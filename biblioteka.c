@@ -27,10 +27,10 @@ while((m=getchar()) !='#') {
 int main() {
 
         FILE *plik;
-        plik=fopen("/Users/sebastian/Desktop/biblioteka/klienci.txt", "w");  /* używam MAC OS wiec musialem uzyc takiej sciezki */
+        plik=fopen("klienci.txt", "w");
 
         FILE *plik2;
-        plik=fopen("/Users/sebastian/Desktop/biblioteka/ksiazki.txt", "w");  /* używam MAC OS wiec musialem uzyc takiej sciezki */
+        plik=fopen("ksiazki.txt", "w");
 
 
     if(plik==NULL) {

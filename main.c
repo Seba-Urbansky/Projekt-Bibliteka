@@ -129,12 +129,9 @@ exit(0);
 /*|||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 //klienci
 
-void wyswietl_baze_klientow() {
-
+void wczytaniepliku() {
 FILE *plik;
 plik = fopen("klienci.txt", "r");
-//puts(sizeof(klient));
-if (!plik) {
 
 while (!feof (plik)) {
 wpis = malloc(sizeof(baza));
@@ -149,9 +146,35 @@ wpis -> nastepny = NULL;
 }
 }
 
-fclose(plik);
+void zapispliku(struct klienci *wezel) {
+FILE *plik;
+plik = fopen("klienci.txt", "r");
+
+while (!feof (plik)) {
+wpis = malloc(sizeof(baza));
+
+fprintf(plik, "%d", wpis->numer_karty);
+fprintf(plik, "%s", wpis->imie);
+fprintf(plik, "%s", wpis->nazwisko);
+fprintf(plik, "%s", wpis->telefon);
+fprintf(plik, "%s", wpis->email);
+
+wpis -> nastepny = NULL;
+}
+}
+
+void wyswietl_baze_klientow() {
+
+for (; NULL != wpis ; wpis =  wpis -> nastepny )
+printf ("%d ", wpis->numer_karty );
+printf ("%d ", wpis->imie);
+printf ("%d ", wpis->nazwisko);
+printf ("%d ", wpis->telefon);
+printf ("%d ", wpis->email);
+printf ("\n");
 menu_klientow();
 }
+
 
 
 void dodaj_klienta() {
@@ -174,11 +197,13 @@ scanf("%s",&wpis->telefon);
 printf("Podaj email: \n");
 scanf("%s",&wpis->email);
 
+menu_klientow();
 }
 void edytuj_klienta() {;}
 void usun_klienta() {;}
 
 
 int main() {
+wczytaniepliku();
 menu();
 }

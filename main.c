@@ -131,7 +131,7 @@ exit(0);
 
 void wczytaniepliku() {
 FILE *plik;
-plik = fopen("klienci.txt", "r");
+plik = fopen("klienci.csv", "r");
 
 while (!feof (plik)) {
 wpis = malloc(sizeof(baza));
@@ -148,7 +148,7 @@ wpis -> nastepny = NULL;
 
 void zapispliku(struct klienci *wezel) {
 FILE *plik;
-plik = fopen("klienci.txt", "r");
+plik = fopen("klienci.csv", "r");
 
 while (!feof (plik)) {
 wpis = malloc(sizeof(baza));

@@ -79,7 +79,64 @@ void dodaj_klienta()
     menu_klientow();
 }
 
-void edytuj_klienta() {;}
+id_klienta(){}
+wyszukaj_klienta(){}
+wydrukuj_klienta(){}
+coedytowac(){}
+
+void edytuj_klienta() {
+{
+    int wybor;
+
+    printf("Witamy w Edycji");
+    printf("\n\n");
+    printf("1. Zapytaj o ID klienta");
+    printf("\n");
+    printf("2.Wyszukaj klienta po ID");
+    printf("\n");
+    printf("3. Wydrukuj klienta");
+    printf("\n");
+    printf("4. Zaproponuj co edytowac(imie, nazwisko)");
+    printf("\n\n");
+
+    scanf("%d", &wybor);
+    printf("\n");
+
+    switch (wybor)
+    {
+    case 1:
+        id_klienta();
+        break;
+
+    case 2:
+        wyszukaj_klienta();
+        break;
+
+    case 3:
+        wydrukuj_klienta();
+        break;
+
+    case 4:
+       coedytowac();
+        break;
+
+    default:
+        printf("Niepoprawna instrukcja");
+        break;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+}
 
 void usun_klienta() {;}
 

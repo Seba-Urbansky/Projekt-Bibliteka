@@ -90,15 +90,15 @@ scanf("%d", id);
 return id;
 }
 
-wydrukuj_klienta(){}
-usuw_edytowanie_klienta(){}
+void wydrukuj_klienta(){}
+void usuw_edytowanie_klienta(){}
 void znajdz_klienta_do_zarzadzania() {
    // wyszukaj klienta
   Id = wyszukaj_klienta()
   usunedytuj_klient(id)
 }
 
-void usunedytuj_klient()
+void usunedytuj_klient(int klient_id)
 {
     int wybor;
 
@@ -123,11 +123,11 @@ void usunedytuj_klient()
 
 
     case 1:
-        wydrukuj_klienta();
+        wydrukuj_klienta(int klient_id);
         break;
 
     case 2:
-       usuw_edytowanie_klienta();
+       usuw_edytowanie_klienta(int klient_id);
         break;
 
     default:

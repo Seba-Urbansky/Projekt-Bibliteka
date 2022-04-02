@@ -34,6 +34,8 @@ void wyjscie();
 void wczytaniepliku();
 void znajdz_klienta_do_zarzadzania();
 void wydrukuj_klienta(struct klient* wpis);
+void edytuj_imie_klienta(struct klient* wpis);
+void edytuj_nazwisko_klienta(struct klient* wpis);
 void usunedytuj_klient(struct klient* wpis);
 
 void wyswietl_baze_klientow()
@@ -52,10 +54,8 @@ void dodaj_klienta()
 
     printf("Podaj numer karty: \n");
     scanf("%d", &wpis->numer_karty);
-    printf("Podaj imie: \n");
-    scanf("%s", &wpis->imie);
-    printf("Podaj nazwisko: \n");
-    scanf("%s", &wpis->nazwisko);
+    edytuj_imie_klienta(wpis);
+    edytuj_nazwisko_klienta(wpis);
     printf("Podaj telefon: \n");
     scanf("%s", &wpis->telefon);
     printf("Podaj email: \n");
@@ -91,9 +91,15 @@ void wydrukuj_klienta(struct klient* wpis) {
     printf ("\n");
 }
 
-void edytuj_imie_klienta(struct klient* wpis){}
+void edytuj_imie_klienta(struct klient* wpis) {
+    printf("Podaj imie: \n");
+    scanf("%s", &wpis->imie);
+}
 
-void edytuj_nazwisko_klienta(struct klient* wpis){}
+void edytuj_nazwisko_klienta(struct klient* wpis){
+    printf("Podaj nazwisko: \n");
+    scanf("%s", &wpis->nazwisko);
+}
 
 void usun_klienta(struct klient* wpis){}
 
@@ -127,12 +133,15 @@ void usunedytuj_klient(struct klient* wpis) {
         break;
     case 2:
         edytuj_imie_klienta(wpis);
+        usunedytuj_klient(wpis);
         break;
     case 3:
         edytuj_nazwisko_klienta(wpis);
+        usunedytuj_klient(wpis);
         break;
     case 4:
         usun_klienta(wpis);
+        menu_klientow();
         break;
     default:
         printf("Niepoprawna instrukcja");

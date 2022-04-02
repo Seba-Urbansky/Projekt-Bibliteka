@@ -95,9 +95,9 @@ wyszukaj_klienta(){
 
 }
 wydrukuj_klienta(){}
-coedytowac(){}
+edytowanie_klienta(){}
 
-void edytuj_klienta()
+void menu_edytuj_klienta()
 {
     int wybor;
 
@@ -130,7 +130,7 @@ void edytuj_klienta()
         break;
 
     case 4:
-       coedytowac();
+       edytowanie_klienta();
         break;
 
     default:
@@ -145,9 +145,9 @@ void edytuj_klienta()
 
 }
 
-cousunac(){}
+usuwanie_klienta(){}
 
-void usun_klienta() {
+void menu_usun_klienta() {
 
 
 
@@ -182,7 +182,7 @@ int wybor;
         break;
 
     case 4:
-       cousunac();
+       usuwanie_klienta();
         break;
 
     default:

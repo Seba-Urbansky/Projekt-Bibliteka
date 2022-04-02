@@ -33,6 +33,7 @@ void menu_klientow();
 void wyjscie();
 void wczytaniepliku();
 void znajdz_klienta_do_zarzadzania();
+void wydrukuj_klienta(struct klient* wpis);
 void usunedytuj_klient(struct klient* wpis);
 
 void wyswietl_baze_klientow()
@@ -50,21 +51,19 @@ void dodaj_klienta()
     struct klient *wpis = (struct klient *)malloc(sizeof(baza));
 
     printf("Podaj numer karty: \n");
-    scanf("%s",&wpis->numer_karty);
+    scanf("%d", &wpis->numer_karty);
     printf("Podaj imie: \n");
-    scanf("%s",&wpis->imie);
+    scanf("%s", &wpis->imie);
     printf("Podaj nazwisko: \n");
-    scanf("%s",&wpis->nazwisko);
+    scanf("%s", &wpis->nazwisko);
     printf("Podaj telefon: \n");
-    scanf("%s",&wpis->telefon);
+    scanf("%s", &wpis->telefon);
     printf("Podaj email: \n");
-    scanf("%s",&wpis->email);
+    scanf("%s", &wpis->email);
 
     koniec->nastepny = wpis;
     wpis->poprzedni = koniec;
     koniec = wpis;
-
-    printf("Koniec: %s\n", koniec->imie);
 
     menu_klientow();
 }
@@ -83,7 +82,7 @@ struct klient* wyszukaj_klienta() {
     return NULL;
 }
 
-void wydrukuj_klienta(struct klient* wpis){
+void wydrukuj_klienta(struct klient* wpis) {
     printf ("%d ", wpis->numer_karty);
     printf ("%s ", wpis->imie);
     printf ("%s ", wpis->nazwisko);
@@ -264,8 +263,7 @@ void wczytaniepliku()
     }
 }
 
-void zapispliku(struct klient *wezel)
-{
+void zapispliku(struct klient *wezel) {
     FILE *plik;
     plik = fopen("klienci.csv", "r");
 

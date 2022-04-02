@@ -89,12 +89,14 @@ scanf("%d", id);
 
 return id;
 }
-wyszukaj_klienta(){
 
-
-}
 wydrukuj_klienta(){}
 usuw_edytowanie_klienta(){}
+void znajdz_klienta_do_zarzadzania() {
+   // wyszukaj klienta
+  Id = wyszukaj_klienta()
+  usunedytuj_klient(id)
+}
 
 void usunedytuj_klient()
 {
@@ -102,13 +104,12 @@ void usunedytuj_klient()
 
     printf("Witamy w Edycji");
     printf("\n\n");
-    printf("1. Wyszukaj ID klienta");
+   
+    printf("1. Wydrukuj klienta");
     printf("\n");
-    printf("2. Wydrukuj klienta");
-    printf("\n");
-    printf("3. Edytuj imie");
+    printf("2. Edytuj imie");
     printf("\n\n");
-    printf("4. Edytuj nazwisko");
+    printf("3. Edytuj nazwisko");
     printf("\n\n");
     printf("4. Usun klienta");
     printf("\n\n");
@@ -120,15 +121,12 @@ void usunedytuj_klient()
     {
  
 
-    case 1:
-        wyszukaj_klienta();
-        break;
 
-    case 2:
+    case 1:
         wydrukuj_klienta();
         break;
 
-    case 3:
+    case 2:
        usuw_edytowanie_klienta();
         break;
 

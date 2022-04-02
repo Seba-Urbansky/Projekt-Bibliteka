@@ -33,6 +33,7 @@ void menu_klientow();
 void wyjscie();
 void wczytaniepliku();
 void znajdz_klienta_do_zarzadzania();
+void usunedytuj_klient(struct klient* wpis);
 
 void wyswietl_baze_klientow()
 {
@@ -98,11 +99,11 @@ void edytuj_nazwisko_klienta(struct klient* wpis){}
 void usun_klienta(struct klient* wpis){}
 
 void zarzadzaj_klientem() {
-  struct klient* k = wyszukaj_klienta();
-  usunedytuj_klient(k);
+  struct klient* wpis = wyszukaj_klienta();
+  usunedytuj_klient(wpis);
 }
 
-void usunedytuj_klient(struct klient* k) {
+void usunedytuj_klient(struct klient* wpis) {
     int wybor;
 
     printf("Witamy w Zarzadzaniu Klientem");
@@ -122,17 +123,17 @@ void usunedytuj_klient(struct klient* k) {
 
     switch (wybor) {
     case 1:
-        wydrukuj_klienta(k);
-        usunedytuj_klient(k);
+        wydrukuj_klienta(wpis);
+        usunedytuj_klient(wpis);
         break;
     case 2:
-        edytuj_imie_klienta(k);
+        edytuj_imie_klienta(wpis);
         break;
     case 3:
-        edytuj_nazwisko_klienta(k);
+        edytuj_nazwisko_klienta(wpis);
         break;
     case 4:
-        usun_klienta(k);
+        usun_klienta(wpis);
         break;
     default:
         printf("Niepoprawna instrukcja");

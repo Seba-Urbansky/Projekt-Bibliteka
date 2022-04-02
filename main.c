@@ -79,37 +79,38 @@ void dodaj_klienta()
     menu_klientow();
 }
 
+
 id_klienta(){
-    int *wpis->id;
+    int id;
 
 printf("Podaj id klienta");
 scanf("%d", id);
 
 
-
+return id;
 }
 wyszukaj_klienta(){
 
 
-
-
 }
 wydrukuj_klienta(){}
-edytowanie_klienta(){}
+usuw_edytowanie_klienta(){}
 
-void menu_edytuj_klienta()
+void usunedytuj_klient()
 {
     int wybor;
 
     printf("Witamy w Edycji");
     printf("\n\n");
-    printf("1. Zapytaj o ID klienta");
+    printf("1. Wyszukaj ID klienta");
     printf("\n");
-    printf("2.Wyszukaj klienta po ID");
+    printf("2. Wydrukuj klienta");
     printf("\n");
-    printf("3. Wydrukuj klienta");
-    printf("\n");
-    printf("4. Zaproponuj co edytowac(imie, nazwisko)");
+    printf("3. Edytuj imie");
+    printf("\n\n");
+    printf("4. Edytuj nazwisko");
+    printf("\n\n");
+    printf("4. Usun klienta");
     printf("\n\n");
 
     scanf("%d", &wybor);
@@ -117,20 +118,18 @@ void menu_edytuj_klienta()
 
     switch (wybor)
     {
-    case 1:
-        id_klienta();
-        break;
+ 
 
-    case 2:
+    case 1:
         wyszukaj_klienta();
         break;
 
-    case 3:
+    case 2:
         wydrukuj_klienta();
         break;
 
-    case 4:
-       edytowanie_klienta();
+    case 3:
+       usuw_edytowanie_klienta();
         break;
 
     default:
@@ -143,61 +142,9 @@ void menu_edytuj_klienta()
 
 
 
-}
-
-usuwanie_klienta(){}
-
-void menu_usun_klienta() {
 
 
 
-int wybor;
-
-    printf("Witamy w usuwaniu klientow");
-    printf("\n\n");
-    printf("1. Zapytaj o ID klienta");
-    printf("\n");
-    printf("2.Wyszukaj klienta po ID");
-    printf("\n");
-    printf("3. Wydrukuj klienta");
-    printf("\n");
-    printf("4. Usun klienta");
-    printf("\n\n");
-
-    scanf("%d", &wybor);
-    printf("\n");
-
-    switch (wybor)
-    {
-    case 1:
-        id_klienta();
-        break;
-
-    case 2:
-        wyszukaj_klienta();
-        break;
-
-    case 3:
-        wydrukuj_klienta();
-        break;
-
-    case 4:
-       usuwanie_klienta();
-        break;
-
-    default:
-        printf("Niepoprawna instrukcja");
-        break;
-
-
-
-
-
-
-
-
-
-}
 
 void menu_klientow()
 {
@@ -237,6 +184,7 @@ void menu_klientow()
 
     case 4:
         usun_klienta();
+
         break;
 
     case 5:

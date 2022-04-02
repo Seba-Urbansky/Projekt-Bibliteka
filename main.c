@@ -97,7 +97,7 @@ void znajdz_klienta_do_zarzadzania() {
   Id = wyszukaj_klienta()
   usunedytuj_klient(id)
 }
-
+struct klient * klient = wyszukaj_klienta();
 void usunedytuj_klient(int klient_id)
 {
     int wybor;

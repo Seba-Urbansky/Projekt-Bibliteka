@@ -96,33 +96,47 @@ void edytuj_imie_klienta(struct klient* wpis) {
     scanf("%s", &wpis->imie);
 }
 
-void edytuj_nazwisko_klienta(struct klient* wpis){
+void edytuj_nazwisko_klienta(struct klient* wpis) {
     printf("Podaj nazwisko: \n");
     scanf("%s", &wpis->nazwisko);
 }
 
-void usun_klienta(struct klient* wpis){}
+void usun_klienta(struct klient* wpis) {
+    struct klient *poprzedni = wpis->poprzedni;
+    struct klient *nastepny = wpis->nastepny;
+    if (poprzedni == NULL && nastepny == NULL) {
+        poczatek = NULL;
+        koniec = NULL;
+    } else if (poprzedni == NULL && nastepny != NULL) {
+        nastepny->poprzedni = NULL;
+        poczatek = nastepny;
+    } else if (nastepny == NULL && poprzedni != NULL) {
+        poprzedni->nastepny = NULL;
+        koniec = poprzedni;
+    } else {
+        poprzedni->nastepny = nastepny;
+        nastepny->poprzedni = poprzedni;    
+    }
+}
 
 void zarzadzaj_klientem() {
   struct klient* wpis = wyszukaj_klienta();
-  usunedytuj_klient(wpis);
+  if (wpis == NULL) {
+    printf("Nie znaleziono klienta \n");
+    zarzadzaj_klientem();
+  } else {
+    usunedytuj_klient(wpis);
+  }
 }
 
 void usunedytuj_klient(struct klient* wpis) {
     int wybor;
 
-    printf("Witamy w Zarzadzaniu Klientem");
-    printf("\n\n");
-   
-    printf("1. Wydrukuj klienta");
-    printf("\n");
-    printf("2. Edytuj imie");
-    printf("\n\n");
-    printf("3. Edytuj nazwisko");
-    printf("\n\n");
-    printf("4. Usun klienta");
-    printf("\n\n");
-
+    printf("Witamy w Zarzadzaniu Klientem \n\n");
+    printf("1. Wydrukuj klienta \n");
+    printf("2. Edytuj imie \n");
+    printf("3. Edytuj nazwisko \n");
+    printf("4. Usun klienta\n");
     scanf("%d", &wybor);
     printf("\n");
 

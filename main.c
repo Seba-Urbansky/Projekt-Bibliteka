@@ -21,7 +21,6 @@ struct klient
 
 } baza;
 
-struct klient *wpis;
 struct klient *poczatek = NULL;
 struct klient *koniec = NULL;
 
@@ -36,14 +35,17 @@ void wczytaniepliku();
 
 void wyswietl_baze_klientow()
 {
-
-    for (; NULL != wpis ; wpis =  wpis -> nastepny )
-        printf ("%d ", wpis->numer_karty );
-    printf ("%d ", wpis->imie);
-    printf ("%d ", wpis->nazwisko);
-    printf ("%d ", wpis->telefon);
-    printf ("%d ", wpis->email);
-    printf ("\n");
+    struct klient *wpis = poczatek;
+    printf ("BAZA KLIENTOW ------------------------\n");
+    for (; NULL != wpis ; wpis = wpis -> nastepny) {
+        printf ("%d ", wpis->numer_karty);
+        printf ("%s ", wpis->imie);
+        printf ("%s ", wpis->nazwisko);
+        printf ("%s ", wpis->telefon);
+        printf ("%s ", wpis->email);
+        printf ("\n");
+    }
+    printf ("--------------------------------------\n\n");
     menu_klientow();
 }
 
@@ -67,6 +69,12 @@ void dodaj_klienta()
 
     printf("Podaj email: \n");
     scanf("%s",&wpis->email);
+
+    koniec->nastepny = wpis;
+    wpis->poprzedni = koniec;
+    koniec = wpis;
+
+    printf("Koniec: %s\n", koniec->imie);
 
     menu_klientow();
 }
@@ -190,6 +198,7 @@ void wczytaniepliku()
     FILE *plik;
     plik = fopen("klienci.csv", "r");
 
+    struct klient *wpis = (struct klient *)malloc(sizeof(baza));
     struct klient *poprzedni;
     while (!feof (plik))
     {
@@ -216,7 +225,7 @@ void zapispliku(struct klient *wezel)
 
     while (!feof (plik))
     {
-        wpis = malloc(sizeof(baza));
+        struct klient *wpis = malloc(sizeof(baza));
 
         fprintf(plik, "%d", wpis->numer_karty);
         fprintf(plik, "%s", wpis->imie);

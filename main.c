@@ -32,18 +32,13 @@ void menu();
 void menu_klientow();
 void wyjscie();
 void wczytaniepliku();
+void znajdz_klienta_do_zarzadzania();
 
 void wyswietl_baze_klientow()
 {
-    struct klient *wpis = poczatek;
     printf ("BAZA KLIENTOW ------------------------\n");
-    for (; NULL != wpis ; wpis = wpis -> nastepny) {
-        printf ("%d ", wpis->numer_karty);
-        printf ("%s ", wpis->imie);
-        printf ("%s ", wpis->nazwisko);
-        printf ("%s ", wpis->telefon);
-        printf ("%s ", wpis->email);
-        printf ("\n");
+    for (struct klient *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
+        wydrukuj_klienta(wpis);
     }
     printf ("--------------------------------------\n\n");
     menu_klientow();
@@ -51,22 +46,16 @@ void wyswietl_baze_klientow()
 
 void dodaj_klienta()
 {
-
     struct klient *wpis = (struct klient *)malloc(sizeof(baza));
-
 
     printf("Podaj numer karty: \n");
     scanf("%s",&wpis->numer_karty);
-
     printf("Podaj imie: \n");
     scanf("%s",&wpis->imie);
-
     printf("Podaj nazwisko: \n");
     scanf("%s",&wpis->nazwisko);
-
     printf("Podaj telefon: \n");
     scanf("%s",&wpis->telefon);
-
     printf("Podaj email: \n");
     scanf("%s",&wpis->email);
 
@@ -80,29 +69,43 @@ void dodaj_klienta()
 }
 
 
-id_klienta(){
-    int id;
+struct klient* wyszukaj_klienta() {
+    int numer_karty;
+    printf("Podaj numer karty klienta: \n");
+    scanf("%d", &numer_karty);
 
-printf("Podaj id klienta");
-scanf("%d", id);
-
-
-return id;
+    for(struct klient *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
+        if (wpis->numer_karty==numer_karty) {
+            return wpis;
+        } 
+    }
+    return NULL;
 }
 
-void wydrukuj_klienta(){}
-void usuw_edytowanie_klienta(){}
-void znajdz_klienta_do_zarzadzania() {
-   // wyszukaj klienta
-  Id = wyszukaj_klienta()
-  usunedytuj_klient(id)
+void wydrukuj_klienta(struct klient* wpis){
+    printf ("%d ", wpis->numer_karty);
+    printf ("%s ", wpis->imie);
+    printf ("%s ", wpis->nazwisko);
+    printf ("%s ", wpis->telefon);
+    printf ("%s ", wpis->email);
+    printf ("\n");
 }
-struct klient * klient = wyszukaj_klienta();
-void usunedytuj_klient(int klient_id)
-{
+
+void edytuj_imie_klienta(struct klient* wpis){}
+
+void edytuj_nazwisko_klienta(struct klient* wpis){}
+
+void usun_klienta(struct klient* wpis){}
+
+void zarzadzaj_klientem() {
+  struct klient* k = wyszukaj_klienta();
+  usunedytuj_klient(k);
+}
+
+void usunedytuj_klient(struct klient* k) {
     int wybor;
 
-    printf("Witamy w Edycji");
+    printf("Witamy w Zarzadzaniu Klientem");
     printf("\n\n");
    
     printf("1. Wydrukuj klienta");
@@ -117,32 +120,25 @@ void usunedytuj_klient(int klient_id)
     scanf("%d", &wybor);
     printf("\n");
 
-    switch (wybor)
-    {
- 
-
-
+    switch (wybor) {
     case 1:
-        wydrukuj_klienta(int klient_id);
+        wydrukuj_klienta(k);
+        usunedytuj_klient(k);
         break;
-
     case 2:
-       usuw_edytowanie_klienta(int klient_id);
+        edytuj_imie_klienta(k);
         break;
-
+    case 3:
+        edytuj_nazwisko_klienta(k);
+        break;
+    case 4:
+        usun_klienta(k);
+        break;
     default:
         printf("Niepoprawna instrukcja");
         break;
-
     }
 }
-
-
-
-
-
-
-
 
 void menu_klientow()
 {
@@ -154,45 +150,32 @@ void menu_klientow()
     printf("\n");
     printf("2. Dodaj klienta");
     printf("\n");
-    printf("3. Edytuj klienta");
+    printf("3. Zarzadzaj klientem");
     printf("\n");
-    printf("4. Usun klienta");
+    printf("4. Powrot do menu");
     printf("\n");
-    printf("5. Powrot do menu");
-    printf("\n");
-    printf("6. Wyjscie z programu");
+    printf("5. Wyjscie z programu");
     printf("\n\n");
 
     scanf("%d", &wybor);
     printf("\n");
 
-    switch (wybor)
-    {
+    switch (wybor) {
     case 1:
         wyswietl_baze_klientow();
         break;
-
     case 2:
         dodaj_klienta();
         break;
-
     case 3:
-        edytuj_klienta();
+        zarzadzaj_klientem();
         break;
-
     case 4:
-        usun_klienta();
-
-        break;
-
-    case 5:
         menu();
         break;
-
-    case 6:
+    case 5:
         wyjscie();
         break;
-
     default:
         printf("Niepoprawna instrukcja");
         break;

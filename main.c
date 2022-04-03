@@ -101,6 +101,24 @@ void edytuj_nazwisko_klienta(struct klient* wpis) {
     scanf("%s", &wpis->nazwisko);
 }
 
+void edytuj_numeru_karty(struct klient* wpis) {
+    int numer_karty;
+    printf("Podaj numer karty klienta: \n");
+    scanf("%d", &numer_karty);
+
+    for(struct klient *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
+        if (wpis->numer_karty==numer_karty) {
+            return wpis;
+        } 
+    }
+    if(return == NULL)
+    {
+        printf("Nie ma takiego numeru\n");
+        scanf("%d", &numer_karty);
+    }
+    
+}
+
 void usun_klienta(struct klient* wpis) {
     struct klient *poprzedni = wpis->poprzedni;
     struct klient *nastepny = wpis->nastepny;
@@ -121,6 +139,9 @@ void usun_klienta(struct klient* wpis) {
 
 void zarzadzaj_klientem() {
   struct klient* wpis = wyszukaj_klienta();
+printf("Podaj id klienta");
+scanf("%d", &wpis);
+
   if (wpis == NULL) {
     printf("Nie znaleziono klienta \n");
     zarzadzaj_klientem();

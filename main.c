@@ -30,8 +30,8 @@ void edytuj_klienta();
 void usun_klienta();
 void menu();
 void menu_klientow();
-void wyjscie();
 void wczytaniepliku();
+void zapispliku();
 void znajdz_klienta_do_zarzadzania();
 void wydrukuj_klienta(struct klient* wpis);
 void edytuj_imie_klienta(struct klient* wpis);
@@ -40,7 +40,7 @@ void usunedytuj_klient(struct klient* wpis);
 void edytuj_telefon_klienta(struct klient* wpis);
 void edytuj_email_klienta(struct klient* wpis);
 void edytuj_numeru_karty(struct klient* wpis);
-
+void wyjscie();
 void wyswietl_baze_klientow()
 {
     printf ("BAZA KLIENTOW ------------------------\n");
@@ -166,6 +166,7 @@ void usunedytuj_klient(struct klient* wpis) {
     printf("2. Edytuj imie \n");
     printf("3. Edytuj nazwisko \n");
     printf("4. Usun klienta\n");
+    printf("5. Wyjscie z programu\n");
     scanf("%d", &wybor);
     printf("\n");
 
@@ -185,6 +186,9 @@ void usunedytuj_klient(struct klient* wpis) {
     case 4:
         usun_klienta(wpis);
         menu_klientow();
+        break;
+    case 5:
+        wyjscie();
         break;
     default:
         printf("Niepoprawna instrukcja");
@@ -279,9 +283,9 @@ void menu()
     }
 }
 
-void wyjscie()
-{
+void wyjscie() {
     printf("Zamykanie programu...");
+    zapispliku();
     exit(0);
 }
 
@@ -317,15 +321,12 @@ void wczytaniepliku()
 
 void zapispliku() {
     FILE *plik = fopen("klienci.csv", "w");
-    while (!feof (plik)) {
-        for(struct klient *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
-            fprintf(plik, "%d %s %s %s %s",wpis->numer_karty, wpis->imie,  wpis->imie, wpis->telefon, wpis->email);
-        }
+    for(struct klient *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
+        fprintf(plik, "%d %s %s %s %s", wpis->numer_karty, wpis->imie, wpis->imie, wpis->telefon, wpis->email);
     }
 }
 
 int main() {
     wczytaniepliku();
     menu();
-    zapispliku();
 }

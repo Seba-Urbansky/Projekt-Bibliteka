@@ -283,7 +283,7 @@ void menu()
     }
 }
 
-void wyjscie_i_zapisywanie_danych() {
+void wyjscie() {
     printf("Zamykanie programu...");
     zapispliku();
     exit(0);

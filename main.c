@@ -166,7 +166,7 @@ void usunedytuj_klient(struct klient* wpis) {
     printf("2. Edytuj imie \n");
     printf("3. Edytuj nazwisko \n");
     printf("4. Usun klienta\n");
-    printf("5. Wyjscie z programu\n");
+    printf("5. Wyjscie z programu i zapisanie danych\n");
     scanf("%d", &wybor);
     printf("\n");
 
@@ -210,7 +210,7 @@ void menu_klientow()
     printf("\n");
     printf("4. Powrot do menu");
     printf("\n");
-    printf("5. Wyjscie z programu");
+    printf("5. Wyjscie z programu i zapisanie danych");
     printf("\n\n");
 
     scanf("%d", &wybor);
@@ -250,7 +250,7 @@ void menu()
     printf("\n");
     printf("3. Otwieranie bazy wypozyczen");
     printf("\n");
-    printf("4. Wyjscie z programu");
+    printf("4. Wyjscie z programu i zapisanie danych");
     printf("\n\n");
 
     scanf("%d", &wybor);
@@ -322,7 +322,7 @@ void wczytaniepliku()
 void zapispliku() {
     FILE *plik = fopen("klienci.csv", "w");
     for(struct klient *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
-        fprintf(plik, "%d %s %s %s %s", wpis->numer_karty, wpis->imie, wpis->imie, wpis->telefon, wpis->email);
+        fprintf(plik, "%d %s %s %s %s\n", wpis->numer_karty, wpis->imie, wpis->nazwisko, wpis->telefon, wpis->email);
     }
 }
 

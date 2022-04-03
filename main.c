@@ -40,7 +40,7 @@ void usunedytuj_klient(struct klient* wpis);
 void edytuj_telefon_klienta(struct klient* wpis);
 void edytuj_email_klienta(struct klient* wpis);
 void edytuj_numeru_karty(struct klient* wpis);
-void wyjscie_i_zapisywanie_danych();
+void wyjscie();
 void wyswietl_baze_klientow()
 {
     printf ("BAZA KLIENTOW ------------------------\n");

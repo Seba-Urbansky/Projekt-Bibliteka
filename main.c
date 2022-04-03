@@ -309,7 +309,7 @@ void wczytaniepliku()
 
 void zapispliku(struct klient *wezel) {
     FILE *plik;
-    plik = fopen("klienci.csv", "r");
+    plik = fopen("klienci.csv", "w");
 
     while (!feof (plik))
     {

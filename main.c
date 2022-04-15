@@ -5,7 +5,7 @@
 
 // to jest milestone1 wiec nie bedzie tu nic o ksiazkach i wypozyczeniach
 // a jezeli bedzie to niedzialajace
-
+// aaaaaaaa
 // http://fizyka.umk.pl/~leii/wskaznikiStrukturyAiR.pdf
 
 struct klient

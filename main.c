@@ -127,6 +127,7 @@ void edytuj_numeru_karty(struct klient* wpis) {
     }
 }
 
+
 void usun_klienta(struct klient* wpis) {
     struct klient *poprzedni = wpis->poprzedni;
     struct klient *nastepny = wpis->nastepny;

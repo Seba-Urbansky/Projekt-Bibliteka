@@ -3,61 +3,64 @@
 #include <string.h>
 #define MAX 32
 
-
+// Dodawanie/usuwanie/edycja książek (ID, tytuł, rok, autor, gatunek, liczba egzemplarzy, liczba wypożyczonych).
 // http://fizyka.umk.pl/~leii/wskaznikiStrukturyAiR.pdf
 
-struct klient
+struct ksiazki
 {
 
-    int numer_karty;
-    char* imie[MAX];
-    char* nazwisko[MAX];
-    char* telefon[MAX];
-    char* email[MAX];
+    int ID;
+    int rok;
+    int liczba_egzemplarzy;
+    int liczba_wypozyczonych;
+    char* tytul[MAX];
+    char* autor[MAX];
+    char* gatunek[MAX];
+    
 
-    struct klient *poprzedni, *nastepny;
+    struct ksiazki *poprzedni, *nastepny;
 
 } baza;
 
-struct klient *poczatek = NULL;
-struct klient *koniec = NULL;
+struct ksiazki *poczatek = NULL;
+struct ksiazki *koniec = NULL;
 
-void wyswietl_baze_klientow();
-void dodaj_klienta();
-void edytuj_klienta();
-void usun_klienta();
+void wyswietl_baze_ksiazek();
+void dodaj_ksiazke();
+void edytuj_ksiazke();
+void usun_ksiazke();
 void menu();
 void menu_klientow();
 void wczytaniepliku();
 void zapispliku();
-void znajdz_klienta_do_zarzadzania();
-void wydrukuj_klienta(struct klient* wpis);
-void edytuj_imie_klienta(struct klient* wpis);
-void edytuj_nazwisko_klienta(struct klient* wpis);
-void usunedytuj_klient(struct klient* wpis);
-void edytuj_telefon_klienta(struct klient* wpis);
-void edytuj_email_klienta(struct klient* wpis);
-void edytuj_numeru_karty(struct klient* wpis);
+void ksiazka_do_zarzadzania();
+void wydrukuj_ksiazki(struct ksiazki* wpis);
+void edytuj_tytul_ksiazki(struct ksiazki* wpis);
+void edytuj_gatunek_ksiazki(struct ksiazki* wpis);
+void usunedytuj_ksiazke(struct ksiazki* wpis);
+void edytuj_autora(struct ksiazki* wpis);
+void edytuj_rok(struct ksiazki* wpis);
+void edytuj_ID(struct ksiazki* wpis);
 void wyjscie();
-void wyswietl_baze_klientow()
+void wyswietl_baze_ksiazek()
 {
     printf ("BAZA KLIENTOW ------------------------\n");
-    for (struct klient *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
-        wydrukuj_klienta(wpis);
+    for (struct ksiazki *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
+        wydrukuj_ksiazki(wpis);
     }
     printf ("--------------------------------------\n\n");
     menu_klientow();
 }
 
-void dodaj_klienta()
+void dodaj_ksiazke()
 {
-    struct klient *wpis = (struct klient *)malloc(sizeof(baza));
+    struct ksiazki *wpis = (struct ksiazki *)malloc(sizeof(baza));
 
-    edytuj_numeru_karty(wpis);
-    edytuj_imie_klienta(wpis);
-    edytuj_nazwisko_klienta(wpis);
-    edytuj_telefon_klienta(wpis);
-    edytuj_email_klienta(wpis);
+    edytuj_ID(wpis);
+    edytuj_tytul_ksiazki(wpis);
+    edytuj_gatunek_ksiazki(wpis);
+    edytuj_autora(wpis);
+    edytuj_rok(wpis);
 
     koniec->nastepny = wpis;
     wpis->poprzedni = koniec;
@@ -67,8 +70,8 @@ void dodaj_klienta()
 }
 
 
-struct klient* wyszukaj_klienta(int numer_karty) {
-    for(struct klient *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
+struct ksiazki* wyszukaj_klienta(int numer_karty) {
+    for(struct ksiazki *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
         if (wpis->numer_karty==numer_karty) {
             return wpis;
         } 
@@ -76,59 +79,59 @@ struct klient* wyszukaj_klienta(int numer_karty) {
     return NULL;
 }
 
-void wydrukuj_klienta(struct klient* wpis) {
+void wydrukuj_ksiazki(struct ksiazki* wpis) {
     printf ("%d ", wpis->numer_karty);
-    printf ("%s ", wpis->imie);
-    printf ("%s ", wpis->nazwisko);
-    printf ("%s ", wpis->telefon);
+    printf ("%s ", wpis->tytul);
+    printf ("%s ", wpis->autor);
+    printf ("%s ", wpis->gatunek);
     printf ("%s ", wpis->email);
     printf ("\n");
 }
 
-void edytuj_imie_klienta(struct klient* wpis) {
+void edytuj_tytul_ksiazki(struct ksiazki* wpis) {
     char imie[MAX] = "";
     printf("Podaj imie: \n");
     scanf("%s", &imie);
     if (imie == "") {
         printf("Niepoprawne imie, nie powinno byc puste.\n");
-        edytuj_imie_klienta(wpis);
+        edytuj_tytul_ksiazki(wpis);
     } else {
-        strcpy(wpis->imie, &imie);
+        strcpy(wpis->tytul, &imie);
     }
 }
 
-void edytuj_telefon_klienta(struct klient* wpis) {
+void edytuj_autora(struct ksiazki* wpis) {
     printf("Podaj telefon: \n");
-    scanf("%s", &wpis->telefon);
+    scanf("%s", &wpis->autor;
 }
 
-void edytuj_email_klienta(struct klient* wpis) {
+void edytuj_rok(struct ksiazki* wpis) {
     printf("Podaj email: \n");
-    scanf("%s", &wpis->email);
+    scanf("%s", &wpis->rok);
 }
 
-void edytuj_nazwisko_klienta(struct klient* wpis) {
+void edytuj_gatunek_ksiazki(struct ksiazki* wpis) {
     printf("Podaj nazwisko: \n");
-    scanf("%s", &wpis->nazwisko);
+    scanf("%s", &wpis->gatunek);
 }
 
-void edytuj_numeru_karty(struct klient* wpis) {
-    int numer_karty;
+void edytuj_ID(struct ksiazki* wpis) {
+    int ID;
     printf("Podaj numer karty klienta: \n");
-    scanf("%d", &numer_karty);
-    struct klient* wyszukany_klient = wyszukaj_klienta(numer_karty);
+    scanf("%d", &ID);
+    struct ksiazki* wyszukany_klient = wyszukaj_klienta(ID);
     if (wyszukany_klient != NULL) {
         printf("Podany numer karty juz istnieje.\n");
-        edytuj_numeru_karty(wpis);
+        edytuj_ID(wpis);
     } else {
-        wpis->numer_karty = numer_karty;
+        wpis->numer_karty = ID;
     }
 }
 
 
-void usun_klienta(struct klient* wpis) {
-    struct klient *poprzedni = wpis->poprzedni;
-    struct klient *nastepny = wpis->nastepny;
+void usun_ksiazke(struct ksiazki* wpis) {
+    struct ksiazki *poprzedni = wpis->poprzedni;
+    struct ksiazki *nastepny = wpis->nastepny;
     if (poprzedni == NULL && nastepny == NULL) {
         poczatek = NULL;
         koniec = NULL;
@@ -148,42 +151,42 @@ void zarzadzaj_klientem() {
     int numer_karty;
     printf("Podaj numer karty klienta: \n");
     scanf("%d", &numer_karty);
-    struct klient* wpis = wyszukaj_klienta(numer_karty);
+    struct ksiazki* wpis = wyszukaj_klienta(numer_karty);
     if (wpis == NULL) {
         printf("Nie znaleziono klienta \n");
         zarzadzaj_klientem();
     } else {
-        usunedytuj_klient(wpis);
+        usunedytuj_ksiazke(wpis);
     }
 }
 
-void usunedytuj_klient(struct klient* wpis) {
+void usunedytuj_ksiazke(struct ksiazki* wpis) {
     int wybor;
 
-    printf("Witamy w Zarzadzaniu Klientem \n\n");
-    printf("1. Wydrukuj klienta \n");
-    printf("2. Edytuj imie \n");
-    printf("3. Edytuj nazwisko \n");
-    printf("4. Usun klienta\n");
+    printf("Witamy w Zarzadzaniu Ksiazkami \n\n");
+    printf("1. Wydrukuj ksiazki \n");
+    printf("2. Edytuj tytul ksiazki \n");
+    printf("3. Edytuj gatunek ksiazki\n");
+    printf("4. Usun ksiazke\n");
     printf("5. Wyjscie z programu i zapisanie danych\n");
     scanf("%d", &wybor);
     printf("\n");
 
     switch (wybor) {
     case 1:
-        wydrukuj_klienta(wpis);
-        usunedytuj_klient(wpis);
+        wydrukuj_ksiazki(wpis);
+        usunedytuj_ksiazke(wpis);
         break;
     case 2:
-        edytuj_imie_klienta(wpis);
-        usunedytuj_klient(wpis);
+        edytuj_tytul_ksiazki(wpis);
+        usunedytuj_ksiazke(wpis);
         break;
     case 3:
-        edytuj_nazwisko_klienta(wpis);
-        usunedytuj_klient(wpis);
+        edytuj_gatunek_ksiazki(wpis);
+        usunedytuj_ksiazke(wpis);
         break;
     case 4:
-        usun_klienta(wpis);
+        usun_ksiazke(wpis);
         menu_klientow();
         break;
     case 5:
@@ -199,13 +202,13 @@ void menu_klientow()
 {
     int wybor;
 
-    printf("Witamy w bibliotece, baza klientow! Co chcesz zrobic?");
+    printf("Witamy w bibliotece, baza ksiazek! Co chcesz zrobic?");
     printf("\n\n");
-    printf("1. Wyswietl baze klientow");
+    printf("1. Wyswietl baze ksiazek");
     printf("\n");
-    printf("2. Dodaj klienta");
+    printf("2. Dodaj ksiazke");
     printf("\n");
-    printf("3. Zarzadzaj klientem");
+    printf("3. Zarzadzaj ksiazkami");
     printf("\n");
     printf("4. Powrot do menu");
     printf("\n");
@@ -217,10 +220,10 @@ void menu_klientow()
 
     switch (wybor) {
     case 1:
-        wyswietl_baze_klientow();
+        wyswietl_baze_ksiazek();
         break;
     case 2:
-        dodaj_klienta();
+        dodaj_ksiazke();
         break;
     case 3:
         zarzadzaj_klientem();
@@ -296,14 +299,14 @@ void wyjscie() {
 void wczytaniepliku()
 {
     FILE *plik;
-    plik = fopen("klienci.csv", "r");
+    plik = fopen("ksiazki.csv", "r");
 
-    struct klient *wpis = (struct klient *)malloc(sizeof(baza));
-    struct klient *poprzedni;
+    struct ksiazki *wpis = (struct ksiazki *)malloc(sizeof(baza));
+    struct ksiazki *poprzedni;
     while (!feof (plik))
     {
         wpis = malloc(sizeof(baza));
-        fscanf(plik, "%d %s %s %s %s", &wpis->numer_karty, &wpis->imie, &wpis->nazwisko, &wpis->telefon, &wpis->email);
+        fscanf(plik, "%d %s %s %s %s", &wpis->numer_karty, &wpis->tytul, &wpis->autor, &wpis->gatunek, &wpis->email);
         if (poczatek == NULL) {
             poczatek = wpis;
             poprzedni = wpis;
@@ -319,9 +322,9 @@ void wczytaniepliku()
 }
 
 void zapispliku() {
-    FILE *plik = fopen("klienci.csv", "w");
-    for(struct klient *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
-        fprintf(plik, "%d %s %s %s %s\n", wpis->numer_karty, wpis->imie, wpis->nazwisko, wpis->telefon, wpis->email);
+    FILE *plik = fopen("ksiazki.csv", "w");
+    for(struct ksiazki *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
+        fprintf(plik, "%d %s %s %s %s\n", wpis->numer_karty, wpis->tytul, wpis->autor, wpis->gatunek, wpis->email);
     }
 }
 

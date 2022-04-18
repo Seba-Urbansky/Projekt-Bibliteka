@@ -30,7 +30,7 @@ void dodaj_ksiazke();
 void edytuj_ksiazke();
 void usun_ksiazke();
 void menu();
-void menu_klientow();
+void menu_ksiazek();
 void wczytaniepliku();
 void zapispliku();
 void ksiazka_do_zarzadzania();
@@ -70,9 +70,9 @@ void dodaj_ksiazke()
 }
 
 
-struct ksiazki* wyszukaj_klienta(int numer_karty) {
+struct ksiazki* wyszukaj_ksiazke(int ID) {
     for(struct ksiazki *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
-        if (wpis->numer_karty==numer_karty) {
+        if (wpis->ID==ID) {
             return wpis;
         } 
     }
@@ -80,17 +80,17 @@ struct ksiazki* wyszukaj_klienta(int numer_karty) {
 }
 
 void wydrukuj_ksiazki(struct ksiazki* wpis) {
-    printf ("%d ", wpis->numer_karty);
+    printf ("%d ", wpis->ID);
     printf ("%s ", wpis->tytul);
     printf ("%s ", wpis->autor);
     printf ("%s ", wpis->gatunek);
-    printf ("%s ", wpis->email);
+    
     printf ("\n");
 }
 
 void edytuj_tytul_ksiazki(struct ksiazki* wpis) {
     char imie[MAX] = "";
-    printf("Podaj imie: \n");
+    printf("Podaj tytul: \n");
     scanf("%s", &imie);
     if (imie == "") {
         printf("Niepoprawne imie, nie powinno byc puste.\n");
@@ -101,27 +101,27 @@ void edytuj_tytul_ksiazki(struct ksiazki* wpis) {
 }
 
 void edytuj_autora(struct ksiazki* wpis) {
-    printf("Podaj telefon: \n");
+    printf("Podaj nowego autora: \n");
     scanf("%s", &wpis->autor;
 }
 
 void edytuj_rok(struct ksiazki* wpis) {
-    printf("Podaj email: \n");
+    printf("Podaj nowy rok: \n");
     scanf("%s", &wpis->rok);
 }
 
 void edytuj_gatunek_ksiazki(struct ksiazki* wpis) {
-    printf("Podaj nazwisko: \n");
+    printf("Podaj nowy gatunek literacki: \n");
     scanf("%s", &wpis->gatunek);
 }
 
 void edytuj_ID(struct ksiazki* wpis) {
     int ID;
-    printf("Podaj numer karty klienta: \n");
+    printf("Podaj ID ksiazki \n");
     scanf("%d", &ID);
     struct ksiazki* wyszukany_klient = wyszukaj_klienta(ID);
     if (wyszukany_klient != NULL) {
-        printf("Podany numer karty juz istnieje.\n");
+        printf("Podany ID ksiazki juz istnieje.\n");
         edytuj_ID(wpis);
     } else {
         wpis->numer_karty = ID;
@@ -149,11 +149,11 @@ void usun_ksiazke(struct ksiazki* wpis) {
 
 void zarzadzaj_klientem() {
     int numer_karty;
-    printf("Podaj numer karty klienta: \n");
+    printf("Podaj numer ID ksiazki: \n");
     scanf("%d", &numer_karty);
     struct ksiazki* wpis = wyszukaj_klienta(numer_karty);
     if (wpis == NULL) {
-        printf("Nie znaleziono klienta \n");
+        printf("Nie znaleziono ksiazki \n");
         zarzadzaj_klientem();
     } else {
         usunedytuj_ksiazke(wpis);
@@ -198,7 +198,7 @@ void usunedytuj_ksiazke(struct ksiazki* wpis) {
     }
 }
 
-void menu_klientow()
+void menu_ksiazek()
 {
     int wybor;
 
@@ -240,50 +240,6 @@ void menu_klientow()
     }
 }
 
-void menu()
-{
-    int wybor;
-
-    printf("Witamy w bibliotece! Co chcesz zrobic?");
-    printf("\n\n");
-    printf("1. Otwieranie bazy klientow");
-    printf("\n");
-    printf("2. Otwieranie bazy ksiazek");
-    printf("\n");
-    printf("3. Otwieranie bazy wypozyczen");
-    printf("\n");
-    printf("4. Wyjscie z programu i zapisanie danych");
-    printf("\n\n");
-
-    scanf("%d", &wybor);
-    printf("\n");
-
-    switch (wybor)
-    {
-    case 1:
-        menu_klientow();
-        break;
-
-    case 2:
-        //todo
-        printf("To na kamien milowy 2");
-        break;
-
-    case 3:
-        //todo
-        printf("To na kamien milowy 2");
-        break;
-
-    case 4:
-        wyjscie();
-        break;
-
-    default:
-        printf("Niepoprawna instrukcja");
-        break;
-
-    }
-}
 
 void wyjscie() {
     printf("Zamykanie programu...");

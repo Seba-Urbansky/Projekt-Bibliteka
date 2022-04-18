@@ -5,6 +5,11 @@
 
 // menu
 
+// cale polecenie projektu
+// Biblioteka. Dodawanie/usuwanie/edycja klientów (numer karty, nazwisko, imię, telefon, E-mail). Dodawanie/usuwanie/edycja książek (ID, tytuł, rok, autor, gatunek, liczba egzemplarzy, liczba wypożyczonych). 
+//Wypożyczanie/oddawanie książek (kto wypożyczył (numer karty), którą książkę (ID), kiedy, do kiedy). Wyświetlanie książek z możliwością sortowania niemalejącego/nierosnącego po dowolnym polu.
+// Wyszukiwanie książek. Przypominanie o zaległych zwrotach z automatycznym naliczaniem kar umownych. Zapisywanie/wczytywanie danych o klientach, książkach i wypożyczeniach do/z plików. Wykorzystanie list.
+
 void menu_klientow();
 void menu_ksiazek();
 void menu_wypozyczen();

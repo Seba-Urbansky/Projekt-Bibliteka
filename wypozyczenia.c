@@ -6,6 +6,10 @@
 // Wypożyczanie/oddawanie książek (kto wypożyczył (numer karty), którą książkę (ID), kiedy, do kiedy). 
 // http://fizyka.umk.pl/~leii/wskaznikiStrukturyAiR.pdf
 
+void menu_wypozyczen();
+
+
+
 struct wypozyczenia
 {
 
@@ -26,3 +30,11 @@ void wyswietl_kto_wypozyczyl();
 void ID_ksiazki();
 void kiedy();
 void do_kiedy();
+
+
+
+int main()
+{
+
+
+}

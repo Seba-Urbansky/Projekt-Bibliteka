@@ -198,47 +198,7 @@ void usunedytuj_ksiazke(struct ksiazki* wpis) {
     }
 }
 
-void menu_ksiazek()
-{
-    int wybor;
 
-    printf("Witamy w bibliotece, baza ksiazek! Co chcesz zrobic?");
-    printf("\n\n");
-    printf("1. Wyswietl baze ksiazek");
-    printf("\n");
-    printf("2. Dodaj ksiazke");
-    printf("\n");
-    printf("3. Zarzadzaj ksiazkami");
-    printf("\n");
-    printf("4. Powrot do menu");
-    printf("\n");
-    printf("5. Wyjscie z programu i zapisanie danych");
-    printf("\n\n");
-
-    scanf("%d", &wybor);
-    printf("\n");
-
-    switch (wybor) {
-    case 1:
-        wyswietl_baze_ksiazek();
-        break;
-    case 2:
-        dodaj_ksiazke();
-        break;
-    case 3:
-        zarzadzaj_klientem();
-        break;
-    case 4:
-        menu();
-        break;
-    case 5:
-        wyjscie();
-        break;
-    default:
-        printf("Niepoprawna instrukcja");
-        break;
-    }
-}
 
 
 void wyjscie() {

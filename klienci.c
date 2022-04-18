@@ -195,47 +195,6 @@ void usunedytuj_klient(struct klient* wpis) {
     }
 }
 
-void menu_klientow()
-{
-    int wybor;
-
-    printf("Witamy w bibliotece, baza klientow! Co chcesz zrobic?");
-    printf("\n\n");
-    printf("1. Wyswietl baze klientow");
-    printf("\n");
-    printf("2. Dodaj klienta");
-    printf("\n");
-    printf("3. Zarzadzaj klientem");
-    printf("\n");
-    printf("4. Powrot do menu");
-    printf("\n");
-    printf("5. Wyjscie z programu i zapisanie danych");
-    printf("\n\n");
-
-    scanf("%d", &wybor);
-    printf("\n");
-
-    switch (wybor) {
-    case 1:
-        wyswietl_baze_klientow();
-        break;
-    case 2:
-        dodaj_klienta();
-        break;
-    case 3:
-        zarzadzaj_klientem();
-        break;
-    case 4:
-        menu();
-        break;
-    case 5:
-        wyjscie();
-        break;
-    default:
-        printf("Niepoprawna instrukcja");
-        break;
-    }
-}
 
 
 void wyjscie() {

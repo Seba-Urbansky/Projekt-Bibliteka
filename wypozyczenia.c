@@ -32,7 +32,7 @@ void kiedy();
 void do_kiedy();
 void wydrukuj_wypozyczenia();
 
-void wydrukuj_ksiazki(struct wypozyczenia* wpis) {
+void wydrukuj_wypozyczenia(struct wypozyczenia* wpis) {
     printf ("%d ", wpis->ID);
     printf ("%s ", wpis->numer_karty);
     printf ("%s ", wpis->kiedy);

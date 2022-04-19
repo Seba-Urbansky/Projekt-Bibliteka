@@ -3,6 +3,9 @@
 #include <string.h>
 #define MAX 32
 
+#include "klienci.h"
+#include "wypozyczenia.h"
+#include "ksiazki.h"
 // menu
 
 // cale polecenie projektu

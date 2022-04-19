@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #define MAX 32
-
+#include "ksiazki.h"
 // Dodawanie/usuwanie/edycja książek (ID, tytuł, rok, autor, gatunek, liczba egzemplarzy, liczba wypożyczonych).
 // http://fizyka.umk.pl/~leii/wskaznikiStrukturyAiR.pdf
 

@@ -192,7 +192,7 @@ void menu()
 
 void wyjscie() {
     printf("Zamykanie programu...");
-    zapispliku();
+    zapispliku_klienci();
     exit(0);
 }
 

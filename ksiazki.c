@@ -31,8 +31,8 @@ void edytuj_ksiazke();
 void usun_ksiazke();
 void menu();
 void menu_ksiazek();
-void wczytaniepliku();
-void zapispliku();
+void wczytaniepliku_klienci();
+void zapispliku_klienci();
 void ksiazka_do_zarzadzania();
 void wydrukuj_ksiazki(struct ksiazki* wpis);
 void edytuj_tytul_ksiazki(struct ksiazki* wpis);
@@ -203,7 +203,7 @@ void usunedytuj_ksiazke(struct ksiazki* wpis) {
 
 void wyjscie() {
     printf("Zamykanie programu...");
-    zapispliku();
+    zapispliku_klienci();
     exit(0);
 }
 
@@ -212,7 +212,7 @@ void wyjscie() {
 /*|||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 //klienci
 
-void wczytaniepliku()
+void wczytaniepliku_ksiazki()
 {
     FILE *plik;
     plik = fopen("ksiazki.csv", "r");
@@ -237,7 +237,7 @@ void wczytaniepliku()
     }
 }
 
-void zapispliku() {
+void zapispliku_ksiazki() {
     FILE *plik = fopen("ksiazki.csv", "w");
     for(struct ksiazki *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
         fprintf(plik, "%d %s %s %s %s\n", wpis->numer_karty, wpis->tytul, wpis->autor, wpis->gatunek, wpis->email);
@@ -245,6 +245,6 @@ void zapispliku() {
 }
 
 int main() {
-    wczytaniepliku();
+    wczytaniepliku_klienci();
     menu();
 }

@@ -28,8 +28,8 @@ void edytuj_klienta();
 void usun_klienta();
 void menu();
 void menu_klientow();
-void wczytaniepliku();
-void zapispliku();
+void wczytaniepliku_klienci();
+void zapispliku_klienci();
 void znajdz_klienta_do_zarzadzania();
 void wydrukuj_klienta(struct klient* wpis);
 void edytuj_imie_klienta(struct klient* wpis);
@@ -199,7 +199,7 @@ void usunedytuj_klient(struct klient* wpis) {
 
 void wyjscie() {
     printf("Zamykanie programu...");
-    zapispliku();
+    zapispliku_klienci();
     exit(0);
 }
 
@@ -208,7 +208,7 @@ void wyjscie() {
 /*|||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 //klienci
 
-void wczytaniepliku()
+void wczytaniepliku_klienci()
 {
     FILE *plik;
     plik = fopen("klienci.csv", "r");
@@ -233,7 +233,7 @@ void wczytaniepliku()
     }
 }
 
-void zapispliku() {
+void zapispliku_klienci() {
     FILE *plik = fopen("klienci.csv", "w");
     for(struct klient *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
         fprintf(plik, "%d %s %s %s %s\n", wpis->numer_karty, wpis->imie, wpis->nazwisko, wpis->telefon, wpis->email);
@@ -241,6 +241,6 @@ void zapispliku() {
 }
 
 int main() {
-    wczytaniepliku();
+    wczytaniepliku_klienci();
     menu();
 }

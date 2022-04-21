@@ -43,13 +43,14 @@ void edytuj_rok(struct ksiazki* wpis);
 void edytuj_ID(struct ksiazki* wpis);
 void wyjscie();
 void wyswietl_baze_ksiazek()
+
 {
     printf ("BAZA KLIENTOW ------------------------\n");
     for (struct ksiazki *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
         wydrukuj_ksiazki(wpis);
     }
     printf ("--------------------------------------\n\n");
-    menu_klientow();
+    menu_ksiazek();
 }
 
 void dodaj_ksiazke()
@@ -66,7 +67,7 @@ void dodaj_ksiazke()
     wpis->poprzedni = koniec;
     koniec = wpis;
 
-    menu_klientow();
+    menu_ksiazek();
 }
 
 
@@ -102,7 +103,7 @@ void edytuj_tytul_ksiazki(struct ksiazki* wpis) {
 
 void edytuj_autora(struct ksiazki* wpis) {
     printf("Podaj nowego autora: \n");
-    scanf("%s", &wpis->autor;
+    scanf("%s", &wpis->autor);
 }
 
 void edytuj_rok(struct ksiazki* wpis) {
@@ -119,12 +120,12 @@ void edytuj_ID(struct ksiazki* wpis) {
     int ID;
     printf("Podaj ID ksiazki \n");
     scanf("%d", &ID);
-    struct ksiazki* wyszukany_klient = wyszukaj_klienta(ID);
+    struct ksiazki* wyszukany_klient = wyszukaj_ksiazke(ID);
     if (wyszukany_klient != NULL) {
         printf("Podany ID ksiazki juz istnieje.\n");
         edytuj_ID(wpis);
     } else {
-        wpis->numer_karty = ID;
+        wpis->ID;
     }
 }
 
@@ -148,10 +149,10 @@ void usun_ksiazke(struct ksiazki* wpis) {
 }
 
 void zarzadzaj_klientem() {
-    int numer_karty;
+    int ID;
     printf("Podaj numer ID ksiazki: \n");
-    scanf("%d", &numer_karty);
-    struct ksiazki* wpis = wyszukaj_klienta(numer_karty);
+    scanf("%d", &ID);
+    struct ksiazki* wpis = wyszukaj_ksiazke(ID);
     if (wpis == NULL) {
         printf("Nie znaleziono ksiazki \n");
         zarzadzaj_klientem();
@@ -187,7 +188,7 @@ void usunedytuj_ksiazke(struct ksiazki* wpis) {
         break;
     case 4:
         usun_ksiazke(wpis);
-        menu_klientow();
+        menu_ksiazek();
         break;
     case 5:
         wyjscie();
@@ -222,7 +223,7 @@ void wczytaniepliku_ksiazki()
     while (!feof (plik))
     {
         wpis = malloc(sizeof(baza));
-        fscanf(plik, "%d %s %s %s %s", &wpis->numer_karty, &wpis->tytul, &wpis->autor, &wpis->gatunek, &wpis->email);
+        fscanf(plik, "%d %s %s %s %s", &wpis->ID, &wpis->tytul, &wpis->autor, &wpis->gatunek);
         if (poczatek == NULL) {
             poczatek = wpis;
             poprzedni = wpis;
@@ -240,7 +241,7 @@ void wczytaniepliku_ksiazki()
 void zapispliku_ksiazki() {
     FILE *plik = fopen("ksiazki.csv", "w");
     for(struct ksiazki *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
-        fprintf(plik, "%d %s %s %s %s\n", wpis->numer_karty, wpis->tytul, wpis->autor, wpis->gatunek, wpis->email);
+        fprintf(plik, "%d %s %s %s %s\n", wpis->ID, wpis->tytul, wpis->autor, wpis->gatunek);
     }
 }
 

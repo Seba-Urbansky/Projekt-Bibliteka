@@ -22,7 +22,7 @@ struct ksiazki
 
     struct ksiazki *poprzedni, *nastepny;
 
-} baza;
+} baza3;
 
 void wyswietl_baze_ksiazek();
 void dodaj_ksiazke();
@@ -41,7 +41,7 @@ void edytuj_autora(struct ksiazki* wpis);
 void edytuj_rok(struct ksiazki* wpis);
 void edytuj_ID(struct ksiazki* wpis);
 void wyjscie();
-void wyswietl_baze_ksiazek()
+void wyswietl_baze_ksiazek();
 
 
 #endif

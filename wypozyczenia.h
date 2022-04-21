@@ -13,14 +13,14 @@ struct wypozyczenia
 {
 
     int numer_karty;
-    int ID;ś
+    int ID;
     char* kiedy[MAX];
     char* dokiedy[MAX];
     
 
     struct wypozyczenia *poprzedni, *nastepny;
 
-} baza;
+} baza2;
 
 
 

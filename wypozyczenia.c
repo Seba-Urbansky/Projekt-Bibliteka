@@ -10,18 +10,7 @@ void menu_wypozyczen();
 
 
 
-struct wypozyczenia
-{
 
-    int numer_karty;
-    int ID;ś
-    char* kiedy[MAX];
-    char* dokiedy[MAX];
-    
-
-    struct wypozyczenia *poprzedni, *nastepny;
-
-} baza;
 
 struct wypozyczenia *poczatek = NULL;
 struct wypozyczenia *koniec = NULL;

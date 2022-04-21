@@ -6,21 +6,7 @@
 // Dodawanie/usuwanie/edycja książek (ID, tytuł, rok, autor, gatunek, liczba egzemplarzy, liczba wypożyczonych).
 // http://fizyka.umk.pl/~leii/wskaznikiStrukturyAiR.pdf
 
-struct ksiazki
-{
 
-    int ID;
-    int rok;
-    int liczba_egzemplarzy;
-    int liczba_wypozyczonych;
-    char* tytul[MAX];
-    char* autor[MAX];
-    char* gatunek[MAX];
-    
-
-    struct ksiazki *poprzedni, *nastepny;
-
-} baza;
 
 struct ksiazki *poczatek = NULL;
 struct ksiazki *koniec = NULL;

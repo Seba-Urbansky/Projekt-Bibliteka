@@ -6,18 +6,7 @@
 
 // http://fizyka.umk.pl/~leii/wskaznikiStrukturyAiR.pdf
 
-struct klient
-{
 
-    int numer_karty;
-    char* imie[MAX];
-    char* nazwisko[MAX];
-    char* telefon[MAX];
-    char* email[MAX];
-
-    struct klient *poprzedni, *nastepny;
-
-} baza;
 
 struct klient *poczatek = NULL;
 struct klient *koniec = NULL;

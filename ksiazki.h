@@ -7,8 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-struct _ksiazki
+struct ksiazki
 {
 
     int ID;
@@ -20,9 +19,9 @@ struct _ksiazki
     char* gatunek[MAX];
     
 
-    struct _ksiazki *poprzedni, *nastepny;
+    struct ksiazki *poprzedni, *nastepny;
 
-} baza3;
+} baza;
 
 void wyswietl_baze_ksiazek();
 void dodaj_ksiazke();

@@ -26,11 +26,7 @@ struct wypozyczenia
 struct wypozyczenia *poczatek = NULL;
 struct wypozyczenia *koniec = NULL;
 
-void wyswietl_kto_wypozyczyl();
-void ID_ksiazki();
-void kiedy();
-void do_kiedy();
-void wydrukuj_wypozyczenia();
+
 
 void wydrukuj_wypozyczenia(struct wypozyczenia* wpis) {
     printf ("%d ", wpis->ID);

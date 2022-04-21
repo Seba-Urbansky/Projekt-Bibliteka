@@ -25,24 +25,6 @@ struct ksiazki
 struct ksiazki *poczatek = NULL;
 struct ksiazki *koniec = NULL;
 
-void wyswietl_baze_ksiazek();
-void dodaj_ksiazke();
-void edytuj_ksiazke();
-void usun_ksiazke();
-void menu();
-void menu_ksiazek();
-void wczytaniepliku_klienci();
-void zapispliku_klienci();
-void ksiazka_do_zarzadzania();
-void wydrukuj_ksiazki(struct ksiazki* wpis);
-void edytuj_tytul_ksiazki(struct ksiazki* wpis);
-void edytuj_gatunek_ksiazki(struct ksiazki* wpis);
-void usunedytuj_ksiazke(struct ksiazki* wpis);
-void edytuj_autora(struct ksiazki* wpis);
-void edytuj_rok(struct ksiazki* wpis);
-void edytuj_ID(struct ksiazki* wpis);
-void wyjscie();
-void wyswietl_baze_ksiazek()
 
 {
     printf ("BAZA KLIENTOW ------------------------\n");

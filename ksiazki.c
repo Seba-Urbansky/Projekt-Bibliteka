@@ -25,9 +25,9 @@ struct ksiazki
 struct ksiazki *poczatek = NULL;
 struct ksiazki *koniec = NULL;
 
-
+void wyswietl_baze_ksiazek()
 {
-    printf ("BAZA KLIENTOW ------------------------\n");
+    printf ("BAZA KSIAZEK ------------------------\n");
     for (struct ksiazki *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
         wydrukuj_ksiazki(wpis);
     }
@@ -186,7 +186,7 @@ void usunedytuj_ksiazke(struct ksiazki* wpis) {
 
 void wyjscie() {
     printf("Zamykanie programu...");
-    zapispliku_klienci();
+    zapispliku_ksiazki();
     exit(0);
 }
 
@@ -228,6 +228,6 @@ void zapispliku_ksiazki() {
 }
 
 int main() {
-    wczytaniepliku_klienci();
+    wczytaniepliku_ksiazki();
     menu();
 }

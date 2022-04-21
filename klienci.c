@@ -11,7 +11,7 @@
 struct klient *poczatek = NULL;
 struct klient *koniec = NULL;
 
-
+void wyswietl_baze_klientow()
 {
     printf ("BAZA KLIENTOW ------------------------\n");
     for (struct klient *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {

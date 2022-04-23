@@ -12,8 +12,8 @@ void menu_wypozyczen();
 
 
 
-struct Wypozyczenia *poczatek = NULL;
-struct Wypozyczenia *koniec = NULL;
+ Wypozyczenia *poczatek = NULL;
+ Wypozyczenia *koniec = NULL;
 
 
 

@@ -8,8 +8,8 @@
 
 
 
-struct Klient *poczatek = NULL;
-struct Klient *koniec = NULL;
+ Klient *poczatek = NULL;
+ Klient *koniec = NULL;
 
 void wyswietl_baze_klientow()
 {

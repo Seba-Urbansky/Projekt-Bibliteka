@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct ksiazki
+struct KsiazkiStruktura
 {
 
     int ID;
@@ -19,9 +19,9 @@ struct ksiazki
     char* gatunek[MAX];
     
 
-    struct ksiazki *poprzedni, *nastepny;
+    struct KsiazkiStruktura *poprzedni, *nastepny;
 
-} baza;
+} Ksiazki;
 
 void wyswietl_baze_ksiazek();
 void dodaj_ksiazke();
@@ -32,13 +32,13 @@ void menu_ksiazek();
 void wczytaniepliku_ksiazki();
 void zapispliku_ksiazki();
 void ksiazka_do_zarzadzania();
-void wydrukuj_ksiazki(struct ksiazki* wpis);
-void edytuj_tytul_ksiazki(struct ksiazki* wpis);
-void edytuj_gatunek_ksiazki(struct ksiazki* wpis);
-void usunedytuj_ksiazke(struct ksiazki* wpis);
-void edytuj_autora(struct ksiazki* wpis);
-void edytuj_rok(struct ksiazki* wpis);
-void edytuj_ID(struct ksiazki* wpis);
+void wydrukuj_ksiazki(struct KsiazkiStruktura* wpis);
+void edytuj_tytul_ksiazki(struct KsiazkiStruktura* wpis);
+void edytuj_gatunek_ksiazki(struct KsiazkiStruktura* wpis);
+void usunedytuj_ksiazke(struct KsiazkiStruktura* wpis);
+void edytuj_autora(struct KsiazkiStruktura* wpis);
+void edytuj_rok(struct KsiazkiStruktura* wpis);
+void edytuj_ID(struct KsiazkiStruktura* wpis);
 void wyjscie();
 void wyswietl_baze_ksiazek();
 

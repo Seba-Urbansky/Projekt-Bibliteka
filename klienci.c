@@ -8,13 +8,13 @@
 
 
 
-struct klient *poczatek = NULL;
-struct klient *koniec = NULL;
+struct KlientStruktura *poczatek = NULL;
+struct KlientStruktura *koniec = NULL;
 
 void wyswietl_baze_klientow()
 {
     printf ("BAZA KLIENTOW ------------------------\n");
-    for (struct klient *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
+    for (struct KlientStruktura *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
         wydrukuj_klienta(wpis);
     }
     printf ("--------------------------------------\n\n");
@@ -23,7 +23,7 @@ void wyswietl_baze_klientow()
 
 void dodaj_klienta()
 {
-    struct klient *wpis = (struct klient *)malloc(sizeof(baza));
+    struct KlientStruktura *wpis = (struct KlientStruktura *)malloc(sizeof(Klient));
 
     edytuj_numeru_karty(wpis);
     edytuj_imie_klienta(wpis);
@@ -39,8 +39,8 @@ void dodaj_klienta()
 }
 
 
-struct klient* wyszukaj_klienta(int numer_karty) {
-    for(struct klient *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
+struct KlientStruktura* wyszukaj_klienta(int numer_karty) {
+    for(struct KlientStruktura *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
         if (wpis->numer_karty==numer_karty) {
             return wpis;
         } 
@@ -48,7 +48,7 @@ struct klient* wyszukaj_klienta(int numer_karty) {
     return NULL;
 }
 
-void wydrukuj_klienta(struct klient* wpis) {
+void wydrukuj_klienta(struct KlientStruktura* wpis) {
     printf ("%d ", wpis->numer_karty);
     printf ("%s ", wpis->imie);
     printf ("%s ", wpis->nazwisko);
@@ -57,7 +57,7 @@ void wydrukuj_klienta(struct klient* wpis) {
     printf ("\n");
 }
 
-void edytuj_imie_klienta(struct klient* wpis) {
+void edytuj_imie_klienta(struct KlientStruktura* wpis) {
     char imie[MAX] = "";
     printf("Podaj imie: \n");
     scanf("%s", &imie);
@@ -69,26 +69,26 @@ void edytuj_imie_klienta(struct klient* wpis) {
     }
 }
 
-void edytuj_telefon_klienta(struct klient* wpis) {
+void edytuj_telefon_klienta(struct KlientStruktura* wpis) {
     printf("Podaj telefon: \n");
     scanf("%s", &wpis->telefon);
 }
 
-void edytuj_email_klienta(struct klient* wpis) {
+void edytuj_email_klienta(struct KlientStruktura* wpis) {
     printf("Podaj email: \n");
     scanf("%s", &wpis->email);
 }
 
-void edytuj_nazwisko_klienta(struct klient* wpis) {
+void edytuj_nazwisko_klienta(struct KlientStruktura* wpis) {
     printf("Podaj nazwisko: \n");
     scanf("%s", &wpis->nazwisko);
 }
 
-void edytuj_numeru_karty(struct klient* wpis) {
+void edytuj_numeru_karty(struct KlientStruktura* wpis) {
     int numer_karty;
     printf("Podaj numer karty klienta: \n");
     scanf("%d", &numer_karty);
-    struct klient* wyszukany_klient = wyszukaj_klienta(numer_karty);
+    struct KlientStruktura* wyszukany_klient = wyszukaj_klienta(numer_karty);
     if (wyszukany_klient != NULL) {
         printf("Podany numer karty juz istnieje.\n");
         edytuj_numeru_karty(wpis);
@@ -98,9 +98,9 @@ void edytuj_numeru_karty(struct klient* wpis) {
 }
 
 
-void usun_klienta(struct klient* wpis) {
-    struct klient *poprzedni = wpis->poprzedni;
-    struct klient *nastepny = wpis->nastepny;
+void usun_klienta(struct KlientStruktura* wpis) {
+    struct KlientStruktura *poprzedni = wpis->poprzedni;
+    struct KlientStruktura *nastepny = wpis->nastepny;
     if (poprzedni == NULL && nastepny == NULL) {
         poczatek = NULL;
         koniec = NULL;
@@ -120,7 +120,7 @@ void zarzadzaj_klientem() {
     int numer_karty;
     printf("Podaj numer karty klienta: \n");
     scanf("%d", &numer_karty);
-    struct klient* wpis = wyszukaj_klienta(numer_karty);
+    struct KlientStruktura* wpis = wyszukaj_klienta(numer_karty);
     if (wpis == NULL) {
         printf("Nie znaleziono klienta \n");
         zarzadzaj_klientem();
@@ -129,7 +129,7 @@ void zarzadzaj_klientem() {
     }
 }
 
-void usunedytuj_klient(struct klient* wpis) {
+void usunedytuj_klient(struct KlientStruktura* wpis) {
     int wybor;
 
     printf("Witamy w Zarzadzaniu Klientem \n\n");
@@ -185,11 +185,11 @@ void wczytaniepliku_klienci()
     FILE *plik;
     plik = fopen("klienci.csv", "r");
 
-    struct klient *wpis = (struct klient *)malloc(sizeof(baza));
-    struct klient *poprzedni;
+    struct KlientStruktura *wpis = (struct KlientStruktura *)malloc(sizeof(Klient));
+    struct KlientStruktura *poprzedni;
     while (!feof (plik))
     {
-        wpis = malloc(sizeof(baza));
+        wpis = malloc(sizeof(Klient));
         fscanf(plik, "%d %s %s %s %s", &wpis->numer_karty, &wpis->imie, &wpis->nazwisko, &wpis->telefon, &wpis->email);
         if (poczatek == NULL) {
             poczatek = wpis;
@@ -207,7 +207,7 @@ void wczytaniepliku_klienci()
 
 void zapispliku_klienci() {
     FILE *plik = fopen("klienci.csv", "w");
-    for(struct klient *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
+    for(struct KlientStruktura *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
         fprintf(plik, "%d %s %s %s %s\n", wpis->numer_karty, wpis->imie, wpis->nazwisko, wpis->telefon, wpis->email);
     }
 }

@@ -8,13 +8,13 @@
 
 
 
-struct ksiazki *poczatek = NULL;
-struct ksiazki *koniec = NULL;
+struct KsiazkiStruktura *poczatek = NULL;
+struct KsiazkiStruktura *koniec = NULL;
 
 void wyswietl_baze_ksiazek()
 {
     printf ("BAZA KSIAZEK ------------------------\n");
-    for (struct ksiazki *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
+    for (struct KsiazkiStruktura *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
         wydrukuj_ksiazki(wpis);
     }
     printf ("--------------------------------------\n\n");
@@ -23,7 +23,7 @@ void wyswietl_baze_ksiazek()
 
 void dodaj_ksiazke()
 {
-    struct ksiazki *wpis = (struct ksiazki *)malloc(sizeof(baza));
+    struct KsiazkiStruktura *wpis = (struct KsiazkiStruktura *)malloc(sizeof(Ksiazki));
 
     edytuj_ID(wpis);
     edytuj_tytul_ksiazki(wpis);
@@ -39,8 +39,8 @@ void dodaj_ksiazke()
 }
 
 
-struct ksiazki* wyszukaj_ksiazke(int ID) {
-    for(struct ksiazki *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
+struct KsiazkiStruktura* wyszukaj_ksiazke(int ID) {
+    for(struct KsiazkiStruktura *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
         if (wpis->ID==ID) {
             return wpis;
         } 
@@ -48,7 +48,7 @@ struct ksiazki* wyszukaj_ksiazke(int ID) {
     return NULL;
 }
 
-void wydrukuj_ksiazki(struct ksiazki* wpis) {
+void wydrukuj_ksiazki(struct KsiazkiStruktura* wpis) {
     printf ("%d ", wpis->ID);
     printf ("%s ", wpis->tytul);
     printf ("%s ", wpis->autor);
@@ -57,7 +57,7 @@ void wydrukuj_ksiazki(struct ksiazki* wpis) {
     printf ("\n");
 }
 
-void edytuj_tytul_ksiazki(struct ksiazki* wpis) {
+void edytuj_tytul_ksiazki(struct KsiazkiStruktura* wpis) {
     char imie[MAX] = "";
     printf("Podaj tytul: \n");
     scanf("%s", &imie);
@@ -69,26 +69,26 @@ void edytuj_tytul_ksiazki(struct ksiazki* wpis) {
     }
 }
 
-void edytuj_autora(struct ksiazki* wpis) {
+void edytuj_autora(struct KsiazkiStruktura* wpis) {
     printf("Podaj nowego autora: \n");
     scanf("%s", &wpis->autor);
 }
 
-void edytuj_rok(struct ksiazki* wpis) {
+void edytuj_rok(struct KsiazkiStruktura* wpis) {
     printf("Podaj nowy rok: \n");
     scanf("%s", &wpis->rok);
 }
 
-void edytuj_gatunek_ksiazki(struct ksiazki* wpis) {
+void edytuj_gatunek_ksiazki(struct KsiazkiStruktura* wpis) {
     printf("Podaj nowy gatunek literacki: \n");
     scanf("%s", &wpis->gatunek);
 }
 
-void edytuj_ID(struct ksiazki* wpis) {
+void edytuj_ID(struct KsiazkiStruktura* wpis) {
     int ID;
     printf("Podaj ID ksiazki \n");
     scanf("%d", &ID);
-    struct ksiazki* wyszukany_klient = wyszukaj_ksiazke(ID);
+    struct KsiazkiStruktura* wyszukany_klient = wyszukaj_ksiazke(ID);
     if (wyszukany_klient != NULL) {
         printf("Podany ID ksiazki juz istnieje.\n");
         edytuj_ID(wpis);
@@ -98,9 +98,9 @@ void edytuj_ID(struct ksiazki* wpis) {
 }
 
 
-void usun_ksiazke(struct ksiazki* wpis) {
-    struct ksiazki *poprzedni = wpis->poprzedni;
-    struct ksiazki *nastepny = wpis->nastepny;
+void usun_ksiazke(struct KsiazkiStruktura* wpis) {
+    struct KsiazkiStruktura *poprzedni = wpis->poprzedni;
+    struct KsiazkiStruktura *nastepny = wpis->nastepny;
     if (poprzedni == NULL && nastepny == NULL) {
         poczatek = NULL;
         koniec = NULL;
@@ -120,7 +120,7 @@ void zarzadzaj_klientem() {
     int ID;
     printf("Podaj numer ID ksiazki: \n");
     scanf("%d", &ID);
-    struct ksiazki* wpis = wyszukaj_ksiazke(ID);
+    struct KsiazkiStruktura* wpis = wyszukaj_ksiazke(ID);
     if (wpis == NULL) {
         printf("Nie znaleziono ksiazki \n");
         zarzadzaj_klientem();
@@ -129,7 +129,7 @@ void zarzadzaj_klientem() {
     }
 }
 
-void usunedytuj_ksiazke(struct ksiazki* wpis) {
+void usunedytuj_ksiazke(struct KsiazkiStruktura* wpis) {
     int wybor;
 
     printf("Witamy w Zarzadzaniu Ksiazkami \n\n");
@@ -186,11 +186,11 @@ void wczytaniepliku_ksiazki()
     FILE *plik;
     plik = fopen("ksiazki.csv", "r");
 
-    struct ksiazki *wpis = (struct ksiazki *)malloc(sizeof(baza));
-    struct ksiazki *poprzedni;
+    struct KsiazkiStruktura *wpis = (struct KsiazkiStruktura *)malloc(sizeof(Ksiazki));
+    struct KsiazkiStruktura *poprzedni;
     while (!feof (plik))
     {
-        wpis = malloc(sizeof(baza));
+        wpis = malloc(sizeof(Ksiazki));
         fscanf(plik, "%d %s %s %s %s", &wpis->ID, &wpis->tytul, &wpis->autor, &wpis->gatunek);
         if (poczatek == NULL) {
             poczatek = wpis;
@@ -208,7 +208,7 @@ void wczytaniepliku_ksiazki()
 
 void zapispliku_ksiazki() {
     FILE *plik = fopen("ksiazki.csv", "w");
-    for(struct ksiazki *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
+    for(struct KsiazkiStruktura *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
         fprintf(plik, "%d %s %s %s %s\n", wpis->ID, wpis->tytul, wpis->autor, wpis->gatunek);
     }
 }

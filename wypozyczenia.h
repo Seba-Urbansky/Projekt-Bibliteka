@@ -9,7 +9,7 @@
 #include <stdlib.h>
 
 
-struct wypozyczenia
+struct WypozyczeniaStruktura
 {
 
     int numer_karty;
@@ -18,9 +18,9 @@ struct wypozyczenia
     char* dokiedy[MAX];
     
 
-    struct wypozyczenia *poprzedni, *nastepny;
+    struct WypozyczeniaStruktura *poprzedni, *nastepny;
 
-} baza2;
+} Wypozyczenia;
 
 
 

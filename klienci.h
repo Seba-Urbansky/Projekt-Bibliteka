@@ -8,7 +8,7 @@
 #include <stdlib.h>
 
 
-struct klient
+struct KlientStruktura
 {
 
     int numer_karty;
@@ -17,9 +17,9 @@ struct klient
     char* telefon[MAX];
     char* email[MAX];
 
-    struct klient *poprzedni, *nastepny;
+    struct KlientStruktura *poprzedni, *nastepny;
 
-} baza;
+} Klient;
 
 
 void wyswietl_baze_klientow();
@@ -31,13 +31,13 @@ void menu_klientow();
 void wczytaniepliku_klienci();
 void zapispliku_klienci();
 void znajdz_klienta_do_zarzadzania();
-void wydrukuj_klienta(struct klient* wpis);
-void edytuj_imie_klienta(struct klient* wpis);
-void edytuj_nazwisko_klienta(struct klient* wpis);
-void usunedytuj_klient(struct klient* wpis);
-void edytuj_telefon_klienta(struct klient* wpis);
-void edytuj_email_klienta(struct klient* wpis);
-void edytuj_numeru_karty(struct klient* wpis);
+void wydrukuj_klienta(struct KlientStruktura* wpis);
+void edytuj_imie_klienta(struct KlientStruktura* wpis);
+void edytuj_nazwisko_klienta(struct KlientStruktura* wpis);
+void usunedytuj_klient(struct KlientStruktura* wpis);
+void edytuj_telefon_klienta(struct KlientStruktura* wpis);
+void edytuj_email_klienta(struct KlientStruktura* wpis);
+void edytuj_numeru_karty(struct KlientStruktura* wpis);
 void wyjscie();
 void wyswietl_baze_klientow();
 

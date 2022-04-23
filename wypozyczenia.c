@@ -12,12 +12,12 @@ void menu_wypozyczen();
 
 
 
-struct wypozyczenia *poczatek = NULL;
-struct wypozyczenia *koniec = NULL;
+struct WypozyczeniaStruktura *poczatek = NULL;
+struct WypozyczeniaStruktura *koniec = NULL;
 
 
 
-void wydrukuj_wypozyczenia(struct wypozyczenia* wpis) {
+void wydrukuj_wypozyczenia(struct WypozyczeniaStruktura* wpis) {
     printf ("%d ", wpis->ID);
     printf ("%s ", wpis->numer_karty);
     printf ("%s ", wpis->kiedy);
@@ -31,7 +31,7 @@ void wydrukuj_wypozyczenia(struct wypozyczenia* wpis) {
 void wyswietl_kto_wypozyczyl()
 {
     printf ("BAZA WYPOZYCZEN ------------------------\n");
-    for (struct wypozyczenia *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
+    for (struct WypozyczeniaStruktura *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
         wydrukuj_wypozyczenia(wpis);
     }
     printf ("--------------------------------------\n\n");

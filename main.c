@@ -17,6 +17,9 @@ void menu_klientow();
 void menu_ksiazek();
 void menu_wypozyczen();
 void zarzadzaj_klientem();
+void menu();
+
+
 void menu_klientow()
 {
     int wybor;

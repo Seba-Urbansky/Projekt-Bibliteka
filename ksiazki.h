@@ -27,7 +27,6 @@ void wyswietl_baze_ksiazek();
 void dodaj_ksiazke();
 void edytuj_ksiazke();
 void usun_ksiazke();
-void menu();
 void menu_ksiazek();
 void wczytaniepliku_ksiazki();
 void zapispliku_ksiazki();
@@ -41,6 +40,7 @@ void edytuj_rok(struct KsiazkiStruktura* wpis);
 void edytuj_ID(struct KsiazkiStruktura* wpis);
 void wyjscie();
 void wyswietl_baze_ksiazek();
+void zarzadzaj_klientem();
 
 
 #endif

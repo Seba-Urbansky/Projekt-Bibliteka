@@ -215,5 +215,5 @@ void zapispliku_ksiazki() {
 
 int main() {
     wczytaniepliku_ksiazki();
-    menu();
+    menu_ksiazek();
 }

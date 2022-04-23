@@ -26,7 +26,6 @@ void wyswietl_baze_klientow();
 void dodaj_klienta();
 void edytuj_klienta();
 void usun_klienta();
-void menu();
 void menu_klientow();
 void wczytaniepliku_klienci();
 void zapispliku_klienci();
@@ -40,5 +39,6 @@ void edytuj_email_klienta(struct KlientStruktura* wpis);
 void edytuj_numeru_karty(struct KlientStruktura* wpis);
 void wyjscie();
 void wyswietl_baze_klientow();
+void zarzadzaj_klientem();
 
 #endif

@@ -35,7 +35,7 @@ void wyswietl_kto_wypozyczyl()
         wydrukuj_wypozyczenia(wpis);
     }
     printf ("--------------------------------------\n\n");
-    menu_klientow();
+    menu_wypozyczen();
 }
 
 

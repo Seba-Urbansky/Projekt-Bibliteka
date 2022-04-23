@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct KsiazkiStruktura
+typedef struct KsiazkiStruktura
 {
 
     int ID;

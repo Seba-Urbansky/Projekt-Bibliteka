@@ -9,7 +9,7 @@
 #include <stdlib.h>
 
 
-struct WypozyczeniaStruktura
+typedef struct WypozyczeniaStruktura
 {
 
     int numer_karty;

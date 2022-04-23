@@ -8,7 +8,7 @@
 #include <stdlib.h>
 
 
-struct KlientStruktura
+typedef struct KlientStruktura
 {
 
     int numer_karty;

@@ -8,8 +8,8 @@
 
 
 
-struct KsiazkiStruktura *poczatek = NULL;
-struct KsiazkiStruktura *koniec = NULL;
+struct Ksiazki *poczatek = NULL;
+struct Ksiazki *koniec = NULL;
 
 void wyswietl_baze_ksiazek()
 {

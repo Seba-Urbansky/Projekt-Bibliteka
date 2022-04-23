@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #define MAX 32
-#include "klienci.h"
+
 
 // http://fizyka.umk.pl/~leii/wskaznikiStrukturyAiR.pdf
 

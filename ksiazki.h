@@ -40,6 +40,7 @@ void edytuj_autora(struct KsiazkiStruktura* wpis);
 void edytuj_rok(struct KsiazkiStruktura* wpis);
 void edytuj_ID(struct KsiazkiStruktura* wpis);
 void wyswietl_baze_ksiazek();
+Ksiazki* wyszukaj_ksiazke(int ID);
 
 
 

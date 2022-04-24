@@ -6,6 +6,7 @@
 #include "klienci.h"
 #include "wypozyczenia.h"
 #include "ksiazki.h"
+#include "common.h"
 // menu
 
 // cale polecenie projektu

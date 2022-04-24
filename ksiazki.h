@@ -34,12 +34,11 @@ void ksiazka_do_zarzadzania();
 void wydrukuj_ksiazki(struct KsiazkiStruktura* wpis);
 void edytuj_tytul_ksiazki(struct KsiazkiStruktura* wpis);
 void edytuj_gatunek_ksiazki(struct KsiazkiStruktura* wpis);
-void usunedytuj_ksiazke(struct KsiazkiStruktura* wpis);
 void edytuj_autora(struct KsiazkiStruktura* wpis);
 void edytuj_rok(struct KsiazkiStruktura* wpis);
 void edytuj_ID(struct KsiazkiStruktura* wpis);
 void wyswietl_baze_ksiazek();
-void zarzadzaj_klientem();
+
 
 
 #endif

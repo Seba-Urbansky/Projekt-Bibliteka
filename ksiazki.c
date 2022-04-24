@@ -117,56 +117,6 @@ void usun_ksiazke(Ksiazki* wpis) {
     }
 }
 
-void zarzadzaj_klientem() {
-    int ID;
-    printf("Podaj numer ID ksiazki: \n");
-    scanf("%d", &ID);
-    Ksiazki* wpis = wyszukaj_ksiazke(ID);
-    if (wpis == NULL) {
-        printf("Nie znaleziono ksiazki \n");
-        zarzadzaj_klientem();
-    } else {
-        usunedytuj_ksiazke(wpis);
-    }
-}
-
-void usunedytuj_ksiazke(Ksiazki* wpis) {
-    int wybor;
-
-    printf("Witamy w Zarzadzaniu Ksiazkami \n\n");
-    printf("1. Wydrukuj ksiazki \n");
-    printf("2. Edytuj tytul ksiazki \n");
-    printf("3. Edytuj gatunek ksiazki\n");
-    printf("4. Usun ksiazke\n");
-    printf("5. Wyjscie z programu i zapisanie danych\n");
-    scanf("%d", &wybor);
-    printf("\n");
-
-    switch (wybor) {
-    case 1:
-        wydrukuj_ksiazki(wpis);
-        usunedytuj_ksiazke(wpis);
-        break;
-    case 2:
-        edytuj_tytul_ksiazki(wpis);
-        usunedytuj_ksiazke(wpis);
-        break;
-    case 3:
-        edytuj_gatunek_ksiazki(wpis);
-        usunedytuj_ksiazke(wpis);
-        break;
-    case 4:
-        usun_ksiazke(wpis);
-        menu_ksiazek();
-        break;
-    case 5:
-        wyjscie();
-        break;
-    default:
-        printf("Niepoprawna instrukcja");
-        break;
-    }
-}
 
 
 

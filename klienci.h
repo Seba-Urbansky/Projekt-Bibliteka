@@ -33,11 +33,10 @@ void znajdz_klienta_do_zarzadzania();
 void wydrukuj_klienta(struct KlientStruktura* wpis);
 void edytuj_imie_klienta(struct KlientStruktura* wpis);
 void edytuj_nazwisko_klienta(struct KlientStruktura* wpis);
-void usunedytuj_klient(struct KlientStruktura* wpis);
 void edytuj_telefon_klienta(struct KlientStruktura* wpis);
 void edytuj_email_klienta(struct KlientStruktura* wpis);
 void edytuj_numeru_karty(struct KlientStruktura* wpis);
 void wyswietl_baze_klientow();
-void zarzadzaj_klientem();
+
 
 #endif

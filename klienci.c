@@ -117,56 +117,8 @@ void usun_klienta(Klient* wpis) {
     }
 }
 
-void zarzadzaj_klientem() {
-    int numer_karty;
-    printf("Podaj numer karty klienta: \n");
-    scanf("%d", &numer_karty);
-     Klient* wpis = wyszukaj_klienta(numer_karty);
-    if (wpis == NULL) {
-        printf("Nie znaleziono klienta \n");
-        zarzadzaj_klientem();
-    } else {
-        usunedytuj_klient(wpis);
-    }
-}
 
-void usunedytuj_klient(Klient* wpis) {
-    int wybor;
 
-    printf("Witamy w Zarzadzaniu Klientem \n\n");
-    printf("1. Wydrukuj klienta \n");
-    printf("2. Edytuj imie \n");
-    printf("3. Edytuj nazwisko \n");
-    printf("4. Usun klienta\n");
-    printf("5. Wyjscie z programu i zapisanie danych\n");
-    scanf("%d", &wybor);
-    printf("\n");
-
-    switch (wybor) {
-    case 1:
-        wydrukuj_klienta(wpis);
-        usunedytuj_klient(wpis);
-        break;
-    case 2:
-        edytuj_imie_klienta(wpis);
-        usunedytuj_klient(wpis);
-        break;
-    case 3:
-        edytuj_nazwisko_klienta(wpis);
-        usunedytuj_klient(wpis);
-        break;
-    case 4:
-        usun_klienta(wpis);
-        menu_klientow();
-        break;
-    case 5:
-        wyjscie();
-        break;
-    default:
-        printf("Niepoprawna instrukcja");
-        break;
-    }
-}
 
 
 

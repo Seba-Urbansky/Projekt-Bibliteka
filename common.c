@@ -15,17 +15,9 @@
 
 void wyjscie() {
     printf("Zamykanie programu...");
-    zapispliku_klienci();
+    
     exit(0);
 }
 
 
 
-int main()
-
-
-{
-
-
-
-}

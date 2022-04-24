@@ -7,7 +7,7 @@
 #include "wypozyczenia.h"
 #include "ksiazki.h"
 #include "common.h"
-
+#include "menu.h"
 
 // cale polecenie projektu
 // Biblioteka. Dodawanie/usuwanie/edycja klientów (numer karty, nazwisko, imię, telefon, E-mail). Dodawanie/usuwanie/edycja książek (ID, tytuł, rok, autor, gatunek, liczba egzemplarzy, liczba wypożyczonych). 

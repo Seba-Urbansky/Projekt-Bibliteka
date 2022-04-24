@@ -19,7 +19,7 @@ void wyswietl_baze_klientow()
         wydrukuj_klienta(wpis);
     }
     printf ("--------------------------------------\n\n");
-    menu_klientow();
+    
 }
 
 void dodaj_klienta()
@@ -36,7 +36,7 @@ void dodaj_klienta()
     wpis->poprzedni = koniec;
     koniec = wpis;
 
-    menu_klientow();
+    
 }
 
 
@@ -163,5 +163,5 @@ void zapispliku_klienci() {
 
 int main() {
     wczytaniepliku_klienci();
-    menu_klientow();
+    
 }

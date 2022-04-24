@@ -15,7 +15,7 @@ void wyswietl_baze_ksiazek()
 {
     printf ("BAZA KSIAZEK ------------------------\n");
     for (Ksiazki *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
-        wydrukuj_ksiazki(wpis);
+        wydrukuj_ksiazke(wpis);
     }
     printf ("--------------------------------------\n\n");
    

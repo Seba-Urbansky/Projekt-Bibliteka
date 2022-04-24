@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define MAX 32
 #include "ksiazki.h"
 #include "common.h"
 // Dodawanie/usuwanie/edycja książek (ID, tytuł, rok, autor, gatunek, liczba egzemplarzy, liczba wypożyczonych).
@@ -49,7 +48,7 @@ Ksiazki* wyszukaj_ksiazke(int ID) {
     return NULL;
 }
 
-void wydrukuj_ksiazki(Ksiazki* wpis) {
+void wydrukuj_ksiazke(Ksiazki* wpis) {
     printf ("%d ", wpis->ID);
     printf ("%s ", wpis->tytul);
     printf ("%s ", wpis->autor);

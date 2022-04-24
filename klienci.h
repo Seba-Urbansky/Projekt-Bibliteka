@@ -2,7 +2,7 @@
 
 #ifndef KLIENCI_H
 #define KLIENCI_H
-#define MAX 32
+
 
 
 #include <stdio.h>
@@ -38,6 +38,7 @@ void edytuj_telefon_klienta(struct KlientStruktura* wpis);
 void edytuj_email_klienta(struct KlientStruktura* wpis);
 void edytuj_numeru_karty(struct KlientStruktura* wpis);
 void wyswietl_baze_klientow();
+void wyszukaj_klienta();
 
 
 #endif

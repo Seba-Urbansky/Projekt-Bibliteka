@@ -2,7 +2,7 @@
 
 #ifndef KSIAZKI_H
 #define KSIAZKI_H
-#define MAX 32
+
 
 
 #include <stdio.h>
@@ -32,13 +32,14 @@ void menu_ksiazek();
 void wczytaniepliku_ksiazki();
 void zapispliku_ksiazki();
 void ksiazka_do_zarzadzania();
-void wydrukuj_ksiazki(struct KsiazkiStruktura* wpis);
+void wydrukuj_ksiazke(struct KsiazkiStruktura* wpis);
 void edytuj_tytul_ksiazki(struct KsiazkiStruktura* wpis);
 void edytuj_gatunek_ksiazki(struct KsiazkiStruktura* wpis);
 void edytuj_autora(struct KsiazkiStruktura* wpis);
 void edytuj_rok(struct KsiazkiStruktura* wpis);
 void edytuj_ID(struct KsiazkiStruktura* wpis);
 void wyswietl_baze_ksiazek();
+void wyszukaj_ksiazke();
 
 
 

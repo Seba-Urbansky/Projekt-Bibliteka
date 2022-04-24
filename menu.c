@@ -8,7 +8,7 @@
 #include "wypozyczenia.h"
 #include "ksiazki.h"
 #include "common.h"
-
+#include "menu.h"
 // menu calego programu
 void menu()
 {

@@ -1,6 +1,7 @@
 
 #ifndef COMMON_H
 #define COMMON_H
+#define MAX 32
 
 #include <stdio.h>
 #include <stdlib.h>

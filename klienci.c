@@ -3,6 +3,7 @@
 #include <string.h>
 #define MAX 32
 #include "klienci.h"
+#include "common.h"
 
 // http://fizyka.umk.pl/~leii/wskaznikiStrukturyAiR.pdf
 
@@ -169,11 +170,7 @@ void usunedytuj_klient(Klient* wpis) {
 
 
 
-void wyjscie() {
-    printf("Zamykanie programu...");
-    zapispliku_klienci();
-    exit(0);
-}
+
 
 /*|||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*|||||||||||||||||||||||||||||||||||||||||||||||||||||*/

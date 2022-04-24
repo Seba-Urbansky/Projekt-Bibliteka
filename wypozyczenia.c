@@ -3,6 +3,7 @@
 #include <string.h>
 #define MAX 32
 #include "wypozyczenia.h"
+#include "common.h"
 // Wypożyczanie/oddawanie książek (kto wypożyczył (numer karty), którą książkę (ID), kiedy, do kiedy). 
 // http://fizyka.umk.pl/~leii/wskaznikiStrukturyAiR.pdf
 

@@ -37,7 +37,6 @@ void usunedytuj_klient(struct KlientStruktura* wpis);
 void edytuj_telefon_klienta(struct KlientStruktura* wpis);
 void edytuj_email_klienta(struct KlientStruktura* wpis);
 void edytuj_numeru_karty(struct KlientStruktura* wpis);
-void wyjscie();
 void wyswietl_baze_klientow();
 void zarzadzaj_klientem();
 

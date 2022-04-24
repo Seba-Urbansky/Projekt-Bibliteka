@@ -38,7 +38,6 @@ void usunedytuj_ksiazke(struct KsiazkiStruktura* wpis);
 void edytuj_autora(struct KsiazkiStruktura* wpis);
 void edytuj_rok(struct KsiazkiStruktura* wpis);
 void edytuj_ID(struct KsiazkiStruktura* wpis);
-void wyjscie();
 void wyswietl_baze_ksiazek();
 void zarzadzaj_klientem();
 

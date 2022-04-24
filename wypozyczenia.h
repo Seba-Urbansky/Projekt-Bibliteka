@@ -31,8 +31,8 @@ void ID_ksiazki();
 void kiedy();
 void do_kiedy();
 void wydrukuj_wypozyczenia();
-
-
+void zapispliku_wypozyczenia();
+void wczytaniepliku_wypozyczenia();
 
 
 

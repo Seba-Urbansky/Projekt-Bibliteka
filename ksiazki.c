@@ -152,6 +152,7 @@ void wczytaniepliku_ksiazki()
     }
 }
 
+
 void zapispliku_ksiazki() {
     FILE *plik = fopen("ksiazki.csv", "w");
     for(Ksiazki *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis -> nastepny) {

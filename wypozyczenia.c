@@ -28,6 +28,8 @@ void wydrukuj_wypozyczenia(Wypozyczenia* wpis) {
 
 
 
+
+
 void wyswietl_kto_wypozyczyl()
 {
     printf ("BAZA WYPOZYCZEN ------------------------\n");
@@ -36,5 +38,41 @@ void wyswietl_kto_wypozyczyl()
     }
     printf ("--------------------------------------\n\n");
     menu_wypozyczen();
+}
+
+
+
+void wczytaniepliku_wypozyczenia()
+{
+    FILE *plik;
+    plik = fopen("wypozyczenia.csv", "r");
+
+    Wypozyczenia *wpis = (Wypozyczenia *)malloc(sizeof(Wypozyczenia));
+    Wypozyczenia *poprzedni;
+    while (!feof (plik))
+    {
+        wpis = malloc(sizeof(Ksiazki));
+        fscanf(plik, "%d %s %s %s %s", &wpis->ID, &wpis->numer_karty, &wpis->kiedy, &wpis->dokiedy);
+        if (pierwsze_wypozyczenie == NULL) {
+            pierwsze_wypozyczenie = wpis;
+            poprzedni = wpis;
+        } else if (wpis != NULL) {
+            poprzedni->nastepny = wpis;
+            wpis->poprzedni = poprzedni;
+            poprzedni = wpis;
+        }
+    }
+    if (wpis != NULL) {
+        ostatnie_wypozyczenie = wpis;
+    }
+}
+
+
+
+void zapispliku_wypozyczenia() {
+      FILE *plik = fopen("wypozyczenia.csv", "w");
+    for(Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis -> nastepny) {
+        fprintf(plik, "%d %s %s %s %s\n", wpis->ID, wpis->numer_karty, wpis->kiedy, wpis->dokiedy);
+    }
 }
 

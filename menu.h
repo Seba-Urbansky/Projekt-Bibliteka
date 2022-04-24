@@ -4,6 +4,8 @@
 
 #ifndef MENU_H
 #define MENU_H
+#define MAX 32
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "klienci.h"

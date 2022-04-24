@@ -2,6 +2,7 @@
 
 #ifndef KSIAZKI_H
 #define KSIAZKI_H
+#define MAX 32
 
 
 #include <stdio.h>

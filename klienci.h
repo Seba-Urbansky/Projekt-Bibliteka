@@ -2,6 +2,7 @@
 
 #ifndef KLIENCI_H
 #define KLIENCI_H
+#define MAX 32
 
 
 #include <stdio.h>

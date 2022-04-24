@@ -13,11 +13,6 @@
 
 
 
-void wyjscie() {
-    printf("Zamykanie programu...");
-    
-    exit(0);
-}
 
 
 

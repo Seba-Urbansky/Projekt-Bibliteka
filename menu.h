@@ -21,6 +21,8 @@ void menu_usunedytuj_klient(struct KlientStruktura* wpis);
 void menu_zarzadzaj_klientem();
 void menu_usunedytuj_ksiazke(struct KsiazkiStruktura* wpis);
 void menu_zarzadzaj_ksiazkami();
+void wyjscie();
+
 
 
 

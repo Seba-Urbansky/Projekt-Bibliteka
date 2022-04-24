@@ -12,6 +12,8 @@
 // menu calego programu
 void menu()
 {
+    wczytaniepliku_klienci();
+    wczytaniepliku_ksiazki();
     int wybor;
 
     printf("Witamy w bibliotece! Co chcesz zrobic?\n\n");

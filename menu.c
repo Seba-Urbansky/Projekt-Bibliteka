@@ -280,7 +280,8 @@ void menu_usunedytuj_ksiazke(Ksiazki* wpis) {
 void wyjscie() {
     printf("Zamykanie programu...");
     zapispliku_ksiazki();
-    zapispliku_klientow();
+    zapispliku_klienci();
     zapispliku_wypozyczenia();
     exit(0);
 }
+

@@ -6,6 +6,10 @@
 #define MENU_H
 #include <stdio.h>
 #include <stdlib.h>
+#include "klienci.h"
+#include "wypozyczenia.h"
+#include "ksiazki.h"
+#include "common.h"
 
 void menu();
 void menu_klientow();

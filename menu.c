@@ -178,11 +178,11 @@ void menu_zarzadzaj_klientem() {
         printf("Nie znaleziono klienta \n");
         menu_zarzadzaj_klientem();
     } else {
-        usunedytuj_klient(wpis);
+        menu_usunedytuj_klient(wpis);
     }
 }
 
-void usunedytuj_klient(Klient* wpis) {
+void menu_usunedytuj_klient(Klient* wpis) {
     int wybor;
 
     printf("Witamy w Zarzadzaniu Klientem \n\n");
@@ -197,15 +197,15 @@ void usunedytuj_klient(Klient* wpis) {
     switch (wybor) {
     case 1:
         wydrukuj_klienta(wpis);
-        usunedytuj_klient(wpis);
+        menu_usunedytuj_klient(wpis);
         break;
     case 2:
         edytuj_imie_klienta(wpis);
-        usunedytuj_klient(wpis);
+        menu_usunedytuj_klient(wpis);
         break;
     case 3:
         edytuj_nazwisko_klienta(wpis);
-        usunedytuj_klient(wpis);
+        menu_usunedytuj_klient(wpis);
         break;
     case 4:
         usun_klienta(wpis);
@@ -220,21 +220,21 @@ void usunedytuj_klient(Klient* wpis) {
     }
 }
 
-void zarzadzaj_ksiazkami() {
+void menu_zarzadzaj_ksiazkami() {
     int ID;
     printf("Podaj numer ID ksiazki: \n");
     scanf("%d", &ID);
     Ksiazki* wpis = wyszukaj_ksiazke(ID);
     if (wpis == NULL) {
         printf("Nie znaleziono ksiazki \n");
-        zarzadzaj_ksiazkami();
+        menu_zarzadzaj_ksiazkami();
     } else {
-        usunedytuj_ksiazke(wpis);
+        menu_usunedytuj_ksiazke(wpis);
     }
 }
 
 
-void usunedytuj_ksiazke(Ksiazki* wpis) {
+void menu_usunedytuj_ksiazke(Ksiazki* wpis) {
     int wybor;
 
     printf("Witamy w Zarzadzaniu Ksiazkami \n\n");
@@ -249,15 +249,15 @@ void usunedytuj_ksiazke(Ksiazki* wpis) {
     switch (wybor) {
     case 1:
         wydrukuj_ksiazki(wpis);
-        usunedytuj_ksiazke(wpis);
+        menu_usunedytuj_ksiazke(wpis);
         break;
     case 2:
         edytuj_tytul_ksiazki(wpis);
-        usunedytuj_ksiazke(wpis);
+        menu_usunedytuj_ksiazke(wpis);
         break;
     case 3:
         edytuj_gatunek_ksiazki(wpis);
-        usunedytuj_ksiazke(wpis);
+        menu_usunedytuj_ksiazke(wpis);
         break;
     case 4:
         usun_ksiazke(wpis);

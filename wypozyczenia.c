@@ -51,7 +51,7 @@ void wczytaniepliku_wypozyczenia()
     Wypozyczenia *poprzedni;
     while (!feof (plik))
     {
-        wpis = malloc(sizeof(Ksiazki));
+        wpis = malloc(sizeof(Wypozyczenia));
         fscanf(plik, "%d %s %s %s %s", &wpis->ID, &wpis->numer_karty, &wpis->kiedy, &wpis->dokiedy);
         if (pierwsze_wypozyczenie == NULL) {
             pierwsze_wypozyczenie = wpis;

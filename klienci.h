@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "common.h"
 
 typedef struct KlientStruktura
 {

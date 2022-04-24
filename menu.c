@@ -76,7 +76,7 @@ void menu_klientow()
         dodaj_klienta();
         break;
     case 3:
-        zarzadzaj_klientem();
+        menu_zarzadzaj_klientem();
         break;
     case 4:
         menu();
@@ -113,7 +113,7 @@ void menu_ksiazek()
         dodaj_ksiazke();
         break;
     case 3:
-        zarzadzaj_klientem();
+        menu_zarzadzaj_klientem();
         break;
     case 4:
         menu();
@@ -150,7 +150,7 @@ void menu_wypozyczen()
         dodaj_klienta();
         break;
     case 3:
-        zarzadzaj_klientem();
+        menu_zarzadzaj_klientem();
         break;
     case 4:
         menu();
@@ -169,14 +169,14 @@ void menu_wypozyczen()
 // menu do edycji + zarzadzanie
 
 
-void zarzadzaj_klientem() {
+void menu_zarzadzaj_klientem() {
     int numer_karty;
     printf("Podaj numer karty klienta: \n");
     scanf("%d", &numer_karty);
      Klient* wpis = wyszukaj_klienta(numer_karty);
     if (wpis == NULL) {
         printf("Nie znaleziono klienta \n");
-        zarzadzaj_klientem();
+        menu_zarzadzaj_klientem();
     } else {
         usunedytuj_klient(wpis);
     }

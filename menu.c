@@ -248,7 +248,7 @@ void menu_usunedytuj_ksiazke(Ksiazki* wpis) {
 
     switch (wybor) {
     case 1:
-        wydrukuj_ksiazki(wpis);
+        wydrukuj_ksiazke(wpis);
         menu_usunedytuj_ksiazke(wpis);
         break;
     case 2:

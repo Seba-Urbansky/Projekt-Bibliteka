@@ -14,19 +14,15 @@ void menu()
 {
     int wybor;
 
-    printf("Witamy w bibliotece! Co chcesz zrobic?");
-    printf("\n\n");
-    printf("1. Otwieranie bazy klientow");
-    printf("\n");
-    printf("2. Otwieranie bazy ksiazek");
-    printf("\n");
-    printf("3. Otwieranie bazy wypozyczen");
-    printf("\n");
-    printf("4. Wyjscie z programu i zapisanie danych");
-    printf("\n\n");
+    printf("Witamy w bibliotece! Co chcesz zrobic?\n\n");
+    printf("1. Otwieranie bazy klientow\n");
+    printf("2. Otwieranie bazy ksiazek\n");
+    printf("3. Otwieranie bazy wypozyczen\n");
+    printf("4. Wyjscie z programu i zapisanie danych\n\n");
+    
 
-    scanf("%d", &wybor);
-    printf("\n");
+    scanf("%d\n", &wybor);
+  
 
     switch (wybor)
     {
@@ -61,21 +57,16 @@ void menu_klientow()
 {
     int wybor;
 
-    printf("Witamy w bibliotece, baza klientow! Co chcesz zrobic?");
-    printf("\n\n");
-    printf("1. Wyswietl baze klientow");
-    printf("\n");
-    printf("2. Dodaj klienta");
-    printf("\n");
-    printf("3. Zarzadzaj klientem");
-    printf("\n");
-    printf("4. Powrot do menu");
-    printf("\n");
-    printf("5. Wyjscie z programu i zapisanie danych");
-    printf("\n\n");
+    printf("Witamy w bibliotece, baza klientow! Co chcesz zrobic?\n\n");
+    printf("1. Wyswietl baze klientow\n");
+    printf("2. Dodaj klienta\n");
+    printf("3. Zarzadzaj klientem\n");
+    printf("4. Powrot do menu\n");
+    printf("5. Wyjscie z programu i zapisanie danych\n\n");
+   
 
-    scanf("%d", &wybor);
-    printf("\n");
+    scanf("%d\n", &wybor);
+   
 
     switch (wybor) {
     case 1:
@@ -103,21 +94,16 @@ void menu_ksiazek()
 {
     int wybor;
 
-    printf("Witamy w bibliotece, baza ksiazek! Co chcesz zrobic?");
-    printf("\n\n");
-    printf("1. Wyswietl baze ksiazek");
-    printf("\n");
-    printf("2. Dodaj ksiazke");
-    printf("\n");
-    printf("3. Zarzadzaj ksiazkami");
-    printf("\n");
-    printf("4. Powrot do menu");
-    printf("\n");
-    printf("5. Wyjscie z programu i zapisanie danych");
-    printf("\n\n");
+    printf("Witamy w bibliotece, baza ksiazek! Co chcesz zrobic?\n\n");
+    printf("1. Wyswietl baze ksiazek\n");
+    printf("2. Dodaj ksiazke\n");
+    printf("3. Zarzadzaj ksiazkami\n");
+    printf("4. Powrot do menu\n");
+    printf("5. Wyjscie z programu i zapisanie danych\n\n");
 
-    scanf("%d", &wybor);
-    printf("\n");
+
+    scanf("%d\n", &wybor);
+
 
     switch (wybor) {
     case 1:
@@ -146,21 +132,15 @@ void menu_wypozyczen()
 {
     int wybor;
 
-    printf("Witamy w bibliotece, baza wypozyczen! Co chcesz zrobic?");
-    printf("\n\n");
-    printf("1. Wyswietl baze wypozyczen");
-    printf("\n");
-    printf("2. Dodaj wypozyczenie");
-    printf("\n");
-    printf("3. Zarzadzaj wypozyczeniami");
-    printf("\n");
-    printf("4. Powrot do menu");
-    printf("\n");
-    printf("5. Wyjscie z programu i zapisanie danych");
-    printf("\n\n");
+    printf("Witamy w bibliotece, baza wypozyczen! Co chcesz zrobic?\n\n");
+    printf("1. Wyswietl baze wypozyczen\n");
+    printf("2. Dodaj wypozyczenie\n");
+    printf("3. Zarzadzaj wypozyczeniami\n");
+    printf("4. Powrot do menu\n");
+    printf("5. Wyjscie z programu i zapisanie danych\n\n");
 
-    scanf("%d", &wybor);
-    printf("\n");
+    scanf("%d\n", &wybor);
+    
 
     switch (wybor) {
     case 1:
@@ -263,8 +243,8 @@ void usunedytuj_ksiazke(Ksiazki* wpis) {
     printf("3. Edytuj gatunek ksiazki\n");
     printf("4. Usun ksiazke\n");
     printf("5. Wyjscie z programu i zapisanie danych\n");
-    scanf("%d", &wybor);
-    printf("\n");
+    scanf("%d\n", &wybor);
+   
 
     switch (wybor) {
     case 1:
@@ -291,5 +271,6 @@ void usunedytuj_ksiazke(Ksiazki* wpis) {
         break;
     }
 }
+
 
 

@@ -19,7 +19,7 @@ void wyswietl_baze_ksiazek()
         wydrukuj_ksiazki(wpis);
     }
     printf ("--------------------------------------\n\n");
-    menu_ksiazek();
+   
 }
 
 void dodaj_ksiazke()
@@ -36,7 +36,7 @@ void dodaj_ksiazke()
     wpis->poprzedni = koniec;
     koniec = wpis;
 
-    menu_ksiazek();
+   
 }
 
 
@@ -162,5 +162,5 @@ void zapispliku_ksiazki() {
 
 int main() {
     wczytaniepliku_ksiazki();
-    menu_ksiazek();
+
 }

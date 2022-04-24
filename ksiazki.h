@@ -39,7 +39,7 @@ void edytuj_autora(struct KsiazkiStruktura* wpis);
 void edytuj_rok(struct KsiazkiStruktura* wpis);
 void edytuj_ID(struct KsiazkiStruktura* wpis);
 void wyswietl_baze_ksiazek();
-void wyszukaj_ksiazke();
+
 
 
 

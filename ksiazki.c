@@ -8,13 +8,13 @@
 
 
 
-Ksiazki *poczatek = NULL;
-Ksiazki *koniec = NULL;
+Ksiazki *pierwsza_ksiazka = NULL;
+Ksiazki *ostatnia_ksiazka = NULL;
 
 void wyswietl_baze_ksiazek()
 {
     printf ("BAZA KSIAZEK ------------------------\n");
-    for (Ksiazki *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
+    for (Ksiazki *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis -> nastepny) {
         wydrukuj_ksiazke(wpis);
     }
     printf ("--------------------------------------\n\n");
@@ -31,16 +31,16 @@ void dodaj_ksiazke()
     edytuj_autora(wpis);
     edytuj_rok(wpis);
 
-    koniec->nastepny = wpis;
-    wpis->poprzedni = koniec;
-    koniec = wpis;
+    ostatnia_ksiazka->nastepny = wpis;
+    wpis->poprzedni = ostatnia_ksiazka;
+    ostatnia_ksiazka = wpis;
 
    
 }
 
 
 Ksiazki* wyszukaj_ksiazke(int ID) {
-    for(Ksiazki *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
+    for(Ksiazki *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis -> nastepny) {
         if (wpis->ID==ID) {
             return wpis;
         } 
@@ -102,14 +102,14 @@ void usun_ksiazke(Ksiazki* wpis) {
     Ksiazki *poprzedni = wpis->poprzedni;
     Ksiazki *nastepny = wpis->nastepny;
     if (poprzedni == NULL && nastepny == NULL) {
-        poczatek = NULL;
-        koniec = NULL;
+        pierwsza_ksiazka = NULL;
+        ostatnia_ksiazka = NULL;
     } else if (poprzedni == NULL && nastepny != NULL) {
         nastepny->poprzedni = NULL;
-        poczatek = nastepny;
+        pierwsza_ksiazka = nastepny;
     } else if (nastepny == NULL && poprzedni != NULL) {
         poprzedni->nastepny = NULL;
-        koniec = poprzedni;
+        ostatnia_ksiazka = poprzedni;
     } else {
         poprzedni->nastepny = nastepny;
         nastepny->poprzedni = poprzedni;    
@@ -138,8 +138,8 @@ void wczytaniepliku_ksiazki()
     {
         wpis = malloc(sizeof(Ksiazki));
         fscanf(plik, "%d %s %s %s %s", &wpis->ID, &wpis->tytul, &wpis->autor, &wpis->gatunek);
-        if (poczatek == NULL) {
-            poczatek = wpis;
+        if (pierwsza_ksiazka == NULL) {
+            pierwsza_ksiazka = wpis;
             poprzedni = wpis;
         } else if (wpis != NULL) {
             poprzedni->nastepny = wpis;
@@ -148,13 +148,13 @@ void wczytaniepliku_ksiazki()
         }
     }
     if (wpis != NULL) {
-        koniec = wpis;
+        ostatnia_ksiazka = wpis;
     }
 }
 
 void zapispliku_ksiazki() {
     FILE *plik = fopen("ksiazki.csv", "w");
-    for(Ksiazki *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
+    for(Ksiazki *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis -> nastepny) {
         fprintf(plik, "%d %s %s %s %s\n", wpis->ID, wpis->tytul, wpis->autor, wpis->gatunek);
     }
 }

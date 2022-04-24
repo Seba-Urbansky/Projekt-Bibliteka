@@ -12,8 +12,8 @@ void menu_wypozyczen();
 
 
 
- Wypozyczenia *poczatek = NULL;
- Wypozyczenia *koniec = NULL;
+ Wypozyczenia *pierwsze_wypozyczenie = NULL;
+ Wypozyczenia *ostatnie_wypozyczenie = NULL;
 
 
 
@@ -31,7 +31,7 @@ void wydrukuj_wypozyczenia(Wypozyczenia* wpis) {
 void wyswietl_kto_wypozyczyl()
 {
     printf ("BAZA WYPOZYCZEN ------------------------\n");
-    for (Wypozyczenia *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
+    for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis -> nastepny) {
         wydrukuj_wypozyczenia(wpis);
     }
     printf ("--------------------------------------\n\n");

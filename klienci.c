@@ -9,13 +9,13 @@
 
 
 
- Klient *poczatek = NULL;
- Klient *koniec = NULL;
+ Klient *pierwszy_klient = NULL;
+ Klient *ostatni_klient = NULL;
 
 void wyswietl_baze_klientow()
 {
     printf ("BAZA KLIENTOW ------------------------\n");
-    for (Klient *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
+    for (Klient *wpis = pierwszy_klient; NULL != wpis; wpis = wpis -> nastepny) {
         wydrukuj_klienta(wpis);
     }
     printf ("--------------------------------------\n\n");
@@ -32,16 +32,16 @@ void dodaj_klienta()
     edytuj_telefon_klienta(wpis);
     edytuj_email_klienta(wpis);
 
-    koniec->nastepny = wpis;
-    wpis->poprzedni = koniec;
-    koniec = wpis;
+    ostatni_klient->nastepny = wpis;
+    wpis->poprzedni = ostatni_klient;
+    ostatni_klient = wpis;
 
     
 }
 
 
 Klient* wyszukaj_klienta(int numer_karty) {
-    for( Klient *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
+    for( Klient *wpis = pierwszy_klient; NULL != wpis; wpis = wpis -> nastepny) {
         if (wpis->numer_karty==numer_karty) {
             return wpis;
         } 
@@ -103,14 +103,14 @@ void usun_klienta(Klient* wpis) {
     Klient *poprzedni = wpis->poprzedni;
     Klient *nastepny = wpis->nastepny;
     if (poprzedni == NULL && nastepny == NULL) {
-        poczatek = NULL;
-        koniec = NULL;
+        pierwszy_klient = NULL;
+        ostatni_klient = NULL;
     } else if (poprzedni == NULL && nastepny != NULL) {
         nastepny->poprzedni = NULL;
-        poczatek = nastepny;
+        pierwszy_klient = nastepny;
     } else if (nastepny == NULL && poprzedni != NULL) {
         poprzedni->nastepny = NULL;
-        koniec = poprzedni;
+        ostatni_klient = poprzedni;
     } else {
         poprzedni->nastepny = nastepny;
         nastepny->poprzedni = poprzedni;    
@@ -140,8 +140,8 @@ void wczytaniepliku_klienci()
     {
         wpis = malloc(sizeof(Klient));
         fscanf(plik, "%d %s %s %s %s", &wpis->numer_karty, &wpis->imie, &wpis->nazwisko, &wpis->telefon, &wpis->email);
-        if (poczatek == NULL) {
-            poczatek = wpis;
+        if (pierwszy_klient == NULL) {
+            pierwszy_klient = wpis;
             poprzedni = wpis;
         } else if (wpis != NULL) {
             poprzedni->nastepny = wpis;
@@ -150,13 +150,13 @@ void wczytaniepliku_klienci()
         }
     }
     if (wpis != NULL) {
-        koniec = wpis;
+        ostatni_klient = wpis;
     }
 }
 
 void zapispliku_klienci() {
     FILE *plik = fopen("klienci.csv", "w");
-    for(Klient *wpis = poczatek; NULL != wpis; wpis = wpis -> nastepny) {
+    for(Klient *wpis = pierwszy_klient; NULL != wpis; wpis = wpis -> nastepny) {
         fprintf(plik, "%d %s %s %s %s\n", wpis->numer_karty, wpis->imie, wpis->nazwisko, wpis->telefon, wpis->email);
     }
 }

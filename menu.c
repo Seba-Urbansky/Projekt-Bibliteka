@@ -276,3 +276,11 @@ void menu_usunedytuj_ksiazke(Ksiazki* wpis) {
 
 
 
+
+void wyjscie() {
+    printf("Zamykanie programu...");
+    zapisz_ksiazki();
+    zapisz_klientow();
+    zapisz_wypozyczenia();
+    exit(0);
+}

@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include "common.h"
 
-typedef struct KlientStruktura
+typedef struct Klient
 {
 
     int numer_karty;
@@ -18,7 +18,7 @@ typedef struct KlientStruktura
     char* telefon[MAX];
     char* email[MAX];
 
-    struct KlientStruktura *poprzedni, *nastepny;
+    struct Klient *poprzedni, *nastepny;
 
 } Klient;
 
@@ -31,12 +31,12 @@ void menu_klientow();
 void wczytaniepliku_klienci();
 void zapispliku_klienci();
 void znajdz_klienta_do_zarzadzania();
-void wydrukuj_klienta(struct KlientStruktura* wpis);
-void edytuj_imie_klienta(struct KlientStruktura* wpis);
-void edytuj_nazwisko_klienta(struct KlientStruktura* wpis);
-void edytuj_telefon_klienta(struct KlientStruktura* wpis);
-void edytuj_email_klienta(struct KlientStruktura* wpis);
-void edytuj_numeru_karty(struct KlientStruktura* wpis);
+void wydrukuj_klienta(struct Klient* wpis);
+void edytuj_imie_klienta(struct Klient* wpis);
+void edytuj_nazwisko_klienta(struct Klient* wpis);
+void edytuj_telefon_klienta(struct Klient* wpis);
+void edytuj_email_klienta(struct Klient* wpis);
+void edytuj_numeru_karty(struct Klient* wpis);
 void wyswietl_baze_klientow();
 Klient* wyszukaj_klienta(int numer_karty);
 

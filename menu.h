@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void menu();
 void menu_klientow();
 void menu_ksiazek();
 void menu_wypozyczen();

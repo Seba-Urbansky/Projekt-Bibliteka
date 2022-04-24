@@ -9,7 +9,50 @@
 #include "ksiazki.h"
 #include "common.h"
 
+// menu calego programu
+void menu()
+{
+    int wybor;
 
+    printf("Witamy w bibliotece! Co chcesz zrobic?");
+    printf("\n\n");
+    printf("1. Otwieranie bazy klientow");
+    printf("\n");
+    printf("2. Otwieranie bazy ksiazek");
+    printf("\n");
+    printf("3. Otwieranie bazy wypozyczen");
+    printf("\n");
+    printf("4. Wyjscie z programu i zapisanie danych");
+    printf("\n\n");
+
+    scanf("%d", &wybor);
+    printf("\n");
+
+    switch (wybor)
+    {
+    case 1:
+        menu_klientow();
+        break;
+
+    case 2:
+        menu_ksiazek();
+        break;
+
+    case 3:
+        
+        menu_wypozyczen();
+        break;
+
+    case 4:
+        wyjscie();
+        break;
+
+    default:
+        printf("Niepoprawna instrukcja");
+        break;
+
+    }
+}
 
 
 // menu glowne plikow

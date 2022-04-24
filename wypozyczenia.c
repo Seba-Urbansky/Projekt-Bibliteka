@@ -39,9 +39,3 @@ void wyswietl_kto_wypozyczyl()
     menu_wypozyczen();
 }
 
-
-int main()
-{
-
-
-}

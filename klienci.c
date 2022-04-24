@@ -161,7 +161,4 @@ void zapispliku_klienci() {
     }
 }
 
-int main() {
-    wczytaniepliku_klienci();
-    
-}
+

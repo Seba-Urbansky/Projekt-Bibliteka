@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include "common.h"
 
-typedef struct Ksiazki
+typedef struct KsiazkiStruktura
 {
 
     int ID;
@@ -21,7 +21,7 @@ typedef struct Ksiazki
     char* gatunek[MAX];
     
 
-    struct Ksiazki *poprzedni, *nastepny;
+    struct KlientStruktura *poprzedni, *nastepny;
 
 } Ksiazki;
 
@@ -33,12 +33,12 @@ void menu_ksiazek();
 void wczytaniepliku_ksiazki();
 void zapispliku_ksiazki();
 void ksiazka_do_zarzadzania();
-void wydrukuj_ksiazke(struct Ksiazki* wpis);
-void edytuj_tytul_ksiazki(struct Ksiazki* wpis);
-void edytuj_gatunek_ksiazki(struct Ksiazki* wpis);
-void edytuj_autora(struct Ksiazki* wpis);
-void edytuj_rok(struct Ksiazki* wpis);
-void edytuj_ID(struct Ksiazki* wpis);
+void wydrukuj_ksiazke(Ksiazki* wpis);
+void edytuj_tytul_ksiazki(Ksiazki* wpis);
+void edytuj_gatunek_ksiazki(Ksiazki* wpis);
+void edytuj_autora(Ksiazki* wpis);
+void edytuj_rok(Ksiazki* wpis);
+void edytuj_ID(Ksiazki* wpis);
 void wyswietl_baze_ksiazek();
 Ksiazki* wyszukaj_ksiazke(int ID);
 

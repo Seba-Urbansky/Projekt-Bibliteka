@@ -14,6 +14,11 @@ void menu()
 {
     wczytaniepliku_klienci();
     wczytaniepliku_ksiazki();
+    menu_glowne();
+}
+
+void menu_glowne()
+{
     int wybor;
 
     printf("Witamy w bibliotece! Co chcesz zrobic?\n\n");
@@ -52,7 +57,6 @@ void menu()
 
     }
 }
-
 
 // menu glowne plikow
 
@@ -291,4 +295,7 @@ void wyjscie() {
     zapispliku_wypozyczenia();
     exit(0);
 }
+
+
+
 

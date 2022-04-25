@@ -18,9 +18,9 @@ void menu_klientow();
 void menu_glowne();
 void menu_ksiazek();
 void menu_wypozyczen();
-void menu_usunedytuj_klient(struct Klient* wpis);
+void menu_usunedytuj_klient(Klient* wpis);
 void menu_zarzadzaj_klientem();
-void menu_usunedytuj_ksiazke(struct Ksiazki* wpis);
+void menu_usunedytuj_ksiazke(Ksiazki* wpis);
 void menu_zarzadzaj_ksiazkami();
 void wyjscie();
 

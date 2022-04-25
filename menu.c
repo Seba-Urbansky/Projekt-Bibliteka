@@ -95,6 +95,7 @@ void menu_klientow()
         printf("Niepoprawna instrukcja");
         break;
     }
+}
 
 void menu_ksiazek()
 {
@@ -120,7 +121,7 @@ void menu_ksiazek()
         dodaj_ksiazke();
         break;
     case 3:
-        menu_zarzadzaj_klientem();
+        menu_zarzadzaj_ksiazkami();
         break;
     case 4:
         menu();

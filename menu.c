@@ -120,12 +120,15 @@ void menu_ksiazek()
     switch (wybor) {
     case 1:
         wyswietl_baze_ksiazek();
+        menu_ksiazek();
         break;
     case 2:
         dodaj_ksiazke();
+        menu_ksiazek();
         break;
     case 3:
         menu_zarzadzaj_ksiazkami();
+        menu_ksiazek();
         break;
     case 4:
         menu();

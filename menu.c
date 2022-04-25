@@ -72,15 +72,18 @@ void menu_klientow()
     printf("\n");
    
 
-    switch (wybor) {
+   switch (wybor) {
     case 1:
         wyswietl_baze_klientow();
+        menu_klientow();
         break;
     case 2:
         dodaj_klienta();
+        menu_klientow();
         break;
     case 3:
         menu_zarzadzaj_klientem();
+        menu_klientow();
         break;
     case 4:
         menu();
@@ -92,7 +95,6 @@ void menu_klientow()
         printf("Niepoprawna instrukcja");
         break;
     }
-}
 
 void menu_ksiazek()
 {

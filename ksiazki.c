@@ -137,10 +137,7 @@ void wczytaniepliku_ksiazki()
     while (!feof (plik))
     {
         wpis = malloc(sizeof(Ksiazki));
-        fscanf(plik, "%d", &wpis->ID);
-        fscanf(plik, "%s", &wpis->gatunek);
-        fscanf(plik, "%s", &wpis->tytul);
-        fscanf(plik, "%s", &wpis->autor);
+        fscanf(plik, "%[^;];%[^;];%[^;];%d\n", wpis->gatunek, wpis->tytul, wpis->autor, &wpis->ID);
         if (pierwsza_ksiazka == NULL) {
             pierwsza_ksiazka = wpis;
             poprzedni = wpis;

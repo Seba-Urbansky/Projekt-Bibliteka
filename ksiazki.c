@@ -156,7 +156,7 @@ void wczytaniepliku_ksiazki()
 void zapispliku_ksiazki() {
     FILE *plik = fopen("ksiazki.csv", "w");
     for(Ksiazki *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis -> nastepny) {
-        fprintf(plik, "%d %s %s %s %s\n", wpis->ID, wpis->tytul, wpis->autor, wpis->gatunek);
+        fprintf(plik, "%[^;];%[^;];%[^;];%d\n", wpis->ID, wpis->tytul, wpis->autor, wpis->gatunek);
     }
 }
 

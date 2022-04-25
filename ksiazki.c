@@ -62,7 +62,7 @@ void edytuj_tytul_ksiazki(Ksiazki* wpis) {
     printf("Podaj tytul: \n");
     scanf("%s", &imie);
     if (imie == "") {
-        printf("Niepoprawne imie, nie powinno byc puste.\n");
+        printf("Niepoprawny tytul, nie powinno byc puste.\n");
         edytuj_tytul_ksiazki(wpis);
     } else {
         strcpy(wpis->tytul, &imie);

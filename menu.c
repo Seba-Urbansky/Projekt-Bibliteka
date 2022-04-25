@@ -23,7 +23,8 @@ void menu()
     printf("4. Wyjscie z programu i zapisanie danych\n\n");
     
 
-    scanf("%d\n", &wybor);
+    scanf("%d", &wybor);
+    printf("\n");
   
 
     switch (wybor)
@@ -67,7 +68,8 @@ void menu_klientow()
     printf("5. Wyjscie z programu i zapisanie danych\n\n");
    
 
-    scanf("%d\n", &wybor);
+    scanf("%d", &wybor);
+    printf("\n");
    
 
     switch (wybor) {
@@ -104,7 +106,8 @@ void menu_ksiazek()
     printf("5. Wyjscie z programu i zapisanie danych\n\n");
 
 
-    scanf("%d\n", &wybor);
+    scanf("%d", &wybor);
+    printf("\n");
 
 
     switch (wybor) {
@@ -141,7 +144,8 @@ void menu_wypozyczen()
     printf("4. Powrot do menu\n");
     printf("5. Wyjscie z programu i zapisanie danych\n\n");
 
-    scanf("%d\n", &wybor);
+    scanf("%d", &wybor);
+    printf("\n");
     
 
     switch (wybor) {

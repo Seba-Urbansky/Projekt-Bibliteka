@@ -22,8 +22,7 @@ void menu_wypozyczen();
  Wypozyczenia *pierwsze_wypozyczenie = NULL;
  Wypozyczenia *ostatnie_wypozyczenie = NULL;
 
-wyszukaj_klienta(int numer_karty);
-wydrukuj_klienta(Klient* wpis);
+
 
 void wydrukuj_wypozyczenia(Wypozyczenia* wpis) {
 

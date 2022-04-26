@@ -22,13 +22,14 @@ void menu_wypozyczen();
  Wypozyczenia *pierwsze_wypozyczenie = NULL;
  Wypozyczenia *ostatnie_wypozyczenie = NULL;
 
-
+wyszukaj_klienta();
+wydrukuj_klienta();
 
 void wydrukuj_wypozyczenia(Wypozyczenia* wpis) {
     printf ("%d ", wpis->ID);
-    printf ("%s ", wpis->numer_karty);
-    printf ("%s ", wpis->kiedy);
-    printf ("%s ", wpis->dokiedy);
+    printf ("%d", wpis->numer_karty);
+    printf ("%d ", wpis->kiedy);
+    printf ("%d ", wpis->dokiedy);
     
     printf ("\n");
 }
@@ -79,7 +80,7 @@ void wczytaniepliku_wypozyczenia()
 void zapispliku_wypozyczenia() {
       FILE *plik = fopen("wypozyczenia.csv", "w");
     for(Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis -> nastepny) {
-        fprintf(plik, "%d %s %s %s %s\n", wpis->ID, wpis->numer_karty, wpis->kiedy, wpis->dokiedy);
+        fprintf(plik, "%d %d %d %d %d\n", wpis->ID, wpis->numer_karty, wpis->kiedy, wpis->dokiedy);
     }
 }
 

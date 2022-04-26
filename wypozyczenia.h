@@ -10,7 +10,7 @@
 #include "common.h"
 
 
-typedef struct Wypozyczenia
+typedef struct WypozyczeniaStruktura
 {
 
     int numer_karty;
@@ -19,7 +19,7 @@ typedef struct Wypozyczenia
     int dokiedy;
     
 
-    struct Wypozyczenia *poprzedni, *nastepny;
+    struct WypozyczeniaStruktura *poprzedni, *nastepny;
 
 } Wypozyczenia;
 

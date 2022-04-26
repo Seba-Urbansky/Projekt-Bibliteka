@@ -3,6 +3,8 @@
 #include <string.h>
 #include "wypozyczenia.h"
 #include "common.h"
+#include "klienci.h"
+#include "wypozyczenia.h"
 // Wypożyczanie/oddawanie książek (kto wypożyczył (numer karty), którą książkę (ID), kiedy, do kiedy). 
 // http://fizyka.umk.pl/~leii/wskaznikiStrukturyAiR.pdf
 

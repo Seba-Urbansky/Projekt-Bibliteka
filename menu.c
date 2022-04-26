@@ -160,14 +160,16 @@ void menu_wypozyczen()
 
     switch (wybor) {
     case 1:
-        wyswietl_baze_klientow();
+        wyswietl_kto_wypozyczyl();
         break;
+    /*
     case 2:
-        dodaj_klienta();
+        //dodaj_wypozyczenie();
         break;
     case 3:
-        menu_zarzadzaj_klientem();
+        //menu_zarzadzaj_wypozyczeniami();
         break;
+    */
     case 4:
         menu();
         break;

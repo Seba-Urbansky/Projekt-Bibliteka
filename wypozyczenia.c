@@ -26,6 +26,10 @@ wyszukaj_klienta();
 wydrukuj_klienta();
 
 void wydrukuj_wypozyczenia(Wypozyczenia* wpis) {
+
+    wyszukaj_klienta();
+    wydrukuj_klienta();
+
     printf ("%d ", wpis->ID);
     printf ("%d", wpis->numer_karty);
     printf ("%d ", wpis->kiedy);

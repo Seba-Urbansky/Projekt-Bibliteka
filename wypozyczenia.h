@@ -15,8 +15,8 @@ typedef struct Wypozyczenia
 
     int numer_karty;
     int ID;
-    char* kiedy[MAX];
-    char* dokiedy[MAX];
+    int kiedy;
+    int dokiedy;
     
 
     struct Wypozyczenia *poprzedni, *nastepny;

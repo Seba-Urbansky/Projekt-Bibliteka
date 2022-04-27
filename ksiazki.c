@@ -97,7 +97,6 @@ void edytuj_ID(Ksiazki* wpis) {
     }
 }
 
-
 void usun_ksiazke(Ksiazki* wpis) {
     Ksiazki *poprzedni = wpis->poprzedni;
     Ksiazki *nastepny = wpis->nastepny;

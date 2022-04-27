@@ -8,6 +8,8 @@
 // Wypożyczanie/oddawanie książek (kto wypożyczył (numer karty), którą książkę (ID), kiedy, do kiedy). 
 // http://fizyka.umk.pl/~leii/wskaznikiStrukturyAiR.pdf
 
+// automatyczne zapisywanie ID w ksiazkach i klientach //
+
 Wypozyczenia *pierwsze_wypozyczenie = NULL;
 Wypozyczenia *ostatnie_wypozyczenie = NULL;
 
@@ -15,12 +17,12 @@ void wydrukuj_wypozyczenia(Wypozyczenia* wpis)
 {
     Klient* klient = wyszukaj_klienta(wpis->numer_karty);
     wydrukuj_klienta(klient);
-    printf ("%d ", wpis->ID);
-    printf("%d", wpis->ID_ksiazki)
-    printf ("%d ", wpis->numer_karty);
-    printf ("%d ", wpis->kiedy);
-    printf ("%d ", wpis->dokiedy);
-    printf ("\n");
+    printf("%d ", wpis->ID);
+    printf("%d ", wpis->ID_ksiazki);
+    printf("%d ", wpis->numer_karty);
+    printf("%d ", wpis->kiedy);
+    printf("%d ", wpis->dokiedy);
+    printf("\n ");
 }
 
 void wyswietl_kto_wypozyczyl()
@@ -34,12 +36,58 @@ void wyswietl_kto_wypozyczyl()
 // Napisz funkcje ktora automatycznie ustawia ID nowego wypozyczenia
 // 
 
+int znajdz_najwyzsze_ID()
+{
+    int max=0;
+  for(Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL !=wpis; wpis = wpis -> nastepny)
+    {
+        if(wpis->ID>max)
+        {
+           max = wpis->ID;
+        }
+    }
+    return max;
+
+}
+
+void edytuj_wypozyczenia_numer_karty(Wypozyczenia* wpis) {
+    int ID;
+    printf("Podaj ID ksiazki \n");
+    scanf("%d", &ID);
+     Ksiazki* wyszukaj_klienta = wyszukaj_ksiazke(ID);
+    if (wyszukana_ksiazka == NULL) {
+        printf("Podane ID ksiazki nie istnieje.\n");
+        edytuj_wypozyczenia_ID_ksiazki(wpis);
+    } else {
+        wpis->ID_ksiazki = ID;
+    }    
+}
+
+void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenia* wpis)
+{
+    int ID;
+    printf("Podaj ID ksiazki \n");
+    scanf("%d", &ID);
+     Ksiazki* wyszukana_ksiazka = wyszukaj_ksiazke(ID);
+    if (wyszukana_ksiazka == NULL) {
+        printf("Podane ID ksiazki nie istnieje.\n");
+        edytuj_wypozyczenia_ID_ksiazki(wpis);
+    } else {
+        wpis->ID_ksiazki = ID;
+    }    
+}
+
+void edytuj_wypozyczenia_ID(Wypozyczenia* wpis)
+{
+    wpis->ID= znajdz_najwyzsze_ID() + 1;
+}
+
 void dodaj_wypozyczenie() 
 {
      Wypozyczenia *wpis = (Wypozyczenia *)malloc(sizeof(Wypozyczenia));
 
-    edytuj_ID(wpis);
-    edytuj_wypozyczenie_numer_ksiazki(wpis);
+    edytuj_wypozyczenia_ID_ksiazki(wpis);
+    edytuj_wypozyczenia_numer_karty(wpis);
     
 
     ostatnie_wypozyczenie->nastepny = wpis;

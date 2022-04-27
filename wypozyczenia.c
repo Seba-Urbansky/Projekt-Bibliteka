@@ -5,6 +5,7 @@
 #include "common.h"
 #include "klienci.h"
 #include "wypozyczenia.h"
+#include "ksiazki.h"
 // Wypożyczanie/oddawanie książek (kto wypożyczył (numer karty), którą książkę (ID), kiedy, do kiedy). 
 // http://fizyka.umk.pl/~leii/wskaznikiStrukturyAiR.pdf
 
@@ -52,11 +53,11 @@ int znajdz_najwyzsze_ID()
 
 void edytuj_wypozyczenia_numer_karty(Wypozyczenia* wpis) {
     int ID;
-    printf("Podaj ID ksiazki \n");
+    printf("Podaj ID klienta \n");
     scanf("%d", &ID);
-     Ksiazki* wyszukaj_klienta = wyszukaj_ksiazke(ID);
-    if (wyszukana_ksiazka == NULL) {
-        printf("Podane ID ksiazki nie istnieje.\n");
+     Wypozyczenia* wyszukaj_klienta = wyszukaj_klienta(ID);
+    if (wyszukaj_klienta == NULL) {
+        printf("Podane klient nie istnieje.\n");
         edytuj_wypozyczenia_ID_ksiazki(wpis);
     } else {
         wpis->ID_ksiazki = ID;
@@ -68,7 +69,7 @@ void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenia* wpis)
     int ID;
     printf("Podaj ID ksiazki \n");
     scanf("%d", &ID);
-     Ksiazki* wyszukana_ksiazka = wyszukaj_ksiazke(ID);
+     Ksiazki* wyszukaj_ksiazke(int ID);
     if (wyszukana_ksiazka == NULL) {
         printf("Podane ID ksiazki nie istnieje.\n");
         edytuj_wypozyczenia_ID_ksiazki(wpis);

@@ -16,6 +16,7 @@ void wydrukuj_wypozyczenia(Wypozyczenia* wpis)
     Klient* klient = wyszukaj_klienta(wpis->numer_karty);
     wydrukuj_klienta(klient);
     printf ("%d ", wpis->ID);
+    printf("%d", wpis->ID_ksiazki)
     printf ("%d ", wpis->numer_karty);
     printf ("%d ", wpis->kiedy);
     printf ("%d ", wpis->dokiedy);
@@ -29,6 +30,22 @@ void wyswietl_kto_wypozyczyl()
         wydrukuj_wypozyczenia(wpis);
     }
     printf ("--------------------------------------\n\n");
+}
+// Napisz funkcje ktora automatycznie ustawia ID nowego wypozyczenia
+// 
+
+void dodaj_wypozyczenie() 
+{
+     Wypozyczenia *wpis = (Wypozyczenia *)malloc(sizeof(Wypozyczenia));
+
+    edytuj_ID(wpis);
+    edytuj_wypozyczenie_numer_ksiazki(wpis);
+    
+
+    ostatnie_wypozyczenie->nastepny = wpis;
+    wpis->poprzedni = ostatnie_wypozyczenie;
+    ostatnie_wypozyczenie = wpis;
+
 }
 
 void wczytaniepliku_wypozyczenia()

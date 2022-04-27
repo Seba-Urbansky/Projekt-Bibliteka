@@ -13,6 +13,7 @@
 typedef struct WypozyczeniaStruktura
 {
     int numer_karty;
+    int ID_ksiazki;
     int ID;
     int kiedy;
     int dokiedy;

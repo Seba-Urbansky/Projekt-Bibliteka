@@ -134,7 +134,7 @@ void wczytaniepliku_klienci()
     FILE *plik;
     plik = fopen("klienci.csv", "r");
 
-     Klient *wpis = (Klient *)malloc(sizeof(Klient));
+    Klient *wpis = (Klient *)malloc(sizeof(Klient));
     Klient *poprzedni;
     while (!feof (plik))
     {

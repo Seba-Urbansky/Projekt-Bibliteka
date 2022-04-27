@@ -12,12 +12,10 @@
 
 typedef struct WypozyczeniaStruktura
 {
-
     int numer_karty;
     int ID;
     int kiedy;
     int dokiedy;
-    
 
     struct WypozyczeniaStruktura *poprzedni, *nastepny;
 

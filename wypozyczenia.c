@@ -8,37 +8,19 @@
 // Wypożyczanie/oddawanie książek (kto wypożyczył (numer karty), którą książkę (ID), kiedy, do kiedy). 
 // http://fizyka.umk.pl/~leii/wskaznikiStrukturyAiR.pdf
 
+Wypozyczenia *pierwsze_wypozyczenie = NULL;
+Wypozyczenia *ostatnie_wypozyczenie = NULL;
 
-
-
-
-
-void menu_wypozyczen();
-
-
-
-
-
- Wypozyczenia *pierwsze_wypozyczenie = NULL;
- Wypozyczenia *ostatnie_wypozyczenie = NULL;
-
-
-
-void wydrukuj_wypozyczenia(Wypozyczenia* wpis) {
-
-   
-
+void wydrukuj_wypozyczenia(Wypozyczenia* wpis) 
+{
+    Klient* klient = wyszukaj_klienta(wpis->numer_karty);
+    wydrukuj_klienta(klient);
     printf ("%d ", wpis->ID);
-    printf ("%d", wpis->numer_karty);
+    printf ("%d ", wpis->numer_karty);
     printf ("%d ", wpis->kiedy);
     printf ("%d ", wpis->dokiedy);
-    
     printf ("\n");
 }
-
-
-
-
 
 void wyswietl_kto_wypozyczyl()
 {
@@ -47,10 +29,7 @@ void wyswietl_kto_wypozyczyl()
         wydrukuj_wypozyczenia(wpis);
     }
     printf ("--------------------------------------\n\n");
-    menu_wypozyczen();
 }
-
-
 
 void wczytaniepliku_wypozyczenia()
 {
@@ -62,7 +41,7 @@ void wczytaniepliku_wypozyczenia()
     while (!feof (plik))
     {
         wpis = malloc(sizeof(Wypozyczenia));
-        fscanf(plik, "%d %d %d %d ", &wpis->ID, &wpis->numer_karty, &wpis->kiedy, &wpis->dokiedy);
+        fscanf(plik, "%d %d %d %d", &wpis->ID, &wpis->numer_karty, &wpis->kiedy, &wpis->dokiedy);
         if (pierwsze_wypozyczenie == NULL) {
             pierwsze_wypozyczenie = wpis;
             poprzedni = wpis;
@@ -76,8 +55,6 @@ void wczytaniepliku_wypozyczenia()
         ostatnie_wypozyczenie = wpis;
     }
 }
-
-
 
 void zapispliku_wypozyczenia() {
       FILE *plik = fopen("wypozyczenia.csv", "w");

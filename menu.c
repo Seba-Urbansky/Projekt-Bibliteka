@@ -14,6 +14,7 @@ void menu()
 {
     wczytaniepliku_klienci();
     wczytaniepliku_ksiazki();
+    wczytaniepliku_wypozyczenia();
     menu_glowne();
 }
 

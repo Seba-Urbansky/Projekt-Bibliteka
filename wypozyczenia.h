@@ -37,6 +37,7 @@ void edytuj_wypozyczenia_numer_karty(Wypozyczenia* wpis);
 int znajdz_najwyzsze_ID();
 void edytuj_wypozyczenia_ID(Wypozyczenia* wpis);
 void dodaj_wypozyczenie();
+void ustaw_ID_nowego_wypozyczenia();
 
 
 

@@ -37,6 +37,18 @@ void wyswietl_kto_wypozyczyl()
 // Napisz funkcje ktora automatycznie ustawia ID nowego wypozyczenia
 // 
 
+void ustaw_ID_nowego_wypozyczenia()
+{
+    int nowe_wypozyczenie;
+    if(Wypozyczenia *wpis != NULL)
+    {
+        wpis = wpis ->  nowe_wypozyczenie;
+    }
+    else {
+        printf("Nie ma nowych wypozyczen");
+        }
+}
+
 int znajdz_najwyzsze_ID()
 {
     int max=0;

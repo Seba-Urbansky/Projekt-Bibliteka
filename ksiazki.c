@@ -56,17 +56,7 @@ void edytuj_ksiazki_ID_ksiazki(Ksiazki *wpis)
     wpis->ID = znajdz_najwyzsze_ID_ksiazki() + 1;
 }
 
-{
-    int max = 0;
-    for (Klient *wpis = pierwszy_klient; NULL != wpis; wpis = wpis->nastepny)
-    {
-        if (wpis->numer_karty > max)
-        {
-            max = wpis->numer_karty;
-        }
-    }
-    return max;
-}
+
 
 Ksiazki* wyszukaj_ksiazke(int ID) {
     for(Ksiazki *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis -> nastepny) {

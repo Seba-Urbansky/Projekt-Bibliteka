@@ -52,7 +52,7 @@ int znajdz_najwyzsze_ID_klienci()
 }
 
 
-void edytuj_wypozyczenia_numer_karty(Klient *wpis)
+void edytuj_wypozyczenia_numer_karty_abc(Klient *wpis)
 {
     wpis->numer_karty = znajdz_najwyzsze_ID_klienci() + 1;
 }

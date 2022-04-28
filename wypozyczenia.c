@@ -66,7 +66,6 @@ void edytuj_wypozyczenia_numer_karty(Wypozyczenia *wpis)
     }
 }
 
-
 void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenia *wpis)
 {
     int ID;
@@ -130,9 +129,19 @@ void wczytaniepliku_wypozyczenia()
 
 void zapispliku_wypozyczenia()
 {
+
+    Wypozyczenia *wpis = (Wypozyczenia *)malloc(sizeof(Wypozyczenia));
     FILE *plik = fopen("wypozyczenia.csv", "w");
     for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {
-        fprintf(plik, "%d %d %d %d %d",&wpis->ID_ksiazki, wpis->ID, wpis->numer_karty, wpis->kiedy, wpis->dokiedy);
+        
+        if (nastepny == NULL)
+        {
+            fprintf(plik, "%d %d %d %d %d", &wpis->ID_ksiazki, wpis->ID, wpis->numer_karty, wpis->kiedy, wpis->dokiedy);
+        }
+        else
+        {
+            fprintf(plik, "\n");
+        }
     }
 }

@@ -55,7 +55,7 @@ void edytuj_wypozyczenia_numer_karty(Wypozyczenia* wpis) {
     int ID;
     printf("Podaj ID klienta \n");
     scanf("%d", &ID);
-     Wypozyczenia* wyszukaj_klienta = wyszukaj_klienta(ID);
+     Wypozyczenia* klient = wyszukaj_klienta(ID);
     if (wyszukaj_klienta == NULL) {
         printf("Podane klient nie istnieje.\n");
         edytuj_wypozyczenia_ID_ksiazki(wpis);
@@ -69,7 +69,7 @@ void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenia* wpis)
     int ID;
     printf("Podaj ID ksiazki \n");
     scanf("%d", &ID);
-     Ksiazki* wyszukaj_ksiazke(int ID);
+     Wypozyczenia* wyszukana_ksiazka = wyszukaj_ksiazke(int ID);
     if (wyszukana_ksiazka == NULL) {
         printf("Podane ID ksiazki nie istnieje.\n");
         edytuj_wypozyczenia_ID_ksiazki(wpis);

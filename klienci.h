@@ -39,6 +39,7 @@ void edytuj_email_klienta(Klient* wpis);
 void edytuj_numeru_karty(Klient* wpis);
 void wyswietl_baze_klientow();
 Klient* wyszukaj_klienta(int numer_karty);
+void znajdz_najwyzsze_ID_klienci();
 
 
 

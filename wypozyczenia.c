@@ -6,7 +6,8 @@
 #include "klienci.h"
 #include "wypozyczenia.h"
 #include "ksiazki.h"
-// Wypożyczanie/oddawanie książek (kto wypożyczył (numer karty), którą książkę (ID), kiedy, do kiedy). 
+
+// Wypożyczanie/oddawanie książek (kto wypożyczył (numer karty), którą książkę (ID), kiedy, do kiedy).
 // http://fizyka.umk.pl/~leii/wskaznikiStrukturyAiR.pdf
 
 // automatyczne zapisywanie ID w ksiazkach i klientach //
@@ -14,9 +15,9 @@
 Wypozyczenia *pierwsze_wypozyczenie = NULL;
 Wypozyczenia *ostatnie_wypozyczenie = NULL;
 
-void wydrukuj_wypozyczenia(Wypozyczenia* wpis) 
+void wydrukuj_wypozyczenia(Wypozyczenia *wpis)
 {
-    Klient* klient = wyszukaj_klienta(wpis->numer_karty);
+    Klient *klient = wyszukaj_klienta(wpis->numer_karty);
     wydrukuj_klienta(klient);
     printf("%d ", wpis->ID);
     printf("%d ", wpis->ID_ksiazki);
@@ -28,12 +29,43 @@ void wydrukuj_wypozyczenia(Wypozyczenia* wpis)
 
 void wyswietl_kto_wypozyczyl()
 {
-    printf ("BAZA WYPOZYCZEN ------------------------\n");
-    for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis -> nastepny) {
+    printf("BAZA WYPOZYCZEN ------------------------\n");
+    for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
+    {
         wydrukuj_wypozyczenia(wpis);
     }
-    printf ("--------------------------------------\n\n");
+    printf("--------------------------------------\n\n");
 }
+
+int znajdz_najwyzsze_ID()
+{
+    int max = 0;
+    for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
+    {
+        if (wpis->ID > max)
+        {
+            max = wpis->ID;
+        }
+    }
+    return max;
+}
+
+void edytuj_wypozyczenia_numer_karty(Wypozyczenia *wpis)
+{
+    int ID;
+    printf("Podaj ID klienta:\n");
+    scanf("%d", &ID);
+    if (wyszukaj_klienta(ID) == NULL)
+    {
+        printf("Podane klient nie istnieje.\n");
+        edytuj_wypozyczenia_numer_karty(wpis);
+    }
+    else
+    {
+        wpis->ID_ksiazki = ID;
+    }
+}
+
 
 void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenia *wpis)
 {
@@ -50,70 +82,21 @@ void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenia *wpis)
     }
 }
 
-
-int znajdz_najwyzsze_ID()
+void edytuj_wypozyczenia_ID(Wypozyczenia *wpis)
 {
-    int max=0;
-  for(Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL !=wpis; wpis = wpis -> nastepny)
-    {
-        if(wpis->ID>max)
-        {
-           max = wpis->ID;
-        }
-    }
-    return max;
-
+    wpis->ID = znajdz_najwyzsze_ID() + 1;
 }
 
-void edytuj_wypozyczenia_numer_karty(Wypozyczenia* wpis) {
-    int ID;
-    printf("Podaj ID klienta \n");
-    scanf("%d", &ID);
-     Wypozyczenia* klient = wyszukaj_klienta(ID);
-    if (wyszukaj_klienta == NULL) {
-        printf("Podane klient nie istnieje.\n");
-        edytuj_wypozyczenia_ID_ksiazki(wpis);
-    } else {
-        wpis->ID_ksiazki = ID;
-    }    
-}
-
-void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenia* wpis)
+void dodaj_wypozyczenie()
 {
-    int ID;
-    printf("Podaj ID ksiazki \n");
-    scanf("%d", &ID);
-    if (wyszukaj_klienta(ID) == NULL) {
-     printf("Klient nie istnieje");
-    }
-    else {
-    Wypozyczenia* wyszukana_ksiazka =  wyszukaj_ksiazke(int ID);
-    }
-    if (wyszukana_ksiazka == NULL) {
-        printf("Podane ID ksiazki nie istnieje.\n");
-        edytuj_wypozyczenia_ID_ksiazki(wpis);
-    } else {
-        wpis->ID_ksiazki = ID;
-    }    
-}
-
-void edytuj_wypozyczenia_ID(Wypozyczenia* wpis)
-{
-    wpis->ID= znajdz_najwyzsze_ID() + 1;
-}
-
-void dodaj_wypozyczenie() 
-{
-     Wypozyczenia *wpis = (Wypozyczenia *)malloc(sizeof(Wypozyczenia));
+    Wypozyczenia *wpis = (Wypozyczenia *)malloc(sizeof(Wypozyczenia));
 
     edytuj_wypozyczenia_ID_ksiazki(wpis);
     edytuj_wypozyczenia_numer_karty(wpis);
-    
-
+    edytuj_wypozyczenia_ID(wpis);
     ostatnie_wypozyczenie->nastepny = wpis;
     wpis->poprzedni = ostatnie_wypozyczenie;
     ostatnie_wypozyczenie = wpis;
-
 }
 
 void wczytaniepliku_wypozyczenia()
@@ -123,28 +106,33 @@ void wczytaniepliku_wypozyczenia()
 
     Wypozyczenia *wpis = (Wypozyczenia *)malloc(sizeof(Wypozyczenia));
     Wypozyczenia *poprzedni;
-    while (!feof (plik))
+    while (!feof(plik))
     {
         wpis = malloc(sizeof(Wypozyczenia));
         fscanf(plik, "%d %d %d %d", &wpis->ID, &wpis->numer_karty, &wpis->kiedy, &wpis->dokiedy);
-        if (pierwsze_wypozyczenie == NULL) {
+        if (pierwsze_wypozyczenie == NULL)
+        {
             pierwsze_wypozyczenie = wpis;
             poprzedni = wpis;
-        } else if (wpis != NULL) {
+        }
+        else if (wpis != NULL)
+        {
             poprzedni->nastepny = wpis;
             wpis->poprzedni = poprzedni;
             poprzedni = wpis;
         }
     }
-    if (wpis != NULL) {
+    if (wpis != NULL)
+    {
         ostatnie_wypozyczenie = wpis;
     }
 }
 
-void zapispliku_wypozyczenia() {
-      FILE *plik = fopen("wypozyczenia.csv", "w");
-    for(Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis -> nastepny) {
+void zapispliku_wypozyczenia()
+{
+    FILE *plik = fopen("wypozyczenia.csv", "w");
+    for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
+    {
         fprintf(plik, "%d %d %d %d %d\n", wpis->ID, wpis->numer_karty, wpis->kiedy, wpis->dokiedy);
     }
 }
-

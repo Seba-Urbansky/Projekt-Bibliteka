@@ -38,7 +38,18 @@ void dodaj_klienta()
 
     
 }
-
+int znajdz_najwyzsze_ID_klienci()
+{
+    int max = 0;
+    for (Klient *wpis = pierwszy_klient; NULL != wpis; wpis = wpis->nastepny)
+    {
+        if (wpis->numer_karty > max)
+        {
+            max = wpis->numer_karty;
+        }
+    }
+    return max;
+}
 
 Klient* wyszukaj_klienta(int numer_karty) {
     for( Klient *wpis = pierwszy_klient; NULL != wpis; wpis = wpis -> nastepny) {

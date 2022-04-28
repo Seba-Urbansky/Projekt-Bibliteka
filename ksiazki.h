@@ -41,6 +41,7 @@ void edytuj_rok(Ksiazki* wpis);
 void edytuj_ID(Ksiazki* wpis);
 void wyswietl_baze_ksiazek();
 Ksiazki* wyszukaj_ksiazke(int ID);
+int znajdz_najwyzsze_ID_ksiazki();
 
 
 

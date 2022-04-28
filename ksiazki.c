@@ -38,6 +38,29 @@ void dodaj_ksiazke()
    
 }
 
+int znajdz_najwyzsze_ID_ksiazki()
+{
+    int max = 0;
+    for (Ksiazki *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
+    {
+        if (wpis->ID > max)
+        {
+            max = wpis->ID;
+        }
+    }
+    return max;
+}
+{
+    int max = 0;
+    for (Klient *wpis = pierwszy_klient; NULL != wpis; wpis = wpis->nastepny)
+    {
+        if (wpis->numer_karty > max)
+        {
+            max = wpis->numer_karty;
+        }
+    }
+    return max;
+}
 
 Ksiazki* wyszukaj_ksiazke(int ID) {
     for(Ksiazki *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis -> nastepny) {

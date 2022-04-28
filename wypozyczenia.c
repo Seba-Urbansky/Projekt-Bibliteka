@@ -69,7 +69,12 @@ void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenia* wpis)
     int ID;
     printf("Podaj ID ksiazki \n");
     scanf("%d", &ID);
-     Wypozyczenia* wyszukana_ksiazka = wyszukaj_ksiazke(int ID);
+    if (wyszukaj_klienta(ID) == NULL) {
+     printf("Klient nie istnieje");
+    }
+    else {
+    Wypozyczenia* wyszukana_ksiazka =  wyszukaj_ksiazke(int ID);
+    }
     if (wyszukana_ksiazka == NULL) {
         printf("Podane ID ksiazki nie istnieje.\n");
         edytuj_wypozyczenia_ID_ksiazki(wpis);

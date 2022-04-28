@@ -34,20 +34,22 @@ void wyswietl_kto_wypozyczyl()
     }
     printf ("--------------------------------------\n\n");
 }
-// Napisz funkcje ktora automatycznie ustawia ID nowego wypozyczenia
-// 
 
-void ustaw_ID_nowego_wypozyczenia()
+void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenia *wpis)
 {
-    int nowe_wypozyczenie;
-    if(Wypozyczenia *wpis != NULL)
+    int ID;
+    printf("Podaj ID ksiazki:\n");
+    scanf("%d", &ID);
+    if (wyszukaj_ksiazke(ID) == NULL)
     {
-        wpis = wpis ->  nowe_wypozyczenie;
+        printf("Ksiazka nie istnieje.\n");
     }
-    else {
-        printf("Nie ma nowych wypozyczen");
-        }
+    else
+    {
+        wpis->ID_ksiazki = ID;
+    }
 }
+
 
 int znajdz_najwyzsze_ID()
 {

@@ -87,16 +87,6 @@ void edytuj_wypozyczenia_ID(Wypozyczenia *wpis)
     wpis->ID = znajdz_najwyzsze_ID() + 1;
 }
 
-void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenia *wpis)
-{
-    wpis->ID = znajdz_najwyzsze_ID_ksiazki() + 1;
-}
-
-void edytuj_wypozyczenia_numer_karty(Wypozyczenia *wpis)
-{
-    wpis->ID = znajdz_najwyzsze_ID_klienci() + 1;
-}
-
 void dodaj_wypozyczenie()
 {
     Wypozyczenia *wpis = (Wypozyczenia *)malloc(sizeof(Wypozyczenia));

@@ -50,6 +50,12 @@ int znajdz_najwyzsze_ID_ksiazki()
     }
     return max;
 }
+
+void edytuj_ksiazki_ID_ksiazki(Ksiazki *wpis)
+{
+    wpis->ID = znajdz_najwyzsze_ID_ksiazki() + 1;
+}
+
 {
     int max = 0;
     for (Klient *wpis = pierwszy_klient; NULL != wpis; wpis = wpis->nastepny)

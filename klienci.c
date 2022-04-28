@@ -51,6 +51,12 @@ int znajdz_najwyzsze_ID_klienci()
     return max;
 }
 
+
+void edytuj_wypozyczenia_numer_karty(Klient *wpis)
+{
+    wpis->numer_karty = znajdz_najwyzsze_ID_klienci() + 1;
+}
+
 Klient* wyszukaj_klienta(int numer_karty) {
     for( Klient *wpis = pierwszy_klient; NULL != wpis; wpis = wpis -> nastepny) {
         if (wpis->numer_karty==numer_karty) {

@@ -163,12 +163,13 @@ void menu_wypozyczen()
     case 1:
         wyswietl_kto_wypozyczyl();
         break;
-    /*
+    
     case 2:
-        //dodaj_wypozyczenie();
+        dodaj_wypozyczenie();
         break;
+        /*
     case 3:
-        //menu_zarzadzaj_wypozyczeniami();
+        menu_zarzadzaj_wypozyczeniami();
         break;
     */
     case 4:

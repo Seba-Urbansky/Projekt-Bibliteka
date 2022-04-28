@@ -109,7 +109,7 @@ void wczytaniepliku_wypozyczenia()
     while (!feof(plik))
     {
         wpis = malloc(sizeof(Wypozyczenia));
-        fscanf(plik, "%d %d %d %d", &wpis->ID, &wpis->numer_karty, &wpis->kiedy, &wpis->dokiedy);
+        fscanf(plik, "%d %d %d %d", &wpis->ID_ksiazki, &wpis->ID, &wpis->numer_karty, &wpis->kiedy, &wpis->dokiedy);
         if (pierwsze_wypozyczenie == NULL)
         {
             pierwsze_wypozyczenie = wpis;
@@ -133,6 +133,6 @@ void zapispliku_wypozyczenia()
     FILE *plik = fopen("wypozyczenia.csv", "w");
     for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {
-        fprintf(plik, "%d %d %d %d %d\n", wpis->ID, wpis->numer_karty, wpis->kiedy, wpis->dokiedy);
+        fprintf(plik, "%d %d %d %d %d\n",&wpis->ID_ksiazki, wpis->ID, wpis->numer_karty, wpis->kiedy, wpis->dokiedy);
     }
 }

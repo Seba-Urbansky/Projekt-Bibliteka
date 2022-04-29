@@ -90,10 +90,13 @@ void dodaj_wypozyczenie()
 {
     Wypozyczenia *wpis = (Wypozyczenia *)malloc(sizeof(Wypozyczenia));
 
-    pierwsze_wypozyczenie = wpis;
+   
     edytuj_wypozyczenia_ID_ksiazki(wpis);
     edytuj_wypozyczenia_numer_karty(wpis);
     edytuj_wypozyczenia_ID(wpis);
+
+     pierwsze_wypozyczenie = wpis;
+
     ostatnie_wypozyczenie->nastepny = wpis;
     wpis->poprzedni = ostatnie_wypozyczenie;
     ostatnie_wypozyczenie = wpis;
@@ -140,6 +143,10 @@ void zapispliku_wypozyczenia()
         if (wpis->nastepny != NULL)
         {
             fprintf(plik, "\n");
+        }
+        while (!feof(plik)) 
+        {
+            flclose(plik);
         }
     }
 }

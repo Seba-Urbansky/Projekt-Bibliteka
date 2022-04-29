@@ -25,12 +25,14 @@ void dodaj_ksiazke()
 {
     Ksiazki *wpis = (Ksiazki *)malloc(sizeof(Ksiazki));
 
-    pierwsza_ksiazka = wpis;
+    
     edytuj_ID(wpis);
     edytuj_tytul_ksiazki(wpis);
     edytuj_gatunek_ksiazki(wpis);
     edytuj_autora(wpis);
     edytuj_rok(wpis);
+
+    pierwsza_ksiazka = wpis;
 
     ostatnia_ksiazka->nastepny = wpis;
     wpis->poprzedni = ostatnia_ksiazka;

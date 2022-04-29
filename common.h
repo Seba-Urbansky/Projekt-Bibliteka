@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
+int czy_plik_jest_pusty(File* plik);
 
 
 

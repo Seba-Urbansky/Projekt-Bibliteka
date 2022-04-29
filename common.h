@@ -6,19 +6,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct Common
-{
 
-    int fp;
-    int fseek;
-    int ftell;
-    
 
-    struct Common *poprzedni, *nastepny;
-
-} File;
-
-int czy_plik_jest_pusty(struct File* plik);
+int czy_plik_jest_pusty(FILE* plik);
 
 
 #endif

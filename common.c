@@ -8,10 +8,11 @@
 #include <string.h>
 #define MAX 32
 
-File *plik;
+FILE *plik;
 
-int czy_plik_jest_pusty(File* plik) 
+int czy_plik_jest_pusty(FILE* plik) 
 {
+    int fp;
     fseek(plik, 0, SEEK_END);
     if (ftell(fp) == 0)
     {

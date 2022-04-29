@@ -134,12 +134,9 @@ void zapispliku_wypozyczenia()
     FILE *plik = fopen("wypozyczenia.csv", "w");
     for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {
-        
-        if (nastepny == NULL)
-        {
-            fprintf(plik, "%d %d %d %d %d", &wpis->ID_ksiazki, wpis->ID, wpis->numer_karty, wpis->kiedy, wpis->dokiedy);
-        }
-        else
+
+        fprintf(plik, "%d %d %d %d %d", &wpis->ID_ksiazki, wpis->ID, wpis->numer_karty, wpis->kiedy, wpis->dokiedy);
+        if (wpis->nastepny != NULL)
         {
             fprintf(plik, "\n");
         }

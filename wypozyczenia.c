@@ -90,16 +90,14 @@ void dodaj_wypozyczenie()
 {
     Wypozyczenia *wpis = (Wypozyczenia *)malloc(sizeof(Wypozyczenia));
 
-   
-
     edytuj_wypozyczenia_ID_ksiazki(wpis);
     edytuj_wypozyczenia_numer_karty(wpis);
     edytuj_wypozyczenia_ID(wpis);
-if(pierwsze_wypozyczenie==NULL)
-{
-    pierwsze_wypozyczenie = wpis;
-    ostatnie_wypozyczenie = wpis;
-}
+    if (pierwsze_wypozyczenie == NULL)
+    {
+        pierwsze_wypozyczenie = wpis;
+        ostatnie_wypozyczenie = wpis;
+    }
     wpis->poprzedni = ostatnie_wypozyczenie;
     ostatnie_wypozyczenie = wpis;
 }
@@ -111,25 +109,36 @@ void wczytaniepliku_wypozyczenia()
 
     Wypozyczenia *wpis = (Wypozyczenia *)malloc(sizeof(Wypozyczenia));
     Wypozyczenia *poprzedni;
+
     while (!feof(plik))
     {
+
         wpis = malloc(sizeof(Wypozyczenia));
-        fscanf(plik, "%d %d %d %d %d", &wpis->ID_ksiazki, &wpis->ID, &wpis->numer_karty, &wpis->kiedy, &wpis->dokiedy);
-        if (pierwsze_wypozyczenie == NULL)
+        bool(int czy_plik_jest_pusty(File * plik) == true)
         {
-            pierwsze_wypozyczenie = wpis;
-            poprzedni = wpis;
+            fscanf(plik, "%d %d %d %d %d", &wpis->ID_ksiazki, &wpis->ID, &wpis->numer_karty, &wpis->kiedy, &wpis->dokiedy);
+
+            if (pierwsze_wypozyczenie == NULL)
+            {
+                pierwsze_wypozyczenie = wpis;
+                poprzedni = wpis;
+            }
         }
-        else if (wpis != NULL)
+        else
         {
-            poprzedni->nastepny = wpis;
-            wpis->poprzedni = poprzedni;
-            poprzedni = wpis;
+            else if (wpis != NULL)
+            {
+                poprzedni->nastepny = wpis;
+                wpis->poprzedni = poprzedni;
+                poprzedni = wpis;
+            }
         }
-    }
-    if (wpis != NULL)
-    {
-        ostatnie_wypozyczenie = wpis;
+        if (wpis != NULL)
+        {
+            ostatnie_wypozyczenie->nastepny = wpis;
+            wpis->poprzedni = ostatnie_wypozyczenie
+            ostatnie_wypozyczenie = wpis;
+        }
     }
 }
 
@@ -138,24 +147,19 @@ void zapispliku_wypozyczenia()
 
     Wypozyczenia *wpis = (Wypozyczenia *)malloc(sizeof(Wypozyczenia));
     FILE *plik = fopen("wypozyczenia.csv", "w");
-    
-    bool (int czy_plik_jest_pusty(File* plik)==true)
-    {
+
     for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {
 
         fprintf(plik, "%d %d %d %d %d", wpis->ID_ksiazki, wpis->ID, wpis->numer_karty, wpis->kiedy, wpis->dokiedy);
     }
+
+    if (wpis->nastepny != NULL)
+    {
+        fprintf(plik, "\n");
     }
-    else{
-        if (wpis->nastepny != NULL)
-        {
-            fprintf(plik, "\n");
-        }
-        while (!feof(plik)) 
-        {
-            flclose(plik);
-        }
-    
-}
+    while (!feof(plik))
+    {
+        flclose(plik);
+    }
 }

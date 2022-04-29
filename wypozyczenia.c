@@ -114,32 +114,29 @@ void wczytaniepliku_wypozyczenia()
     {
 
         wpis = malloc(sizeof(Wypozyczenia));
-        bool(int czy_plik_jest_pusty(File * plik) == true)
-        {
-            fscanf(plik, "%d %d %d %d %d", &wpis->ID_ksiazki, &wpis->ID, &wpis->numer_karty, &wpis->kiedy, &wpis->dokiedy);
+        fscanf(plik, "%d %d %d %d %d", &wpis->ID_ksiazki, &wpis->ID, &wpis->numer_karty, &wpis->kiedy, &wpis->dokiedy);
 
-            if (pierwsze_wypozyczenie == NULL)
-            {
-                pierwsze_wypozyczenie = wpis;
-                poprzedni = wpis;
-            }
-        }
-        else
+        if (pierwsze_wypozyczenie == NULL)
         {
-            else if (wpis != NULL)
-            {
-                poprzedni->nastepny = wpis;
-                wpis->poprzedni = poprzedni;
-                poprzedni = wpis;
-            }
-        }
-        if (wpis != NULL)
-        {
-            ostatnie_wypozyczenie->nastepny = wpis;
-            wpis->poprzedni = ostatnie_wypozyczenie
-            ostatnie_wypozyczenie = wpis;
+            pierwsze_wypozyczenie = wpis;
+            poprzedni = wpis;
         }
     }
+
+    else if (wpis != NULL)
+    {
+        poprzedni->nastepny = wpis;
+        wpis->poprzedni = poprzedni;
+        poprzedni = wpis;
+    }
+
+    if (wpis != NULL)
+    {
+        ostatnie_wypozyczenie->nastepny = wpis;
+        wpis->poprzedni = ostatnie_wypozyczenie
+            ostatnie_wypozyczenie = wpis;
+    }
+}
 }
 
 void zapispliku_wypozyczenia()

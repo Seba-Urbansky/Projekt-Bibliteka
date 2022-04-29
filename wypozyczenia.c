@@ -138,10 +138,16 @@ void zapispliku_wypozyczenia()
 
     Wypozyczenia *wpis = (Wypozyczenia *)malloc(sizeof(Wypozyczenia));
     FILE *plik = fopen("wypozyczenia.csv", "w");
+    
+    bool (int czy_plik_jest_pusty(File* plik)==true)
+    {
     for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {
 
         fprintf(plik, "%d %d %d %d %d", wpis->ID_ksiazki, wpis->ID, wpis->numer_karty, wpis->kiedy, wpis->dokiedy);
+    }
+    }
+    else{
         if (wpis->nastepny != NULL)
         {
             fprintf(plik, "\n");
@@ -150,5 +156,6 @@ void zapispliku_wypozyczenia()
         {
             flclose(plik);
         }
-    }
+    
+}
 }

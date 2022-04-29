@@ -123,7 +123,7 @@ void wczytaniepliku_wypozyczenia()
         }
     }
 
-    else if (wpis != NULL)
+    if (wpis != NULL)
     {
         poprzedni->nastepny = wpis;
         wpis->poprzedni = poprzedni;
@@ -133,11 +133,11 @@ void wczytaniepliku_wypozyczenia()
     if (wpis != NULL)
     {
         ostatnie_wypozyczenie->nastepny = wpis;
-        wpis->poprzedni = ostatnie_wypozyczenie
+        wpis->poprzedni = ostatnie_wypozyczenie;
             ostatnie_wypozyczenie = wpis;
     }
 }
-}
+
 
 void zapispliku_wypozyczenia()
 {
@@ -157,6 +157,6 @@ void zapispliku_wypozyczenia()
     }
     while (!feof(plik))
     {
-        flclose(plik);
+        fclose(plik);
     }
 }

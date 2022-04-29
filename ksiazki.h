@@ -21,7 +21,7 @@ typedef struct KsiazkiStruktura
     char* gatunek[MAX];
     
 
-    struct KlientStruktura *poprzedni, *nastepny;
+    struct KsiazkiStruktura *poprzedni, *nastepny;
 
 } Ksiazki;
 

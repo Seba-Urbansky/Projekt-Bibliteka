@@ -6,46 +6,43 @@
 // Dodawanie/usuwanie/edycja książek (ID, tytuł, rok, autor, gatunek, liczba egzemplarzy, liczba wypożyczonych).
 // http://fizyka.umk.pl/~leii/wskaznikiStrukturyAiR.pdf
 
-
-
 Ksiazki *pierwsza_ksiazka = NULL;
 Ksiazki *ostatnia_ksiazka = NULL;
 
 void wyswietl_baze_ksiazek()
 {
-    printf ("BAZA KSIAZEK ------------------------\n");
-    for (Ksiazki *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis -> nastepny) {
+    printf("BAZA KSIAZEK ------------------------\n");
+    for (Ksiazki *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
+    {
         wydrukuj_ksiazke(wpis);
     }
-    printf ("--------------------------------------\n\n");
-   
+    printf("--------------------------------------\n\n");
 }
 
 void dodaj_ksiazke()
 {
     Ksiazki *wpis = (Ksiazki *)malloc(sizeof(Ksiazki));
 
-    
     edytuj_ID(wpis);
     edytuj_tytul_ksiazki(wpis);
     edytuj_gatunek_ksiazki(wpis);
     edytuj_autora(wpis);
     edytuj_rok(wpis);
 
-    if(pierwsza_ksiazka==NULL)
+    if (pierwsza_ksiazka == NULL)
     {
-    pierwsza_ksiazka = wpis;
-    ostatnia_ksiazka = wpis;
+
+        pierwsza_ksiazka = wpis;
+        ostatnia_ksiazka = wpis;
+
     }
 
     else
     {
-    ostatnia_ksiazka->nastepny = wpis;
-    wpis->poprzedni = ostatnia_ksiazka;
-    ostatnia_ksiazka = wpis;
+        ostatnia_ksiazka->nastepny = wpis;
+        wpis->poprzedni = ostatnia_ksiazka;
+        ostatnia_ksiazka = wpis;
     }
-
-   
 }
 
 int znajdz_najwyzsze_ID_ksiazki()
@@ -66,94 +63,104 @@ void edytuj_ksiazki_ID_ksiazki(Ksiazki *wpis)
     wpis->ID = znajdz_najwyzsze_ID_ksiazki() + 1;
 }
 
-
-
-Ksiazki* wyszukaj_ksiazke(int ID) {
-    for(Ksiazki *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis -> nastepny) {
-        if (wpis->ID==ID) {
+Ksiazki *wyszukaj_ksiazke(int ID)
+{
+    for (Ksiazki *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
+    {
+        if (wpis->ID == ID)
+        {
             return wpis;
-        } 
+        }
     }
     return NULL;
 }
 
-void wydrukuj_ksiazke(Ksiazki* wpis) {
-    printf ("%d ", wpis->ID);
-    printf ("%s ", wpis->tytul);
-    printf ("%s ", wpis->autor);
-    printf ("%s ", wpis->gatunek);
-    
-    printf ("\n");
+void wydrukuj_ksiazke(Ksiazki *wpis)
+{
+    printf("%d ", wpis->ID);
+    printf("%s ", wpis->tytul);
+    printf("%s ", wpis->autor);
+    printf("%s ", wpis->gatunek);
+
+    printf("\n");
 }
 
-void edytuj_tytul_ksiazki(Ksiazki* wpis) {
+void edytuj_tytul_ksiazki(Ksiazki *wpis)
+{
     char imie[MAX] = "";
     printf("Podaj tytul: \n");
     scanf("%s", &imie);
-    if (imie == "") {
+    if (imie == "")
+    {
         printf("Niepoprawny tytul, nie powinno byc puste.\n");
         edytuj_tytul_ksiazki(wpis);
-    } else {
+    }
+    else
+    {
         strcpy(wpis->tytul, &imie);
     }
 }
 
-void edytuj_autora(Ksiazki* wpis) {
+void edytuj_autora(Ksiazki *wpis)
+{
     printf("Podaj nowego autora: \n");
     scanf("%s", &wpis->autor);
 }
 
-void edytuj_rok(Ksiazki* wpis) {
+void edytuj_rok(Ksiazki *wpis)
+{
     printf("Podaj nowy rok: \n");
     scanf("%s", &wpis->rok);
 }
 
-void edytuj_gatunek_ksiazki(Ksiazki* wpis) {
+void edytuj_gatunek_ksiazki(Ksiazki *wpis)
+{
     printf("Podaj nowy gatunek literacki: \n");
     scanf("%s", &wpis->gatunek);
 }
 
-void edytuj_ID(Ksiazki* wpis) {
+void edytuj_ID(Ksiazki *wpis)
+{
     int ID;
     printf("Podaj ID ksiazki \n");
     scanf("%d", &ID);
-     Ksiazki* wyszukany_klient = wyszukaj_ksiazke(ID);
-    if (wyszukany_klient != NULL) {
+    Ksiazki *wyszukany_klient = wyszukaj_ksiazke(ID);
+    if (wyszukany_klient != NULL)
+    {
         printf("Podany ID ksiazki juz istnieje.\n");
         edytuj_ID(wpis);
-    } else {
+    }
+    else
+    {
         wpis->ID;
     }
 }
 
-void usun_ksiazke(Ksiazki* wpis) {
+void usun_ksiazke(Ksiazki *wpis)
+{
     Ksiazki *poprzedni = wpis->poprzedni;
     Ksiazki *nastepny = wpis->nastepny;
-    if (poprzedni == NULL && nastepny == NULL) {
+    if (poprzedni == NULL && nastepny == NULL)
+    {
         pierwsza_ksiazka = NULL;
         ostatnia_ksiazka = NULL;
-    } else if (poprzedni == NULL && nastepny != NULL) {
+    }
+    else if (poprzedni == NULL && nastepny != NULL)
+    {
         nastepny->poprzedni = NULL;
         pierwsza_ksiazka = nastepny;
-    } else if (nastepny == NULL && poprzedni != NULL) {
+    }
+    else if (nastepny == NULL && poprzedni != NULL)
+    {
         poprzedni->nastepny = NULL;
         ostatnia_ksiazka = poprzedni;
-    } else {
+    }
+    else
+    {
         poprzedni->nastepny = nastepny;
-        nastepny->poprzedni = poprzedni;    
+        nastepny->poprzedni = poprzedni;
     }
 }
-
-
-
-
-
-
-
-/*|||||||||||||||||||||||||||||||||||||||||||||||||||||*/
-/*|||||||||||||||||||||||||||||||||||||||||||||||||||||*/
-/*|||||||||||||||||||||||||||||||||||||||||||||||||||||*/
-//klienci
 
 void wczytaniepliku_ksiazki()
 {
@@ -162,30 +169,33 @@ void wczytaniepliku_ksiazki()
 
     Ksiazki *wpis = (Ksiazki *)malloc(sizeof(Ksiazki));
     Ksiazki *poprzedni;
-    while (!feof (plik))
+    while (!feof(plik))
     {
         wpis = malloc(sizeof(Ksiazki));
         fscanf(plik, "%[^;];%[^;];%[^;];%d\n", wpis->gatunek, wpis->tytul, wpis->autor, &wpis->ID);
-        if (pierwsza_ksiazka == NULL) {
+        if (pierwsza_ksiazka == NULL)
+        {
             pierwsza_ksiazka = wpis;
             poprzedni = wpis;
-        } else if (wpis != NULL) {
+        }
+        else if (wpis != NULL)
+        {
             poprzedni->nastepny = wpis;
             wpis->poprzedni = poprzedni;
             poprzedni = wpis;
         }
     }
-    if (wpis != NULL) {
+    if (wpis != NULL)
+    {
         ostatnia_ksiazka = wpis;
     }
 }
 
-
-void zapispliku_ksiazki() {
+void zapispliku_ksiazki()
+{
     FILE *plik = fopen("ksiazki.csv", "w");
-    for(Ksiazki *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis -> nastepny) {
+    for (Ksiazki *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
+    {
         fprintf(plik, "%s;%s;%s;%d\n", wpis->gatunek, wpis->tytul, wpis->autor, wpis->ID);
     }
 }
-
-

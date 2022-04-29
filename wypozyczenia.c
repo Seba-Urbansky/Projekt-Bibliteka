@@ -122,6 +122,13 @@ void wczytaniepliku_wypozyczenia()
         wpis = malloc(sizeof(Wypozyczenia));
         fscanf(plik, "%d %d %d %d %d", &wpis->ID_ksiazki, &wpis->ID, &wpis->numer_karty, &wpis->kiedy, &wpis->dokiedy);
 
+
+
+        if (czy_plik_jest_pusty(plik)) {
+            return;
+        }
+
+
         if (pierwsze_wypozyczenie == NULL)
         {
             pierwsze_wypozyczenie = wpis;

@@ -91,13 +91,15 @@ void dodaj_wypozyczenie()
     Wypozyczenia *wpis = (Wypozyczenia *)malloc(sizeof(Wypozyczenia));
 
    
+
     edytuj_wypozyczenia_ID_ksiazki(wpis);
     edytuj_wypozyczenia_numer_karty(wpis);
     edytuj_wypozyczenia_ID(wpis);
-
-     pierwsze_wypozyczenie = wpis;
-
-    ostatnie_wypozyczenie->nastepny = wpis;
+if(pierwsze_wypozyczenie==NULL)
+{
+    pierwsze_wypozyczenie = wpis;
+    ostatnie_wypozyczenie = wpis;
+}
     wpis->poprzedni = ostatnie_wypozyczenie;
     ostatnie_wypozyczenie = wpis;
 }

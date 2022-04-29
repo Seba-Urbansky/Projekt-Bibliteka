@@ -136,14 +136,14 @@ void wczytaniepliku_wypozyczenia()
         }
     }
 
-    if (wpis != NULL)
+    else if (wpis != NULL)
     {
         poprzedni->nastepny = wpis;
         wpis->poprzedni = poprzedni;
         poprzedni = wpis;
     }
 
-    else
+    if (wpis != NULL)
     {
         ostatnie_wypozyczenie->nastepny = wpis;
         wpis->poprzedni = ostatnie_wypozyczenie;

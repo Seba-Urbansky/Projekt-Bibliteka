@@ -98,12 +98,14 @@ void dodaj_wypozyczenie()
         pierwsze_wypozyczenie = wpis;
         ostatnie_wypozyczenie = wpis;
     }
-    
-    else {
-    ostatnie_wypozyczenie->nastepny = wpis;
-    wpis->poprzedni = ostatnie_wypozyczenie;
-    ostatnie_wypozyczenie = wpis;
-}
+
+    else
+    {
+
+        ostatnie_wypozyczenie->nastepny = wpis;
+        wpis->poprzedni = ostatnie_wypozyczenie;
+        ostatnie_wypozyczenie = wpis;
+    }
 }
 
 void wczytaniepliku_wypozyczenia()
@@ -134,14 +136,13 @@ void wczytaniepliku_wypozyczenia()
         poprzedni = wpis;
     }
 
-    if (wpis != NULL)
+    else
     {
         ostatnie_wypozyczenie->nastepny = wpis;
         wpis->poprzedni = ostatnie_wypozyczenie;
-            ostatnie_wypozyczenie = wpis;
+        ostatnie_wypozyczenie = wpis;
     }
 }
-
 
 void zapispliku_wypozyczenia()
 {

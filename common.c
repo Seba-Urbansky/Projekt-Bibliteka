@@ -12,9 +12,8 @@ FILE *plik;
 
 int czy_plik_jest_pusty(FILE* plik) 
 {
-    int fp;
     fseek(plik, 0, SEEK_END);
-    if (ftell(fp) == 0)
+    if (ftell(plik) == 0)
     {
         return 1;
     }

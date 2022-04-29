@@ -114,39 +114,36 @@ void wczytaniepliku_wypozyczenia()
     plik = fopen("wypozyczenia.csv", "r");
 
     Wypozyczenia *wpis = (Wypozyczenia *)malloc(sizeof(Wypozyczenia));
+
     Wypozyczenia *poprzedni;
 
     while (!feof(plik))
     {
 
-        wpis = malloc(sizeof(Wypozyczenia));
-        fscanf(plik, "%d %d %d %d %d", &wpis->ID_ksiazki, &wpis->ID, &wpis->numer_karty, &wpis->kiedy, &wpis->dokiedy);
-
-
-
-        if (czy_plik_jest_pusty(plik)) {
+        if (czy_plik_jest_pusty(plik))
+        {
             return;
         }
 
+        wpis = malloc(sizeof(Wypozyczenia));
+
+        fscanf(plik, "%d %d %d %d %d", &wpis->ID_ksiazki, &wpis->ID, &wpis->numer_karty, &wpis->kiedy, &wpis->dokiedy);
 
         if (pierwsze_wypozyczenie == NULL)
         {
             pierwsze_wypozyczenie = wpis;
             poprzedni = wpis;
         }
-    }
 
-    else if (wpis != NULL)
-    {
-        poprzedni->nastepny = wpis;
-        wpis->poprzedni = poprzedni;
-        poprzedni = wpis;
+        else if (wpis != NULL)
+        {
+            poprzedni->nastepny = wpis;
+            wpis->poprzedni = poprzedni;
+            poprzedni = wpis;
+        }
     }
-
     if (wpis != NULL)
     {
-        ostatnie_wypozyczenie->nastepny = wpis;
-        wpis->poprzedni = ostatnie_wypozyczenie;
         ostatnie_wypozyczenie = wpis;
     }
 }
@@ -154,21 +151,15 @@ void wczytaniepliku_wypozyczenia()
 void zapispliku_wypozyczenia()
 {
 
-    Wypozyczenia *wpis = (Wypozyczenia *)malloc(sizeof(Wypozyczenia));
     FILE *plik = fopen("wypozyczenia.csv", "w");
-
     for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {
 
         fprintf(plik, "%d %d %d %d %d", wpis->ID_ksiazki, wpis->ID, wpis->numer_karty, wpis->kiedy, wpis->dokiedy);
+        if (wpis->nastepny != NULL)
+        {
+            fprintf(plik, "\n");
+        }
     }
-
-    if (wpis->nastepny != NULL)
-    {
-        fprintf(plik, "\n");
-    }
-    while (!feof(plik))
-    {
-        fclose(plik);
-    }
+    fclose(plik);
 }

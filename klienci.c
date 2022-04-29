@@ -169,8 +169,14 @@ void wczytaniepliku_klienci()
     Klient *poprzedni;
     while (!feof(plik))
     {
+         if (czy_plik_jest_pusty(plik)) {
+            return;
+        }
+
         wpis = malloc(sizeof(Klient));
         fscanf(plik, "%d %s %s %s %s", &wpis->numer_karty, &wpis->imie, &wpis->nazwisko, &wpis->telefon, &wpis->email);
+        
+    
         if (pierwszy_klient == NULL)
         {
             pierwszy_klient = wpis;

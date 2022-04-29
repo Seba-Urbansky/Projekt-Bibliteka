@@ -171,8 +171,15 @@ void wczytaniepliku_ksiazki()
     Ksiazki *poprzedni;
     while (!feof(plik))
     {
+
+         if (czy_plik_jest_pusty(plik)) {
+            return;
+        }
+        
         wpis = malloc(sizeof(Ksiazki));
         fscanf(plik, "%[^;];%[^;];%[^;];%d\n", wpis->gatunek, wpis->tytul, wpis->autor, &wpis->ID);
+
+
         if (pierwsza_ksiazka == NULL)
         {
             pierwsza_ksiazka = wpis;

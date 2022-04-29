@@ -33,12 +33,18 @@ void dodaj_klienta()
     edytuj_telefon_klienta(wpis);
     edytuj_email_klienta(wpis);
 
+    if(pierwszy_klient==NULL)
+    {
     pierwszy_klient = wpis;
+    ostatni_klient = wpis;
+    }
 
+    else
+    {
     ostatni_klient->nastepny = wpis;
     wpis->poprzedni = ostatni_klient;
     ostatni_klient = wpis;
-
+    }
     
 }
 int znajdz_najwyzsze_ID_klienci()

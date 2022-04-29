@@ -32,11 +32,18 @@ void dodaj_ksiazke()
     edytuj_autora(wpis);
     edytuj_rok(wpis);
 
+    if(pierwsza_ksiazka==NULL)
+    {
     pierwsza_ksiazka = wpis;
+    ostatnia_ksiazka = wpis;
+    }
 
+    else
+    {
     ostatnia_ksiazka->nastepny = wpis;
     wpis->poprzedni = ostatnia_ksiazka;
     ostatnia_ksiazka = wpis;
+    }
 
    
 }

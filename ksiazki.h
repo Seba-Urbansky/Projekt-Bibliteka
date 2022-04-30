@@ -15,7 +15,6 @@ typedef struct KsiazkiStruktura
     int ID;
     int rok;
     int liczba_egzemplarzy;
-    int liczba_wypozyczonych;
     char* tytul[MAX];
     char* autor[MAX];
     char* gatunek[MAX];

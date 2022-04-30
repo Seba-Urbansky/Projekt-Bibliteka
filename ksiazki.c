@@ -19,6 +19,11 @@ void wyswietl_baze_ksiazek()
     printf("--------------------------------------\n\n");
 }
 
+void edycja_liczby_egzemplarzy()
+{
+
+}
+
 void dodaj_ksiazke()
 {
     Ksiazki *wpis = (Ksiazki *)malloc(sizeof(Ksiazki));

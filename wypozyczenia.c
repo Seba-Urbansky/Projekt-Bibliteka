@@ -53,17 +53,17 @@ int znajdz_najwyzsze_ID()
 
 void edytuj_wypozyczenia_numer_karty(Wypozyczenia *wpis)
 {
-    int ID;
+    int numer_karty;
     printf("Podaj ID klienta:\n");
-    scanf("%d", &ID);
-    if (wyszukaj_klienta(ID) == NULL)
+    scanf("%d", &numer_karty);
+    if (wyszukaj_klienta(numer_karty) == NULL)
     {
         printf("Podane klient nie istnieje.\n");
         edytuj_wypozyczenia_numer_karty(wpis);
     }
     else
     {
-        wpis->ID_ksiazki = ID;
+        wpis->ID_ksiazki = numer_karty;
     }
 }
 

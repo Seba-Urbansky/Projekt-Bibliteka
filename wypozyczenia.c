@@ -21,19 +21,19 @@ void wydrukuj_wypozyczenia(Wypozyczenia *wpis)
     Klient *klient = wyszukaj_klienta(wpis->numer_karty);
     printf("%-12s | %d \n", "ID", wpis->ID);
     printf("%-12s | %d \n", "ID Ksiazki", wpis->ID_ksiazki);
-    printf("%-12s | %d \n", "Numer Karty", wpis->numer_karty);
     wydrukuj_klienta(klient);
     printf("%-12s | %s", "Do kiedy", ctime(&wpis->dokiedy));
     printf("%-12s | %s", "Kiedy", ctime(&wpis->kiedy));
 }
+
 void wyswietl_kto_wypozyczyl()
 {
     printf("BAZA WYPOZYCZEN ------------------------\n");
     for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {
         wydrukuj_wypozyczenia(wpis);
+        printf("--------------------------------------\n");
     }
-    printf("--------------------------------------\n\n");
 }
 
 int znajdz_najwyzsze_ID()

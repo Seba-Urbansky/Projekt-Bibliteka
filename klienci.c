@@ -16,7 +16,7 @@ void wyswietl_baze_klientow()
     for (Klient *wpis = pierwszy_klient; NULL != wpis; wpis = wpis->nastepny)
     {
         wydrukuj_klienta(wpis);
-        printf(“———————————————————\n”);
+        printf("--------------------------------------\n");
     }
 }
 

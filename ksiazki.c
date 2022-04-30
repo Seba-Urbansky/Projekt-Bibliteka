@@ -169,13 +169,13 @@ void wczytaniepliku_ksiazki()
 
     Ksiazki *wpis = (Ksiazki *)malloc(sizeof(Ksiazki));
     Ksiazki *poprzedni;
+
+        if (!czy_plik_jest_pusty(plik)) {
+
+
     while (!feof(plik))
     {
 
-         if (czy_plik_jest_pusty(plik)) {
-            return;
-        }
-        
         wpis = malloc(sizeof(Ksiazki));
         fscanf(plik, "%[^;];%[^;];%[^;];%d\n", wpis->gatunek, wpis->tytul, wpis->autor, &wpis->ID);
 
@@ -196,6 +196,7 @@ void wczytaniepliku_ksiazki()
     {
         ostatnia_ksiazka = wpis;
     }
+        }
 }
 
 void zapispliku_ksiazki()

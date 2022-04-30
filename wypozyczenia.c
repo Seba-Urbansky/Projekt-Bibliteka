@@ -117,6 +117,8 @@ void wczytaniepliku_wypozyczenia()
 
     Wypozyczenia *poprzedni;
 
+     if (!czy_plik_jest_pusty(plik)) {
+
     while (!feof(plik))
     {
 
@@ -146,6 +148,7 @@ void wczytaniepliku_wypozyczenia()
     {
         ostatnie_wypozyczenie = wpis;
     }
+     }
 }
 
 void zapispliku_wypozyczenia()

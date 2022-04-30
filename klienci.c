@@ -160,6 +160,7 @@ void usun_klienta(Klient *wpis)
     }
 }
 
+
 void wczytaniepliku_klienci()
 {
     FILE *plik;
@@ -167,31 +168,30 @@ void wczytaniepliku_klienci()
 
     Klient *wpis = (Klient *)malloc(sizeof(Klient));
     Klient *poprzedni;
-    while (!feof(plik))
-    {
-         if (czy_plik_jest_pusty(plik)) {
-            return;
-        }
 
-        wpis = malloc(sizeof(Klient));
-        fscanf(plik, "%d %s %s %s %s", &wpis->numer_karty, &wpis->imie, &wpis->nazwisko, &wpis->telefon, &wpis->email);
-        
-    
-        if (pierwszy_klient == NULL)
-        {
-            pierwszy_klient = wpis;
-            poprzedni = wpis;
-        }
-        else if (wpis != NULL)
-        {
-            poprzedni->nastepny = wpis;
-            wpis->poprzedni = poprzedni;
-            poprzedni = wpis;
-        }
-    }
-    if (wpis != NULL)
+    if (!czy_plik_jest_pusty(plik))
     {
-        ostatni_klient = wpis;
+        while (!feof(plik))
+        {
+            wpis = malloc(sizeof(Klient));
+            fscanf(plik, "%d %s %s %s %s", &wpis->numer_karty, &wpis->imie, &wpis->nazwisko, &wpis->telefon, &wpis->email);
+
+            if (pierwszy_klient == NULL)
+            {
+                pierwszy_klient = wpis;
+                poprzedni = wpis;
+            }
+            else if (wpis != NULL)
+            {
+                poprzedni->nastepny = wpis;
+                wpis->poprzedni = poprzedni;
+                poprzedni = wpis;
+            }
+        }
+        if (wpis != NULL)
+        {
+            ostatni_klient = wpis;
+        }
     }
 }
 

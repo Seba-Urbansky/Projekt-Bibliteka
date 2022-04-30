@@ -16,8 +16,8 @@ void wyswietl_baze_klientow()
     for (Klient *wpis = pierwszy_klient; NULL != wpis; wpis = wpis->nastepny)
     {
         wydrukuj_klienta(wpis);
+        printf(“———————————————————\n”);
     }
-    printf("--------------------------------------\n\n");
 }
 
 void dodaj_klienta()
@@ -76,12 +76,10 @@ Klient *wyszukaj_klienta(int numer_karty)
 void wydrukuj_klienta(Klient *wpis)
 {
     printf("%-12s | %d \n", "Numer Karty", wpis->numer_karty);
-    printf("%-12s | %d \n", "Imie", wpis->imie);
-    printf("%-12s | %d \n", "Nazwisko", wpis->nazwisko);
-    printf("%-12s | %d \n", "Telefon", wpis->telefon);
-    printf("%-12s | %d \n", "Email", wpis->email);
-    printf("\n");
-
+    printf("%-12s | %s \n", "Imie", wpis->imie);
+    printf("%-12s | %s \n", "Nazwisko", wpis->nazwisko);
+    printf("%-12s | %s \n", "Telefon", wpis->telefon);
+    printf("%-12s | %s \n", "Email", wpis->email);
 }
 
 void edytuj_imie_klienta(Klient *wpis)
@@ -118,7 +116,6 @@ void edytuj_nazwisko_klienta(Klient *wpis)
     scanf("%s", &wpis->nazwisko);
 }
 
-
 void usun_klienta(Klient *wpis)
 {
     Klient *poprzedni = wpis->poprzedni;
@@ -144,7 +141,6 @@ void usun_klienta(Klient *wpis)
         nastepny->poprzedni = poprzedni;
     }
 }
-
 
 void wczytaniepliku_klienci()
 {
@@ -190,7 +186,6 @@ void zapispliku_klienci()
         {
             fprintf(plik, "\n");
         }
-        
     }
     fclose(plik);
 }

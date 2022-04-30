@@ -15,8 +15,8 @@ typedef struct WypozyczeniaStruktura
     int numer_karty;
     int ID_ksiazki;
     int ID;
-    int kiedy;
-    int dokiedy;
+    time_t kiedy;
+    time_t dokiedy;
 
     struct WypozyczeniaStruktura *poprzedni, *nastepny;
 

@@ -6,6 +6,7 @@
 #include "klienci.h"
 #include "wypozyczenia.h"
 #include "ksiazki.h"
+#include <time.h>
 
 // Wypożyczanie/oddawanie książek (kto wypożyczył (numer karty), którą książkę (ID), kiedy, do kiedy).
 // http://fizyka.umk.pl/~leii/wskaznikiStrukturyAiR.pdf
@@ -156,12 +157,12 @@ void wczytaniepliku_wypozyczenia()
 
 void edytuj_wypozyczenia_kiedy()
 {
-kiedy(wpis)=time(NULL);
+wpis->kiedy=time(NULL);
 }
 
 void edytuj_wypozyczenia_do_kiedy()
 {
- do_kiedy(wpis)=time(NULL);
+wpis->dokiedy=time(NULL);
 }
 
 void zapispliku_wypozyczenia()

@@ -19,15 +19,13 @@ Wypozyczenia *ostatnie_wypozyczenie = NULL;
 void wydrukuj_wypozyczenia(Wypozyczenia *wpis)
 {
     Klient *klient = wyszukaj_klienta(wpis->numer_karty);
+    printf("%-12s | %d \n", "ID", wpis->ID);
+    printf("%-12s | %d \n", "ID Ksiazki", wpis->ID_ksiazki);
+    printf("%-12s | %d \n", "Numer Karty", wpis->numer_karty);
     wydrukuj_klienta(klient);
-    printf("%d ", wpis->ID);
-    printf("%d ", wpis->ID_ksiazki);
-    printf("%d ", wpis->numer_karty);
-    printf("%d ", wpis->kiedy);
-    printf("%d ", wpis->dokiedy);
-    printf("\n ");
+    printf("%-12s | %s", "Do kiedy", ctime(&wpis->kiedy));
+    printf("%-12s | %s", "Kiedy", ctime(&wpis->dokiedy));
 }
-
 void wyswietl_kto_wypozyczyl()
 {
     printf("BAZA WYPOZYCZEN ------------------------\n");

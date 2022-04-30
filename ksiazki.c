@@ -131,7 +131,7 @@ void edytuj_ID(Ksiazki *wpis)
     }
     else
     {
-        wpis->ID;
+        wpis->ID = znajdz_najwyzsze_ID_ksiazki()+1;
     }
 }
 

@@ -117,22 +117,6 @@ void edytuj_nazwisko_klienta(Klient *wpis)
     scanf("%s", &wpis->nazwisko);
 }
 
-void edytuj_numeru_karty(Klient *wpis)
-{
-    int numer_karty;
-    printf("Podaj numer karty klienta: \n");
-    scanf("%d", &numer_karty);
-    Klient *wyszukany_klient = wyszukaj_klienta(numer_karty);
-    if (wyszukany_klient != NULL)
-    {
-        printf("Podany numer karty juz istnieje.\n");
-        edytuj_numeru_karty(wpis);
-    }
-    else
-    {
-        wpis->numer_karty = numer_karty;
-    }
-}
 
 void usun_klienta(Klient *wpis)
 {

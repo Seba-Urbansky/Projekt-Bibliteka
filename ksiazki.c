@@ -23,6 +23,7 @@ void dodaj_ksiazke()
 {
     Ksiazki *wpis = (Ksiazki *)malloc(sizeof(Ksiazki));
 
+    edytuj_ksiazki_ID_ksiazki(wpis)
     edytuj_ID(wpis);
     edytuj_tytul_ksiazki(wpis);
     edytuj_gatunek_ksiazki(wpis);
@@ -116,23 +117,6 @@ void edytuj_gatunek_ksiazki(Ksiazki *wpis)
 {
     printf("Podaj nowy gatunek literacki: \n");
     scanf("%s", &wpis->gatunek);
-}
-
-void edytuj_ID(Ksiazki *wpis)
-{
-    int ID;
-    printf("Podaj ID ksiazki \n");
-    scanf("%d", &ID);
-    Ksiazki *wyszukany_klient = wyszukaj_ksiazke(ID);
-    if (wyszukany_klient != NULL)
-    {
-        printf("Podany ID ksiazki juz istnieje.\n");
-        edytuj_ID(wpis);
-    }
-    else
-    {
-        wpis->ID = znajdz_najwyzsze_ID_ksiazki()+1;
-    }
 }
 
 void usun_ksiazke(Ksiazki *wpis)

@@ -200,6 +200,11 @@ void zapispliku_klienci()
     FILE *plik = fopen("klienci.csv", "w");
     for (Klient *wpis = pierwszy_klient; NULL != wpis; wpis = wpis->nastepny)
     {
-        fprintf(plik, "%d %s %s %s %s\n", wpis->numer_karty, wpis->imie, wpis->nazwisko, wpis->telefon, wpis->email);
+        fprintf(plik, "%d %s %s %d %s", wpis->numer_karty, wpis->imie, wpis->nazwisko, wpis->telefon, wpis->email);
+        if (wpis->nastepny != NULL)
+        {
+            fprintf(plik, "\n");
+        }
+        fclose(plik);
     }
 }

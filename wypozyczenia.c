@@ -166,3 +166,4 @@ void zapispliku_wypozyczenia()
     }
     fclose(plik);
 }
+

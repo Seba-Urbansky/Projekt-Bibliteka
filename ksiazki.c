@@ -205,5 +205,10 @@ void zapispliku_ksiazki()
     for (Ksiazki *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
         fprintf(plik, "%s;%s;%s;%d\n", wpis->gatunek, wpis->tytul, wpis->autor, wpis->ID);
+        if (wpis->nastepny != NULL)
+        {
+            fprintf(plik, "\n");
+        }
+        fclose(plik);
     }
 }

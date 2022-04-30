@@ -61,7 +61,7 @@ void edytuj_wypozyczenia_numer_karty(Wypozyczenia *wpis)
     }
     else
     {
-        wpis->ID_ksiazki = numer_karty;
+        wpis->numer_karty;
     }
 }
 

@@ -24,7 +24,7 @@ void dodaj_klienta()
 {
     Klient *wpis = (Klient *)malloc(sizeof(Klient));
 
-    edytuj_numeru_karty(wpis);
+    
     edytuj_imie_klienta(wpis);
     edytuj_nazwisko_klienta(wpis);
     edytuj_telefon_klienta(wpis);

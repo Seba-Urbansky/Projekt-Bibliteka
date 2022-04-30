@@ -23,8 +23,8 @@ void wydrukuj_wypozyczenia(Wypozyczenia *wpis)
     printf("%-12s | %d \n", "ID Ksiazki", wpis->ID_ksiazki);
     printf("%-12s | %d \n", "Numer Karty", wpis->numer_karty);
     wydrukuj_klienta(klient);
-    printf("%-12s | %s", "Do kiedy", ctime(&wpis->kiedy));
-    printf("%-12s | %s", "Kiedy", ctime(&wpis->dokiedy));
+    printf("%-12s | %s", "Do kiedy", ctime(&wpis->dokiedy));
+    printf("%-12s | %s", "Kiedy", ctime(&wpis->kiedy));
 }
 void wyswietl_kto_wypozyczyl()
 {

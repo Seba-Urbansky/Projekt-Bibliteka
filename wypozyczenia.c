@@ -152,6 +152,18 @@ void wczytaniepliku_wypozyczenia()
     }
 }
 
+
+
+void edytuj_wypozyczenia_kiedy()
+{
+kiedy(wpis)=time(NULL);
+}
+
+void edytuj_wypozyczenia_do_kiedy()
+{
+ do_kiedy(wpis)=time(NULL);
+}
+
 void zapispliku_wypozyczenia()
 {
 

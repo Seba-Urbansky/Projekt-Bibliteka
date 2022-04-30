@@ -313,11 +313,11 @@ void menu_zarzadzaj_wypozyczeniami(Ksiazki* wpis) {
         menu_zarzadzaj_wypozyczeniami(wpis);
         break;
     case 2:
-      edytuj_wypozyczenia_ID_ksiazki(Wypozyczenia* wpis);
+      edytuj_wypozyczenia_ID_ksiazki(wpis);
       menu_zarzadzaj_wypozyczeniami(wpis);
         break;
     case 3:
-    edytuj_wypozyczenia_numer_karty(Wypozyczenia* wpis);
+    edytuj_wypozyczenia_numer_karty(wpis);
       menu_zarzadzaj_wypozyczeniami(wpis);
         break;
     case 4:

@@ -15,8 +15,9 @@ void wyswietl_baze_ksiazek()
     for (Ksiazki *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
         wydrukuj_ksiazke(wpis);
+        printf("--------------------------------------\n");
     }
-    printf("--------------------------------------\n\n");
+    
 }
 
 void edycja_liczby_egzemplarzy()
@@ -81,12 +82,11 @@ Ksiazki *wyszukaj_ksiazke(int ID)
 
 void wydrukuj_ksiazke(Ksiazki *wpis)
 {
-    printf("%d ", wpis->ID);
-    printf("%s ", wpis->tytul);
-    printf("%s ", wpis->autor);
-    printf("%s ", wpis->gatunek);
-
-    printf("\n");
+    printf("%-12s | %d \n", "ID", wpis->ID);
+    printf("%-12s | %s \n", "Tytul", wpis->tytul);
+    printf("%-12s | %s \n", "Autor", wpis->autor);
+    printf("%-12s | %s \n", "Gatunek", wpis->gatunek);
+   
 }
 
 void edytuj_tytul_ksiazki(Ksiazki *wpis)

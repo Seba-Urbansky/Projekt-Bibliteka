@@ -5,10 +5,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-const int GODZINA = 3600;
-const int DZIEN = 24 * GODZINA;
-const int TYDZIEN = 7 * DZIEN;
 
+#define GODZINA 3600
+#define DZIEN 24 * GODZINA
+#define TYDZIEN 7 * DZIEN
 
 
 int czy_plik_jest_pusty(FILE* plik);

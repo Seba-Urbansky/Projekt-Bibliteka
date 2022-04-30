@@ -18,7 +18,8 @@ Wypozyczenia *ostatnie_wypozyczenie = NULL;
 
 void wydrukuj_wypozyczenia(Wypozyczenia *wpis)
 {
-    
+    Ksiazki *wyszukaj_ksiazke = wyszukaj_ksiazke(wpis->ID_ksiazki);
+    Klient *klient = wyszukaj_klienta(wpis->numer_karty);
     printf("%-12s | %d \n", "ID", wpis->ID);
     printf("%-12s | %d \n", "ID Ksiazki", wpis->ID_ksiazki);
     wydrukuj_ksiazke(ksiazka);

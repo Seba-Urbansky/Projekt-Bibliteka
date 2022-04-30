@@ -34,7 +34,6 @@ void dodaj_ksiazke()
 
         pierwsza_ksiazka = wpis;
         ostatnia_ksiazka = wpis;
-
     }
 
     else
@@ -170,33 +169,32 @@ void wczytaniepliku_ksiazki()
     Ksiazki *wpis = (Ksiazki *)malloc(sizeof(Ksiazki));
     Ksiazki *poprzedni;
 
-        if (!czy_plik_jest_pusty(plik)) {
-
-
-    while (!feof(plik))
+    if (!czy_plik_jest_pusty(plik))
     {
 
-        wpis = malloc(sizeof(Ksiazki));
-        fscanf(plik, "%[^;];%[^;];%[^;];%d\n", wpis->gatunek, wpis->tytul, wpis->autor, &wpis->ID);
-
-
-        if (pierwsza_ksiazka == NULL)
+        while (!feof(plik))
         {
-            pierwsza_ksiazka = wpis;
-            poprzedni = wpis;
+
+            wpis = malloc(sizeof(Ksiazki));
+            fscanf(plik, "%[^;];%[^;];%[^;];%d\n", wpis->gatunek, wpis->tytul, wpis->autor, &wpis->ID);
+
+            if (pierwsza_ksiazka == NULL)
+            {
+                pierwsza_ksiazka = wpis;
+                poprzedni = wpis;
+            }
+            else if (wpis != NULL)
+            {
+                poprzedni->nastepny = wpis;
+                wpis->poprzedni = poprzedni;
+                poprzedni = wpis;
+            }
         }
-        else if (wpis != NULL)
+        if (wpis != NULL)
         {
-            poprzedni->nastepny = wpis;
-            wpis->poprzedni = poprzedni;
-            poprzedni = wpis;
+            ostatnia_ksiazka = wpis;
         }
     }
-    if (wpis != NULL)
-    {
-        ostatnia_ksiazka = wpis;
-    }
-        }
 }
 
 void zapispliku_ksiazki()
@@ -209,6 +207,7 @@ void zapispliku_ksiazki()
         {
             fprintf(plik, "\n");
         }
-        fclose(plik);
+        
     }
+    fclose(plik);
 }

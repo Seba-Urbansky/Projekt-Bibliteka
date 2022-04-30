@@ -205,6 +205,7 @@ void zapispliku_klienci()
         {
             fprintf(plik, "\n");
         }
-        fclose(plik);
+        
     }
+    fclose(plik);
 }

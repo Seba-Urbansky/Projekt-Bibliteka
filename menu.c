@@ -162,10 +162,12 @@ void menu_wypozyczen()
     switch (wybor) {
     case 1:
         wyswietl_kto_wypozyczyl();
+        menu_wypozyczen();
         break;
     
     case 2:
         dodaj_wypozyczenie();
+        menu_wypozyczen();
         break;
         /*
     case 3:

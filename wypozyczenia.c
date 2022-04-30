@@ -92,6 +92,10 @@ void dodaj_wypozyczenie()
     edytuj_wypozyczenia_ID_ksiazki(wpis);
     edytuj_wypozyczenia_numer_karty(wpis);
     edytuj_wypozyczenia_ID(wpis);
+
+    edytuj_wypozyczenia_do_kiedy(wpis);
+    edytuj_wypozyczenia_kiedy(wpis);
+
     if (pierwsze_wypozyczenie == NULL)
     {
         pierwsze_wypozyczenie = wpis;

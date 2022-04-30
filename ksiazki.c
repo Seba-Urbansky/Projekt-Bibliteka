@@ -23,7 +23,7 @@ void dodaj_ksiazke()
 {
     Ksiazki *wpis = (Ksiazki *)malloc(sizeof(Ksiazki));
 
-    edytuj_ksiazki_ID_ksiazki(wpis)
+    edytuj_ksiazki_ID_ksiazki(wpis);
     edytuj_ID(wpis);
     edytuj_tytul_ksiazki(wpis);
     edytuj_gatunek_ksiazki(wpis);

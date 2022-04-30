@@ -7,7 +7,9 @@
 #include "wypozyczenia.h"
 #include "ksiazki.h"
 #include <time.h>
-
+const int GODZINA = 3600
+const int DZIEN = 24 * GODZINA
+const int TYDZIEN = 7 * DZIEN
 // Wypożyczanie/oddawanie książek (kto wypożyczył (numer karty), którą książkę (ID), kiedy, do kiedy).
 // http://fizyka.umk.pl/~leii/wskaznikiStrukturyAiR.pdf
 
@@ -61,8 +63,13 @@ void edytuj_wypozyczenia_numer_karty(Wypozyczenia *wpis)
     }
     else
     {
-        wpis->numer_karty;
+        numer_karty->wpis;
     }
+}
+
+void edycja_liczby_egzemplarzy
+{
+    
 }
 
 void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenia *wpis)
@@ -83,6 +90,11 @@ void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenia *wpis)
 void edytuj_wypozyczenia_ID(Wypozyczenia *wpis)
 {
     wpis->ID = znajdz_najwyzsze_ID() + 1;
+}
+
+void na_dwa_tygodnie()
+{
+    if()
 }
 
 void dodaj_wypozyczenie()
@@ -157,9 +169,11 @@ void edytuj_wypozyczenia_kiedy(Wypozyczenia *wpis)
      wpis->kiedy=time(NULL);
 }
 
+
 void edytuj_wypozyczenia_do_kiedy(Wypozyczenia *wpis)
 {
-    wpis->dokiedy=time(NULL);
+    wpis->dokiedy=time(NULL) + 2 * TYDZIEN;
+    
 }
 
 void zapispliku_wypozyczenia()

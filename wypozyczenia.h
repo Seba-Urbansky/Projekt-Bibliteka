@@ -41,6 +41,7 @@ void dodaj_wypozyczenie();
 void ustaw_ID_nowego_wypozyczenia();
 void edytuj_wypozyczenia_kiedy();
 void edytuj_wypozyczenia_do_kiedy();
+void na_dwa_tygodnie();
 
 
 

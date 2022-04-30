@@ -63,7 +63,7 @@ void edytuj_wypozyczenia_numer_karty(Wypozyczenia *wpis)
     }
     else
     {
-        numer_karty->wpis;
+        wpis->numer_karty = numer_karty;
     }
 }
 
@@ -85,11 +85,6 @@ void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenia *wpis)
 void edytuj_wypozyczenia_ID(Wypozyczenia *wpis)
 {
     wpis->ID = znajdz_najwyzsze_ID() + 1;
-}
-
-void na_dwa_tygodnie()
-{
-    if()
 }
 
 void dodaj_wypozyczenie()

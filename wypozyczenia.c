@@ -18,7 +18,8 @@ Wypozyczenia *ostatnie_wypozyczenie = NULL;
 
 void wydrukuj_wypozyczenia(Wypozyczenia *wpis)
 {
-    float kara->wpis = policz_kare(wpis);
+    float kara = kara_za_dzien * dni_zalegle;
+    float kara = policz_kare(wpis);
     printf("%-20s | %d \n", "ID", wpis->ID);
     printf("%-20s | %d \n", "ID Ksiazki", wpis->ID_ksiazki);
     printf("%-20s | %s", "Do kiedy", ctime(&wpis->dokiedy));
@@ -60,7 +61,7 @@ float policz_kare(Wypozyczenia *wpis)
     float kara_za_dzien = 1.8;
     int kara = kara_za_dzien * dni_zalegle;
 
-    return kara->wpis;
+    return kara;
 }
 
 int zalegle_wypozyczenia()

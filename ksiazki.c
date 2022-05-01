@@ -20,9 +20,10 @@ void wyswietl_baze_ksiazek()
     
 }
 
-void edycja_liczby_egzemplarzy()
+void edycja_liczby_egzemplarzy(Ksiazki *wpis)
 {
-    wpis->liczba_egzemplarzy;
+     printf("Podaj liczbe egzamplarzy: \n");
+    scanf("%d", &wpis->liczba_egzemplarzy);
 }
 
 void dodaj_ksiazke()
@@ -118,7 +119,7 @@ void edytuj_autora(Ksiazki *wpis)
 void edytuj_rok(Ksiazki *wpis)
 {
     printf("Podaj nowy rok: \n");
-    scanf("%s", &wpis->rok);
+    scanf("%d", &wpis->rok);
 }
 
 void edytuj_gatunek_ksiazki(Ksiazki *wpis)

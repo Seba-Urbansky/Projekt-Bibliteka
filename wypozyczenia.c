@@ -18,12 +18,11 @@ Wypozyczenia *ostatnie_wypozyczenie = NULL;
 
 void wydrukuj_wypozyczenia(Wypozyczenia *wpis)
 {
-     int kara = policz_kare(wpis);
+    float kara->wpis = policz_kare(wpis);
     printf("%-20s | %d \n", "ID", wpis->ID);
     printf("%-20s | %d \n", "ID Ksiazki", wpis->ID_ksiazki);
     printf("%-20s | %s", "Do kiedy", ctime(&wpis->dokiedy));
     printf("%-20s | %s", "Kiedy", ctime(&wpis->kiedy));
-    printf("Ksiazka ---------------------\n");
     Ksiazki *ksiazka = wyszukaj_ksiazke(wpis->ID_ksiazki);
     wydrukuj_ksiazke(ksiazka);
     printf("Klient ----------------------\n");
@@ -36,6 +35,8 @@ void wydrukuj_wypozyczenia(Wypozyczenia *wpis)
     {
        printf("%-20s | %.2f PLN\n", "Kara", kara);
     }
+
+    printf("Ksiazka ---------------------\n");
 
 
 }
@@ -59,7 +60,7 @@ float policz_kare(Wypozyczenia *wpis)
     float kara_za_dzien = 1.8;
     int kara = kara_za_dzien * dni_zalegle;
 
-    return kara;
+    return kara->wpis;
 }
 
 int zalegle_wypozyczenia()

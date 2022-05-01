@@ -54,11 +54,15 @@ void oddawanie ksiazki(Wypozyczenia *wpis)
     else
     {
         printf("Klient nie oddal ksiazki\n");
-        
+
     }
     
 }
 
+void czy_klient_ma_wypozyczenia(Wypozyczenia *numer_karty)
+{
+
+}
 
 float policz_kare(Wypozyczenia *wpis)
 {

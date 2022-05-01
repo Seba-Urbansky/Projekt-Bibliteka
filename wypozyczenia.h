@@ -45,6 +45,7 @@ void na_dwa_tygodnie();
 int zalegle_wypozyczenia();
 float policz_kare(Wypozyczenia* wpis);
 void oddawanie ksiazki();
+void czy_klient_ma_wypozyczenia(Wypozyczenia *numer_karty)
 
 
 

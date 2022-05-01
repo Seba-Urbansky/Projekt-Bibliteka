@@ -40,15 +40,15 @@ void wyswietl_kto_wypozyczyl()
 
 void zalegle_wypozyczenia()
 {
-        time_t teraz = time(NULL);
-        printf("ZALEGLE WYPOZYCZENIA ------------------------\n");
-        for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
+    time_t teraz = time(NULL);
+    printf("ZALEGLE WYPOZYCZENIA ------------------------\n");
+    for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {
         if(teraz > wpis->dokiedy)
-    {
-        wydrukuj_wypozyczenia(wpis);
-        printf("--------------------------------------\n");
-    }
+        {
+            wydrukuj_wypozyczenia(wpis);
+            printf("--------------------------------------\n");
+        }
        
        
     }

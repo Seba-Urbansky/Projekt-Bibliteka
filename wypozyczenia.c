@@ -47,14 +47,11 @@ void wyswietl_kto_wypozyczyl()
 
 float policz_kare(Wypozyczenia *wpis)
 {
-    
     time_t teraz = time(NULL);
-    int czas_zalegly = teraz - wpis->dokiedy;
-    int dni_zalegle = czas_zalegly/DZIEN;
+    long czas_zalegly = teraz - wpis->dokiedy;
+    long dni_zalegle = czas_zalegly/(DZIEN);
     float kara_za_dzien = 1.8;
-    int kara = kara_za_dzien * dni_zalegle;
-
-    return kara;
+    return kara_za_dzien * dni_zalegle;
 }
 
 int zalegle_wypozyczenia()

@@ -46,7 +46,7 @@ int zalegle_wypozyczenia();
 float policz_kare(Wypozyczenia* wpis);
 void oddawanie_ksiazki(Wypozyczenia *wpis);
 void czy_klient_ma_wypozyczenia(Klient *klient);
-void czy_ksiazka_jest_wypozyczona(Wypozyczenia *ID_ksiazki);
+int czy_ksiazka_jest_wypozyczona(Wypozyczenia *ID_ksiazki);
 
 
 

@@ -23,9 +23,9 @@ void wydrukuj_wypozyczenia(Wypozyczenia *wpis)
     printf("%-20s | %d \n", "ID Ksiazki", wpis->ID_ksiazki);
     printf("%-20s | %s", "Do kiedy", ctime(&wpis->dokiedy));
     printf("%-20s | %s", "Kiedy", ctime(&wpis->kiedy));
-    if (kara>0)
+    if (kara > 0)
     {
-       printf("%-20s | %.2f PLN\n", "Kara", kara);
+        printf("%-20s | %.2f PLN\n", "Kara", kara);
     }
     printf("Ksiazka ---------------------\n");
     Ksiazki *ksiazka = wyszukaj_ksiazke(wpis->ID_ksiazki);
@@ -47,51 +47,46 @@ void wyswietl_kto_wypozyczyl()
 
 void oddawanie_ksiazki(Wypozyczenia *wpis)
 {
-    if(wpis->ID_ksiazki == NULL)
+    if (wpis->ID_ksiazki == NULL)
     {
         printf("Ksiazka oddana\n");
     }
     else
     {
         printf("Klient nie oddal ksiazki\n");
-
     }
-    
 }
 
 int czy_klient_ma_wypozyczenia(Klient *klient)
 {
     for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {
-    if(wpis->numer_karty == klient->numer_karty)
-    {
-        
-        return 1;
-    }
-      
+        if (wpis->numer_karty == klient->numer_karty)
+        {
+
+            return 1;
+        }
     }
     return 0;
 }
 
-void czy_ksiazka_jest_wypozyczona(Klient *klient)
+int czy_ksiazka_jest_wypozyczona(Ksiazki *ksiazki)
 {
-     for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
+    for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {
-    if(wpis->ID_ksiazki==NULL)
-    {
-        return 1;
+        if (wpis->ID_ksiazki == ksiazka->ID_ksiazki)
+        {
+            return 1;
+        }
     }
-      return 0;
-    }
+    return 0;
 }
-
-
 
 float policz_kare(Wypozyczenia *wpis)
 {
     time_t teraz = time(NULL);
     long czas_zalegly = teraz - wpis->dokiedy;
-    long dni_zalegle = czas_zalegly/(DZIEN);
+    long dni_zalegle = czas_zalegly / (DZIEN);
     float kara_za_dzien = 1.8;
     return kara_za_dzien * dni_zalegle;
 }
@@ -102,13 +97,11 @@ int zalegle_wypozyczenia()
     printf("ZALEGLE WYPOZYCZENIA ------------------------\n");
     for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {
-        if(teraz > wpis->dokiedy)
+        if (teraz > wpis->dokiedy)
         {
             wydrukuj_wypozyczenia(wpis);
             printf("--------------------------------------\n");
         }
-       
-       
     }
 }
 
@@ -231,17 +224,14 @@ void wczytaniepliku_wypozyczenia()
     }
 }
 
-
 void edytuj_wypozyczenia_kiedy(Wypozyczenia *wpis)
 {
-     wpis->kiedy=time(NULL);
+    wpis->kiedy = time(NULL);
 }
-
 
 void edytuj_wypozyczenia_do_kiedy(Wypozyczenia *wpis)
 {
-    wpis->dokiedy=time(NULL) + 2 * TYDZIEN;
-    
+    wpis->dokiedy = time(NULL) + 2 * TYDZIEN;
 }
 
 void zapispliku_wypozyczenia()

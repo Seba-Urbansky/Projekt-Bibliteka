@@ -3,8 +3,6 @@
 #ifndef KSIAZKI_H
 #define KSIAZKI_H
 
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "common.h"
@@ -15,10 +13,9 @@ typedef struct KsiazkiStruktura
     int ID;
     int rok;
     int liczba_egzemplarzy;
-    char* tytul[MAX];
-    char* autor[MAX];
-    char* gatunek[MAX];
-    
+    char *tytul[MAX];
+    char *autor[MAX];
+    char *gatunek[MAX];
 
     struct KsiazkiStruktura *poprzedni, *nastepny;
 
@@ -32,19 +29,14 @@ void menu_ksiazek();
 void wczytaniepliku_ksiazki();
 void zapispliku_ksiazki();
 void ksiazka_do_zarzadzania();
-void wydrukuj_ksiazke(Ksiazki* wpis);
-void edytuj_tytul_ksiazki(Ksiazki* wpis);
-void edytuj_gatunek_ksiazki(Ksiazki* wpis);
-void edytuj_autora(Ksiazki* wpis);
-void edytuj_rok(Ksiazki* wpis);
+void wydrukuj_ksiazke(Ksiazki *wpis);
+void edytuj_tytul_ksiazki(Ksiazki *wpis);
+void edytuj_gatunek_ksiazki(Ksiazki *wpis);
+void edytuj_autora(Ksiazki *wpis);
+void edytuj_rok(Ksiazki *wpis);
 void wyswietl_baze_ksiazek();
-Ksiazki* wyszukaj_ksiazke(int ID);
+Ksiazki *wyszukaj_ksiazke(int ID);
 int znajdz_najwyzsze_ID_ksiazki();
 void edytuj_ksiazki_ID_ksiazki(Ksiazki *wpis);
 
-
-
-
 #endif
-
-

@@ -44,12 +44,13 @@ void zalegle_wypozyczenia()
     printf("ZALEGLE WYPOZYCZENIA ------------------------\n");
     for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {
-            if(wpis(teraz)>>wpis->dokiedy=teraz + 2 * TYDZIEN;))
+            if(teraz > wpis->dokiedy)
         {
         wydrukuj_wypozyczenia(wpis);
+         printf("--------------------------------------\n");
         }
        
-        printf("--------------------------------------\n");
+       
     }
 }
 

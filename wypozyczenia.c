@@ -45,6 +45,21 @@ void wyswietl_kto_wypozyczyl()
     }
 }
 
+void oddawanie ksiazki(Wypozyczenia *wpis)
+{
+    if(numer_karty(wpis)->ID_ksiazki==NULL)
+    {
+        printf("Ksiazka oddana\n");
+    }
+    else
+    {
+        printf("Klient nie oddal ksiazki\n");
+        
+    }
+    
+}
+
+
 float policz_kare(Wypozyczenia *wpis)
 {
     time_t teraz = time(NULL);

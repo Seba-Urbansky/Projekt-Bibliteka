@@ -94,6 +94,11 @@ void wydrukuj_ksiazke(Ksiazki *wpis)
    
 }
 
+void usuniecie_liczby_egzemplarzy()
+{
+
+}
+
 void edytuj_tytul_ksiazki(Ksiazki *wpis)
 {
     char imie[MAX] = "";

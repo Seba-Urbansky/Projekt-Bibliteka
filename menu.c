@@ -151,7 +151,7 @@ void menu_wypozyczen()
     printf("Witamy w bibliotece, baza wypozyczen! Co chcesz zrobic?\n\n");
     printf("1. Wyswietl baze wypozyczen\n");
     printf("2. Dodaj wypozyczenie\n");
-    printf("3. Zarzadzaj wypozyczeniami\n");
+    printf("3. Wyswietl zalegle wypozyczenia\n");
     printf("4. Powrot do menu\n");
     printf("5. Wyjscie z programu i zapisanie danych\n\n");
 
@@ -171,7 +171,7 @@ void menu_wypozyczen()
         break;
         
     case 3:
-        menu_zarzadzaj_wypozyczeniami();
+        zalegle_wypozyczenia();
         menu_wypozyczen();
         break;
 
@@ -294,45 +294,6 @@ void menu_usunedytuj_ksiazke(Ksiazki* wpis) {
         break;
     }
 }
-
-void menu_zarzadzaj_wypozyczeniami(Ksiazki* wpis) {
-    int wybor;
-
-    printf("Witamy w Zarzadzaniu Wypozyczeniami \n\n");
-    printf("1. Wydrukuj wypozyczenia \n");
-    printf("2. Edytuj ID wypozyczonej ksiazki \n");
-    printf("3. Edytuj numer karty wypozyczenia\n");
-    printf("4. Usun ksiazke\n");
-    printf("5. Wyjscie z programu i zapisanie danych\n");
-    scanf("%d\n", &wybor);
-   
-
-    switch (wybor) {
-    case 1:
-     wyswietl_kto_wypozyczyl();
-        menu_zarzadzaj_wypozyczeniami(wpis);
-        break;
-    case 2:
-      edytuj_wypozyczenia_ID_ksiazki(wpis);
-      menu_zarzadzaj_wypozyczeniami(wpis);
-        break;
-    case 3:
-    edytuj_wypozyczenia_numer_karty(wpis);
-      menu_zarzadzaj_wypozyczeniami(wpis);
-        break;
-    case 4:
-        
-        menu_zarzadzaj_wypozyczeniami(wpis);
-        break;
-    case 5:
-        wyjscie();
-        break;
-    default:
-        printf("Niepoprawna instrukcja");
-        break;
-    }
-}
-
 
 
 

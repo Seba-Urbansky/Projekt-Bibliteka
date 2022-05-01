@@ -23,7 +23,7 @@ void menu_zarzadzaj_klientem();
 void menu_usunedytuj_ksiazke(Ksiazki* wpis);
 void menu_zarzadzaj_ksiazkami();
 void wyjscie();
-void menu_zarzadzaj_wypozyczeniami();
+
 
 
 

@@ -30,9 +30,11 @@ void wydrukuj_wypozyczenia(Wypozyczenia *wpis)
     Klient *klient = wyszukaj_klienta(wpis->numer_karty);
     wydrukuj_klienta(klient);
 
+   printf("%-20s | %s", "Kiedy", ctime(&wpis->kiedy));
+
     if (kara>0)
     {
-       printf("%-20s | %d PLN\n", "Kara", kara);
+       printf("%-20s | %.2f PLN\n", "Kara", kara);
     }
 
 
@@ -48,13 +50,13 @@ void wyswietl_kto_wypozyczyl()
     }
 }
 
-int policz_kare(Wypozyczenia *wpis)
+float policz_kare(Wypozyczenia *wpis)
 {
     
     time_t teraz = time(NULL);
-    int czas_zalegly = wpis->dokiedy - teraz;
+    int czas_zalegly = teraz - wpis->dokiedy;
     int dni_zalegle = czas_zalegly/DZIEN;
-    int kara_za_dzien = 1.8;
+    float kara_za_dzien = 1.8;
     int kara = kara_za_dzien * dni_zalegle;
 
     return kara;

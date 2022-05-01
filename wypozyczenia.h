@@ -43,7 +43,7 @@ void edytuj_wypozyczenia_kiedy();
 void edytuj_wypozyczenia_do_kiedy();
 void na_dwa_tygodnie();
 int zalegle_wypozyczenia();
-int policz_kare();
+float policz_kare();
 
 
 

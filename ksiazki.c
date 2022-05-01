@@ -34,8 +34,8 @@ void dodaj_ksiazke()
     edytuj_gatunek_ksiazki(wpis);
     edytuj_autora(wpis);
     edytuj_rok(wpis);
-    edycja_liczby_egzemplarzy();
-    edytuj_rok();
+    edycja_liczby_egzemplarzy(wpis);
+    edytuj_rok(wpis);
 
     if (pierwsza_ksiazka == NULL)
     {
@@ -168,7 +168,7 @@ void wczytaniepliku_ksiazki()
         {
 
             wpis = malloc(sizeof(Ksiazki));
-            fscanf(plik, "%[^;];%[^;];%[^;];%d\n", wpis->gatunek, wpis->tytul, wpis->autor, &wpis->ID &wpis->liczba_egzemplarzy, wpis->rok);
+            fscanf(plik, "%[^;];%[^;];%[^;];%d\n", wpis->gatunek, wpis->tytul, wpis->autor, wpis->ID wpis->liczba_egzemplarzy, wpis->rok);
 
             if (pierwsza_ksiazka == NULL)
             {

@@ -34,6 +34,7 @@ void dodaj_ksiazke()
     edytuj_gatunek_ksiazki(wpis);
     edytuj_autora(wpis);
     edytuj_rok(wpis);
+    edycja_liczby_egzemplarzy();
 
     if (pierwsza_ksiazka == NULL)
     {

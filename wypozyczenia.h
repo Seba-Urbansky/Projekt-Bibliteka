@@ -8,6 +8,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "common.h"
+#include "klienci.h"
+#include "ksiazki.h§"
 #include <time.h>
 
 

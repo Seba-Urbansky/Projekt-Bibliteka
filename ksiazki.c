@@ -22,7 +22,7 @@ void wyswietl_baze_ksiazek()
 
 void edycja_liczby_egzemplarzy()
 {
-
+    wpis->liczba_egzemplarzy;
 }
 
 void dodaj_ksiazke()

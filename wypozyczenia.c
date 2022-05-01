@@ -45,9 +45,9 @@ void wyswietl_kto_wypozyczyl()
     }
 }
 
-void oddawanie ksiazki(Wypozyczenia *wpis)
+void oddawanie_ksiazki(Wypozyczenia *wpis)
 {
-    if(numer_karty(wpis)->ID_ksiazki==NULL)
+    if(wpis->ID_ksiazki == NULL)
     {
         printf("Ksiazka oddana\n");
     }
@@ -61,7 +61,7 @@ void oddawanie ksiazki(Wypozyczenia *wpis)
 
 void czy_klient_ma_wypozyczenia(Wypozyczenia *numer_karty)
 {
-    if(numer_karty(wpis)->ID_ksiazki==NULL)
+    if(numer_karty->ID_ksiazki == NULL)
     {
         printf("Nie ma wypozyczen\n");
     }
@@ -73,7 +73,7 @@ void czy_klient_ma_wypozyczenia(Wypozyczenia *numer_karty)
 
 void czy_ksiazka_jest_wypozyczona(Wypozyczenia *ID_ksiazki)
 {
-    if(ID_ksiazki->numer_karty(wpis)==NULL)
+    if(ID_ksiazki->numer_karty==NULL)
     {
         printf("Ksiazka nie jest wypozyczona\n");
     }

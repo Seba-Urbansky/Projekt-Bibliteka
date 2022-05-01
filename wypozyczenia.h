@@ -44,7 +44,7 @@ void edytuj_wypozyczenia_do_kiedy();
 void na_dwa_tygodnie();
 int zalegle_wypozyczenia();
 float policz_kare(Wypozyczenia* wpis);
-void oddawanie ksiazki();
+void oddawanie_ksiazki(Wypozyczenia *wpis);
 void czy_klient_ma_wypozyczenia(Wypozyczenia *numer_karty);
 void czy_ksiazka_jest_wypozyczona(Wypozyczenia *ID_ksiazki);
 

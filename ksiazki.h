@@ -6,8 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "common.h"
-
-typedef struct KsiazkiStruktura
+typedef struct KsiazkaStruktura
 {
 
     int ID;
@@ -17,9 +16,9 @@ typedef struct KsiazkiStruktura
     char *autor[MAX];
     char *gatunek[MAX];
 
-    struct KsiazkiStruktura *poprzedni, *nastepny;
+    struct KsiazkaStruktura *poprzedni, *nastepny;
 
-} Ksiazki;
+} Ksiazka;
 
 void wyswietl_baze_ksiazek();
 void dodaj_ksiazke();
@@ -29,15 +28,15 @@ void menu_ksiazek();
 void wczytaniepliku_ksiazki();
 void zapispliku_ksiazki();
 void ksiazka_do_zarzadzania();
-void wydrukuj_ksiazke(Ksiazki *wpis);
-void edytuj_tytul_ksiazki(Ksiazki *wpis);
-void edytuj_gatunek_ksiazki(Ksiazki *wpis);
+void wydrukuj_ksiazke(Ksiazka *wpis);
+void edytuj_tytul_ksiazki(Ksiazka *wpis);
+void edytuj_gatunek_ksiazki(Ksiazka *wpis);
 void edytuj_autora(Ksiazki *wpis);
 void edytuj_rok(Ksiazki *wpis);
 void wyswietl_baze_ksiazek();
 Ksiazki *wyszukaj_ksiazke(int ID);
 int znajdz_najwyzsze_ID_ksiazki();
-void edytuj_ksiazki_ID_ksiazki(Ksiazki *wpis);
+void edytuj_ksiazki_ID_ksiazki(Ksiazka *wpis);
 void usuniecie_liczby_egzemplarzy();
 
 #endif

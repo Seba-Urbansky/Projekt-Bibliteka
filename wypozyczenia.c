@@ -70,7 +70,7 @@ int czy_klient_ma_wypozyczenia(Klient *klient)
     return 0;
 }
 
-int czy_ksiazka_jest_wypozyczona(Ksiazki *ksiazki)
+int czy_ksiazka_jest_wypozyczona(Ksiazki *ksiazka)
 {
     for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {

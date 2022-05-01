@@ -168,7 +168,7 @@ void wczytaniepliku_ksiazki()
         {
 
             wpis = malloc(sizeof(Ksiazki));
-            fscanf(plik, "%[^;];%[^;];%[^;];%d\n", wpis->gatunek, wpis->tytul, wpis->autor, wpis->ID, wpis->liczba_egzemplarzy, wpis->rok);
+            fscanf(plik, "%[^;];%[^;];%[^;];%d;%d;%d\n", wpis->gatunek, wpis->tytul, wpis->autor, wpis->ID, wpis->liczba_egzemplarzy, wpis->rok);
 
             if (pierwsza_ksiazka == NULL)
             {
@@ -194,7 +194,7 @@ void zapispliku_ksiazki()
     FILE *plik = fopen("ksiazki.csv", "w");
     for (Ksiazki *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        fprintf(plik, "%s;%s;%s;%d", wpis->gatunek, wpis->tytul, wpis->autor, wpis->ID, wpis->liczba_egzemplarzy, wpis->rok);
+        fprintf(plik, "%s;%s;%s;%d;%d;%d", wpis->gatunek, wpis->tytul, wpis->autor, wpis->ID, wpis->liczba_egzemplarzy, wpis->rok);
         if (wpis->nastepny != NULL)
         {
             fprintf(plik, "\n");

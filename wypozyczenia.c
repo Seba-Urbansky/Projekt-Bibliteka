@@ -61,8 +61,30 @@ void oddawanie ksiazki(Wypozyczenia *wpis)
 
 void czy_klient_ma_wypozyczenia(Wypozyczenia *numer_karty)
 {
+    if(numer_karty(wpis)->ID_ksiazki==NULL)
+    {
+        printf("Nie ma wypozyczen\n");
+    }
+        else
+        {
+            printf("Ma wypozyczenia\n");
+        }
+}
+
+void czy_ksiazka_jest_wypozyczona(Wypozyczenia *ID_ksiazki)
+{
+    if(ID_ksiazki->numer_karty(wpis)==NULL)
+    {
+        printf("Ksiazka nie jest wypozyczona\n");
+    }
+        else
+        {
+            printf("Klient powinien oddac wypozyczone ksiazki");
+        }
 
 }
+
+
 
 float policz_kare(Wypozyczenia *wpis)
 {

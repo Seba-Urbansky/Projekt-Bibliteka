@@ -231,7 +231,7 @@ void menu_usunedytuj_klient(Klient* wpis) {
         menu_usunedytuj_klient(wpis);
         break;
     case 4:
-        usun_klienta(wpis);
+        usun_klienta();
         menu_klientow();
         break;
     case 5:

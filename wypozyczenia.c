@@ -63,16 +63,14 @@ int czy_klient_ma_wypozyczenia(Klient *klient)
 {
     for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {
-    if(numer_karty->ID_ksiazki == NULL)
+    if(wpis->numer_karty == klient->numer_karty)
     {
-        printf("Nie ma wypozyczen\n");
+        
+        return 1;
     }
-        else
-        {
-            printf("Ma wypozyczenia\n");
-            return 1;
-        }
+      
     }
+    return 0;
 }
 
 void czy_ksiazka_jest_wypozyczona(Wypozyczenia *ID_ksiazki)

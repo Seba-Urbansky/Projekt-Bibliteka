@@ -20,11 +20,6 @@ void wyswietl_baze_ksiazek()
     
 }
 
-void edycja_liczby_egzemplarzy(Ksiazka *wpis)
-{
-     printf("Podaj liczbe egzamplarzy: \n");
-    scanf("%d", &wpis->liczba_egzemplarzy);
-}
 
 void dodaj_ksiazke()
 {
@@ -35,7 +30,6 @@ void dodaj_ksiazke()
     edytuj_gatunek_ksiazki(wpis);
     edytuj_autora(wpis);
     edytuj_rok(wpis);
-    edycja_liczby_egzemplarzy(wpis);
     edytuj_rok(wpis);
 
     if (pierwsza_ksiazka == NULL)
@@ -90,14 +84,10 @@ void wydrukuj_ksiazke(Ksiazka *wpis)
     printf("%-20s | %s \n", "Autor", wpis->autor);
     printf("%-20s | %s \n", "Gatunek", wpis->gatunek);
     printf("%-20s | %d \n", "Rok", wpis->rok);
-     printf("%-20s | %d \n", "Liczba egzemplarzy", wpis->liczba_egzemplarzy);
+    
    
 }
 
-void usuniecie_liczby_egzemplarzy()
-{
-
-}
 
 void edytuj_tytul_ksiazki(Ksiazka *wpis)
 {
@@ -174,7 +164,7 @@ void wczytaniepliku_ksiazki()
         {
 
             wpis = malloc(sizeof(Ksiazka));
-            fscanf(plik, "%[^;];%[^;];%[^;];%d;%d;%d\n", wpis->gatunek, wpis->tytul, wpis->autor, &wpis->ID, &wpis->liczba_egzemplarzy, &wpis->rok);
+            fscanf(plik, "%[^;];%[^;];%[^;];%d;%d\n", wpis->gatunek, wpis->tytul, wpis->autor, &wpis->ID, &wpis->rok);
 
             if (pierwsza_ksiazka == NULL)
             {
@@ -200,7 +190,7 @@ void zapispliku_ksiazki()
     FILE *plik = fopen("ksiazki.csv", "w");
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        fprintf(plik, "%s;%s;%s;%d;%d;%d", wpis->gatunek, wpis->tytul, wpis->autor, wpis->ID, wpis->liczba_egzemplarzy, wpis->rok);
+        fprintf(plik, "%s;%s;%s;%d;%d", wpis->gatunek, wpis->tytul, wpis->autor, wpis->ID, wpis->rok);
         if (wpis->nastepny != NULL)
         {
             fprintf(plik, "\n");

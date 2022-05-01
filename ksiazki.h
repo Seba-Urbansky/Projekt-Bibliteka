@@ -36,6 +36,6 @@ void wyswietl_baze_ksiazek();
 Ksiazka *wyszukaj_ksiazke(int ID);
 int znajdz_najwyzsze_ID_ksiazki();
 void edytuj_ksiazki_ID_ksiazki(Ksiazka *wpis);
-void usuniecie_liczby_egzemplarzy();
+
 
 #endif

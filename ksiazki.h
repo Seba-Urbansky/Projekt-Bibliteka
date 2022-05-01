@@ -11,7 +11,6 @@ typedef struct KsiazkaStruktura
 
     int ID;
     int rok;
-    int liczba_egzemplarzy;
     char *tytul[MAX];
     char *autor[MAX];
     char *gatunek[MAX];
@@ -31,8 +30,8 @@ void ksiazka_do_zarzadzania();
 void wydrukuj_ksiazke(Ksiazka *wpis);
 void edytuj_tytul_ksiazki(Ksiazka *wpis);
 void edytuj_gatunek_ksiazki(Ksiazka *wpis);
-void edytuj_autora(Ksiazki *wpis);
-void edytuj_rok(Ksiazki *wpis);
+void edytuj_autora(Ksiazka *wpis);
+void edytuj_rok(Ksiazka *wpis);
 void wyswietl_baze_ksiazek();
 Ksiazka *wyszukaj_ksiazke(int ID);
 int znajdz_najwyzsze_ID_ksiazki();

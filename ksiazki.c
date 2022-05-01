@@ -85,12 +85,12 @@ Ksiazki *wyszukaj_ksiazke(int ID)
 
 void wydrukuj_ksiazke(Ksiazki *wpis)
 {
-    printf("%-20s | %d \n", "ID", wpis->ID);
+    printf("%-20d | %d \n", "ID", wpis->ID);
     printf("%-20s | %s \n", "Tytul", wpis->tytul);
     printf("%-20s | %s \n", "Autor", wpis->autor);
     printf("%-20s | %s \n", "Gatunek", wpis->gatunek);
-    printf("%-20s | %s \n", "Rok", wpis->rok);
-     printf("%-20s | %s \n", "Liczba egzemplarzy", wpis->liczba_egzemplarzy);
+    printf("%-20s | %d \n", "Rok", wpis->rok);
+     printf("%-20s | %d \n", "Liczba egzemplarzy", wpis->liczba_egzemplarzy);
    
 }
 

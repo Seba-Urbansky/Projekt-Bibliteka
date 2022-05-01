@@ -6,13 +6,13 @@
 // Dodawanie/usuwanie/edycja książek (ID, tytuł, rok, autor, gatunek, liczba egzemplarzy, liczba wypożyczonych).
 // http://fizyka.umk.pl/~leii/wskaznikiStrukturyAiR.pdf
 
-Ksiazki *pierwsza_ksiazka = NULL;
-Ksiazki *ostatnia_ksiazka = NULL;
+Ksiazka *pierwsza_ksiazka = NULL;
+Ksiazka *ostatnia_ksiazka = NULL;
 
 void wyswietl_baze_ksiazek()
 {
     printf("BAZA KSIAZEK ------------------------\n");
-    for (Ksiazki *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
+    for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
         wydrukuj_ksiazke(wpis);
         printf("--------------------------------------\n");
@@ -20,7 +20,7 @@ void wyswietl_baze_ksiazek()
     
 }
 
-void edycja_liczby_egzemplarzy(Ksiazki *wpis)
+void edycja_liczby_egzemplarzy(Ksiazka *wpis)
 {
      printf("Podaj liczbe egzamplarzy: \n");
     scanf("%d", &wpis->liczba_egzemplarzy);
@@ -28,7 +28,7 @@ void edycja_liczby_egzemplarzy(Ksiazki *wpis)
 
 void dodaj_ksiazke()
 {
-    Ksiazki *wpis = (Ksiazki *)malloc(sizeof(Ksiazki));
+    Ksiazka *wpis = (Ksiazka *)malloc(sizeof(Ksiazka));
 
     edytuj_ksiazki_ID_ksiazki(wpis);
     edytuj_tytul_ksiazki(wpis);
@@ -56,7 +56,7 @@ void dodaj_ksiazke()
 int znajdz_najwyzsze_ID_ksiazki()
 {
     int max = 0;
-    for (Ksiazki *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
+    for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
         if (wpis->ID > max)
         {
@@ -66,14 +66,14 @@ int znajdz_najwyzsze_ID_ksiazki()
     return max;
 }
 
-void edytuj_ksiazki_ID_ksiazki(Ksiazki *wpis)
+void edytuj_ksiazki_ID_ksiazki(Ksiazka *wpis)
 {
     wpis->ID = znajdz_najwyzsze_ID_ksiazki() + 1;
 }
 
-Ksiazki *wyszukaj_ksiazke(int ID)
+Ksiazka *wyszukaj_ksiazke(int ID)
 {
-    for (Ksiazki *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
+    for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
         if (wpis->ID == ID)
         {
@@ -83,7 +83,7 @@ Ksiazki *wyszukaj_ksiazke(int ID)
     return NULL;
 }
 
-void wydrukuj_ksiazke(Ksiazki *wpis)
+void wydrukuj_ksiazke(Ksiazka *wpis)
 {
     printf("%-20d | %d \n", "ID", wpis->ID);
     printf("%-20s | %s \n", "Tytul", wpis->tytul);
@@ -99,7 +99,7 @@ void usuniecie_liczby_egzemplarzy()
 
 }
 
-void edytuj_tytul_ksiazki(Ksiazki *wpis)
+void edytuj_tytul_ksiazki(Ksiazka *wpis)
 {
     char imie[MAX] = "";
     printf("Podaj tytul: \n");
@@ -115,28 +115,28 @@ void edytuj_tytul_ksiazki(Ksiazki *wpis)
     }
 }
 
-void edytuj_autora(Ksiazki *wpis)
+void edytuj_autora(Ksiazka *wpis)
 {
     printf("Podaj nowego autora: \n");
     scanf("%s", &wpis->autor);
 }
 
-void edytuj_rok(Ksiazki *wpis)
+void edytuj_rok(Ksiazka *wpis)
 {
     printf("Podaj nowy rok: \n");
     scanf("%d", &wpis->rok);
 }
 
-void edytuj_gatunek_ksiazki(Ksiazki *wpis)
+void edytuj_gatunek_ksiazki(Ksiazka *wpis)
 {
     printf("Podaj nowy gatunek literacki: \n");
     scanf("%s", &wpis->gatunek);
 }
 
-void usun_ksiazke(Ksiazki *wpis)
+void usun_ksiazke(Ksiazka *wpis)
 {
-    Ksiazki *poprzedni = wpis->poprzedni;
-    Ksiazki *nastepny = wpis->nastepny;
+    Ksiazka *poprzedni = wpis->poprzedni;
+    Ksiazka *nastepny = wpis->nastepny;
     if (poprzedni == NULL && nastepny == NULL)
     {
         pierwsza_ksiazka = NULL;
@@ -164,8 +164,8 @@ void wczytaniepliku_ksiazki()
     FILE *plik;
     plik = fopen("ksiazki.csv", "r");
 
-    Ksiazki *wpis = (Ksiazki *)malloc(sizeof(Ksiazki));
-    Ksiazki *poprzedni;
+    Ksiazka *wpis = (Ksiazka *)malloc(sizeof(Ksiazka));
+    Ksiazka *poprzedni;
 
     if (!czy_plik_jest_pusty(plik))
     {
@@ -173,7 +173,7 @@ void wczytaniepliku_ksiazki()
         while (!feof(plik))
         {
 
-            wpis = malloc(sizeof(Ksiazki));
+            wpis = malloc(sizeof(Ksiazka));
             fscanf(plik, "%[^;];%[^;];%[^;];%d;%d;%d\n", wpis->gatunek, wpis->tytul, wpis->autor, &wpis->ID, &wpis->liczba_egzemplarzy, &wpis->rok);
 
             if (pierwsza_ksiazka == NULL)
@@ -198,7 +198,7 @@ void wczytaniepliku_ksiazki()
 void zapispliku_ksiazki()
 {
     FILE *plik = fopen("ksiazki.csv", "w");
-    for (Ksiazki *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
+    for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
         fprintf(plik, "%s;%s;%s;%d;%d;%d", wpis->gatunek, wpis->tytul, wpis->autor, wpis->ID, wpis->liczba_egzemplarzy, wpis->rok);
         if (wpis->nastepny != NULL)

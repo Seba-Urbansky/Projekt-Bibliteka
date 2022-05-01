@@ -34,7 +34,7 @@ void edytuj_gatunek_ksiazki(Ksiazka *wpis);
 void edytuj_autora(Ksiazki *wpis);
 void edytuj_rok(Ksiazki *wpis);
 void wyswietl_baze_ksiazek();
-Ksiazki *wyszukaj_ksiazke(int ID);
+Ksiazka *wyszukaj_ksiazke(int ID);
 int znajdz_najwyzsze_ID_ksiazki();
 void edytuj_ksiazki_ID_ksiazki(Ksiazka *wpis);
 void usuniecie_liczby_egzemplarzy();

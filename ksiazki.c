@@ -88,6 +88,8 @@ void wydrukuj_ksiazke(Ksiazki *wpis)
     printf("%-12s | %s \n", "Tytul", wpis->tytul);
     printf("%-12s | %s \n", "Autor", wpis->autor);
     printf("%-12s | %s \n", "Gatunek", wpis->gatunek);
+    printf("%-12s | %s \n", "Rok", wpis->rok);
+     printf("%-12s | %s \n", "Liczba egzemplarzy", wpis->liczba_egzemplarzy);
    
 }
 

@@ -70,6 +70,7 @@ int czy_klient_ma_wypozyczenia(Klient *klient)
         else
         {
             printf("Ma wypozyczenia\n");
+            return 1;
         }
     }
 }

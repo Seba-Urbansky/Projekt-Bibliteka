@@ -75,11 +75,11 @@ Klient *wyszukaj_klienta(int numer_karty)
 
 void wydrukuj_klienta(Klient *wpis)
 {
-    printf("%-12s | %d \n", "Numer Karty", wpis->numer_karty);
-    printf("%-12s | %s \n", "Imie", wpis->imie);
-    printf("%-12s | %s \n", "Nazwisko", wpis->nazwisko);
-    printf("%-12s | %s \n", "Telefon", wpis->telefon);
-    printf("%-12s | %s \n", "Email", wpis->email);
+    printf("%-20s | %d \n", "Numer Karty", wpis->numer_karty);
+    printf("%-20s | %s \n", "Imie", wpis->imie);
+    printf("%-20s | %s \n", "Nazwisko", wpis->nazwisko);
+    printf("%-20s | %s \n", "Telefon", wpis->telefon);
+    printf("%-20s | %s \n", "Email", wpis->email);
 }
 
 void edytuj_imie_klienta(Klient *wpis)

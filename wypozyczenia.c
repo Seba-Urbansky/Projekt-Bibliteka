@@ -73,17 +73,16 @@ int czy_klient_ma_wypozyczenia(Klient *klient)
     return 0;
 }
 
-void czy_ksiazka_jest_wypozyczona(Wypozyczenia *ID_ksiazki)
+void czy_ksiazka_jest_wypozyczona(Klient *klient)
 {
-    if(ID_ksiazki->numer_karty==NULL)
+     for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {
-        printf("Ksiazka nie jest wypozyczona\n");
+    if(wpis->ID_ksiazki==NULL)
+    {
+        return 1;
     }
-        else
-        {
-            printf("Klient powinien oddac wypozyczone ksiazki");
-        }
-
+      return 0;
+    }
 }
 
 

@@ -169,7 +169,7 @@ void wczytaniepliku_ksiazki()
         {
 
             wpis = malloc(sizeof(Ksiazki));
-            fscanf(plik, "%[^;];%[^;];%[^;];%d;%d;%d\n", wpis->gatunek, wpis->tytul, wpis->autor, wpis->ID, wpis->liczba_egzemplarzy, wpis->rok);
+            fscanf(plik, "%[^;];%[^;];%[^;];%d;%d;%d\n", wpis->gatunek, wpis->tytul, wpis->autor, &wpis->ID, &wpis->liczba_egzemplarzy, &wpis->rok);
 
             if (pierwsza_ksiazka == NULL)
             {

@@ -59,8 +59,10 @@ void oddawanie_ksiazki(Wypozyczenia *wpis)
     
 }
 
-void czy_klient_ma_wypozyczenia(Wypozyczenia *numer_karty)
+int czy_klient_ma_wypozyczenia(Klient *klient)
 {
+    for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
+    {
     if(numer_karty->ID_ksiazki == NULL)
     {
         printf("Nie ma wypozyczen\n");
@@ -69,6 +71,7 @@ void czy_klient_ma_wypozyczenia(Wypozyczenia *numer_karty)
         {
             printf("Ma wypozyczenia\n");
         }
+    }
 }
 
 void czy_ksiazka_jest_wypozyczona(Wypozyczenia *ID_ksiazki)

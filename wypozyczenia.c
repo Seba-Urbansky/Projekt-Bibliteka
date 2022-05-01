@@ -18,6 +18,7 @@ Wypozyczenia *ostatnie_wypozyczenie = NULL;
 
 void wydrukuj_wypozyczenia(Wypozyczenia *wpis)
 {
+     int kara = policz_kare(wpis);
     printf("%-20s | %d \n", "ID", wpis->ID);
     printf("%-20s | %d \n", "ID Ksiazki", wpis->ID_ksiazki);
     printf("%-20s | %s", "Do kiedy", ctime(&wpis->dokiedy));
@@ -28,6 +29,13 @@ void wydrukuj_wypozyczenia(Wypozyczenia *wpis)
     printf("Klient ----------------------\n");
     Klient *klient = wyszukaj_klienta(wpis->numer_karty);
     wydrukuj_klienta(klient);
+
+    if (kara>0)
+    {
+       printf("%-20s | %d PLN\n", "Kara", kara);
+    }
+
+
 }
 
 void wyswietl_kto_wypozyczyl()
@@ -40,7 +48,19 @@ void wyswietl_kto_wypozyczyl()
     }
 }
 
-void zalegle_wypozyczenia()
+int policz_kare(Wypozyczenia *wpis)
+{
+    
+    time_t teraz = time(NULL);
+    int czas_zalegly = wpis->dokiedy - teraz;
+    int dni_zalegle = czas_zalegly/DZIEN;
+    int kara_za_dzien = 1.8;
+    int kara = kara_za_dzien * dni_zalegle;
+
+    return kara;
+}
+
+int zalegle_wypozyczenia()
 {
     time_t teraz = time(NULL);
     printf("ZALEGLE WYPOZYCZENIA ------------------------\n");

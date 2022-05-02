@@ -209,7 +209,8 @@ void menu_usunedytuj_klient(Klient *klient)
     printf("2. Edytuj imie \n");
     printf("3. Edytuj nazwisko \n");
     printf("4. Usun klienta\n");
-    printf("5. Wyjscie z programu i zapisanie danych\n");
+    printf("5. Sprawdz czy klient nadal ma wypozyczenia\n");
+    printf("6. Wyjscie z programu i zapisanie danych\n");
     scanf("%d", &wybor);
     printf("\n");
 
@@ -232,6 +233,10 @@ void menu_usunedytuj_klient(Klient *klient)
         menu_klientow();
         break;
     case 5:
+        czy_klient_ma_wypozyczenia();
+        menu_usunedytuj_klient();
+        break;
+    case 6:
         wyjscie();
         break;
     default:
@@ -266,7 +271,8 @@ void menu_usunedytuj_ksiazke(Ksiazka *ksiazka)
     printf("2. Edytuj tytul ksiazki \n");
     printf("3. Edytuj gatunek ksiazki\n");
     printf("4. Usun ksiazke\n");
-    printf("5. Wyjscie z programu i zapisanie danych\n");
+    printf("5. Sprawdz czy ksiazka jest wypozyczona\n");
+    printf("6. Wyjscie z programu i zapisanie danych\n");
     scanf("%d\n", &wybor);
 
     switch (wybor)
@@ -288,6 +294,9 @@ void menu_usunedytuj_ksiazke(Ksiazka *ksiazka)
         menu_ksiazek();
         break;
     case 5:
+        czy_ksiazka_jest_wypozyczona();
+        menu_usunedytuj_ksiazke();
+    case 6:
         wyjscie();
         break;
     default:

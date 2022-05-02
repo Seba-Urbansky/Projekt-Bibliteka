@@ -136,22 +136,25 @@ void edytuj_wypozyczenia_numer_karty(Wypozyczenie *wpis)
 
 void zwroc_wypozyczenie()
 {
-    int ID;
-    int numer_karty;
-    printf("Podaj numer karty klienta:\n");
-    scanf("%d", &numer_karty);
-
-    printf("Podaj ID ksiazki\n");
-    scanf("%d", &ID);
-
-    for (Wypozyczenie *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
+    if (czy_klient_ma_wypozyczenia(wpis))
     {
-        if(wpis == wpis->ID;
+        int ID;
+        int numer_karty;
+        printf("Podaj numer karty klienta:\n");
+        scanf("%d", &numer_karty);
+
+        printf("Podaj ID ksiazki\n");
+        scanf("%d", &ID_ksiazki);
+
+        for (Wypozyczenie *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
         {
-            return wpis;
-            printf(policz_kare(wpis));
-            
-            usun_wypozyczenie();
+            if (ID_ksiazki == ID_ksiazki->wpis && ID_ksiazki == wpis->ID_ksiazki)
+                ;
+            {
+                return wpis;
+                printf(“Uzytkownik powinien zwrocic % .2f PLN”, policz_kare(wpis))
+                    usun_wypozyczenie();
+            }
         }
     }
 }

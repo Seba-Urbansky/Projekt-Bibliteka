@@ -134,7 +134,7 @@ void edytuj_wypozyczenia_numer_karty(Wypozyczenie *wpis)
     }
 }
 
-void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenie *wpis)
+void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenie *ksiazka)
 {
     int ID;
     printf("Podaj ID ksiazki:\n");
@@ -146,7 +146,7 @@ void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenie *wpis)
     }
     else
     {
-        wpis->ID_ksiazki = ID;
+        ksiazka->ID_ksiazki = ID;
     }
     if (czy_ksiazka_jest_wypozyczona(ksiazka))
     {

@@ -243,7 +243,7 @@ void menu_usunedytuj_klient(Klient *klient)
         printf("Niepoprawna instrukcja");
         break;
     }
-
+}
 void menu_zarzadzaj_ksiazkami()
 {
     int ID;
@@ -318,3 +318,4 @@ void wyjscie()
     zapispliku_wypozyczenia();
     exit(0);
 }
+

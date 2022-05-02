@@ -158,6 +158,7 @@ void zwroc_wypozyczenie()
         }
     }
 }
+
 void usun_wypozyczenie()
 {
     Wypozyczenie *poprzedni = wpis->poprzedni;

@@ -18,9 +18,9 @@ void menu_klientow();
 void menu_glowne();
 void menu_ksiazek();
 void menu_wypozyczen();
-void menu_usunedytuj_klient(Ksiazka* wpis);
+void menu_usunedytuj_klient(Ksiazka* klient);
 void menu_zarzadzaj_klientem();
-void menu_usunedytuj_ksiazke(Ksiazka* wpis);
+void menu_usunedytuj_ksiazke(Ksiazka* ksiazka);
 void menu_zarzadzaj_ksiazkami();
 void wyjscie();
 

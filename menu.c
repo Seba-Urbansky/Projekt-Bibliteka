@@ -27,11 +27,9 @@ void menu_glowne()
     printf("2. Otwieranie bazy ksiazek\n");
     printf("3. Otwieranie bazy wypozyczen\n");
     printf("4. Wyjscie z programu i zapisanie danych\n\n");
-    
 
     scanf("%d", &wybor);
     printf("\n");
-  
 
     switch (wybor)
     {
@@ -44,7 +42,7 @@ void menu_glowne()
         break;
 
     case 3:
-        
+
         menu_wypozyczen();
         break;
 
@@ -55,7 +53,6 @@ void menu_glowne()
     default:
         printf("Niepoprawna instrukcja");
         break;
-
     }
 }
 
@@ -71,13 +68,12 @@ void menu_klientow()
     printf("3. Zarzadzaj klientem\n");
     printf("4. Powrot do menu\n");
     printf("5. Wyjscie z programu i zapisanie danych\n\n");
-   
 
     scanf("%d", &wybor);
     printf("\n");
-   
 
-   switch (wybor) {
+    switch (wybor)
+    {
     case 1:
         wyswietl_baze_klientow();
         menu_klientow();
@@ -113,12 +109,11 @@ void menu_ksiazek()
     printf("4. Powrot do menu\n");
     printf("5. Wyjscie z programu i zapisanie danych\n\n");
 
-
     scanf("%d", &wybor);
     printf("\n");
 
-
-    switch (wybor) {
+    switch (wybor)
+    {
     case 1:
         wyswietl_baze_ksiazek();
         menu_ksiazek();
@@ -143,7 +138,6 @@ void menu_ksiazek()
     }
 }
 
-
 void menu_wypozyczen()
 {
     int wybor;
@@ -157,19 +151,19 @@ void menu_wypozyczen()
 
     scanf("%d", &wybor);
     printf("\n");
-    
 
-    switch (wybor) {
+    switch (wybor)
+    {
     case 1:
         wyswietl_kto_wypozyczyl();
         menu_wypozyczen();
         break;
-    
+
     case 2:
         dodaj_wypozyczenie();
         menu_wypozyczen();
         break;
-        
+
     case 3:
         zalegle_wypozyczenia();
         menu_wypozyczen();
@@ -187,25 +181,27 @@ void menu_wypozyczen()
     }
 }
 
-
-
 // menu do edycji + zarzadzanie
 
-
-void menu_zarzadzaj_klientem() {
+void menu_zarzadzaj_klientem()
+{
     int numer_karty;
     printf("Podaj numer karty klienta: \n");
     scanf("%d", &numer_karty);
-     Klient* wpis = wyszukaj_klienta(numer_karty);
-    if (wpis == NULL) {
+    Klient *wpis = wyszukaj_klienta(numer_karty);
+    if (wpis == NULL)
+    {
         printf("Nie znaleziono klienta \n");
         menu_zarzadzaj_klientem();
-    } else {
+    }
+    else
+    {
         menu_usunedytuj_klient(wpis);
     }
 }
 
-void menu_usunedytuj_klient(Klient* wpis) {
+void menu_usunedytuj_klient(Klient *klient)
+{
     int wybor;
 
     printf("Witamy w Zarzadzaniu Klientem \n\n");
@@ -217,18 +213,19 @@ void menu_usunedytuj_klient(Klient* wpis) {
     scanf("%d", &wybor);
     printf("\n");
 
-    switch (wybor) {
+    switch (wybor)
+    {
     case 1:
-        wydrukuj_klienta(wpis);
-        menu_usunedytuj_klient(wpis);
+        wydrukuj_klienta(klient);
+        menu_usunedytuj_klient(klient);
         break;
     case 2:
-        edytuj_imie_klienta(wpis);
-        menu_usunedytuj_klient(wpis);
+        edytuj_imie_klienta(klient);
+        menu_usunedytuj_klient(klient);
         break;
     case 3:
-        edytuj_nazwisko_klienta(wpis);
-        menu_usunedytuj_klient(wpis);
+        edytuj_nazwisko_klienta(klient);
+        menu_usunedytuj_klient(klient);
         break;
     case 4:
         usun_klienta();
@@ -243,21 +240,25 @@ void menu_usunedytuj_klient(Klient* wpis) {
     }
 }
 
-void menu_zarzadzaj_ksiazkami() {
+void menu_zarzadzaj_ksiazkami()
+{
     int ID;
     printf("Podaj numer ID ksiazki: \n");
     scanf("%d", &ID);
-    Ksiazka* wpis = wyszukaj_ksiazke(ID);
-    if (wpis == NULL) {
+    Ksiazka *wpis = wyszukaj_ksiazke(ID);
+    if (wpis == NULL)
+    {
         printf("Nie znaleziono ksiazki \n");
         menu_zarzadzaj_ksiazkami();
-    } else {
+    }
+    else
+    {
         menu_usunedytuj_ksiazke(wpis);
     }
 }
 
-
-void menu_usunedytuj_ksiazke(Ksiazka* wpis) {
+void menu_usunedytuj_ksiazke(Ksiazka *ksiazka)
+{
     int wybor;
 
     printf("Witamy w Zarzadzaniu Ksiazkami \n\n");
@@ -267,23 +268,23 @@ void menu_usunedytuj_ksiazke(Ksiazka* wpis) {
     printf("4. Usun ksiazke\n");
     printf("5. Wyjscie z programu i zapisanie danych\n");
     scanf("%d\n", &wybor);
-   
 
-    switch (wybor) {
+    switch (wybor)
+    {
     case 1:
-        wydrukuj_ksiazke(wpis);
-        menu_usunedytuj_ksiazke(wpis);
+        wydrukuj_ksiazke(ksiazka);
+        menu_usunedytuj_ksiazke(ksiazka);
         break;
     case 2:
-        edytuj_tytul_ksiazki(wpis);
-        menu_usunedytuj_ksiazke(wpis);
+        edytuj_tytul_ksiazki(ksiazka);
+        menu_usunedytuj_ksiazke(ksiazka);
         break;
     case 3:
-        edytuj_gatunek_ksiazki(wpis);
-        menu_usunedytuj_ksiazke(wpis);
+        edytuj_gatunek_ksiazki(ksiazka);
+        menu_usunedytuj_ksiazke(ksiazka);
         break;
     case 4:
-        usun_ksiazke(wpis);
+        usun_ksiazke(ksiazka);
         menu_ksiazek();
         break;
     case 5:
@@ -295,16 +296,11 @@ void menu_usunedytuj_ksiazke(Ksiazka* wpis) {
     }
 }
 
-
-
-void wyjscie() {
+void wyjscie()
+{
     printf("Zamykanie programu...");
     zapispliku_ksiazki();
     zapispliku_klienci();
     zapispliku_wypozyczenia();
     exit(0);
 }
-
-
-
-

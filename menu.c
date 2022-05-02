@@ -274,7 +274,8 @@ void menu_usunedytuj_ksiazke(Ksiazka *ksiazka)
     printf("3. Edytuj gatunek ksiazki\n");
     printf("4. Usun ksiazke\n");
     printf("5. Wyjscie z programu i zapisanie danych\n");
-    scanf("%d\n", &wybor);
+    scanf("%d", &wybor);
+    printf("\n");
 
     switch (wybor)
     {

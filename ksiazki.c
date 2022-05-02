@@ -30,7 +30,7 @@ void dodaj_ksiazke()
     edytuj_gatunek_ksiazki(wpis);
     edytuj_autora(wpis);
     edytuj_rok(wpis);
-    edytuj_rok(wpis);
+   
 
     if (pierwsza_ksiazka == NULL)
     {

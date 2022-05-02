@@ -134,9 +134,26 @@ void edytuj_wypozyczenia_numer_karty(Wypozyczenie *wpis)
     }
 }
 
-void zwroc_wypozyczenie()
+int zwroc_wypozyczenie(Wypozyczenie *wpis)
 {
+    int ID;
+    int numer_karty;
+    printf("Podaj numer karty klienta:\n");
+    scanf("%d", &numer_karty);
+   
+     printf("Podaj ID ksiazki\n");
+    scanf("%d", &ID);
+   
+    for (Wypozyczenie *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
+    {
+        wpis=wpis->ID;
+        return wpis;
+    }
+   
+    float kara = policz_kare(wpis);
+    return kara;
     
+
 }
 
 void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenie *wypozyczenie)

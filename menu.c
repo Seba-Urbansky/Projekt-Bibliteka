@@ -197,7 +197,7 @@ void menu_zarzadzaj_klientem()
     }
     else
     {
-        menu_usunedytuj_klient(wpis);
+        menu_klienta(wpis);
     }
 }
 
@@ -210,7 +210,8 @@ void menu_klienta(Klient *klient)
     printf("2. Edytuj imie \n");
     printf("3. Edytuj nazwisko \n");
     printf("4. Usun klienta\n");
-    printf("5. Wyjscie z programu i zapisanie danych\n");
+    printf("5. Powrot\n");
+    printf("6. Wyjscie z programu i zapisanie danych\n");
     scanf("%d", &wybor);
     printf("\n");
 
@@ -241,6 +242,9 @@ void menu_klienta(Klient *klient)
         }
         break;
     case 5:
+        menu_klientow();
+        break;
+    case 5:
         wyjscie();
         break;
     default:
@@ -261,7 +265,7 @@ void menu_zarzadzaj_ksiazkami()
     }
     else
     {
-        menu_usunedytuj_ksiazke(wpis);
+        menu_ksiazki(wpis);
     }
 }
 
@@ -274,7 +278,8 @@ void menu_ksiazki(Ksiazka *ksiazka)
     printf("2. Edytuj tytul ksiazki \n");
     printf("3. Edytuj gatunek ksiazki\n");
     printf("4. Usun ksiazke\n");
-    printf("5. Wyjscie z programu i zapisanie danych\n");
+    printf("5. Powrot\n");
+    printf("6. Wyjscie z programu i zapisanie danych\n");
     scanf("%d", &wybor);
     printf("\n");
 
@@ -305,6 +310,9 @@ void menu_ksiazki(Ksiazka *ksiazka)
         }
         break;
     case 5:
+        menu_ksiazek();
+        break;
+    case 6:
         wyjscie();
         break;
     default:

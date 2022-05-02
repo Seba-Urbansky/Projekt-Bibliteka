@@ -146,8 +146,9 @@ void menu_wypozyczen()
     printf("1. Wyswietl baze wypozyczen\n");
     printf("2. Dodaj wypozyczenie\n");
     printf("3. Wyswietl zalegle wypozyczenia\n");
-    printf("4. Powrot do menu\n");
-    printf("5. Wyjscie z programu i zapisanie danych\n\n");
+    printf("4. Zwroc wypozyczenie\n");
+    printf("5. Powrot do menu\n");
+    printf("6. Wyjscie z programu i zapisanie danych\n\n");
 
     scanf("%d", &wybor);
     printf("\n");
@@ -200,7 +201,7 @@ void menu_zarzadzaj_klientem()
     }
 }
 
-void menu_usunedytuj_klient(Klient *klient)
+void menu_klienta(Klient *klient)
 {
     int wybor;
 
@@ -217,21 +218,21 @@ void menu_usunedytuj_klient(Klient *klient)
     {
     case 1:
         wydrukuj_klienta(klient);
-        menu_usunedytuj_klient(klient);
+        menu_klienta(klient);
         break;
     case 2:
         edytuj_imie_klienta(klient);
-        menu_usunedytuj_klient(klient);
+        menu_klienta(klient);
         break;
     case 3:
         edytuj_nazwisko_klienta(klient);
-        menu_usunedytuj_klient(klient);
+        menu_klienta(klient);
         break;
     case 4:
         if (czy_klient_ma_wypozyczenia(klient))
         {
             printf("Klient powinien oddac wypozyczone ksiazki\n");
-            menu_usunedytuj_klient(klient);
+            menu_klienta(klient);
         }
         else
         {
@@ -264,7 +265,7 @@ void menu_zarzadzaj_ksiazkami()
     }
 }
 
-void menu_usunedytuj_ksiazke(Ksiazka *ksiazka)
+void menu_ksiazki(Ksiazka *ksiazka)
 {
     int wybor;
 
@@ -281,21 +282,21 @@ void menu_usunedytuj_ksiazke(Ksiazka *ksiazka)
     {
     case 1:
         wydrukuj_ksiazke(ksiazka);
-        menu_usunedytuj_ksiazke(ksiazka);
+        menu_ksiazki(ksiazka);
         break;
     case 2:
         edytuj_tytul_ksiazki(ksiazka);
-        menu_usunedytuj_ksiazke(ksiazka);
+        menu_ksiazki(ksiazka);
         break;
     case 3:
         edytuj_gatunek_ksiazki(ksiazka);
-        menu_usunedytuj_ksiazke(ksiazka);
+        menu_ksiazki(ksiazka);
         break;
     case 4:
         if (czy_ksiazka_jest_wypozyczona(ksiazka))
         {
             printf("Ksiazka powinna zostac zwrocona przed usunieciem\n");
-            menu_usunedytuj_ksiazke(ksiazka);
+            menu_ksiazki(ksiazka);
         }
         else
         {

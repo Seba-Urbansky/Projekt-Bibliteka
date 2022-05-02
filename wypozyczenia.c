@@ -134,27 +134,55 @@ void edytuj_wypozyczenia_numer_karty(Wypozyczenie *wpis)
     }
 }
 
-int zwroc_wypozyczenie(Wypozyczenie *wpis)
+void zwroc_wypozyczenie()
 {
     int ID;
     int numer_karty;
     printf("Podaj numer karty klienta:\n");
     scanf("%d", &numer_karty);
-   
-     printf("Podaj ID ksiazki\n");
+
+    printf("Podaj ID ksiazki\n");
     scanf("%d", &ID);
-   
+
     for (Wypozyczenie *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {
-        wpis=wpis->ID;
+        wpis = wpis->ID;
         return wpis;
     }
-   
+
     float kara = policz_kare(wpis);
     return kara;
-    
+
+    usun_wypozyczenie();
+}
+
+void usun_wypozyczenie()
+{
+    Wypozyczenie *poprzedni = wpis->poprzedni;
+    Wypozyczenie *nastepny = wpis->nastepny;
+    if (poprzedni == NULL && nastepny == NULL)
+    {
+        pierwsze_wypozyczenie = NULL;
+        ostatnie_wypozyczenie = NULL;
+    }
+    else if (poprzedni == NULL && nastepny != NULL)
+    {
+        nastepny->poprzedni = NULL;
+        pierwsze_wypozyczenie = nastepny;
+    }
+    else if (nastepny == NULL && poprzedni != NULL)
+    {
+        poprzedni->nastepny = NULL;
+        ostatnie_wypozyczenie = poprzedni;
+    }
+    else
+    {
+        poprzedni->nastepny = nastepny;
+        nastepny->poprzedni = poprzedni;
+    }
 
 }
+
 
 void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenie *wypozyczenie)
 {
@@ -221,12 +249,12 @@ void wczytaniepliku_wypozyczenia()
 
         while (!feof(plik))
         {
-           wpis = (Wypozyczenie *) malloc(sizeof(Wypozyczenie));
+            wpis = (Wypozyczenie *)malloc(sizeof(Wypozyczenie));
             if (czy_plik_jest_pusty(plik))
             {
                 return;
             }
-        
+
             fscanf(plik, "%d %d %d %d %d", &wpis->ID_ksiazki, &wpis->ID, &wpis->numer_karty, &wpis->kiedy, &wpis->dokiedy);
 
             if (pierwsze_wypozyczenie == NULL)

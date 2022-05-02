@@ -151,7 +151,7 @@ void zwroc_wypozyczenie()
         {
             if (policz_kare(wpis) > 0)
             {
-                printf(“Uzytkownik powinien zwrocic % .2f PLN\n”, policz_kare(wpis))
+                printf("Uzytkownik powinien zwrocic % .2f PLN\n", policz_kare(wpis));
             }
             usun_wypozyczenie();
             printf("Ksiazka zostala zwrocona\n");
@@ -159,7 +159,7 @@ void zwroc_wypozyczenie()
     }
 }
 
-void usun_wypozyczenie()
+void usun_wypozyczenie(Wypozyczenie *wpis)
 {
     Wypozyczenie *poprzedni = wpis->poprzedni;
     Wypozyczenie *nastepny = wpis->nastepny;

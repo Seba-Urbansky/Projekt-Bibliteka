@@ -50,6 +50,6 @@ void oddawanie_ksiazki(Wypozyczenie *wpis);
 int czy_klient_ma_wypozyczenia(Klient *klient);
 int czy_ksiazka_jest_wypozyczona(Ksiazka *ID_ksiazki);
 void zwroc_wypozyczenie(Wypozyczenie *wpis);
-void usun_wypozyczenie();
+void usun_wypozyczenie(Wypozyczenie *wpis);
 
 #endif

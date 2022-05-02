@@ -87,7 +87,7 @@ void menu_klientow()
         menu_klientow();
         break;
     case 4:
-        menu();
+        menu_glowne();
         break;
     case 5:
         wyjscie();
@@ -127,7 +127,7 @@ void menu_ksiazek()
         menu_ksiazek();
         break;
     case 4:
-        menu();
+        menu_glowne();
         break;
     case 5:
         wyjscie();
@@ -171,7 +171,7 @@ void menu_wypozyczen()
         break;
 
     case 4:
-        menu();
+        menu_glowne();
         break;
     case 5:
         wyjscie();

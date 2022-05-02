@@ -134,6 +134,11 @@ void edytuj_wypozyczenia_numer_karty(Wypozyczenie *wpis)
     }
 }
 
+void zwroc_wypozyczenie()
+{
+    
+}
+
 void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenie *wypozyczenie)
 {
     int ID;

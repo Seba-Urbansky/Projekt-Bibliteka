@@ -134,24 +134,23 @@ void edytuj_wypozyczenia_numer_karty(Wypozyczenie *wpis)
     }
 }
 
-void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenie *ksiazka)
+void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenie *wypozyczenie)
 {
     int ID;
     printf("Podaj ID ksiazki:\n");
     scanf("%d", &ID);
-
-    if (wyszukaj_ksiazke(ID) == NULL)
+    Ksiazka *ksiazka = wyszukaj_ksiazke(ID);
+    if (ksiazka == NULL)
     {
         printf("Ksiazka nie istnieje.\n");
     }
+    else if (czy_ksiazka_jest_wypozyczona(ksiazka))
+    {
+        printf("Ksiazka jest juz wypozyczona\n");
+    }
     else
     {
-        ksiazka->ID_ksiazki = ID;
-    }
-    if (czy_ksiazka_jest_wypozyczona(ksiazka))
-    {
-           printf("Ksiazka jest juz wypozyczona");
-                
+        wypozyczenie->ID_ksiazki = ID;
     }
 }
 

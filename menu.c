@@ -246,7 +246,7 @@ void menu_usunedytuj_klient(Klient *klient)
         printf("Niepoprawna instrukcja");
         break;
     }
-}
+} 
 void menu_zarzadzaj_ksiazkami()
 {
     int ID;
@@ -273,8 +273,7 @@ void menu_usunedytuj_ksiazke(Ksiazka *ksiazka)
     printf("2. Edytuj tytul ksiazki \n");
     printf("3. Edytuj gatunek ksiazki\n");
     printf("4. Usun ksiazke\n");
-    printf("5. Sprawdz czy ksiazka jest wypozyczona\n");
-    printf("6. Wyjscie z programu i zapisanie danych\n");
+    printf("5. Wyjscie z programu i zapisanie danych\n");
     scanf("%d\n", &wybor);
 
     switch (wybor)
@@ -295,19 +294,15 @@ void menu_usunedytuj_ksiazke(Ksiazka *ksiazka)
         if (czy_ksiazka_jest_wypozyczona(ksiazka))
         {
             printf("Ksiazka powinna zostac zwrocona przed usunieciem\n");
-            menu_usunedytuj_klient(ksiazka);
+            menu_usunedytuj_ksiazke(ksiazka);
         }
         else
         {
             usun_ksiazke(ksiazka);
             menu_ksiazek();
         }
-
         break;
     case 5:
-        czy_ksiazka_jest_wypozyczona(ksiazka);
-        menu_usunedytuj_ksiazke(ksiazka);
-    case 6:
         wyjscie();
         break;
     default:

@@ -35,7 +35,7 @@ void do_kiedy();
 void wydrukuj_wypozyczenia();
 void zapispliku_wypozyczenia();
 void wczytaniepliku_wypozyczenia();
-void edytuj_wypozyczenia_ID_ksiazki(Ksiazka* wpis);
+void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenie *wypozyczenie);
 void edytuj_wypozyczenia_numer_karty(Wypozyczenie* wpis);
 int znajdz_najwyzsze_ID();
 void edytuj_wypozyczenia_ID(Wypozyczenie* wpis);

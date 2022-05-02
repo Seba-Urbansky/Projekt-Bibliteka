@@ -244,7 +244,7 @@ void menu_klienta(Klient *klient)
     case 5:
         menu_klientow();
         break;
-    case 5:
+    case 6:
         wyjscie();
         break;
     default:

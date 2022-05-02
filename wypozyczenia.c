@@ -146,14 +146,14 @@ void zwroc_wypozyczenie()
 
     for (Wypozyczenie *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {
-        wpis = wpis->ID;
-        return wpis;
+        if(wpis == wpis->ID;
+        {
+            return wpis;
+            printf(policz_kare(wpis));
+            
+            usun_wypozyczenie();
+        }
     }
-
-    float kara = policz_kare(wpis);
-    return kara;
-
-    usun_wypozyczenie();
 }
 
 void usun_wypozyczenie()
@@ -180,9 +180,7 @@ void usun_wypozyczenie()
         poprzedni->nastepny = nastepny;
         nastepny->poprzedni = poprzedni;
     }
-
 }
-
 
 void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenie *wypozyczenie)
 {

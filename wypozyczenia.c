@@ -138,8 +138,8 @@ void zwroc_wypozyczenie()
 {
     if (czy_klient_ma_wypozyczenia(wpis))
     {
-        int ID;
         int numer_karty;
+        int ID_ksiazki;
         printf("Podaj numer karty klienta:\n");
         scanf("%d", &numer_karty);
 
@@ -148,12 +148,12 @@ void zwroc_wypozyczenie()
 
         for (Wypozyczenie *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
         {
-            if (ID_ksiazki == ID_ksiazki->wpis && ID_ksiazki == wpis->ID_ksiazki)
+            if (numer_karty == wpis->numer_karty && ID_ksiazki == wpis->ID_ksiazki)
                 ;
             {
-                return wpis;
+               
                 printf(“Uzytkownik powinien zwrocic % .2f PLN”, policz_kare(wpis))
-                    usun_wypozyczenie();
+                usun_wypozyczenie();
             }
         }
     }

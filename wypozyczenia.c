@@ -28,7 +28,7 @@ void wydrukuj_wypozyczenia(Wypozyczenia *wpis)
         printf("%-20s | %.2f PLN\n", "Kara", kara);
     }
     printf("Ksiazka ---------------------\n");
-    Ksiazki *ksiazka = wyszukaj_ksiazke(wpis->ID_ksiazki);
+    Ksiazka *ksiazka = wyszukaj_ksiazke(wpis->ID_ksiazki);
     wydrukuj_ksiazke(ksiazka);
     printf("Klient ----------------------\n");
     Klient *klient = wyszukaj_klienta(wpis->numer_karty);
@@ -70,7 +70,7 @@ int czy_klient_ma_wypozyczenia(Klient *klient)
     return 0;
 }
 
-int czy_ksiazka_jest_wypozyczona(Ksiazki *ksiazka)
+int czy_ksiazka_jest_wypozyczona(Wypozyczenia *ksiazka)
 {
     for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {

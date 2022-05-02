@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include "common.h"
 #include "klienci.h"
-#include "ksiazki.h§"
+#include "ksiazki.h"
 #include <time.h>
 
 
@@ -47,7 +47,7 @@ void na_dwa_tygodnie();
 int zalegle_wypozyczenia();
 float policz_kare(Wypozyczenia* wpis);
 void oddawanie_ksiazki(Wypozyczenia *wpis);
-void czy_klient_ma_wypozyczenia(Klient *klient);
+int czy_klient_ma_wypozyczenia(Klient *klient);
 int czy_ksiazka_jest_wypozyczona(Wypozyczenia *ID_ksiazki);
 
 

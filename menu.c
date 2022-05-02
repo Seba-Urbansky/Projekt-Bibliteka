@@ -171,6 +171,7 @@ void menu_wypozyczen()
         break;
 
     case 4:
+        zwroc_wypozyczenie();
         menu_glowne();
         break;
     case 5:
@@ -252,6 +253,7 @@ void menu_klienta(Klient *klient)
         break;
     }
 } 
+
 void menu_zarzadzaj_ksiazkami()
 {
     int ID;

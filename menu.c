@@ -247,7 +247,7 @@ void menu_zarzadzaj_ksiazkami() {
     int ID;
     printf("Podaj numer ID ksiazki: \n");
     scanf("%d", &ID);
-    Ksiazki* wpis = wyszukaj_ksiazke(ID);
+    Ksiazka* wpis = wyszukaj_ksiazke(ID);
     if (wpis == NULL) {
         printf("Nie znaleziono ksiazki \n");
         menu_zarzadzaj_ksiazkami();
@@ -257,7 +257,7 @@ void menu_zarzadzaj_ksiazkami() {
 }
 
 
-void menu_usunedytuj_ksiazke(Ksiazki* wpis) {
+void menu_usunedytuj_ksiazke(Ksiazka* wpis) {
     int wybor;
 
     printf("Witamy w Zarzadzaniu Ksiazkami \n\n");

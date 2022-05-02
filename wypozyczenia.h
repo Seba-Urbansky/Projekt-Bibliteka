@@ -23,7 +23,7 @@ typedef struct WypozyczeniaStruktura
 
     struct WypozyczeniaStruktura *poprzedni, *nastepny;
 
-} Wypozyczenia;
+} Wypozyczenie;
 
 
 
@@ -35,20 +35,20 @@ void do_kiedy();
 void wydrukuj_wypozyczenia();
 void zapispliku_wypozyczenia();
 void wczytaniepliku_wypozyczenia();
-void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenia* wpis);
-void edytuj_wypozyczenia_numer_karty(Wypozyczenia* wpis);
+void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenie* wpis);
+void edytuj_wypozyczenia_numer_karty(Wypozyczenie* wpis);
 int znajdz_najwyzsze_ID();
-void edytuj_wypozyczenia_ID(Wypozyczenia* wpis);
+void edytuj_wypozyczenia_ID(Wypozyczenie* wpis);
 void dodaj_wypozyczenie();
 void ustaw_ID_nowego_wypozyczenia();
-void edytuj_wypozyczenia_kiedy();
-void edytuj_wypozyczenia_do_kiedy();
+void edytuj_wypozyczenia_kiedy(Wypozyczenie *wpis);
+void edytuj_wypozyczenia_do_kiedy(Wypozyczenie  *wpis);
 void na_dwa_tygodnie();
 int zalegle_wypozyczenia();
-float policz_kare(Wypozyczenia* wpis);
-void oddawanie_ksiazki(Wypozyczenia *wpis);
+float policz_kare(Wypozyczenie* wpis);
+void oddawanie_ksiazki(Wypozyczenie *wpis);
 int czy_klient_ma_wypozyczenia(Klient *klient);
-int czy_ksiazka_jest_wypozyczona(Wypozyczenia *ID_ksiazki);
+int czy_ksiazka_jest_wypozyczona(Wypozyczenie *ID_ksiazki);
 
 
 

@@ -13,10 +13,10 @@
 
 // automatyczne zapisywanie ID w ksiazkach i klientach //
 
-Wypozyczenia *pierwsze_wypozyczenie = NULL;
-Wypozyczenia *ostatnie_wypozyczenie = NULL;
+Wypozyczenie *pierwsze_wypozyczenie = NULL;
+Wypozyczenie *ostatnie_wypozyczenie = NULL;
 
-void wydrukuj_wypozyczenia(Wypozyczenia *wpis)
+void wydrukuj_wypozyczenia(Wypozyczenie *wpis)
 {
     float kara = policz_kare(wpis);
     printf("%-20s | %d \n", "ID", wpis->ID);
@@ -38,14 +38,14 @@ void wydrukuj_wypozyczenia(Wypozyczenia *wpis)
 void wyswietl_kto_wypozyczyl()
 {
     printf("BAZA WYPOZYCZEN ------------------------\n");
-    for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
+    for (Wypozyczenie *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {
         wydrukuj_wypozyczenia(wpis);
         printf("--------------------------------------\n");
     }
 }
 
-void oddawanie_ksiazki(Wypozyczenia *wpis)
+void oddawanie_ksiazki(Wypozyczenie *wpis)
 {
     if (wpis->ID_ksiazki == NULL)
     {
@@ -59,7 +59,7 @@ void oddawanie_ksiazki(Wypozyczenia *wpis)
 
 int czy_klient_ma_wypozyczenia(Klient *klient)
 {
-    for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
+    for (Wypozyczenie *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {
         if (wpis->numer_karty == klient->numer_karty)
         {
@@ -70,11 +70,11 @@ int czy_klient_ma_wypozyczenia(Klient *klient)
     return 0;
 }
 
-int czy_ksiazka_jest_wypozyczona(Wypozyczenia *ksiazka)
+int czy_ksiazka_jest_wypozyczona(Wypozyczenie *ksiazka)
 {
-    for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
+    for (Wypozyczenie *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {
-        if (wpis->ID_ksiazki == ksiazka->ID_ksiazki)
+        if (wpis->ID_ksiazki == ksiazka->ID)
         {
             return 1;
         }
@@ -82,7 +82,7 @@ int czy_ksiazka_jest_wypozyczona(Wypozyczenia *ksiazka)
     return 0;
 }
 
-float policz_kare(Wypozyczenia *wpis)
+float policz_kare(Wypozyczenie *wpis)
 {
     time_t teraz = time(NULL);
     long czas_zalegly = teraz - wpis->dokiedy;
@@ -95,7 +95,7 @@ int zalegle_wypozyczenia()
 {
     time_t teraz = time(NULL);
     printf("ZALEGLE WYPOZYCZENIA ------------------------\n");
-    for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
+    for (Wypozyczenie *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {
         if (teraz > wpis->dokiedy)
         {
@@ -108,7 +108,7 @@ int zalegle_wypozyczenia()
 int znajdz_najwyzsze_ID()
 {
     int max = 0;
-    for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
+    for (Wypozyczenie *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {
         if (wpis->ID > max)
         {
@@ -118,7 +118,7 @@ int znajdz_najwyzsze_ID()
     return max;
 }
 
-void edytuj_wypozyczenia_numer_karty(Wypozyczenia *wpis)
+void edytuj_wypozyczenia_numer_karty(Wypozyczenie *wpis)
 {
     int numer_karty;
     printf("Podaj ID klienta:\n");
@@ -134,7 +134,7 @@ void edytuj_wypozyczenia_numer_karty(Wypozyczenia *wpis)
     }
 }
 
-void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenia *wpis)
+void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenie *wpis)
 {
     int ID;
     printf("Podaj ID ksiazki:\n");
@@ -149,14 +149,14 @@ void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenia *wpis)
     }
 }
 
-void edytuj_wypozyczenia_ID(Wypozyczenia *wpis)
+void edytuj_wypozyczenia_ID(Wypozyczenie *wpis)
 {
     wpis->ID = znajdz_najwyzsze_ID() + 1;
 }
 
 void dodaj_wypozyczenie()
 {
-    Wypozyczenia *wpis = (Wypozyczenia *)malloc(sizeof(Wypozyczenia));
+    Wypozyczenie *wpis = (Wypozyczenie *)malloc(sizeof(Wypozyczenie));
 
     edytuj_wypozyczenia_ID_ksiazki(wpis);
     edytuj_wypozyczenia_numer_karty(wpis);
@@ -185,9 +185,9 @@ void wczytaniepliku_wypozyczenia()
     FILE *plik;
     plik = fopen("wypozyczenia.csv", "r");
 
-    Wypozyczenia *wpis = (Wypozyczenia *)malloc(sizeof(Wypozyczenia));
+    Wypozyczenie *wpis = (Wypozyczenie *)malloc(sizeof(Wypozyczenie));
 
-    Wypozyczenia *poprzedni;
+    Wypozyczenie *poprzedni;
 
     if (!czy_plik_jest_pusty(plik))
     {
@@ -200,7 +200,7 @@ void wczytaniepliku_wypozyczenia()
                 return;
             }
 
-            wpis = malloc(sizeof(Wypozyczenia));
+            wpis = malloc(sizeof(Wypozyczenie));
 
             fscanf(plik, "%d %d %d %d %d", &wpis->ID_ksiazki, &wpis->ID, &wpis->numer_karty, &wpis->kiedy, &wpis->dokiedy);
 
@@ -224,12 +224,12 @@ void wczytaniepliku_wypozyczenia()
     }
 }
 
-void edytuj_wypozyczenia_kiedy(Wypozyczenia *wpis)
+void edytuj_wypozyczenia_kiedy(Wypozyczenie *wpis)
 {
     wpis->kiedy = time(NULL);
 }
 
-void edytuj_wypozyczenia_do_kiedy(Wypozyczenia *wpis)
+void edytuj_wypozyczenia_do_kiedy(Wypozyczenie *wpis)
 {
     wpis->dokiedy = time(NULL) + 2 * TYDZIEN;
 }
@@ -238,7 +238,7 @@ void zapispliku_wypozyczenia()
 {
 
     FILE *plik = fopen("wypozyczenia.csv", "w");
-    for (Wypozyczenia *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
+    for (Wypozyczenie *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
     {
 
         fprintf(plik, "%d %d %d %d %d", wpis->ID_ksiazki, wpis->ID, wpis->numer_karty, wpis->kiedy, wpis->dokiedy);

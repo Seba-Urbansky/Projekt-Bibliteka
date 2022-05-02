@@ -209,8 +209,7 @@ void menu_usunedytuj_klient(Klient *klient)
     printf("2. Edytuj imie \n");
     printf("3. Edytuj nazwisko \n");
     printf("4. Usun klienta\n");
-    printf("5. Sprawdz czy klient nadal ma wypozyczenia\n");
-    printf("6. Wyjscie z programu i zapisanie danych\n");
+    printf("5. Wyjscie z programu i zapisanie danych\n");
     scanf("%d", &wybor);
     printf("\n");
 
@@ -229,21 +228,21 @@ void menu_usunedytuj_klient(Klient *klient)
         menu_usunedytuj_klient(klient);
         break;
     case 4:
-        usun_klienta();
-        menu_klientow();
+        if (czy_klient_ma_wypozyczenia(klient)) {
+           printf("Klient powinien oddac wypozyczone ksiazki”");
+            menu_usunedytuj_klient(klient);     
+        } else {
+            usun_klienta(klient);
+            menu_klientow();
+        }
         break;
     case 5:
-        czy_klient_ma_wypozyczenia();
-        menu_usunedytuj_klient();
-        break;
-    case 6:
         wyjscie();
         break;
     default:
         printf("Niepoprawna instrukcja");
         break;
     }
-}
 
 void menu_zarzadzaj_ksiazkami()
 {
@@ -290,8 +289,14 @@ void menu_usunedytuj_ksiazke(Ksiazka *ksiazka)
         menu_usunedytuj_ksiazke(ksiazka);
         break;
     case 4:
-        usun_ksiazke(ksiazka);
-        menu_ksiazek();
+    if (czy_ksiazka_jest_wypozyczona(ksiazka)) {
+           printf("Ksiazka powinna zostac zwrocona przed usunieciem");
+            menu_usunedytuj_klient(ksiazka);     
+        } else {
+            usun_ksiazke(ksiazka);
+            menu_ksiazek();
+        }
+        
         break;
     case 5:
         czy_ksiazka_jest_wypozyczona();

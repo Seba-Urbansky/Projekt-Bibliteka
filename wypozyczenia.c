@@ -139,6 +139,7 @@ void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenie *wpis)
     int ID;
     printf("Podaj ID ksiazki:\n");
     scanf("%d", &ID);
+
     if (wyszukaj_ksiazke(ID) == NULL)
     {
         printf("Ksiazka nie istnieje.\n");
@@ -146,6 +147,11 @@ void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenie *wpis)
     else
     {
         wpis->ID_ksiazki = ID;
+    }
+    if (czy_ksiazka_jest_wypozyczona(ksiazka))
+    {
+           printf("Ksiazka jest juz wypozyczona");
+                
     }
 }
 

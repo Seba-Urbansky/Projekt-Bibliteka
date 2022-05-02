@@ -199,7 +199,7 @@ void wczytaniepliku_wypozyczenia()
 
         while (!feof(plik))
         {
-            wpis = malloc(sizeof(Wypozyczenie));
+           wpis = (Wypozyczenie *) malloc(sizeof(Wypozyczenie));
             if (czy_plik_jest_pusty(plik))
             {
                 return;

@@ -229,7 +229,7 @@ void menu_usunedytuj_klient(Klient *klient)
         break;
     case 4:
         if (czy_klient_ma_wypozyczenia(klient)) {
-           printf("Klient powinien oddac wypozyczone ksiazki”");
+           printf("Klient powinien oddac wypozyczone ksiazki\n");
             menu_usunedytuj_klient(klient);     
         } else {
             usun_klienta(klient);
@@ -290,7 +290,7 @@ void menu_usunedytuj_ksiazke(Ksiazka *ksiazka)
         break;
     case 4:
     if (czy_ksiazka_jest_wypozyczona(ksiazka)) {
-           printf("Ksiazka powinna zostac zwrocona przed usunieciem");
+           printf("Ksiazka powinna zostac zwrocona przed usunieciem\n");
             menu_usunedytuj_klient(ksiazka);     
         } else {
             usun_ksiazke(ksiazka);

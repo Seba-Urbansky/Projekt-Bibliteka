@@ -299,8 +299,8 @@ void menu_usunedytuj_ksiazke(Ksiazka *ksiazka)
         
         break;
     case 5:
-        czy_ksiazka_jest_wypozyczona();
-        menu_usunedytuj_ksiazke();
+        czy_ksiazka_jest_wypozyczona(ksiazka);
+        menu_usunedytuj_ksiazke(ksiazka);
     case 6:
         wyjscie();
         break;

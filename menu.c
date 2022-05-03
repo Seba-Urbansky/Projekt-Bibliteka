@@ -144,7 +144,7 @@ void menu_ksiazek()
         menu_ksiazek();
         break;
     case 7:
-        sortowanie();
+        sortowanie(num SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atrybut);
         menu_ksiazek();
         break;
     case 8:

@@ -9,7 +9,7 @@
 Ksiazka *pierwsza_ksiazka = NULL;
 Ksiazka *ostatnia_ksiazka = NULL;
 
-char wyszukaj_ksiazki_po_tytule(Ksiazka *wpis)
+char wyszukaj_ksiazki_po_tytule()
 {
     char tytul[MAX] = "";
     printf("Podaj tytul: \n");
@@ -24,7 +24,7 @@ char wyszukaj_ksiazki_po_tytule(Ksiazka *wpis)
 
 
 
-char wyszukaj_ksiazki_po_autorze(Ksiazka *wpis)
+char wyszukaj_ksiazki_po_autorze()
 {
     char autor[MAX] = "";
     printf("Podaj autora: \n");
@@ -37,7 +37,7 @@ char wyszukaj_ksiazki_po_autorze(Ksiazka *wpis)
     }
 }
 
-int wyszukaj_ksiazki_po_roku(Ksiazka *wpis)
+int wyszukaj_ksiazki_po_roku()
 {
     int rok;
     printf("Podaj rok: \n");
@@ -51,7 +51,7 @@ int wyszukaj_ksiazki_po_roku(Ksiazka *wpis)
 }
 
 
-void sortowanie_ksiazek_niemalejace(Ksiazka *ID)
+void sortowanie_ksiazek_niemalejace()
 {
     
 }

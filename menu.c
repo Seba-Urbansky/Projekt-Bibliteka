@@ -109,8 +109,9 @@ void menu_ksiazek()
     printf("4. Wyszukaj ksiazke po tytule\n");
     printf("5. Wyszukaj ksiazke po autorze\n");
     printf("6. Wyszukaj ksiazke po roku\n");
-    printf("7. Powrot do menu\n");
-    printf("8. Wyjscie z programu i zapisanie danych\n\n");
+    printf("7. Sortuj ksiazki\n");
+    printf("8. Powrot do menu\n");
+    printf("9. Wyjscie z programu i zapisanie danych\n\n");
 
     scanf("%d", &wybor);
     printf("\n");
@@ -142,10 +143,14 @@ void menu_ksiazek()
         menu_ksiazek();
         break;
     case 7:
-        menu_glowne();
+        sortowanie();
         menu_ksiazek();
         break;
     case 8:
+        menu_glowne();
+        menu_ksiazek();
+        break;
+    case 9:
         wyjscie();
         break;
     default:

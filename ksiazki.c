@@ -9,7 +9,99 @@
 Ksiazka *pierwsza_ksiazka = NULL;
 Ksiazka *ostatnia_ksiazka = NULL;
 
-char wyszukaj_ksiazki_po_tytule()
+Ksiazka* zamien(Ksiazka* a, Ksiazka* b)
+{
+    Ksiazka* tmpNastepny = b->nastepny;
+    Ksiazka* tmpPoprzedni = a->poprzedni;
+    b->nastepny = a;
+    b->poprzedni = tmpPoprzedni;
+    a->poprzedni = b;
+    a->nastepny = tmpNastepny;
+    if (tmpNastepny != NULL)
+    {
+        tmpNastepny->poprzedni = a;
+    }
+    if (tmpPoprzedni != NULL)
+    {
+        tmpPoprzedni->nastepny = b;
+    }
+    if (b->poprzedni == NULL) {
+        pierwsza_ksiazka = a;
+    }
+    if (a->nastepny == NULL) {
+        ostatnia_ksiazka = a;
+    } 
+    return b;
+}
+  
+int policz_ksiazki()
+{
+    int licznik = 0;
+    for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
+    {
+        licznik++;
+    }
+    return licznik;
+}
+
+void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atrybut)
+{
+    Ksiazka** h;
+    int licznik = policz_ksiazki();
+    int i, j, zamieniona;
+  
+    for (i = 0; i <= licznik; i++) {
+        h = &pierwsza_ksiazka;
+        zamieniona = 0;
+        for (j = 0; j < licznik - i - 1; j++) {
+            Ksiazka* p1 = *h;
+            Ksiazka* p2 = p1->nastepny;
+            switch (kolejnosc)
+            {
+            case Rosnaca:
+                switch (atrybut)
+                {
+                case Tytul:
+                    if (strcasecmp(p1->tytul, p2->tytul) >= 0) {
+                        *h = zamien(p1, p2);
+                        zamieniona = 1;
+                    }
+                    break;
+                case Autor:
+                    if (strcasecmp(p1->autor, p2->autor) >= 0) {
+                        *h = zamien(p1, p2);
+                        zamieniona = 1;
+                    }
+                    break;
+                }
+                break;
+            case Malejaca:
+                switch (atrybut)
+                {
+                case Tytul:
+                    if (strcasecmp(p1->tytul, p2->tytul) <= 0) {
+                        *h = zamien(p1, p2);
+                        zamieniona = 1;
+                    }
+                    break;
+                case Autor:
+                    if (strcasecmp(p1->autor, p2->autor) <= 0) {
+                        *h = zamien(p1, p2);
+                        zamieniona = 1;
+                    }
+                    break;
+                }
+                break;
+            }
+            h = &(*h)->nastepny;
+        }
+        if (zamieniona == 0) {
+            break;
+        }
+    }
+}
+
+void wyszukaj_ksiazki_po_tytule()
 {
     char tytul[MAX] = "";
     printf("Podaj tytul: \n");
@@ -41,7 +133,7 @@ int wyszukaj_ksiazki_po_roku()
 {
     int rok;
     printf("Podaj rok: \n");
-    scanf("%s", rok);
+    scanf("%d", rok);
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
         if (strcasestr(rok == wpis->rok, rok) != NULL) {
@@ -50,11 +142,6 @@ int wyszukaj_ksiazki_po_roku()
     }
 }
 
-
-void sortowanie_ksiazek_niemalejace()
-{
-    
-}
 
 void wyswietl_baze_ksiazek()
 {

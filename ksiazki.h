@@ -40,9 +40,16 @@ Ksiazka *wyszukaj_ksiazke(int ID);
 int znajdz_najwyzsze_ID_ksiazki();
 void edytuj_ksiazki_ID_ksiazki(Ksiazka *wpis);
 void sortowanie_ksiazek_niemalejace(Ksiazka *ID);
-char wyszukaj_ksiazki_po_tytule();
+void wyszukaj_ksiazki_po_tytule();
 char wyszukaj_ksiazki_po_autorze();
 int wyszukaj_ksiazki_po_roku();
+Ksiazka* zamien(Ksiazka* a, Ksiazka* b);
+int policz_ksiazki();
+void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atrybut);
+
+
+
+
 
 
 

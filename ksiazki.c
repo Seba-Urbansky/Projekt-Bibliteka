@@ -9,10 +9,10 @@
 Ksiazka *pierwsza_ksiazka = NULL;
 Ksiazka *ostatnia_ksiazka = NULL;
 
-Ksiazka* zamien(Ksiazka* a, Ksiazka* b)
+Ksiazka *zamien(Ksiazka *a, Ksiazka *b)
 {
-    Ksiazka* tmpNastepny = b->nastepny;
-    Ksiazka* tmpPoprzedni = a->poprzedni;
+    Ksiazka *tmpNastepny = b->nastepny;
+    Ksiazka *tmpPoprzedni = a->poprzedni;
     b->nastepny = a;
     b->poprzedni = tmpPoprzedni;
     a->poprzedni = b;
@@ -25,15 +25,17 @@ Ksiazka* zamien(Ksiazka* a, Ksiazka* b)
     {
         tmpPoprzedni->nastepny = b;
     }
-    if (b->poprzedni == NULL) {
+    if (b->poprzedni == NULL)
+    {
         pierwsza_ksiazka = a;
     }
-    if (a->nastepny == NULL) {
+    if (a->nastepny == NULL)
+    {
         ostatnia_ksiazka = a;
-    } 
+    }
     return b;
 }
-  
+
 int policz_ksiazki()
 {
     int licznik = 0;
@@ -46,29 +48,33 @@ int policz_ksiazki()
 
 void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atrybut)
 {
-    Ksiazka** h;
+    Ksiazka **h;
     int licznik = policz_ksiazki();
     int i, j, zamieniona;
-  
-    for (i = 0; i <= licznik; i++) {
+
+    for (i = 0; i <= licznik; i++)
+    {
         h = &pierwsza_ksiazka;
         zamieniona = 0;
-        for (j = 0; j < licznik - i - 1; j++) {
-            Ksiazka* p1 = *h;
-            Ksiazka* p2 = p1->nastepny;
+        for (j = 0; j < licznik - i - 1; j++)
+        {
+            Ksiazka *p1 = *h;
+            Ksiazka *p2 = p1->nastepny;
             switch (kolejnosc)
             {
             case Rosnaca:
                 switch (atrybut)
                 {
                 case Tytul:
-                    if (strcasecmp(p1->tytul, p2->tytul) >= 0) {
+                    if (strcasecmp(p1->tytul, p2->tytul) >= 0)
+                    {
                         *h = zamien(p1, p2);
                         zamieniona = 1;
                     }
                     break;
                 case Autor:
-                    if (strcasecmp(p1->autor, p2->autor) >= 0) {
+                    if (strcasecmp(p1->autor, p2->autor) >= 0)
+                    {
                         *h = zamien(p1, p2);
                         zamieniona = 1;
                     }
@@ -79,13 +85,15 @@ void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atryb
                 switch (atrybut)
                 {
                 case Tytul:
-                    if (strcasecmp(p1->tytul, p2->tytul) <= 0) {
+                    if (strcasecmp(p1->tytul, p2->tytul) <= 0)
+                    {
                         *h = zamien(p1, p2);
                         zamieniona = 1;
                     }
                     break;
                 case Autor:
-                    if (strcasecmp(p1->autor, p2->autor) <= 0) {
+                    if (strcasecmp(p1->autor, p2->autor) <= 0)
+                    {
                         *h = zamien(p1, p2);
                         zamieniona = 1;
                     }
@@ -95,7 +103,8 @@ void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atryb
             }
             h = &(*h)->nastepny;
         }
-        if (zamieniona == 0) {
+        if (zamieniona == 0)
+        {
             break;
         }
     }
@@ -108,15 +117,16 @@ void wyszukaj_ksiazki_po_tytule()
     scanf("%s", tytul);
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        if (strcasestr(wpis->tytul, tytul) != NULL) {
+        if (strcasestr(wpis->tytul, tytul) != NULL)
+        {
             wydrukuj_ksiazke(wpis);
+            printf("--------------------------------------\n");
         }
     }
+     
 }
 
-
-
-char wyszukaj_ksiazki_po_autorze()
+void wyszukaj_ksiazki_po_autorze()
 {
     char autor[MAX] = "";
     printf("Podaj autora: \n");
@@ -125,6 +135,7 @@ char wyszukaj_ksiazki_po_autorze()
     {
         if (strcasestr(wpis->autor, autor) != NULL) {
             wydrukuj_ksiazke(wpis);
+            printf("--------------------------------------\n");
         }
     }
 }
@@ -136,12 +147,14 @@ int wyszukaj_ksiazki_po_roku()
     scanf("%d", rok);
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        if (strcasestr(rok == wpis->rok, rok) != NULL) {
+        if (rok == wpis->rok)
+        {
             wydrukuj_ksiazke(wpis);
+            printf("--------------------------------------\n");
         }
     }
+     
 }
-
 
 void wyswietl_baze_ksiazek()
 {

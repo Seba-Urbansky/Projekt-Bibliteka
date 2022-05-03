@@ -9,6 +9,33 @@
 Ksiazka *pierwsza_ksiazka = NULL;
 Ksiazka *ostatnia_ksiazka = NULL;
 
+void wyszukiwanie_ksiazek()
+{
+    printf("Wyniki wyszukiwania: \n");
+    printf("Wyszukany tutul:  \n"wyszukaj_tytul());
+    printf("Wyszukany autor:  \n"wyszukaj_rok());
+    printf("Wyszukany rok:  \n"wyszukaj_rok());
+
+}
+
+void wyszukaj_tytul(Ksiazka *wpis)
+{
+    char tytul[MAX] = " ";
+    printf("Podaj tytul: \n");
+    scanf("%s", wpis->tytul);
+}
+
+void wyszukaj_autora(Ksiazka *wpis)
+{
+    printf("Podaj autora: \n");
+    scanf("%s", wpis->autor);
+}
+
+void edytuj_rok(Ksiazka *wpis)
+{
+    printf("Podaj nowy rok: \n");
+    scanf("%d", wpis->rok);
+}
 
 void sortowanie_ksiazek_niemalejace()
 {   
@@ -107,17 +134,17 @@ void wydrukuj_ksiazke(Ksiazka *wpis)
 
 void edytuj_tytul_ksiazki(Ksiazka *wpis)
 {
-    char imie[MAX] = "";
+    char tytul[MAX] = " ";
     printf("Podaj tytul: \n");
-    scanf("%s", &imie);
-    if (imie == "")
+    scanf("%s", &tytul);
+    if (tytul == " ")
     {
         printf("Niepoprawny tytul, nie powinno byc puste.\n");
         edytuj_tytul_ksiazki(wpis);
     }
     else
     {
-        strcpy(wpis->tytul, &imie);
+        strcpy(wpis->tytul, &tytul);
     }
 }
 

@@ -17,7 +17,7 @@ void wyszukiwanie_ksiazek(Ksiazka *wpis)
     printf("Wyszukany rok:  \n", wyszukaj_rok(wpis->rok));
 }
 
-void wyszukaj_ksiazki_po_tytule(Ksiazka *wpis)
+char wyszukaj_ksiazki_po_tytule(Ksiazka *wpis)
 {
     char tytul[MAX] = "";
     printf("Podaj tytul: \n");
@@ -32,7 +32,7 @@ void wyszukaj_ksiazki_po_tytule(Ksiazka *wpis)
 
 
 
-void wyszukaj_ksiazki_po_autorze(Ksiazka *wpis)
+char wyszukaj_ksiazki_po_autorze(Ksiazka *wpis)
 {
     char autor[MAX] = "";
     printf("Podaj autora: \n");
@@ -45,7 +45,7 @@ void wyszukaj_ksiazki_po_autorze(Ksiazka *wpis)
     }
 }
 
-void wyszukaj_ksiazki_po_roku(Ksiazka *wpis)
+int wyszukaj_ksiazki_po_roku(Ksiazka *wpis)
 {
     int rok;
     printf("Podaj rok: \n");

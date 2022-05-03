@@ -17,64 +17,47 @@ void wyszukiwanie_ksiazek(Ksiazka *wpis)
     printf("Wyszukany rok:  \n", wyszukaj_rok(wpis->rok));
 }
 
-void wyszukaj_ksiazki_po_tytule()
+void wyszukaj_ksiazki_po_tytule(Ksiazka *wpis)
 {
-    char tytul[MAX] = " ";
+    char tytul[MAX] = "";
     printf("Podaj tytul: \n");
     scanf("%s", tytul);
-
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        if (strstr(zmien_na_wielkie_litery(wpis->tytul), zmien_na_wielkie_litery(tytul)) != NULL)
-        {
-            wydrukuj_po_tytule_ksiazki();
+        if (strcasestr(wpis->tytul, tytul) != NULL) {
+            wydrukuj_ksiazke(wpis);
         }
     }
 }
-void wydrukuj_po_tytule_ksiazki(Ksiazka *wpis)
-{
-printf("%-20s | %s \n", "Tytul", wpis->tytul);
-}
-
-void wydrukuj_po_autorze_ksiazki(Ksiazka *wpis)
-{
-    printf("%-20s | %s \n", "Autor", wpis->autor);
-}
-void wydrukuj_po_roku_ksiazki(Ksiazka *wpis)
-{
-    printf("%-20s | %d \n", "Rok", wpis->rok);
-}
 
 
-void wyszukaj_autora(Ksiazka *wpis)
+
+void wyszukaj_ksiazki_po_autorze(Ksiazka *wpis)
 {
-    char autor[MAX] = " ";
+    char autor[MAX] = "";
     printf("Podaj autora: \n");
     scanf("%s", autor);
-
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        if (strstr(zmien_na_wielkie_litery(wpis->autor), zmien_na_wielkie_litery(autor)) != NULL)
-        {
-            wydrukuj_po_autorze_ksiazki();
+        if (strcasestr(wpis->autor, autor) != NULL) {
+            wydrukuj_ksiazke(wpis);
         }
     }
 }
 
-void wyszukaj_rok(Ksiazka *wpis)
+void wyszukaj_ksiazki_po_roku(Ksiazka *wpis)
 {
     int rok;
     printf("Podaj rok: \n");
     scanf("%s", rok);
-
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        if (strstr(zmien_na_wielkie_litery(wpis->rok), zmien_na_wielkie_litery(rok)) != NULL)
-        {
-            wydrukuj_po_roku_ksiazki();
+        if (strcasestr(rok == wpis->rok, rok) != NULL) {
+            wydrukuj_ksiazke(wpis);
         }
     }
 }
+
 
 void sortowanie_ksiazek_niemalejace(Ksiazka *ID)
 {

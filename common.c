@@ -21,18 +21,6 @@ int czy_plik_jest_pusty(FILE* plik)
     return 0;
 }
 
-char *zmien_na_wielkie_litery(char str[])
-{
-    char temp[MAX];
-    strcpy(temp, str);
-    int i = 0;
-    while (temp[i])
-    {
-        temp[i] = (toupper(temp[i]));
-        i++;
-    }
-    return temp;
-}
 
 
 

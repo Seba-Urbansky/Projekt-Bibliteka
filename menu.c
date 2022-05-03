@@ -111,8 +111,10 @@ void menu_ksiazek()
     printf("6. Wyszukaj ksiazke po roku\n");
     printf("7. Sortuj ksiazki malejaco, po tytule\n");
     printf("8. Sortuj ksiazki rosnaco, po tytule\n");
-    printf("9. Powrot do menu\n");
-    printf("10. Wyjscie z programu i zapisanie danych\n\n");
+    printf("9. Sortuj ksiazki malejaco, po autorze\n");
+    printf("10. Sortuj ksiazki rosnaco, po autorze\n");
+    printf("11. Powrot do menu\n");
+    printf("12. Wyjscie z programu i zapisanie danych\n\n");
 
     scanf("%d", &wybor);
     printf("\n");
@@ -144,7 +146,7 @@ void menu_ksiazek()
         menu_ksiazek();
         break;
     case 7:
-        
+        sortowanie(Malejaca, Tytul);
         menu_ksiazek();
         break;
     case 8:
@@ -152,6 +154,17 @@ void menu_ksiazek()
         menu_ksiazek();
         break;
     case 9:
+        sortowanie(Malejaca, Autor);
+        menu_ksiazek();
+        break;
+     case 10:
+        sortowanie(Rosnaca, Autor);
+        menu_ksiazek();
+        break;
+    case 11::
+       menu_glowne();
+        break;
+    case 12:
         wyjscie();
         break;
     default:

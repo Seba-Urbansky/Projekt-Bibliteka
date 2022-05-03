@@ -25,7 +25,7 @@ void wyszukaj_ksiazki_po_tytule()
 
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        if (strstr(strupr(wpis->tytul), strupr(tytul)) != NULL)
+        if (strstr(zmien_na_wielkie_litery(wpis->tytul), zmien_na_wielkie_litery(tytul)) != NULL)
         {
             wydrukuj_ksiazke();
         }
@@ -40,7 +40,7 @@ void wyszukaj_autora(Ksiazka *wpis)
 
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        if (strstr(strupr(wpis->autor), strupr(autor)) != NULL)
+        if (strstr(zmien_na_wielkie_litery(wpis->autor), zmien_na_wielkie_litery(autor)) != NULL)
         {
             wydrukuj_autora();
         }
@@ -55,7 +55,7 @@ void wyszukaj_rok(Ksiazka *wpis)
 
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        if (strstr(strupr(wpis->rok), strupr(rok)) != NULL)
+        if (strstr(zmien_na_wielkie_litery(wpis->rok), zmien_na_wielkie_litery(rok)) != NULL)
         {
             wydrukuj_rok();
         }
@@ -64,20 +64,7 @@ void wyszukaj_rok(Ksiazka *wpis)
 
 void sortowanie_ksiazek_niemalejace(Ksiazka *ID)
 {
-    int ID_ksiazki1;
-    int ID_ksiazki2;
-    if (ID->ID_ksiazki1 < ID->ID_ksiazki2)
-    {
-        ID->ID_ksiazki2 > ID->ID_ksiazki1;
-    }
-    else if (ID->ID_ksiazki1 > ID->ID_ksiazki2)
-    {
-        ID->ID_ksiazki1 < ID->ID_ksiazki2;
-    }
-    else
-    {
-        ID->ID_ksiazki1 < ID->ID_ksiazki2;
-    }
+    
 }
 
 void wyswietl_baze_ksiazek()

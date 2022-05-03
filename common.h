@@ -12,6 +12,6 @@
 
 
 int czy_plik_jest_pusty(FILE* plik);
-
+char *zmien_na_wielkie_litery(char str[]);
 
 #endif

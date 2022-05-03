@@ -148,7 +148,7 @@ void menu_ksiazek()
         menu_ksiazek();
         break;
     case 8:
-        sortowanie(sortowanie(Rosnaca, Tytul);
+        sortowanie(Rosnaca, Tytul);
         menu_ksiazek();
         break;
     case 9:

@@ -10,6 +10,7 @@
 Klient *pierwszy_klient = NULL;
 Klient *ostatni_klient = NULL;
 
+
 void wyswietl_baze_klientow()
 {
     printf("BAZA KLIENTOW ------------------------\n");

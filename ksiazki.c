@@ -9,6 +9,22 @@
 Ksiazka *pierwsza_ksiazka = NULL;
 Ksiazka *ostatnia_ksiazka = NULL;
 
+
+void sortowanie_ksiazek_niemalejace()
+{   
+    int ID_ksiazki1;
+    int ID_ksiazki2;
+
+
+   if(ID->ID_ksiazki1 < ID->ID_ksiazki2) {
+      ID->ID_ksiazki2 > ID->ID_ksiazki1;
+   } else if(ID->ID_ksiazki1 > ID->ID_ksiazki2) {
+       ID->ID_ksiazki1 < ID->ID_ksiazki2;
+   } else {
+      ID->ID_ksiazki1 < ID->ID_ksiazki2;
+}
+
+
 void wyswietl_baze_ksiazek()
 {
     printf("BAZA KSIAZEK ------------------------\n");

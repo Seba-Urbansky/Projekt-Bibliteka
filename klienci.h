@@ -43,4 +43,6 @@ void edytuj_wypozyczenia_numer_karty_abc(Klient* wpis);
 
 
 
+
+
 #endif

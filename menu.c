@@ -161,7 +161,7 @@ void menu_ksiazek()
         sortowanie(Rosnaca, Autor);
         menu_ksiazek();
         break;
-    case 11::
+    case 11:
        menu_glowne();
         break;
     case 12:

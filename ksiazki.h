@@ -45,12 +45,8 @@ void wyszukaj_ksiazki_po_autorze();
 int wyszukaj_ksiazki_po_roku();
 Ksiazka* zamien(Ksiazka* a, Ksiazka* b);
 int policz_ksiazki();
-void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atrybut);
 enum SortowanieKolejnosc {Rosnaca = 1, Malejaca = 0}; 
 enum SortowanieAtrybut {Tytul = 0, Autor = 1};
-
-
-
-
+void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atrybut);
 
 #endif

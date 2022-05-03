@@ -40,9 +40,9 @@ Ksiazka *wyszukaj_ksiazke(int ID);
 int znajdz_najwyzsze_ID_ksiazki();
 void edytuj_ksiazki_ID_ksiazki(Ksiazka *wpis);
 void sortowanie_ksiazek_niemalejace(Ksiazka *ID);
-char wyszukaj_ksiazki_po_tytule();
-char wyszukaj_autora();
-int wyszukaj_rok();
+char wyszukaj_ksiazke_po_tytule();
+char wyszukaj_ksiazke_po_autorze();
+int wyszukaj_ksiazke_po_roku();
 
 
 

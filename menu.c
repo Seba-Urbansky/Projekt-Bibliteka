@@ -130,15 +130,15 @@ void menu_ksiazek()
         menu_ksiazek();
         break;
     case 4:
-        wyszukaj_ksiazki_po_tytule();
+        wyszukaj_ksiazke_po_tytule();
         menu_ksiazek();
         break;
     case 5:
-        wyszukaj_autora();
+        wyszukaj_ksiazke_po_autorze();
         menu_ksiazek();
         break;
     case 6:
-        wyszukaj_rok();
+        wyszukaj_ksiazke_po_roku();
         menu_ksiazek();
         break;
     case 7:

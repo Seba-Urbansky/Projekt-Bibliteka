@@ -148,7 +148,7 @@ void menu_ksiazek()
         menu_ksiazek();
         break;
     case 8:
-        sortowanie(num SortowanieKolejnosc Rosnaca, enum SortowanieAtrybut Tytul);
+        sortowanie(sortowanie(Rosnaca, Tytul);
         menu_ksiazek();
         break;
     case 9:

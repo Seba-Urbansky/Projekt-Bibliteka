@@ -41,9 +41,9 @@ int znajdz_najwyzsze_ID_ksiazki();
 void edytuj_ksiazki_ID_ksiazki(Ksiazka *wpis);
 void sortowanie_ksiazek_niemalejace(Ksiazka *ID);
 void wyszukiwanie_ksiazek();
-char wyszukaj_tytul(Ksiazka *wpis);
-char wyszukaj_autora(Ksiazka *wpis);
-int wyszukaj_rok(Ksiazka *wpis);
+void wyszukaj_tytul(Ksiazka *wpis);
+void wyszukaj_autora(Ksiazka *wpis);
+void wyszukaj_rok(Ksiazka *wpis);
 
 
 #endif

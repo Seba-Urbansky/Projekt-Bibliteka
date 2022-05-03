@@ -17,23 +17,49 @@ void wyszukiwanie_ksiazek(Ksiazka *wpis)
     printf("Wyszukany rok:  \n", wyszukaj_rok(wpis->rok));
 }
 
-char wyszukaj_tytul(Ksiazka *wpis)
+void wyszukaj_ksiazki_po_tytule()
 {
     char tytul[MAX] = " ";
     printf("Podaj tytul: \n");
-    scanf("%s", wpis->tytul);
+    scanf("%s", tytul);
+
+    for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
+    {
+        if (strstr(strupr(wpis->tytul), strupr(tytul)) != NULL)
+        {
+            wydrukuj_ksiazke();
+        }
+    }
 }
 
-char wyszukaj_autora(Ksiazka *wpis)
+void wyszukaj_autora(Ksiazka *wpis)
 {
+    char autor[MAX] = " ";
     printf("Podaj autora: \n");
-    scanf("%s", wpis->autor);
+    scanf("%s", autor);
+
+    for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
+    {
+        if (strstr(strupr(wpis->autor), strupr(autor)) != NULL)
+        {
+            wydrukuj_autora();
+        }
+    }
 }
 
-int wyszukaj_rok(Ksiazka *wpis)
+void wyszukaj_rok(Ksiazka *wpis)
 {
+    int rok;
     printf("Podaj rok: \n");
-    scanf("%d", wpis->rok);
+    scanf("%s", rok);
+
+    for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
+    {
+        if (strstr(strupr(wpis->rok), strupr(rok)) != NULL)
+        {
+            wydrukuj_rok();
+        }
+    }
 }
 
 void sortowanie_ksiazek_niemalejace(Ksiazka *ID)

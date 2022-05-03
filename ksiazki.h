@@ -14,6 +14,9 @@ typedef struct KsiazkaStruktura
     char *tytul[MAX];
     char *autor[MAX];
     char *gatunek[MAX];
+    int ID_ksiazki1;
+    int ID_ksiazki2;
+    int ID_ksiazki;
 
     struct KsiazkaStruktura *poprzedni, *nastepny;
 
@@ -36,11 +39,11 @@ void wyswietl_baze_ksiazek();
 Ksiazka *wyszukaj_ksiazke(int ID);
 int znajdz_najwyzsze_ID_ksiazki();
 void edytuj_ksiazki_ID_ksiazki(Ksiazka *wpis);
-void sortowanie_ksiazek_niemalejace();
+void sortowanie_ksiazek_niemalejace(Ksiazka *ID);
 void wyszukiwanie_ksiazek();
-void wyszukaj_tytul();
-void wyszukaj_autora();
-void wyszukaj_rok();
+char wyszukaj_tytul(Ksiazka *wpis);
+char wyszukaj_autora(Ksiazka *wpis);
+int wyszukaj_rok(Ksiazka *wpis);
 
 
 #endif

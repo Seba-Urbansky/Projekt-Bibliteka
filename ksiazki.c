@@ -9,48 +9,50 @@
 Ksiazka *pierwsza_ksiazka = NULL;
 Ksiazka *ostatnia_ksiazka = NULL;
 
-void wyszukiwanie_ksiazek()
+void wyszukiwanie_ksiazek(Ksiazka *wpis)
 {
     printf("Wyniki wyszukiwania: \n");
-    printf("Wyszukany tutul:  \n"wyszukaj_tytul());
-    printf("Wyszukany autor:  \n"wyszukaj_rok());
-    printf("Wyszukany rok:  \n"wyszukaj_rok());
-
+    printf("Wyszukany tutul:  \n", wyszukaj_tytul(wpis->tytul));
+    printf("Wyszukany autor:  \n", wyszukaj_autora(wpis->autor));
+    printf("Wyszukany rok:  \n", wyszukaj_rok(wpis->rok));
 }
 
-void wyszukaj_tytul(Ksiazka *wpis)
+char wyszukaj_tytul(Ksiazka *wpis)
 {
     char tytul[MAX] = " ";
     printf("Podaj tytul: \n");
     scanf("%s", wpis->tytul);
 }
 
-void wyszukaj_autora(Ksiazka *wpis)
+char wyszukaj_autora(Ksiazka *wpis)
 {
     printf("Podaj autora: \n");
     scanf("%s", wpis->autor);
 }
 
-void edytuj_rok(Ksiazka *wpis)
+int wyszukaj_rok(Ksiazka *wpis)
 {
-    printf("Podaj nowy rok: \n");
+    printf("Podaj rok: \n");
     scanf("%d", wpis->rok);
 }
 
-void sortowanie_ksiazek_niemalejace()
-{   
+void sortowanie_ksiazek_niemalejace(Ksiazka *ID)
+{
     int ID_ksiazki1;
     int ID_ksiazki2;
-
-
-   if(ID->ID_ksiazki1 < ID->ID_ksiazki2) {
-      ID->ID_ksiazki2 > ID->ID_ksiazki1;
-   } else if(ID->ID_ksiazki1 > ID->ID_ksiazki2) {
-       ID->ID_ksiazki1 < ID->ID_ksiazki2;
-   } else {
-      ID->ID_ksiazki1 < ID->ID_ksiazki2;
+    if (ID->ID_ksiazki1 < ID->ID_ksiazki2)
+    {
+        ID->ID_ksiazki2 > ID->ID_ksiazki1;
+    }
+    else if (ID->ID_ksiazki1 > ID->ID_ksiazki2)
+    {
+        ID->ID_ksiazki1 < ID->ID_ksiazki2;
+    }
+    else
+    {
+        ID->ID_ksiazki1 < ID->ID_ksiazki2;
+    }
 }
-
 
 void wyswietl_baze_ksiazek()
 {
@@ -60,9 +62,7 @@ void wyswietl_baze_ksiazek()
         wydrukuj_ksiazke(wpis);
         printf("--------------------------------------\n");
     }
-    
 }
-
 
 void dodaj_ksiazke()
 {
@@ -73,7 +73,6 @@ void dodaj_ksiazke()
     edytuj_gatunek_ksiazki(wpis);
     edytuj_autora(wpis);
     edytuj_rok(wpis);
-   
 
     if (pierwsza_ksiazka == NULL)
     {
@@ -127,15 +126,12 @@ void wydrukuj_ksiazke(Ksiazka *wpis)
     printf("%-20s | %s \n", "Autor", wpis->autor);
     printf("%-20s | %s \n", "Gatunek", wpis->gatunek);
     printf("%-20s | %d \n", "Rok", wpis->rok);
-    
-   
 }
-
 
 void edytuj_tytul_ksiazki(Ksiazka *wpis)
 {
     char tytul[MAX] = " ";
-    printf("Podaj tytul: \n");
+    printf("Podaj nowy tytul: \n");
     scanf("%s", &tytul);
     if (tytul == " ")
     {
@@ -206,7 +202,7 @@ void wczytaniepliku_ksiazki()
         while (!feof(plik))
         {
 
-            wpis = (Ksiazka *) malloc(sizeof(Ksiazka));
+            wpis = (Ksiazka *)malloc(sizeof(Ksiazka));
             fscanf(plik, "%[^;];%[^;];%[^;];%d;%d\n", wpis->gatunek, wpis->tytul, wpis->autor, &wpis->ID, &wpis->rok);
 
             if (pierwsza_ksiazka == NULL)
@@ -238,7 +234,6 @@ void zapispliku_ksiazki()
         {
             fprintf(plik, "\n");
         }
-        
     }
     fclose(plik);
 }

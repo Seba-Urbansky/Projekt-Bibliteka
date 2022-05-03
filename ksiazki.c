@@ -9,7 +9,7 @@
 Ksiazka *pierwsza_ksiazka = NULL;
 Ksiazka *ostatnia_ksiazka = NULL;
 
-char wyszukaj_ksiazke_po_tytule()
+char wyszukaj_ksiazki_po_tytule()
 {
     char tytul[MAX] = "";
     printf("Podaj tytul: \n");
@@ -24,7 +24,7 @@ char wyszukaj_ksiazke_po_tytule()
 
 
 
-char wyszukaj_ksiazke_po_autorze()
+char wyszukaj_ksiazki_po_autorze()
 {
     char autor[MAX] = "";
     printf("Podaj autora: \n");
@@ -37,7 +37,7 @@ char wyszukaj_ksiazke_po_autorze()
     }
 }
 
-int wyszukaj_ksiazke_po_roku()
+int wyszukaj_ksiazki_po_roku()
 {
     int rok;
     printf("Podaj rok: \n");

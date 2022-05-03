@@ -12,7 +12,7 @@ Ksiazka *ostatnia_ksiazka = NULL;
 void wyszukiwanie_ksiazek(Ksiazka *wpis)
 {
     printf("Wyniki wyszukiwania: \n");
-    printf("Wyszukany tutul:  \n", wyszukaj_tytul(wpis->tytul));
+    printf("Wyszukany tutul:  \n", wyszukaj_ksiazki_po_tytule(wpis->tytul));
     printf("Wyszukany autor:  \n", wyszukaj_autora(wpis->autor));
     printf("Wyszukany rok:  \n", wyszukaj_rok(wpis->rok));
 }
@@ -27,10 +27,24 @@ void wyszukaj_ksiazki_po_tytule()
     {
         if (strstr(zmien_na_wielkie_litery(wpis->tytul), zmien_na_wielkie_litery(tytul)) != NULL)
         {
-            wydrukuj_ksiazke();
+            wydrukuj_po_tytule_ksiazki();
         }
     }
 }
+void wydrukuj_po_tytule_ksiazki(Ksiazka *wpis)
+{
+printf("%-20s | %s \n", "Tytul", wpis->tytul);
+}
+
+void wydrukuj_po_autorze_ksiazki(Ksiazka *wpis)
+{
+    printf("%-20s | %s \n", "Autor", wpis->autor);
+}
+void wydrukuj_po_roku_ksiazki(Ksiazka *wpis)
+{
+    printf("%-20s | %d \n", "Rok", wpis->rok);
+}
+
 
 void wyszukaj_autora(Ksiazka *wpis)
 {
@@ -42,7 +56,7 @@ void wyszukaj_autora(Ksiazka *wpis)
     {
         if (strstr(zmien_na_wielkie_litery(wpis->autor), zmien_na_wielkie_litery(autor)) != NULL)
         {
-            wydrukuj_autora();
+            wydrukuj_po_autorze_ksiazki();
         }
     }
 }
@@ -57,7 +71,7 @@ void wyszukaj_rok(Ksiazka *wpis)
     {
         if (strstr(zmien_na_wielkie_litery(wpis->rok), zmien_na_wielkie_litery(rok)) != NULL)
         {
-            wydrukuj_rok();
+            wydrukuj_po_roku_ksiazki();
         }
     }
 }

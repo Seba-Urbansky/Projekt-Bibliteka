@@ -44,6 +44,8 @@ void wyszukiwanie_ksiazek();
 void wyszukaj_tytul(Ksiazka *wpis);
 void wyszukaj_autora(Ksiazka *wpis);
 void wyszukaj_rok(Ksiazka *wpis);
-
+void wydrukuj_po_tytule_ksiazki(Ksiazka *wpis);
+void wydrukuj_po_autorze_ksiazki(Ksiazka *wpis);
+void wydrukuj_po_roku_ksiazki(Ksiazka *wpis);
 
 #endif

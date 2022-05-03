@@ -9,14 +9,6 @@
 Ksiazka *pierwsza_ksiazka = NULL;
 Ksiazka *ostatnia_ksiazka = NULL;
 
-void wyszukiwanie_ksiazek(Ksiazka *wpis)
-{
-    printf("Wyniki wyszukiwania: \n");
-    printf("Wyszukany tutul:  \n", wyszukaj_ksiazki_po_tytule(wpis->tytul));
-    printf("Wyszukany autor:  \n", wyszukaj_autora(wpis->autor));
-    printf("Wyszukany rok:  \n", wyszukaj_rok(wpis->rok));
-}
-
 char wyszukaj_ksiazki_po_tytule(Ksiazka *wpis)
 {
     char tytul[MAX] = "";

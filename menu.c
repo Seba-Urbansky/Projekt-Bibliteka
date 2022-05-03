@@ -157,12 +157,12 @@ void menu_ksiazek()
         sortowanie(Malejaca, Autor);
         menu_ksiazek();
         break;
-     case 10:
+    case 10:
         sortowanie(Rosnaca, Autor);
         menu_ksiazek();
         break;
     case 11:
-       menu_glowne();
+        menu_glowne();
         break;
     case 12:
         wyjscie();
@@ -287,7 +287,7 @@ void menu_klienta(Klient *klient)
         printf("Niepoprawna instrukcja");
         break;
     }
-} 
+}
 
 void menu_zarzadzaj_ksiazkami()
 {

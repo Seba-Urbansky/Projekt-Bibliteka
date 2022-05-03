@@ -79,6 +79,13 @@ void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atryb
                         zamieniona = 1;
                     }
                     break;
+                case Rok:
+                    if (strcasecmp(p1->rok, p2->rok) >= 0)
+                    {
+                        *h = zamien(p1, p2);
+                        zamieniona = 1;
+                    }
+                    break;
                 }
                 break;
             case Malejaca:
@@ -93,6 +100,13 @@ void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atryb
                     break;
                 case Autor:
                     if (strcasecmp(p1->autor, p2->autor) <= 0)
+                    {
+                        *h = zamien(p1, p2);
+                        zamieniona = 1;
+                    }
+                    break;
+                case Rok:
+                    if (strcasecmp(p1->rok, p2->rok) <= 0)
                     {
                         *h = zamien(p1, p2);
                         zamieniona = 1;
@@ -123,7 +137,6 @@ void wyszukaj_ksiazki_po_tytule()
             printf("--------------------------------------\n");
         }
     }
-     
 }
 
 void wyszukaj_ksiazki_po_autorze()
@@ -133,7 +146,8 @@ void wyszukaj_ksiazki_po_autorze()
     scanf("%s", autor);
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        if (strcasestr(wpis->autor, autor) != NULL) {
+        if (strcasestr(wpis->autor, autor) != NULL)
+        {
             wydrukuj_ksiazke(wpis);
             printf("--------------------------------------\n");
         }
@@ -153,7 +167,6 @@ int wyszukaj_ksiazki_po_roku()
             printf("--------------------------------------\n");
         }
     }
-     
 }
 
 void wyswietl_baze_ksiazek()

@@ -263,7 +263,7 @@ void wyszukaj_po_liczbie_egzemplarzy()
     scanf("%d", liczba_egzemplarzy);
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        if (wpis->liczba_egzemplarzy, liczba_egzemplarzy != NULL)
+        if (wpis->liczba_egzemplarzy != NULL)
         {
             wydrukuj_ksiazke(wpis);
             printf("--------------------------------------\n");
@@ -278,7 +278,7 @@ void wyszukaj_po_ID()
     scanf("%d", ID);
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        if (strcasestr(wpis->ID, ID) != NULL)
+        if (wpis->ID != NULL)
         {
             wydrukuj_ksiazke(wpis);
             printf("--------------------------------------\n");

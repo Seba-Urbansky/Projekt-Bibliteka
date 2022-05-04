@@ -149,26 +149,32 @@ void menu_ksiazek()
         break;
     case 7:
         sortowanie(Malejaca, Tytul);
+        wyswietl_baze_ksiazek();
         menu_ksiazek();
         break;
     case 8:
         sortowanie(Rosnaca, Tytul);
+        wyswietl_baze_ksiazek();
         menu_ksiazek();
         break;
     case 9:
         sortowanie(Malejaca, Autor);
+        wyswietl_baze_ksiazek();
         menu_ksiazek();
         break;
     case 10:
         sortowanie(Rosnaca, Autor);
+        wyswietl_baze_ksiazek();
         menu_ksiazek();
         break;
     case 11:
         sortowanie(Malejaca, Rok);
+        wyswietl_baze_ksiazek();
         menu_ksiazek();
         break;
     case 12:
         sortowanie(Rosnaca, Rok);
+        wyswietl_baze_ksiazek();
         menu_ksiazek();
         break;
     case 13:
@@ -217,9 +223,12 @@ void menu_wypozyczen()
 
     case 4:
         zwroc_wypozyczenie();
-        menu_glowne();
+        menu_wypozyczen();
         break;
     case 5:
+        menu_glowne();
+        break;
+    case 6:
         wyjscie();
         break;
     default:

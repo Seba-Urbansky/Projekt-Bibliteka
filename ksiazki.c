@@ -127,7 +127,7 @@ void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atryb
 void wyszukaj_ksiazki_po_tytule()
 {
     char tytul[MAX] = "";
-    printf("Podaj tytul: \n");
+    printf("Podaj tytul ksiazki: \n");
     scanf("%s", tytul);
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
@@ -142,11 +142,26 @@ void wyszukaj_ksiazki_po_tytule()
 void wyszukaj_ksiazki_po_autorze()
 {
     char autor[MAX] = "";
-    printf("Podaj autora: \n");
+    printf("Podaj autora ksiazki: \n");
     scanf("%s", autor);
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
         if (strcasestr(wpis->autor, autor) != NULL)
+        {
+            wydrukuj_ksiazke(wpis);
+            printf("--------------------------------------\n");
+        }
+    }
+}
+
+void wyszukaj_ksiazki_po_gatunku()
+{
+    char gatunek[MAX] = "";
+    printf("Podaj gatunek ksiazki: \n");
+    scanf("%s", gatunek);
+    for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
+    {
+        if (strcasestr(wpis->gatunek, gatunek) != NULL)
         {
             wydrukuj_ksiazke(wpis);
             printf("--------------------------------------\n");
@@ -168,6 +183,52 @@ int wyszukaj_ksiazki_po_roku()
         }
     }
 }
+
+int wyszukaj_po_liczbie_wypozyczonych()
+{
+    int liczba_wypozyczonych;
+    printf("Podaj liczbe wypozyczonych: \n");
+    scanf("%d", liczba_wypozyczonych);
+    for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
+    {
+        if (strcasestr(wpis->liczba_wypozyczonych, liczba_wypozyczonych) != NULL)
+        {
+            wydrukuj_ksiazke(wpis);
+            printf("--------------------------------------\n");
+        }
+    }
+}
+
+int wyszukaj_po_liczbie_egzemplarzy()
+{
+    int liczba_egzemplarzy;
+    printf("Podaj liczbe egzemplarzy: \n");
+    scanf("%d", liczba_egzemplarzy);
+    for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
+    {
+        if (strcasestr(wpis->liczba_egzemplarzy, liczba_egzemplarzy) != NULL)
+        {
+            wydrukuj_ksiazke(wpis);
+            printf("--------------------------------------\n");
+        }
+    }
+}
+
+int wyszukaj_po_ID()
+{
+    int ID;
+    printf("Podaj ID ksiazki: \n");
+    scanf("%d", ID);
+    for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
+    {
+        if (strcasestr(wpis->ID, ID) != NULL)
+        {
+            wydrukuj_ksiazke(wpis);
+            printf("--------------------------------------\n");
+        }
+    }
+}
+
 
 void wyswietl_baze_ksiazek()
 {
@@ -332,7 +393,7 @@ void wczytaniepliku_ksiazki()
         {
 
             wpis = (Ksiazka *)malloc(sizeof(Ksiazka));
-            fscanf(plik, "%[^;];%[^;];%[^;];%d;%d", wpis->gatunek, wpis->tytul, wpis->autor, &wpis->ID, &wpis->rok, &wpis->liczba_egzemplarzy,
+            fscanf(plik, "%[^;];%[^;];%[^;];%d;%d;%d:%d", wpis->gatunek, wpis->tytul, wpis->autor, &wpis->ID, &wpis->rok, &wpis->liczba_egzemplarzy,
                    &wpis->liczba_wypozyczonych);
 
             if (pierwsza_ksiazka == NULL)
@@ -359,7 +420,7 @@ void zapispliku_ksiazki()
     FILE *plik = fopen("ksiazki.csv", "w");
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        fprintf(plik, "%s;%s;%s;%d;%d", wpis->gatunek, wpis->tytul, wpis->autor, wpis->ID, wpis->rok, wpis->liczba_egzemplarzy,wpis->liczba_wypozyczonych);
+        fprintf(plik, "%s;%s;%s;%d;%d;%d;%d", wpis->gatunek, wpis->tytul, wpis->autor, wpis->ID, wpis->rok, wpis->liczba_egzemplarzy,wpis->liczba_wypozyczonych);
         if (wpis->nastepny != NULL)
         {
             fprintf(plik, "\n");

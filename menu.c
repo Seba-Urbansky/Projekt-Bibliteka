@@ -113,6 +113,8 @@ void menu_ksiazek()
     printf("8. Sortuj ksiazki rosnaco, po tytule\n");
     printf("9. Sortuj ksiazki malejaco, po autorze\n");
     printf("10. Sortuj ksiazki rosnaco, po autorze\n");
+    printf("9. Sortuj ksiazki malejaco, po roku\n");
+    printf("10. Sortuj ksiazki rosnaco, po roku\n");
     printf("11. Powrot do menu\n");
     printf("12. Wyjscie z programu i zapisanie danych\n\n");
 
@@ -162,9 +164,17 @@ void menu_ksiazek()
         menu_ksiazek();
         break;
     case 11:
-        menu_glowne();
+        sortowanie(Malejaca, Rok);
+        menu_ksiazek();
         break;
     case 12:
+        sortowanie(Rosnaca, Rok);
+        menu_ksiazek();
+        break;
+    case 13:
+        menu_glowne();
+        break;
+    case 114:
         wyjscie();
         break;
     default:

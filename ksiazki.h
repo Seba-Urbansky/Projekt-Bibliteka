@@ -52,8 +52,8 @@ void edytuj_liczbe_egzemplarzy(Ksiazka *wpis);
 void edytuj_liczbe_wypozyczonych(Ksiazka *wpis);
 void wyszukaj_ksiazki_po_gatunku();
 int wyszukaj_po_liczbie_wypozyczonych();
-int wyszukaj_po_liczbie_egzemplarzy()
-int wyszukaj_po_ID()
+int wyszukaj_po_liczbie_egzemplarzy();
+int wyszukaj_po_ID();
 
 
 #endif

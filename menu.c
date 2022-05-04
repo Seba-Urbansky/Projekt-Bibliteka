@@ -113,10 +113,10 @@ void menu_ksiazek()
     printf("8. Sortuj ksiazki rosnaco, po tytule\n");
     printf("9. Sortuj ksiazki malejaco, po autorze\n");
     printf("10. Sortuj ksiazki rosnaco, po autorze\n");
-    printf("9. Sortuj ksiazki malejaco, po roku\n");
-    printf("10. Sortuj ksiazki rosnaco, po roku\n");
-    printf("11. Powrot do menu\n");
-    printf("12. Wyjscie z programu i zapisanie danych\n\n");
+    printf("11. Sortuj ksiazki malejaco, po roku\n");
+    printf("12. Sortuj ksiazki rosnaco, po roku\n");
+    printf("13. Powrot do menu\n");
+    printf("14. Wyjscie z programu i zapisanie danych\n\n");
 
     scanf("%d", &wybor);
     printf("\n");

@@ -241,6 +241,7 @@ void wyszukaj_ksiazki_po_roku()
     }
 }
 
+
 void wyszukaj_po_liczbie_wypozyczonych()
 {
     int liczba_wypozyczonych;

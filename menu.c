@@ -264,9 +264,12 @@ void menu_klienta(Klient *klient)
     printf("1. Wydrukuj klienta \n");
     printf("2. Edytuj imie \n");
     printf("3. Edytuj nazwisko \n");
-    printf("4. Usun klienta\n");
-    printf("5. Powrot\n");
-    printf("6. Wyjscie z programu i zapisanie danych\n");
+    printf("4. Edytuj email klienta \n");
+    printf("5. Edytuj numer telefonu klienta \n");
+    printf("6. Edytuj numer karty klienta \n");
+    printf("7. Usun klienta\n");
+    printf("8. Powrot\n");
+    printf("9. Wyjscie z programu i zapisanie danych\n");
     scanf("%d", &wybor);
     printf("\n");
 
@@ -285,6 +288,18 @@ void menu_klienta(Klient *klient)
         menu_klienta(klient);
         break;
     case 4:
+        edytuj_email_klienta(klient);
+        menu_klienta(klient);
+        break;
+    case 5:
+        edytuj_telefon_klienta(klient);
+        menu_klienta(klient);
+        break;
+    case 6:
+        edytuj_wypozyczenia_numer_karty_abc(klient);
+        menu_klienta(klient);
+        break;
+    case 7:
         if (czy_klient_ma_wypozyczenia(klient))
         {
             printf("Klient powinien oddac wypozyczone ksiazki\n");
@@ -296,10 +311,10 @@ void menu_klienta(Klient *klient)
             menu_klientow();
         }
         break;
-    case 5:
+    case 8:
         menu_klientow();
         break;
-    case 6:
+    case 9:
         wyjscie();
         break;
     default:
@@ -331,11 +346,16 @@ void menu_ksiazki(Ksiazka *ksiazka)
 
     printf("Witamy w Zarzadzaniu Ksiazkami \n\n");
     printf("1. Wydrukuj ksiazki \n");
-    printf("2. Edytuj tytul ksiazki \n");
-    printf("3. Edytuj gatunek ksiazki\n");
-    printf("4. Usun ksiazke\n");
-    printf("5. Powrot\n");
-    printf("6. Wyjscie z programu i zapisanie danych\n");
+    printf("2. Edytuj ID Ksiazki \n");
+    printf("3. Edytuj autora \n");
+    printf("4. Edytuj tytul ksiazki \n");
+    printf("5. Edytuj gatunek ksiazki\n");
+    printf("6. Edytuj rok ksiazki \n");
+    printf("7. Edytuj liczbe egzemplarzy \n");
+    printf("8. Edytuj liczbe wypozyczonych \n");
+    printf("9. Usun ksiazke\n");
+    printf("10. Powrot\n");
+    printf("11. Wyjscie z programu i zapisanie danych\n");
     scanf("%d", &wybor);
     printf("\n");
 
@@ -346,14 +366,34 @@ void menu_ksiazki(Ksiazka *ksiazka)
         menu_ksiazki(ksiazka);
         break;
     case 2:
-        edytuj_tytul_ksiazki(ksiazka);
+        edytuj_ksiazki_ID_ksiazki(ksiazka);
         menu_ksiazki(ksiazka);
         break;
     case 3:
-        edytuj_gatunek_ksiazki(ksiazka);
+        edytuj_autora(ksiazka);
         menu_ksiazki(ksiazka);
         break;
     case 4:
+        edytuj_tytul_ksiazki(ksiazka);
+        menu_ksiazki(ksiazka);
+        break;
+    case 5:
+        edytuj_gatunek_ksiazki(ksiazka);
+        menu_ksiazki(ksiazka);
+        break;
+    case 6:
+        edytuj_rok(ksiazka);
+        menu_ksiazki(ksiazka);
+        break;
+    case 7:
+        edytuj_liczbe_egzemplarzy(ksiazka);
+        menu_ksiazki(ksiazka);
+        break;
+    case 8:
+        edytuj_liczbe_wypozyczonych(ksiazka);
+        menu_ksiazki(ksiazka);
+        break;
+    case 9:
         if (czy_ksiazka_jest_wypozyczona(ksiazka))
         {
             printf("Ksiazka powinna zostac zwrocona przed usunieciem\n");
@@ -365,10 +405,10 @@ void menu_ksiazki(Ksiazka *ksiazka)
             menu_ksiazek();
         }
         break;
-    case 5:
+    case 10:
         menu_ksiazek();
         break;
-    case 6:
+    case 11:
         wyjscie();
         break;
     default:

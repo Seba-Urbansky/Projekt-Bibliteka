@@ -14,8 +14,8 @@ typedef struct KsiazkaStruktura
     char *tytul[MAX];
     char *autor[MAX];
     char *gatunek[MAX];
-    int ID_ksiazki1;
-    int ID_ksiazki2;
+    int liczba_egzemplarzy;
+    int liczba_wypozyczonych;
     int ID_ksiazki;
 
     struct KsiazkaStruktura *poprzedni, *nastepny;
@@ -48,5 +48,8 @@ int policz_ksiazki();
 enum SortowanieKolejnosc {Rosnaca = 1, Malejaca = 0}; 
 enum SortowanieAtrybut {Tytul = 0, Autor = 1, Rok = 2};
 void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atrybut);
+void edytuj_liczbe_egzemplarzy(Ksiazka *wpis);
+void edytuj_liczbe_wypozyczonych(Ksiazka *wpis);
+
 
 #endif

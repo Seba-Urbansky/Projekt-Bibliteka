@@ -188,6 +188,8 @@ void dodaj_ksiazke()
     edytuj_gatunek_ksiazki(wpis);
     edytuj_autora(wpis);
     edytuj_rok(wpis);
+    edytuj_liczbe_egzemplarzy(wpis);
+    edytuj_liczbe_wypozyczonych(wpis);
 
     if (pierwsza_ksiazka == NULL)
     {
@@ -202,6 +204,18 @@ void dodaj_ksiazke()
         wpis->poprzedni = ostatnia_ksiazka;
         ostatnia_ksiazka = wpis;
     }
+}
+
+void edytuj_liczbe_egzemplarzy(Ksiazka *wpis)
+{
+    printf("Podaj nowa liczbe egzemplarzy: \n");
+    scanf("%d", &wpis->liczba_egzemplarzy);
+}
+
+void edytuj_liczbe_wypozyczonych(Ksiazka *wpis)
+{
+    printf("Podaj edytuj liczbe wypozyczonych: \n");
+    scanf("%d", &wpis->liczba_wypozyczonych);
 }
 
 int znajdz_najwyzsze_ID_ksiazki()
@@ -318,7 +332,8 @@ void wczytaniepliku_ksiazki()
         {
 
             wpis = (Ksiazka *)malloc(sizeof(Ksiazka));
-            fscanf(plik, "%[^;];%[^;];%[^;];%d;%d\n", wpis->gatunek, wpis->tytul, wpis->autor, &wpis->ID, &wpis->rok);
+            fscanf(plik, "%[^;];%[^;];%[^;];%d;%d\n", wpis->gatunek, wpis->tytul, wpis->autor, &wpis->ID, &wpis->rok, &wpis->liczba_egzemplarzy,
+                   &wpis->liczba_wypozyczonych);
 
             if (pierwsza_ksiazka == NULL)
             {
@@ -344,7 +359,7 @@ void zapispliku_ksiazki()
     FILE *plik = fopen("ksiazki.csv", "w");
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        fprintf(plik, "%s;%s;%s;%d;%d", wpis->gatunek, wpis->tytul, wpis->autor, wpis->ID, wpis->rok);
+        fprintf(plik, "%s;%s;%s;%d;%d", wpis->gatunek, wpis->tytul, wpis->autor, wpis->ID, wpis->rok, wpis->liczba_egzemplarzy,wpis->liczba_wypozyczonych );
         if (wpis->nastepny != NULL)
         {
             fprintf(plik, "\n");

@@ -191,7 +191,7 @@ void wyszukaj_po_liczbie_wypozyczonych()
     scanf("%d", liczba_wypozyczonych);
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        if (wpis->liczba_wypozyczonych, liczba_wypozyczonych) != NULL)
+        if (wpis->liczba_wypozyczonych, liczba_wypozyczonych != NULL)
         {
             wydrukuj_ksiazke(wpis);
             printf("--------------------------------------\n");
@@ -206,7 +206,7 @@ void wyszukaj_po_liczbie_egzemplarzy()
     scanf("%d", liczba_egzemplarzy);
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        if (wpis->liczba_egzemplarzy, liczba_egzemplarzy) != NULL)
+        if (wpis->liczba_egzemplarzy, liczba_egzemplarzy != NULL)
         {
             wydrukuj_ksiazke(wpis);
             printf("--------------------------------------\n");

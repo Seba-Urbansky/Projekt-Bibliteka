@@ -42,7 +42,7 @@ void edytuj_ksiazki_ID_ksiazki(Ksiazka *wpis);
 void sortowanie_ksiazek_niemalejace(Ksiazka *ID);
 void wyszukaj_ksiazki_po_tytule();
 void wyszukaj_ksiazki_po_autorze();
-int wyszukaj_ksiazki_po_roku();
+void wyszukaj_ksiazki_po_roku();
 Ksiazka* zamien(Ksiazka* a, Ksiazka* b);
 int policz_ksiazki();
 enum SortowanieKolejnosc {Rosnaca = 1, Malejaca = 0}; 
@@ -51,9 +51,9 @@ void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atryb
 void edytuj_liczbe_egzemplarzy(Ksiazka *wpis);
 void edytuj_liczbe_wypozyczonych(Ksiazka *wpis);
 void wyszukaj_ksiazki_po_gatunku();
-int wyszukaj_po_liczbie_wypozyczonych();
-int wyszukaj_po_liczbie_egzemplarzy();
-int wyszukaj_po_ID();
+void wyszukaj_po_liczbie_wypozyczonych();
+void wyszukaj_po_liczbie_egzemplarzy();
+void wyszukaj_po_ID();
 
 
 #endif

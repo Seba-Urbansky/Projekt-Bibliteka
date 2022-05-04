@@ -106,17 +106,21 @@ void menu_ksiazek()
     printf("1. Wyswietl baze ksiazek\n");
     printf("2. Dodaj ksiazke\n");
     printf("3. Zarzadzaj ksiazkami\n");
-    printf("4. Wyszukaj ksiazke po tytule\n");
-    printf("5. Wyszukaj ksiazke po autorze\n");
-    printf("6. Wyszukaj ksiazke po roku\n");
-    printf("7. Sortuj ksiazki malejaco, po tytule\n");
-    printf("8. Sortuj ksiazki rosnaco, po tytule\n");
-    printf("9. Sortuj ksiazki malejaco, po autorze\n");
-    printf("10. Sortuj ksiazki rosnaco, po autorze\n");
-    printf("11. Sortuj ksiazki malejaco, po roku\n");
-    printf("12. Sortuj ksiazki rosnaco, po roku\n");
-    printf("13. Powrot do menu\n");
-    printf("14. Wyjscie z programu i zapisanie danych\n\n");
+    printf("4. Wyszukaj ksiazke po gatunku\n");
+    printf("5. Wyszukaj ksiazke po tytule\n");
+    printf("6. Wyszukaj ksiazke po autorze\n");
+    printf("7. Wyszukaj ksiazke po roku\n");
+    printf("8. Wyszukaj ksiazke po ID\n");
+    printf("9. Wyszukaj ksiazke po liczbie egzemplarzy\n");
+    printf("10. Wyszukaj ksiazke po liczbie wypozyczonych\n");
+    printf("11. Sortuj ksiazki malejaco, po tytule\n");
+    printf("12. Sortuj ksiazki rosnaco, po tytule\n");
+    printf("13. Sortuj ksiazki malejaco, po autorze\n");
+    printf("14. Sortuj ksiazki rosnaco, po autorze\n");
+    printf("15. Sortuj ksiazki malejaco, po roku\n");
+    printf("16. Sortuj ksiazki rosnaco, po roku\n");
+    printf("17. Powrot do menu\n");
+    printf("18. Wyjscie z programu i zapisanie danych\n\n");
 
     scanf("%d", &wybor);
     printf("\n");
@@ -136,51 +140,67 @@ void menu_ksiazek()
         menu_ksiazek();
         break;
     case 4:
-        wyszukaj_ksiazki_po_tytule();
+        wyszukaj_ksiazki_po_gatunku();
         menu_ksiazek();
         break;
     case 5:
-        wyszukaj_ksiazki_po_autorze();
+        wyszukaj_ksiazki_po_tytule();
         menu_ksiazek();
         break;
     case 6:
-        wyszukaj_ksiazki_po_roku();
+        wyszukaj_ksiazki_po_autorze();
         menu_ksiazek();
         break;
     case 7:
+        wyszukaj_ksiazki_po_roku();
+        menu_ksiazek();
+        break;
+    case 8:
+        wyszukaj_po_ID();
+        menu_ksiazek();
+        break;
+    case 9:
+        wyszukaj_po_liczbie_egzemplarzy();
+        menu_ksiazek();
+        break;
+    case 10:
+        wyszukaj_po_liczbie_wypozyczonych();
+        menu_ksiazek();
+        break;
+    case 11:
         sortowanie(Malejaca, Tytul);
         wyswietl_baze_ksiazek();
         menu_ksiazek();
         break;
-    case 8:
+    case 12:
         sortowanie(Rosnaca, Tytul);
         wyswietl_baze_ksiazek();
         menu_ksiazek();
         break;
-    case 9:
+    case 13:
         sortowanie(Malejaca, Autor);
         wyswietl_baze_ksiazek();
         menu_ksiazek();
         break;
-    case 10:
+    case 14:
         sortowanie(Rosnaca, Autor);
         wyswietl_baze_ksiazek();
         menu_ksiazek();
         break;
-    case 11:
+    case 15:
         sortowanie(Malejaca, Rok);
         wyswietl_baze_ksiazek();
         menu_ksiazek();
         break;
-    case 12:
+    case 16:
         sortowanie(Rosnaca, Rok);
         wyswietl_baze_ksiazek();
         menu_ksiazek();
         break;
-    case 13:
+    case 17:
         menu_glowne();
         break;
-    case 14:
+    case 18:
         wyjscie();
         break;
     default:
@@ -352,10 +372,9 @@ void menu_ksiazki(Ksiazka *ksiazka)
     printf("5. Edytuj gatunek ksiazki\n");
     printf("6. Edytuj rok ksiazki \n");
     printf("7. Edytuj liczbe egzemplarzy \n");
-    printf("8. Edytuj liczbe wypozyczonych \n");
-    printf("9. Usun ksiazke\n");
-    printf("10. Powrot\n");
-    printf("11. Wyjscie z programu i zapisanie danych\n");
+    printf("8. Usun ksiazke\n");
+    printf("9. Powrot\n");
+    printf("10. Wyjscie z programu i zapisanie danych\n");
     scanf("%d", &wybor);
     printf("\n");
 
@@ -390,10 +409,6 @@ void menu_ksiazki(Ksiazka *ksiazka)
         menu_ksiazki(ksiazka);
         break;
     case 8:
-        edytuj_liczbe_wypozyczonych(ksiazka);
-        menu_ksiazki(ksiazka);
-        break;
-    case 9:
         if (czy_ksiazka_jest_wypozyczona(ksiazka))
         {
             printf("Ksiazka powinna zostac zwrocona przed usunieciem\n");
@@ -405,10 +420,10 @@ void menu_ksiazki(Ksiazka *ksiazka)
             menu_ksiazek();
         }
         break;
-    case 10:
+    case 9:
         menu_ksiazek();
         break;
-    case 11:
+    case 10:
         wyjscie();
         break;
     default:

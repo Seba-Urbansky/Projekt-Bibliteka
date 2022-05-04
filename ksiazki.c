@@ -169,7 +169,7 @@ void wyszukaj_ksiazki_po_gatunku()
     }
 }
 
-int wyszukaj_ksiazki_po_roku()
+void wyszukaj_ksiazki_po_roku()
 {
     int rok;
     printf("Podaj rok: \n");
@@ -184,14 +184,14 @@ int wyszukaj_ksiazki_po_roku()
     }
 }
 
-int wyszukaj_po_liczbie_wypozyczonych()
+void wyszukaj_po_liczbie_wypozyczonych()
 {
     int liczba_wypozyczonych;
     printf("Podaj liczbe wypozyczonych: \n");
     scanf("%d", liczba_wypozyczonych);
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        if (strcasestr(wpis->liczba_wypozyczonych, liczba_wypozyczonych) != NULL)
+        if (wpis->liczba_wypozyczonych, liczba_wypozyczonych) != NULL)
         {
             wydrukuj_ksiazke(wpis);
             printf("--------------------------------------\n");
@@ -199,14 +199,14 @@ int wyszukaj_po_liczbie_wypozyczonych()
     }
 }
 
-int wyszukaj_po_liczbie_egzemplarzy()
+void wyszukaj_po_liczbie_egzemplarzy()
 {
     int liczba_egzemplarzy;
     printf("Podaj liczbe egzemplarzy: \n");
     scanf("%d", liczba_egzemplarzy);
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        if (strcasestr(wpis->liczba_egzemplarzy, liczba_egzemplarzy) != NULL)
+        if (wpis->liczba_egzemplarzy, liczba_egzemplarzy) != NULL)
         {
             wydrukuj_ksiazke(wpis);
             printf("--------------------------------------\n");
@@ -214,7 +214,7 @@ int wyszukaj_po_liczbie_egzemplarzy()
     }
 }
 
-int wyszukaj_po_ID()
+void wyszukaj_po_ID()
 {
     int ID;
     printf("Podaj ID ksiazki: \n");
@@ -250,7 +250,7 @@ void dodaj_ksiazke()
     edytuj_autora(wpis);
     edytuj_rok(wpis);
     edytuj_liczbe_egzemplarzy(wpis);
-    edytuj_liczbe_wypozyczonych(wpis);
+    
 
     if (pierwsza_ksiazka == NULL)
     {
@@ -393,7 +393,7 @@ void wczytaniepliku_ksiazki()
         {
 
             wpis = (Ksiazka *)malloc(sizeof(Ksiazka));
-            fscanf(plik, "%[^;];%[^;];%[^;];%d;%d;%d:%d", wpis->gatunek, wpis->tytul, wpis->autor, &wpis->ID, &wpis->rok, &wpis->liczba_egzemplarzy,
+            fscanf(plik, "%[^;];%[^;];%[^;];%d;%d;%d;%d", wpis->gatunek, wpis->tytul, wpis->autor, &wpis->ID, &wpis->rok, &wpis->liczba_egzemplarzy,
                    &wpis->liczba_wypozyczonych);
 
             if (pierwsza_ksiazka == NULL)

@@ -119,8 +119,16 @@ void menu_ksiazek()
     printf("14. Sortuj ksiazki rosnaco, po autorze\n");
     printf("15. Sortuj ksiazki malejaco, po roku\n");
     printf("16. Sortuj ksiazki rosnaco, po roku\n");
-    printf("17. Powrot do menu\n");
-    printf("18. Wyjscie z programu i zapisanie danych\n\n");
+    printf("17. Sortuj ksiazki malejaco, po gatunku\n");
+    printf("18. Sortuj ksiazki rosnaco, po gatunku\n");
+    printf("19. Sortuj ksiazki malejaco, po ID\n");
+    printf("20. Sortuj ksiazki rosnaco, po ID\n");
+    printf("21. Sortuj ksiazki malejaco, po liczbie egzemplarzy\n");
+    printf("22. Sortuj ksiazki rosnaco, po liczbie egzemplarzy\n");
+    printf("23. Sortuj ksiazki malejaco, po liczbie wypozyczonych\n");
+    printf("24. Sortuj ksiazki rosnaco, po liczbie wypozyczonych\n");
+    printf("25. Powrot do menu\n");
+    printf("26. Wyjscie z programu i zapisanie danych\n\n");
 
     scanf("%d", &wybor);
     printf("\n");
@@ -198,9 +206,49 @@ void menu_ksiazek()
         menu_ksiazek();
         break;
     case 17:
-        menu_glowne();
+        sortowanie(Malejaca, Gatunek);
+        wyswietl_baze_ksiazek();
+        menu_ksiazek();
         break;
     case 18:
+        sortowanie(Rosnaca, Gatunek);
+        wyswietl_baze_ksiazek();
+        menu_ksiazek();
+        break;
+     case 19:
+        sortowanie(Malejaca, ID);
+        wyswietl_baze_ksiazek();
+        menu_ksiazek();
+        break;
+     case 20:
+        sortowanie(Rosnaca, ID);
+        wyswietl_baze_ksiazek();
+        menu_ksiazek();
+        break;
+    case 21:
+        sortowanie(Malejaca, liczba_egzemplarzy);
+        wyswietl_baze_ksiazek();
+        menu_ksiazek();
+        break;
+    case 22:
+        sortowanie(Rosnaca, liczba_egzemplarzy);
+        wyswietl_baze_ksiazek();
+        menu_ksiazek();
+        break;
+    case 23:
+        sortowanie(Malejaca, liczba_wypozyczonych);
+        wyswietl_baze_ksiazek();
+        menu_ksiazek();
+        break;
+    case 24:
+        sortowanie(Rosnaca, liczba_wypozyczonych);
+        wyswietl_baze_ksiazek();
+        menu_ksiazek();
+        break;
+    case 25:
+        menu_glowne();
+        break;
+    case 26:
         wyjscie();
         break;
     default:

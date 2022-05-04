@@ -46,7 +46,7 @@ void wyszukaj_ksiazki_po_roku();
 Ksiazka* zamien(Ksiazka* a, Ksiazka* b);
 int policz_ksiazki();
 enum SortowanieKolejnosc {Rosnaca = 1, Malejaca = 0}; 
-enum SortowanieAtrybut {Tytul = 0, Autor = 1, Rok = 2};
+enum SortowanieAtrybut {Tytul = 0, Autor = 1, Rok = 2, Gatunek = 3, ID = 4, liczba_egzemplarzy = 5, liczba_wypozyczonych = 6 };
 void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atrybut);
 void edytuj_liczbe_egzemplarzy(Ksiazka *wpis);
 void edytuj_liczbe_wypozyczonych(Ksiazka *wpis);

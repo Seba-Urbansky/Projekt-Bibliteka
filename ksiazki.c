@@ -86,42 +86,99 @@ void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atryb
                         zamieniona = 1;
                     }
                     break;
+                case Gatunek:
+                    if (strcasecmp(p1->gatunek, p2->gatunek) >= 0)
+                    {
+                        *h = zamien(p1, p2);
+                        zamieniona = 1;
+                    }
+                    break;
+                case ID:
+                    if (p1->ID > p2->ID)
+                    {
+                        *h = zamien(p1, p2);
+                        zamieniona = 1;
+                    }
+                    break;
+                }
+            case liczba_egzemplarzy:
+                if (p1->liczba_egzemplarzy > p2->liczba_egzemplarzy)
+                {
+                    *h = zamien(p1, p2);
+                    zamieniona = 1;
                 }
                 break;
-            case Malejaca:
-                switch (atrybut)
+            case liczba_wypozyczonych:
+                if (p1->liczba_wypozyczonych > p2->liczba_wypozyczonych)
                 {
-                case Tytul:
-                    if (strcasecmp(p1->tytul, p2->tytul) <= 0)
-                    {
-                        *h = zamien(p1, p2);
-                        zamieniona = 1;
-                    }
-                    break;
-                case Autor:
-                    if (strcasecmp(p1->autor, p2->autor) <= 0)
-                    {
-                        *h = zamien(p1, p2);
-                        zamieniona = 1;
-                    }
-                    break;
-                case Rok:
-                    if (p1->rok < p2->rok)
-                    {
-                        *h = zamien(p1, p2);
-                        zamieniona = 1;
-                    }
-                    break;
+                    *h = zamien(p1, p2);
+                    zamieniona = 1;
                 }
                 break;
             }
-            h = &(*h)->nastepny;
-        }
-        if (zamieniona == 0)
-        {
+            break;
+        case Malejaca:
+            switch (atrybut)
+            {
+            case Tytul:
+                if (strcasecmp(p1->tytul, p2->tytul) <= 0)
+                {
+                    *h = zamien(p1, p2);
+                    zamieniona = 1;
+                }
+                break;
+            case Autor:
+                if (strcasecmp(p1->autor, p2->autor) <= 0)
+                {
+                    *h = zamien(p1, p2);
+                    zamieniona = 1;
+                }
+                break;
+            case Rok:
+                if (p1->rok < p2->rok)
+                {
+                    *h = zamien(p1, p2);
+                    zamieniona = 1;
+                }
+                break;
+            case Gatunek:
+                if (strcasecmp(p1->gatunek, p2->gatunek) >= 0)
+                {
+                    *h = zamien(p1, p2);
+                    zamieniona = 1;
+                }
+                break;
+            case ID:
+                if (p1->ID < p2->ID)
+                {
+                    *h = zamien(p1, p2);
+                    zamieniona = 1;
+                }
+                break;
+            case liczba_egzemplarzy:
+                if (p1->liczba_egzemplarzy < p2->liczba_egzemplarzy)
+                {
+                    *h = zamien(p1, p2);
+                    zamieniona = 1;
+                }
+                break;
+            case liczba_wypozyczonych:
+                if (p1->liczba_wypozyczonych < p2->liczba_wypozyczonych)
+                {
+                    *h = zamien(p1, p2);
+                    zamieniona = 1;
+                }
+                break;
+            }
             break;
         }
+        h = &(*h)->nastepny;
     }
+    if (zamieniona == 0)
+    {
+        break;
+    }
+}
 }
 
 void wyszukaj_ksiazki_po_tytule()
@@ -229,7 +286,6 @@ void wyszukaj_po_ID()
     }
 }
 
-
 void wyswietl_baze_ksiazek()
 {
     printf("BAZA KSIAZEK ------------------------\n");
@@ -250,7 +306,6 @@ void dodaj_ksiazke()
     edytuj_autora(wpis);
     edytuj_rok(wpis);
     edytuj_liczbe_egzemplarzy(wpis);
-    
 
     if (pierwsza_ksiazka == NULL)
     {
@@ -420,7 +475,7 @@ void zapispliku_ksiazki()
     FILE *plik = fopen("ksiazki.csv", "w");
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        fprintf(plik, "%s;%s;%s;%d;%d;%d;%d", wpis->gatunek, wpis->tytul, wpis->autor, wpis->ID, wpis->rok, wpis->liczba_egzemplarzy,wpis->liczba_wypozyczonych);
+        fprintf(plik, "%s;%s;%s;%d;%d;%d;%d", wpis->gatunek, wpis->tytul, wpis->autor, wpis->ID, wpis->rok, wpis->liczba_egzemplarzy, wpis->liczba_wypozyczonych);
         if (wpis->nastepny != NULL)
         {
             fprintf(plik, "\n");

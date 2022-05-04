@@ -80,7 +80,7 @@ void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atryb
                     }
                     break;
                 case Rok:
-                    if (strcasecmp(p1->rok, p2->rok) >= 0)
+                    if (p1->rok < p2->rok)
                     {
                         *h = zamien(p1, p2);
                         zamieniona = 1;
@@ -106,7 +106,7 @@ void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atryb
                     }
                     break;
                 case Rok:
-                    if (strcasecmp(p1->rok, p2->rok) <= 0)
+                    if (p1->rok > p2->rok)
                     {
                         *h = zamien(p1, p2);
                         zamieniona = 1;

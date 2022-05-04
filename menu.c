@@ -174,7 +174,7 @@ void menu_ksiazek()
     case 13:
         menu_glowne();
         break;
-    case 114:
+    case 14:
         wyjscie();
         break;
     default:

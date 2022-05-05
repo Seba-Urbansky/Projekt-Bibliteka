@@ -369,7 +369,7 @@ Ksiazka *wyszukaj_ksiazke(int ID)
 
 void wydrukuj_ksiazke(Ksiazka *wpis)
 {
-    printf("%-20d | %d \n", "ID", wpis->ID);
+    printf("%-20s | %d \n", "ID", wpis->ID);
     printf("%-20s | %s \n", "Tytul", wpis->tytul);
     printf("%-20s | %s \n", "Autor", wpis->autor);
     printf("%-20s | %s \n", "Gatunek", wpis->gatunek);
@@ -453,7 +453,7 @@ void wczytaniepliku_ksiazki()
         {
 
             wpis = (Ksiazka *)malloc(sizeof(Ksiazka));
-            fscanf(plik, "%[^;];%[^;];%[^;];%d;%d;%d;%d\n", wpis->gatunek, wpis->tytul, wpis->autor, &wpis->ID, &wpis->rok, &wpis->liczba_egzemplarzy,
+            fscanf(plik, "%[^;];%[^;];%[^;];%d;%d;%d;%d\n", &wpis->gatunek, &wpis->tytul, &wpis->autor, &wpis->ID, &wpis->rok, &wpis->liczba_egzemplarzy,
                    &wpis->liczba_wypozyczonych);
 
             if (pierwsza_ksiazka == NULL)

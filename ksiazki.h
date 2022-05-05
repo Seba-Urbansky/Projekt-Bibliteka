@@ -53,7 +53,7 @@ void edytuj_liczbe_wypozyczonych(Ksiazka *wpis);
 void wyszukaj_ksiazki_po_gatunku();
 void wyszukaj_po_liczbie_wypozyczonych();
 void wyszukaj_po_liczbie_egzemplarzy();
-void wyszukaj_po_ID();
+void wydrukuj_po_ID;
 
 
 #endif

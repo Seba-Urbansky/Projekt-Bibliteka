@@ -45,18 +45,6 @@ void wyswietl_kto_wypozyczyl()
     }
 }
 
-void oddawanie_ksiazki(Wypozyczenie *wpis)
-{
-    if (wpis->ID_ksiazki == NULL)
-    {
-        printf("Ksiazka oddana\n");
-    }
-    else
-    {
-        printf("Klient nie oddal ksiazki\n");
-    }
-}
-
 int czy_klient_ma_wypozyczenia(Klient *klient)
 {
     for (Wypozyczenie *wpis = pierwsze_wypozyczenie; NULL != wpis; wpis = wpis->nastepny)
@@ -183,6 +171,10 @@ void usun_wypozyczenie(Wypozyczenie *wpis)
         poprzedni->nastepny = nastepny;
         nastepny->poprzedni = poprzedni;
     }
+
+    wydrukuj_po_ID();
+    liczba_wypozyczonych -> liczba_wypozyczonych --;
+
 }
 
 void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenie *wypozyczenie)

@@ -272,7 +272,7 @@ void wyszukaj_po_liczbie_egzemplarzy()
     }
 }
 
-void wyszukaj_po_ID()
+void wydrukuj_po_ID()
 {
     int ID;
     printf("Podaj ID ksiazki: \n");
@@ -451,7 +451,7 @@ void wczytaniepliku_ksiazki()
         {
 
             wpis = (Ksiazka *)malloc(sizeof(Ksiazka));
-            fscanf(plik, "%[^;];%[^;];%[^;];%d;%d;%d;%d", wpis->gatunek, wpis->tytul, wpis->autor, &wpis->ID, &wpis->rok, &wpis->liczba_egzemplarzy,
+            fscanf(plik, "%[^;];%[^;];%[^;];%d;%d;%d;%d\n", wpis->gatunek, wpis->tytul, wpis->autor, &wpis->ID, &wpis->rok, &wpis->liczba_egzemplarzy,
                    &wpis->liczba_wypozyczonych);
 
             if (pierwsza_ksiazka == NULL)

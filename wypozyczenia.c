@@ -139,7 +139,7 @@ void zwroc_wypozyczenie()
         {
             if (policz_kare(wpis) > 0)
             {
-                printf("Uzytkownik powinien zwrocic % .2f PLN\n",policz_kare(wpis));
+                printf("Uzytkownik powinien zwrocic % .2f PLN\n", policz_kare(wpis));
             }
             usun_wypozyczenie(wpis);
             printf("Ksiazka zostala zwrocona\n");
@@ -172,10 +172,10 @@ void usun_wypozyczenie(Wypozyczenie *wpis)
         nastepny->poprzedni = poprzedni;
     }
 
-    if(liczba_wypozyczonych > 0)
+    if (liczba_wypozyczonych > 0)
     {
-    Ksiazka *ksiazka = wyszukaj_ksiazke(wpis->ID_ksiazki);
-    ksiazka->liczba_wypozyczonych--;
+        Ksiazka *ksiazka = wyszukaj_ksiazke(wpis->ID_ksiazki);
+        ksiazka->liczba_wypozyczonych--;
     }
 }
 
@@ -229,10 +229,10 @@ void dodaj_wypozyczenie()
         ostatnie_wypozyczenie = wpis;
     }
 
-      if(liczba_wypozyczonych > 0)
+    if (liczba_wypozycznych <= liczba_wypozyczonych)
     {
-    Ksiazka *ksiazka = wyszukaj_ksiazke(wpis->ID_ksiazki);
-    ksiazka->liczba_wypozyczonych+1;
+        Ksiazka *ksiazka = wyszukaj_ksiazke(wpis->ID_ksiazki);
+        ksiazka->liczba_wypozyczonych = ksiazka->liczba_wypozyczonych + 1;
     }
 }
 

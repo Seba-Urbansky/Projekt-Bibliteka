@@ -321,6 +321,8 @@ void dodaj_ksiazke()
         wpis->poprzedni = ostatnia_ksiazka;
         ostatnia_ksiazka = wpis;
     }
+
+
 }
 
 void edytuj_liczbe_egzemplarzy(Ksiazka *wpis)

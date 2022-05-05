@@ -16,6 +16,24 @@
 Wypozyczenie *pierwsze_wypozyczenie = NULL;
 Wypozyczenie *ostatnie_wypozyczenie = NULL;
 
+void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenie *wypozyczenie)
+{
+    int ID;
+    printf("Podaj ID ksiazki:\n");
+    scanf("%d", &ID);
+    Ksiazka *ksiazka = wyszukaj_ksiazke(ID);
+    if (ksiazka == NULL)
+    {
+        printf("Ksiazka nie istnieje.\n");
+    }
+    
+    else
+    {
+        wypozyczenie->ID_ksiazki = ID;
+    }
+}
+
+
 void wydrukuj_wypozyczenia(Wypozyczenie *wpis)
 {
     float kara = policz_kare(wpis);
@@ -172,32 +190,13 @@ void usun_wypozyczenie(Wypozyczenie *wpis)
         nastepny->poprzedni = poprzedni;
     }
 
-    if (liczba_wypozyczonych > 0)
+    Ksiazka *ksiazka = wyszukaj_ksiazke(wpis->ID_ksiazki);
+    if (ksiazka -> liczba_wypozyczonych > 0)
     {
-        Ksiazka *ksiazka = wyszukaj_ksiazke(wpis->ID_ksiazki);
         ksiazka->liczba_wypozyczonych--;
     }
 }
 
-void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenie *wypozyczenie)
-{
-    int ID;
-    printf("Podaj ID ksiazki:\n");
-    scanf("%d", &ID);
-    Ksiazka *ksiazka = wyszukaj_ksiazke(ID);
-    if (ksiazka == NULL)
-    {
-        printf("Ksiazka nie istnieje.\n");
-    }
-    else if (czy_ksiazka_jest_wypozyczona(ksiazka))
-    {
-        printf("Ksiazka jest juz wypozyczona\n");
-    }
-    else
-    {
-        wypozyczenie->ID_ksiazki = ID;
-    }
-}
 
 void edytuj_wypozyczenia_ID(Wypozyczenie *wpis)
 {
@@ -206,7 +205,21 @@ void edytuj_wypozyczenia_ID(Wypozyczenie *wpis)
 
 void dodaj_wypozyczenie()
 {
+
     Wypozyczenie *wpis = (Wypozyczenie *)malloc(sizeof(Wypozyczenie));
+    
+     Ksiazka *ksiazka = wyszukaj_ksiazke(wpis->ID_ksiazki);
+    if (ksiazka->liczba_wypozycznych <= ksiazka->liczba_egzemplarzy)
+    {
+    
+       ksiazka->liczba_wypozyczonych++;
+
+    }
+    else
+    {
+        printf("Wszystkie eksemplarze ksiazki sa wypozyczone\n");
+        return ;
+    }
 
     edytuj_wypozyczenia_ID_ksiazki(wpis);
     edytuj_wypozyczenia_numer_karty(wpis);
@@ -229,11 +242,7 @@ void dodaj_wypozyczenie()
         ostatnie_wypozyczenie = wpis;
     }
 
-    if (liczba_wypozycznych <= liczba_wypozyczonych)
-    {
-        Ksiazka *ksiazka = wyszukaj_ksiazke(wpis->ID_ksiazki);
-        ksiazka->liczba_wypozyczonych = ksiazka->liczba_wypozyczonych + 1;
-    }
+   
 }
 
 void wczytaniepliku_wypozyczenia()

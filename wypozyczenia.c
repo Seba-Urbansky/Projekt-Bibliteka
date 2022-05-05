@@ -172,9 +172,11 @@ void usun_wypozyczenie(Wypozyczenie *wpis)
         nastepny->poprzedni = poprzedni;
     }
 
-    wydrukuj_po_ID();
-    liczba_wypozyczonych -> liczba_wypozyczonych --;
-
+    if(liczba_wypozyczonych > 0)
+    {
+    Ksiazka *ksiazka = wyszukaj_ksiazke(wpis->ID_ksiazki);
+    ksiazka->liczba_wypozyczonych--;
+    }
 }
 
 void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenie *wypozyczenie)
@@ -225,6 +227,12 @@ void dodaj_wypozyczenie()
         ostatnie_wypozyczenie->nastepny = wpis;
         wpis->poprzedni = ostatnie_wypozyczenie;
         ostatnie_wypozyczenie = wpis;
+    }
+
+      if(liczba_wypozyczonych > 0)
+    {
+    Ksiazka *ksiazka = wyszukaj_ksiazke(wpis->ID_ksiazki);
+    ksiazka->liczba_wypozyczonych+1;
     }
 }
 

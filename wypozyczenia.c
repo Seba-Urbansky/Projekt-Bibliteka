@@ -16,23 +16,6 @@
 Wypozyczenie *pierwsze_wypozyczenie = NULL;
 Wypozyczenie *ostatnie_wypozyczenie = NULL;
 
-void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenie *wypozyczenie)
-{
-    int ID;
-    printf("Podaj ID ksiazki:\n");
-    scanf("%d", &ID);
-    Ksiazka *ksiazka = wyszukaj_ksiazke(ID);
-    if (ksiazka == NULL)
-    {
-        printf("Ksiazka nie istnieje.\n");
-    }
-    
-    else
-    {
-        wypozyczenie->ID_ksiazki = ID;
-    }
-}
-
 
 void wydrukuj_wypozyczenia(Wypozyczenie *wpis)
 {
@@ -124,6 +107,23 @@ int znajdz_najwyzsze_ID()
     return max;
 }
 
+void edytuj_wypozyczenia_ID_ksiazki(Wypozyczenie *wypozyczenie)
+{
+    int ID;
+    printf("Podaj ID ksiazki:\n");
+    scanf("%d", &ID);
+    Ksiazka *ksiazka = wyszukaj_ksiazke(ID);
+    if (ksiazka == NULL)
+    {
+        printf("Ksiazka nie istnieje.\n");
+    }
+    
+    else
+    {
+        wypozyczenie->ID_ksiazki = ID;
+    }
+}
+
 void edytuj_wypozyczenia_numer_karty(Wypozyczenie *wpis)
 {
     int numer_karty;
@@ -206,6 +206,8 @@ void edytuj_wypozyczenia_ID(Wypozyczenie *wpis)
 void dodaj_wypozyczenie()
 {
 
+    edytuj_wypozyczenia_ID_ksiazki(wpis);
+    
     Wypozyczenie *wpis = (Wypozyczenie *)malloc(sizeof(Wypozyczenie));
     
      Ksiazka *ksiazka = wyszukaj_ksiazke(wpis->ID_ksiazki);
@@ -221,7 +223,7 @@ void dodaj_wypozyczenie()
         return ;
     }
 
-    edytuj_wypozyczenia_ID_ksiazki(wpis);
+    
     edytuj_wypozyczenia_numer_karty(wpis);
     edytuj_wypozyczenia_ID(wpis);
 

@@ -100,83 +100,85 @@ void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atryb
                         zamieniona = 1;
                     }
                     break;
-                }
-            case LiczbaEgzemplarzy:
-                if (p1->liczba_egzemplarzy > p2->liczba_egzemplarzy)
-                {
-                    *h = zamien(p1, p2);
-                    zamieniona = 1;
+
+                case LiczbaEgzemplarzy:
+                    if (p1->liczba_egzemplarzy > p2->liczba_egzemplarzy)
+                    {
+                        *h = zamien(p1, p2);
+                        zamieniona = 1;
+                    }
+                    break;
+                case LiczbaWypozyczonych:
+                    if (p1->liczba_wypozyczonych > p2->liczba_wypozyczonych)
+                    {
+                        *h = zamien(p1, p2);
+                        zamieniona = 1;
+                    }
+                    break;
                 }
                 break;
-            case LiczbaWypozyczonych:
-                if (p1->liczba_wypozyczonych > p2->liczba_wypozyczonych)
+            case Malejaca:
+                switch (atrybut)
                 {
-                    *h = zamien(p1, p2);
-                    zamieniona = 1;
+                case Tytul:
+                    if (strcasecmp(p1->tytul, p2->tytul) <= 0)
+                    {
+                        *h = zamien(p1, p2);
+                        zamieniona = 1;
+                    }
+                    break;
+                case Autor:
+                    if (strcasecmp(p1->autor, p2->autor) <= 0)
+                    {
+                        *h = zamien(p1, p2);
+                        zamieniona = 1;
+                    }
+                    break;
+                case Rok:
+                    if (p1->rok < p2->rok)
+                    {
+                        *h = zamien(p1, p2);
+                        zamieniona = 1;
+                    }
+                    break;
+                case Gatunek:
+                    if (strcasecmp(p1->gatunek, p2->gatunek) >= 0)
+                    {
+                        *h = zamien(p1, p2);
+                        zamieniona = 1;
+                    }
+                    break;
+                case ID:
+                    if (p1->ID < p2->ID)
+                    {
+                        *h = zamien(p1, p2);
+                        zamieniona = 1;
+                    }
+                    break;
+                case LiczbaEgzemplarzy:
+                    if (p1->liczba_egzemplarzy < p2->liczba_egzemplarzy)
+                    {
+                        *h = zamien(p1, p2);
+                        zamieniona = 1;
+                    }
+                    break;
+                case LiczbaWypozyczonych:
+                    if (p1->liczba_wypozyczonych < p2->liczba_wypozyczonych)
+                    {
+                        *h = zamien(p1, p2);
+                        zamieniona = 1;
+                    }
+                    break;
                 }
                 break;
             }
-            break;
-        case Malejaca:
-            switch (atrybut)
+            h = &(*h)->nastepny;
+
+            if (zamieniona == 0)
             {
-            case Tytul:
-                if (strcasecmp(p1->tytul, p2->tytul) <= 0)
-                {
-                    *h = zamien(p1, p2);
-                    zamieniona = 1;
-                }
-                break;
-            case Autor:
-                if (strcasecmp(p1->autor, p2->autor) <= 0)
-                {
-                    *h = zamien(p1, p2);
-                    zamieniona = 1;
-                }
-                break;
-            case Rok:
-                if (p1->rok < p2->rok)
-                {
-                    *h = zamien(p1, p2);
-                    zamieniona = 1;
-                }
-                break;
-            case Gatunek:
-                if (strcasecmp(p1->gatunek, p2->gatunek) >= 0)
-                {
-                    *h = zamien(p1, p2);
-                    zamieniona = 1;
-                }
-                break;
-            case ID:
-                if (p1->ID < p2->ID)
-                {
-                    *h = zamien(p1, p2);
-                    zamieniona = 1;
-                }
-                break;
-            case LiczbaEgzemplarzy:
-                if (p1->liczba_egzemplarzy < p2->liczba_egzemplarzy)
-                {
-                    *h = zamien(p1, p2);
-                    zamieniona = 1;
-                }
-                break;
-            case LiczbaWypozyczonych:
-                if (p1->liczba_wypozyczonych < p2->liczba_wypozyczonych)
-                {
-                    *h = zamien(p1, p2);
-                    zamieniona = 1;
-                }
                 break;
             }
-            break;
         }
-        h = &(*h)->nastepny;
-    }
-    if (zamieniona == 0)
-    {
-        break;
     }
 }
 

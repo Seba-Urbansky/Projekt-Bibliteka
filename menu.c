@@ -226,22 +226,22 @@ void menu_ksiazek()
         menu_ksiazek();
         break;
     case 21:
-        sortowanie(Malejaca, liczba_egzemplarzy);
+        sortowanie(Malejaca, LiczbaEgzemplarzy);
         wyswietl_baze_ksiazek();
         menu_ksiazek();
         break;
     case 22:
-        sortowanie(Rosnaca, liczba_egzemplarzy);
+        sortowanie(Rosnaca, LiczbaEgzemplarzy);
         wyswietl_baze_ksiazek();
         menu_ksiazek();
         break;
     case 23:
-        sortowanie(Malejaca, liczba_wypozyczonych);
+        sortowanie(Malejaca, LiczbaWypozyczonych);
         wyswietl_baze_ksiazek();
         menu_ksiazek();
         break;
     case 24:
-        sortowanie(Rosnaca, liczba_wypozyczonych);
+        sortowanie(Rosnaca, LiczbaWypozyczonych);
         wyswietl_baze_ksiazek();
         menu_ksiazek();
         break;

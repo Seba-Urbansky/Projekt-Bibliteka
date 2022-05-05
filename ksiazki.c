@@ -101,14 +101,14 @@ void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atryb
                     }
                     break;
                 }
-            case liczba_egzemplarzy:
+            case LiczbaEgzemplarzy:
                 if (p1->liczba_egzemplarzy > p2->liczba_egzemplarzy)
                 {
                     *h = zamien(p1, p2);
                     zamieniona = 1;
                 }
                 break;
-            case liczba_wypozyczonych:
+            case LiczbaWypozyczonych:
                 if (p1->liczba_wypozyczonych > p2->liczba_wypozyczonych)
                 {
                     *h = zamien(p1, p2);
@@ -155,14 +155,14 @@ void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atryb
                     zamieniona = 1;
                 }
                 break;
-            case liczba_egzemplarzy:
+            case LiczbaEgzemplarzy:
                 if (p1->liczba_egzemplarzy < p2->liczba_egzemplarzy)
                 {
                     *h = zamien(p1, p2);
                     zamieniona = 1;
                 }
                 break;
-            case liczba_wypozyczonych:
+            case LiczbaWypozyczonych:
                 if (p1->liczba_wypozyczonych < p2->liczba_wypozyczonych)
                 {
                     *h = zamien(p1, p2);
@@ -178,7 +178,6 @@ void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atryb
     {
         break;
     }
-}
 }
 
 void wyszukaj_ksiazki_po_tytule()
@@ -241,7 +240,6 @@ void wyszukaj_ksiazki_po_roku()
     }
 }
 
-
 void wyszukaj_po_liczbie_wypozyczonych()
 {
     int liczba_wypozyczonych;
@@ -249,7 +247,7 @@ void wyszukaj_po_liczbie_wypozyczonych()
     scanf("%d", liczba_wypozyczonych);
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        if (liczba_wypozyczonych == wpis->liczba_wypozyczonych )
+        if (liczba_wypozyczonych == wpis->liczba_wypozyczonych)
         {
             wydrukuj_ksiazke(wpis);
             printf("--------------------------------------\n");
@@ -259,12 +257,12 @@ void wyszukaj_po_liczbie_wypozyczonych()
 
 void wyszukaj_po_liczbie_egzemplarzy()
 {
-    int LiczbaEgzemplarzy;
+    int liczba_egzemplarzy;
     printf("Podaj liczbe egzemplarzy: \n");
-    scanf("%d", LiczbaEgzemplarzy);
+    scanf("%d", liczba_egzemplarzy);
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        if (LiczbaEgzemplarzy == wpis -> liczba_egzemplarzy)
+        if (liczba_egzemplarzy == wpis->liczba_egzemplarzy)
         {
             wydrukuj_ksiazke(wpis);
             printf("--------------------------------------\n");

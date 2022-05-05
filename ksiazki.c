@@ -372,6 +372,8 @@ void wydrukuj_ksiazke(Ksiazka *wpis)
     printf("%-20s | %s \n", "Autor", wpis->autor);
     printf("%-20s | %s \n", "Gatunek", wpis->gatunek);
     printf("%-20s | %d \n", "Rok", wpis->rok);
+    printf("%-20s | %d \n", "Liczba egzemplarzy", wpis->liczba_egzemplarzy);
+    printf("%-20s | %d \n", "Liczba wypozyczonych", wpis->liczba_wypozyczonych);
 }
 
 void edytuj_tytul_ksiazki(Ksiazka *wpis)

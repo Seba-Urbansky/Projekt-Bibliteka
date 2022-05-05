@@ -210,7 +210,7 @@ void dodaj_wypozyczenie()
     edytuj_wypozyczenia_ID_ksiazki(wpis);
     
      Ksiazka *ksiazka = wyszukaj_ksiazke(wpis->ID_ksiazki);
-    if (ksiazka->liczba_wypozycznych <= ksiazka->liczba_egzemplarzy)
+    if (ksiazka->liczba_wypozyczonych <= ksiazka->liczba_egzemplarzy)
     {
     
        ksiazka->liczba_wypozyczonych++;

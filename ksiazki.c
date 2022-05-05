@@ -259,12 +259,12 @@ void wyszukaj_po_liczbie_wypozyczonych()
 
 void wyszukaj_po_liczbie_egzemplarzy()
 {
-    int liczba_egzemplarzy;
+    int LiczbaEgzemplarzy;
     printf("Podaj liczbe egzemplarzy: \n");
-    scanf("%d", liczba_egzemplarzy);
+    scanf("%d", LiczbaEgzemplarzy);
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
-        if (liczba_egzemplarzy == wpis -> liczba_egzemplarzy)
+        if (LiczbaEgzemplarzy == wpis -> liczba_egzemplarzy)
         {
             wydrukuj_ksiazke(wpis);
             printf("--------------------------------------\n");

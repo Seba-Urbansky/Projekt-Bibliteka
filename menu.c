@@ -164,7 +164,7 @@ void menu_ksiazek()
         menu_ksiazek();
         break;
     case 8:
-        wyszukaj_po_ID();
+        wydrukuj_po_ID();
         menu_ksiazek();
         break;
     case 9:

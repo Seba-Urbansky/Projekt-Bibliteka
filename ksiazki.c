@@ -142,7 +142,7 @@ void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atryb
                     }
                     break;
                 case Gatunek:
-                    if (strcasecmp(p1->gatunek, p2->gatunek) >= 0)
+                    if (strcasecmp(p1->gatunek, p2->gatunek) <= 0)
                     {
                         *h = zamien(p1, p2);
                         zamieniona = 1;

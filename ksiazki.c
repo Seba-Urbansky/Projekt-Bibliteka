@@ -201,7 +201,9 @@ void wyszukaj_ksiazki_po_autorze()
 {
     char autor[MAX] = "";
     printf("Podaj autora ksiazki: \n");
-    scanf("%s", autor);
+    fflush(stdin);
+    scanf("%[^\n]%*c", &autor);
+    printf("--------------------------------------\n");
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
         if (strcasestr(wpis->autor, autor) != NULL)

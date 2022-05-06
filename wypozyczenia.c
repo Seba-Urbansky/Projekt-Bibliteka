@@ -161,6 +161,7 @@ void zwroc_wypozyczenie()
             }
             usun_wypozyczenie(wpis);
             printf("Ksiazka zostala zwrocona\n");
+            break;
         }
     }
 }
@@ -210,7 +211,7 @@ void dodaj_wypozyczenie()
     edytuj_wypozyczenia_ID_ksiazki(wpis);
     
      Ksiazka *ksiazka = wyszukaj_ksiazke(wpis->ID_ksiazki);
-    if (ksiazka->liczba_wypozyczonych <= ksiazka->liczba_egzemplarzy)
+    if (ksiazka->liczba_wypozyczonych < ksiazka->liczba_egzemplarzy)
     {
     
        ksiazka->liczba_wypozyczonych++;
@@ -220,6 +221,7 @@ void dodaj_wypozyczenie()
     {
         printf("Wszystkie eksemplarze ksiazki sa wypozyczone\n");
         return ;
+      
     }
 
     

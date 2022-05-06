@@ -186,7 +186,8 @@ void wyszukaj_ksiazki_po_tytule()
 {
     char tytul[MAX] = "";
     printf("Podaj tytul ksiazki: \n");
-    scanf("%s", tytul);
+    fflush(stdin);
+    scanf("%[^\n]%*c", &tytul);
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
         if (strcasestr(wpis->tytul, tytul) != NULL)
@@ -218,7 +219,8 @@ void wyszukaj_ksiazki_po_gatunku()
 {
     char gatunek[MAX] = "";
     printf("Podaj gatunek ksiazki: \n");
-    scanf("%s", gatunek);
+    fflush(stdin);
+    scanf("%[^\n]%*c", gatunek);
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
         if (strcasestr(wpis->gatunek, gatunek) != NULL)

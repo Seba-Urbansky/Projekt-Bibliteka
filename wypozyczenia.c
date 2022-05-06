@@ -261,11 +261,7 @@ void wczytaniepliku_wypozyczenia()
         while (!feof(plik))
         {
             wpis = (Wypozyczenie *)malloc(sizeof(Wypozyczenie));
-            if (czy_plik_jest_pusty(plik))
-            {
-                return;
-            }
-
+          
             fscanf(plik, "%d %d %d %d %d", &wpis->ID_ksiazki, &wpis->ID, &wpis->numer_karty, &wpis->kiedy, &wpis->dokiedy);
 
             if (pierwsze_wypozyczenie == NULL)

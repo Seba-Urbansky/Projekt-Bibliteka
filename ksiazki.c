@@ -50,12 +50,12 @@ void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atryb
 {
     Ksiazka **h;
     int licznik = policz_ksiazki();
-    int i, j, zamieniona;
+    int i, j;
 
     for (i = 0; i <= licznik; i++)
     {
         h = &pierwsza_ksiazka;
-        zamieniona = 0;
+        
         for (j = 0; j < licznik - i - 1; j++)
         {
             Ksiazka *p1 = *h;
@@ -69,35 +69,35 @@ void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atryb
                     if (strcasecmp(p1->tytul, p2->tytul) >= 0)
                     {
                         *h = zamien(p1, p2);
-                        zamieniona = 1;
+                        
                     }
                     break;
                 case Autor:
                     if (strcasecmp(p1->autor, p2->autor) >= 0)
                     {
                         *h = zamien(p1, p2);
-                        zamieniona = 1;
+                        
                     }
                     break;
                 case Rok:
                     if (p1->rok > p2->rok)
                     {
                         *h = zamien(p1, p2);
-                        zamieniona = 1;
+                       
                     }
                     break;
                 case Gatunek:
                     if (strcasecmp(p1->gatunek, p2->gatunek) >= 0)
                     {
                         *h = zamien(p1, p2);
-                        zamieniona = 1;
+                       
                     }
                     break;
                 case ID:
                     if (p1->ID > p2->ID)
                     {
                         *h = zamien(p1, p2);
-                        zamieniona = 1;
+                        
                     }
                     break;
 
@@ -105,14 +105,14 @@ void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atryb
                     if (p1->liczba_egzemplarzy > p2->liczba_egzemplarzy)
                     {
                         *h = zamien(p1, p2);
-                        zamieniona = 1;
+                        
                     }
                     break;
                 case LiczbaWypozyczonych:
                     if (p1->liczba_wypozyczonych > p2->liczba_wypozyczonych)
                     {
                         *h = zamien(p1, p2);
-                        zamieniona = 1;
+                        
                     }
                     break;
                 }
@@ -124,49 +124,49 @@ void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atryb
                     if (strcasecmp(p1->tytul, p2->tytul) <= 0)
                     {
                         *h = zamien(p1, p2);
-                        zamieniona = 1;
+                        
                     }
                     break;
                 case Autor:
                     if (strcasecmp(p1->autor, p2->autor) <= 0)
                     {
                         *h = zamien(p1, p2);
-                        zamieniona = 1;
+                       
                     }
                     break;
                 case Rok:
                     if (p1->rok < p2->rok)
                     {
                         *h = zamien(p1, p2);
-                        zamieniona = 1;
+                        
                     }
                     break;
                 case Gatunek:
                     if (strcasecmp(p1->gatunek, p2->gatunek) <= 0)
                     {
                         *h = zamien(p1, p2);
-                        zamieniona = 1;
+                        
                     }
                     break;
                 case ID:
                     if (p1->ID < p2->ID)
                     {
                         *h = zamien(p1, p2);
-                        zamieniona = 1;
+                        
                     }
                     break;
                 case LiczbaEgzemplarzy:
                     if (p1->liczba_egzemplarzy < p2->liczba_egzemplarzy)
                     {
                         *h = zamien(p1, p2);
-                        zamieniona = 1;
+                        
                     }
                     break;
                 case LiczbaWypozyczonych:
                     if (p1->liczba_wypozyczonych < p2->liczba_wypozyczonych)
                     {
                         *h = zamien(p1, p2);
-                        zamieniona = 1;
+                        
                     }
                     break;
                 }
@@ -174,10 +174,7 @@ void sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atryb
             }
             h = &(*h)->nastepny;
 
-            if (zamieniona == 0)
-            {
-                break;
-            }
+            
         }
     }
 }
@@ -402,7 +399,8 @@ void edytuj_tytul_ksiazki(Ksiazka *wpis)
 void edytuj_autora(Ksiazka *wpis)
 {
     printf("Podaj nowego autora: \n");
-    scanf("%s", &wpis->autor);
+    fflush(stdin);
+    scanf("%[^\n]%*c", &wpis->autor);
 }
 
 void edytuj_rok(Ksiazka *wpis)
@@ -414,7 +412,8 @@ void edytuj_rok(Ksiazka *wpis)
 void edytuj_gatunek_ksiazki(Ksiazka *wpis)
 {
     printf("Podaj nowy gatunek literacki: \n");
-    scanf("%s", &wpis->gatunek);
+    fflush(stdin);
+    scanf("%[^\n]%*c", &wpis->gatunek);
 }
 
 void usun_ksiazke(Ksiazka *wpis)

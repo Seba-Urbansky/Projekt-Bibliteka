@@ -280,7 +280,7 @@ void wydrukuj_po_ID()
 {
     int ID;
     printf("Podaj ID ksiazki: \n");
-    scanf("%d", ID);
+    scanf("%d", &ID);
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
         if (ID == wpis->ID)

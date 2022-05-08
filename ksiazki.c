@@ -220,7 +220,7 @@ void wyszukaj_ksiazki_po_gatunku()
     char gatunek[MAX] = "";
     printf("Podaj gatunek ksiazki: \n");
     fflush(stdin);
-    scanf("%[^\n]%*c", gatunek);
+    scanf("%[^\n]%*c", &gatunek);
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
         if (strcasestr(wpis->gatunek, gatunek) != NULL)
@@ -235,7 +235,7 @@ void wyszukaj_ksiazki_po_roku()
 {
     int rok;
     printf("Podaj rok: \n");
-    scanf("%d", rok);
+    scanf("%d", &rok);
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
         if (rok == wpis->rok)
@@ -250,7 +250,7 @@ void wyszukaj_po_liczbie_wypozyczonych()
 {
     int liczba_wypozyczonych;
     printf("Podaj liczbe wypozyczonych: \n");
-    scanf("%d", liczba_wypozyczonych);
+    scanf("%d", &liczba_wypozyczonych);
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
         if (liczba_wypozyczonych == wpis->liczba_wypozyczonych)
@@ -265,7 +265,7 @@ void wyszukaj_po_liczbie_egzemplarzy()
 {
     int liczba_egzemplarzy;
     printf("Podaj liczbe egzemplarzy: \n");
-    scanf("%d", liczba_egzemplarzy);
+    scanf("%d", &liczba_egzemplarzy);
     for (Ksiazka *wpis = pierwsza_ksiazka; NULL != wpis; wpis = wpis->nastepny)
     {
         if (liczba_egzemplarzy == wpis->liczba_egzemplarzy)

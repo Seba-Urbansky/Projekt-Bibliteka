@@ -386,7 +386,8 @@ void edytuj_tytul_ksiazki(Ksiazka *wpis)
 {
     char tytul[MAX] = " ";
     printf("Podaj nowy tytul: \n");
-    scanf("%s", &tytul);
+    fflush(stdin);
+    scanf("%[^\n]%*c", &tytul);
     if (tytul == " ")
     {
         printf("Niepoprawny tytul, nie powinno byc puste.\n");

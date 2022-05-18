@@ -106,29 +106,10 @@ void menu_ksiazek()
     printf("1. Wyswietl baze ksiazek\n");
     printf("2. Dodaj ksiazke\n");
     printf("3. Zarzadzaj ksiazkami\n");
-    printf("4. Wyszukaj ksiazke po gatunku\n");
-    printf("5. Wyszukaj ksiazke po tytule\n");
-    printf("6. Wyszukaj ksiazke po autorze\n");
-    printf("7. Wyszukaj ksiazke po roku\n");
-    printf("8. Wyszukaj ksiazke po ID\n");
-    printf("9. Wyszukaj ksiazke po liczbie egzemplarzy\n");
-    printf("10. Wyszukaj ksiazke po liczbie wypozyczonych\n");
-    printf("11. Sortuj ksiazki malejaco, po tytule\n");
-    printf("12. Sortuj ksiazki rosnaco, po tytule\n");
-    printf("13. Sortuj ksiazki malejaco, po autorze\n");
-    printf("14. Sortuj ksiazki rosnaco, po autorze\n");
-    printf("15. Sortuj ksiazki malejaco, po roku\n");
-    printf("16. Sortuj ksiazki rosnaco, po roku\n");
-    printf("17. Sortuj ksiazki malejaco, po gatunku\n");
-    printf("18. Sortuj ksiazki rosnaco, po gatunku\n");
-    printf("19. Sortuj ksiazki malejaco, po ID\n");
-    printf("20. Sortuj ksiazki rosnaco, po ID\n");
-    printf("21. Sortuj ksiazki malejaco, po liczbie egzemplarzy\n");
-    printf("22. Sortuj ksiazki rosnaco, po liczbie egzemplarzy\n");
-    printf("23. Sortuj ksiazki malejaco, po liczbie wypozyczonych\n");
-    printf("24. Sortuj ksiazki rosnaco, po liczbie wypozyczonych\n");
-    printf("25. Powrot do menu\n");
-    printf("26. Wyjscie z programu i zapisanie danych\n\n");
+    printf("4. Wyszukiwanie ksiazek\n");
+    printf("5. Sortowanie ksiazek\n");
+    printf("6. Powrot do menu\n");
+    printf("7. Wyjscie z programu i zapisanie danych\n\n");
 
     scanf("%d", &wybor);
     printf("\n");
@@ -148,111 +129,168 @@ void menu_ksiazek()
         menu_ksiazek();
         break;
     case 4:
-        wyszukaj_ksiazki_po_gatunku();
+        menu_ksiazek_wyszukiwania();
         menu_ksiazek();
         break;
     case 5:
-        wyszukaj_ksiazki_po_tytule();
+        menu_ksiazek_sortowania();
         menu_ksiazek();
         break;
+
     case 6:
-        wyszukaj_ksiazki_po_autorze();
-        menu_ksiazek();
-        break;
-    case 7:
-        wyszukaj_ksiazki_po_roku();
-        menu_ksiazek();
-        break;
-    case 8:
-        wydrukuj_po_ID();
-        menu_ksiazek();
-        break;
-    case 9:
-        wyszukaj_po_liczbie_egzemplarzy();
-        menu_ksiazek();
-        break;
-    case 10:
-        wyszukaj_po_liczbie_wypozyczonych();
-        menu_ksiazek();
-        break;
-    case 11:
-        sortowanie(Malejaca, Tytul);
-        wyswietl_baze_ksiazek();
-        menu_ksiazek();
-        break;
-    case 12:
-        sortowanie(Rosnaca, Tytul);
-        wyswietl_baze_ksiazek();
-        menu_ksiazek();
-        break;
-    case 13:
-        sortowanie(Malejaca, Autor);
-        wyswietl_baze_ksiazek();
-        menu_ksiazek();
-        break;
-    case 14:
-        sortowanie(Rosnaca, Autor);
-        wyswietl_baze_ksiazek();
-        menu_ksiazek();
-        break;
-    case 15:
-        sortowanie(Malejaca, Rok);
-        wyswietl_baze_ksiazek();
-        menu_ksiazek();
-        break;
-    case 16:
-        sortowanie(Rosnaca, Rok);
-        wyswietl_baze_ksiazek();
-        menu_ksiazek();
-        break;
-    case 17:
-        sortowanie(Malejaca, Gatunek);
-        wyswietl_baze_ksiazek();
-        menu_ksiazek();
-        break;
-    case 18:
-        sortowanie(Rosnaca, Gatunek);
-        wyswietl_baze_ksiazek();
-        menu_ksiazek();
-        break;
-     case 19:
-        sortowanie(Malejaca, ID);
-        wyswietl_baze_ksiazek();
-        menu_ksiazek();
-        break;
-     case 20:
-        sortowanie(Rosnaca, ID);
-        wyswietl_baze_ksiazek();
-        menu_ksiazek();
-        break;
-    case 21:
-        sortowanie(Malejaca, LiczbaEgzemplarzy);
-        wyswietl_baze_ksiazek();
-        menu_ksiazek();
-        break;
-    case 22:
-        sortowanie(Rosnaca, LiczbaEgzemplarzy);
-        wyswietl_baze_ksiazek();
-        menu_ksiazek();
-        break;
-    case 23:
-        sortowanie(Malejaca, LiczbaWypozyczonych);
-        wyswietl_baze_ksiazek();
-        menu_ksiazek();
-        break;
-    case 24:
-        sortowanie(Rosnaca, LiczbaWypozyczonych);
-        wyswietl_baze_ksiazek();
-        menu_ksiazek();
-        break;
-    case 25:
         menu_glowne();
         break;
-    case 26:
+
+    case 7:
         wyjscie();
         break;
     default:
         printf("Niepoprawna instrukcja");
+        break;
+    }
+}
+
+void menu_ksiazek_wyszukiwania()
+{
+    int wybor;
+    printf("1. Wyszukaj ksiazke po gatunku\n");
+    printf("2. Wyszukaj ksiazke po tytule\n");
+    printf("3. Wyszukaj ksiazke po autorze\n");
+    printf("4. Wyszukaj ksiazke po roku\n");
+    printf("5. Wyszukaj ksiazke po ID\n");
+    printf("6. Wyszukaj ksiazke po liczbie egzemplarzy\n");
+    printf("7. Wyszukaj ksiazke po liczbie wypozyczonych\n");
+
+    scanf("%d", &wybor);
+    printf("\n");
+
+    switch (wybor)
+    {
+    case 1:
+        wyszukaj_ksiazki_po_gatunku();
+        menu_ksiazek();
+        break;
+    case 2:
+        wyszukaj_ksiazki_po_tytule();
+        menu_ksiazek();
+        break;
+    case 3:
+        wyszukaj_ksiazki_po_autorze();
+        menu_ksiazek();
+        break;
+    case 4:
+        wyszukaj_ksiazki_po_roku();
+        menu_ksiazek();
+        break;
+    case 5:
+        wydrukuj_po_ID();
+        menu_ksiazek();
+        break;
+    case 6:
+        wyszukaj_po_liczbie_egzemplarzy();
+        menu_ksiazek();
+        break;
+    case 7:
+        wyszukaj_po_liczbie_wypozyczonych();
+        menu_ksiazek();
+        break;
+    }
+}
+
+void menu_ksiazek_sortowania()
+{
+    int wybor;
+
+    printf("1. Sortuj ksiazki malejaco, po tytule\n");
+    printf("2. Sortuj ksiazki rosnaco, po tytule\n");
+    printf("3. Sortuj ksiazki malejaco, po autorze\n");
+    printf("4. Sortuj ksiazki rosnaco, po autorze\n");
+    printf("5. Sortuj ksiazki malejaco, po roku\n");
+    printf("6. Sortuj ksiazki rosnaco, po roku\n");
+    printf("7. Sortuj ksiazki malejaco, po gatunku\n");
+    printf("8. Sortuj ksiazki rosnaco, po gatunku\n");
+    printf("9. Sortuj ksiazki malejaco, po ID\n");
+    printf("10. Sortuj ksiazki rosnaco, po ID\n");
+    printf("11. Sortuj ksiazki malejaco, po liczbie egzemplarzy\n");
+    printf("12. Sortuj ksiazki rosnaco, po liczbie egzemplarzy\n");
+    printf("13. Sortuj ksiazki malejaco, po liczbie wypozyczonych\n");
+    printf("14. Sortuj ksiazki rosnaco, po liczbie wypozyczonych\n");
+    printf("15. Powrot do menu ksiazek\n");
+
+    scanf("%d", &wybor);
+    printf("\n");
+
+    switch (wybor)
+    {
+    case 1:
+        sortowanie(Malejaca, Tytul);
+        wyswietl_baze_ksiazek();
+        menu_ksiazek();
+        break;
+    case 2:
+        sortowanie(Rosnaca, Tytul);
+        wyswietl_baze_ksiazek();
+        menu_ksiazek();
+        break;
+    case 3:
+        sortowanie(Malejaca, Autor);
+        wyswietl_baze_ksiazek();
+        menu_ksiazek();
+        break;
+    case 4:
+        sortowanie(Rosnaca, Autor);
+        wyswietl_baze_ksiazek();
+        menu_ksiazek();
+        break;
+    case 5:
+        sortowanie(Malejaca, Rok);
+        wyswietl_baze_ksiazek();
+        menu_ksiazek();
+        break;
+    case 6:
+        sortowanie(Rosnaca, Rok);
+        wyswietl_baze_ksiazek();
+        menu_ksiazek();
+        break;
+    case 7:
+        sortowanie(Malejaca, Gatunek);
+        wyswietl_baze_ksiazek();
+        menu_ksiazek();
+        break;
+    case 8:
+        sortowanie(Rosnaca, Gatunek);
+        wyswietl_baze_ksiazek();
+        menu_ksiazek();
+        break;
+    case 9:
+        sortowanie(Malejaca, ID);
+        wyswietl_baze_ksiazek();
+        menu_ksiazek();
+        break;
+    case 10:
+        sortowanie(Rosnaca, ID);
+        wyswietl_baze_ksiazek();
+        menu_ksiazek();
+        break;
+    case 11:
+        sortowanie(Malejaca, LiczbaEgzemplarzy);
+        wyswietl_baze_ksiazek();
+        menu_ksiazek();
+        break;
+    case 12:
+        sortowanie(Rosnaca, LiczbaEgzemplarzy);
+        wyswietl_baze_ksiazek();
+        menu_ksiazek();
+        break;
+    case 13:
+        sortowanie(Malejaca, LiczbaWypozyczonych);
+        wyswietl_baze_ksiazek();
+        menu_ksiazek();
+        break;
+    case 14:
+        sortowanie(Rosnaca, LiczbaWypozyczonych);
+        wyswietl_baze_ksiazek();
+        menu_ksiazek();
         break;
     }
 }

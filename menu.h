@@ -21,7 +21,10 @@ void menu_wypozyczen();
 void menu_klienta(Klient* klient);
 void menu_zarzadzaj_klientem();
 void menu_ksiazki(Ksiazka* ksiazka);
+void menu_ksiazek_sortowania();
+void menu_ksiazek_wyszukiwania();
 void menu_zarzadzaj_ksiazkami();
+
 void wyjscie();
 
 

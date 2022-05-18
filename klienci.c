@@ -11,7 +11,9 @@ Klient *pierwszy_klient = NULL;
 Klient *ostatni_klient = NULL;
 
 /*! \fn void wyswietl_baze_klientow()
-     \brief Funkcja wyswietl_baze_klientow wyswietla dane klientow z pliku
+     \brief 
+     
+     Funkcja wyswietl_baze_klientow wyswietla dane klientow z pliku
 */
 
 void wyswietl_baze_klientow()
@@ -25,11 +27,12 @@ void wyswietl_baze_klientow()
 }
 
 /*! \fn void dodaj_klienta()
-    \brief Funkcja dodaj_klienta dodaje nowego klienta do bazy danych
-    \brief Jesli nie ma klientow w bazie to tworzymy nowego klienta
-    \brief w przeciwnym wypadku wpis uzytkownika dodaje nastepnego klienta do bazy klientow
+    \brief 
+    
+    Funkcja dodaj_klienta dodaje nowego klienta do bazy danych
+    Jesli nie ma klientow w bazie to tworzymy nowego klienta
+    w przeciwnym wypadku wpis uzytkownika dodaje nastepnego klienta do bazy klientow
 */
-
 void dodaj_klienta()
 {
     Klient *wpis = (Klient *)malloc(sizeof(Klient));
@@ -55,8 +58,10 @@ void dodaj_klienta()
 }
 
 /*! \fn int znajdz_najwyzsze_ID_klienci()
-     \brief Funkcja wyszukuje w pliku ID klienta o najwyzszej wartosci
-     \brief jesli wpis uzytkownika jest wiekszy od aktualnego max, to nastepuje nowe maksimum
+     \brief 
+     
+     Funkcja wyszukuje w pliku ID klienta o najwyzszej wartosci
+     jesli wpis uzytkownika jest wiekszy od aktualnego max, to nastepuje nowe maksimum
     \param (brak parametru)
     \return Zwracane jest najwyzsze ID klienta
 */
@@ -75,8 +80,10 @@ int znajdz_najwyzsze_ID_klienci()
 }
 
 /*! \fn void edytuj_wypozyczenia_numer_karty_abc(Klient *wpis)
-     \brief wpis uzytkownika jest przypisywany do numeru karty ktory jest rowny
-     \brief najwyzszemu ID klienta + 1
+     \brief 
+
+     Wpis uzytkownika jest przypisywany do numeru karty ktory jest rowny
+     najwyzszemu ID klienta + 1
     \param wpis pobierany jest parametr z wpisu uzytkownika, ktory chce cos edytowac
 */
 
@@ -86,9 +93,11 @@ void edytuj_wypozyczenia_numer_karty_abc(Klient *wpis)
 }
 
 /*! \fn Klient *wyszukaj_klienta(int numer_karty)
-     \brief przechodzimy w petli przez wszystkich klientow
-     \brief jesli wpis uzytkownika szukajacego numeru_karty jest rowny szukanemu numerowi karty zwroc wpis
-     \brief jezeli uzytkownik nic nie wpisze nie zwracaj niczego
+     \brief 
+     
+     Przechodzimy w petli przez wszystkich klientow
+     Jesli wpis uzytkownika szukajacego numeru_karty jest rowny szukanemu numerowi karty zwroc wpis
+     Jezeli uzytkownik nic nie wpisze nie zwracaj niczego
     \param numer_karty dany klient wyszukiwany jest po numerze karty
     \return Funkcja zwraca szukanego klienta
 */
@@ -106,8 +115,9 @@ Klient *wyszukaj_klienta(int numer_karty)
 }
 
 /*! \fn void wydrukuj_klienta(Klient *wpis)
-     \brief Funkcja wydrukowuje na ekran numer_karty, imie, nazwisko,
-     \brief , telefon, email klienta
+     \brief 
+
+     Funkcja wydrukowuje na ekran numer_karty, imie, nazwisko,, telefon, email klienta
     \param wpis Dane klienta sa wydrukowywane na podstawie wpisu klienta
 */
 
@@ -121,7 +131,9 @@ void wydrukuj_klienta(Klient *wpis)
 }
 
 /*! \fn void edytuj_imie_klienta(Klient *wpis)
-     \brief Funkcja edytuje dane imie klienta na podstawie wpisu uzytkownika
+     \brief 
+
+     Funkcja edytuje dane imie klienta na podstawie wpisu uzytkownika
     \param wpis na podstawie parametru wpisu uzytkownika edytowane jest biezace imie
 */
 
@@ -142,7 +154,9 @@ void edytuj_imie_klienta(Klient *wpis)
 }
 
 /*! \fn void edytuj_telefon_klienta(Klient *wpis)
-     \brief Funkcja edytuje dane telefonu klienta na podstawie wpisu uzytkownika
+     \brief 
+
+     Funkcja edytuje dane telefonu klienta na podstawie wpisu uzytkownika
     \param wpis na podstawie parametru wpisu uzytkownika edytowany jest biezacy telefon
 */
 
@@ -153,7 +167,9 @@ void edytuj_telefon_klienta(Klient *wpis)
 }
 
 /*! \fn void edytuj_email_klienta(Klient *wpis)
-     \brief Funkcja edytuje email klienta na podstawie wpisu uzytkownika
+     \brief 
+
+     Funkcja edytuje email klienta na podstawie wpisu uzytkownika
     \param wpis na podstawie parametru wpisu uzytkownika edytowany jest biezacy email uzytkownika
 */
 
@@ -164,7 +180,9 @@ void edytuj_email_klienta(Klient *wpis)
 }
 
 /*! \fn void edytuj_nazwisko_klienta(Klient *wpis)
-     \brief Funkcja edytuje nazwisko klienta na podstawie wpisu uzytkownika
+     \brief
+
+     Funkcja edytuje nazwisko klienta na podstawie wpisu uzytkownika
     \param wpis na podstawie parametru wpisu uzytkownika edytowane jest biezace nazwisko klienta
 */
 
@@ -175,15 +193,17 @@ void edytuj_nazwisko_klienta(Klient *wpis)
 }
 
 /*! \fn void usun_klienta(Klient *wpis)
-     \brief w pierwszym warunku jesli pierwszy i nastepny klient maja puste wartosci
-     \brief oznacza to ze nie ma co usuwac i do pierwszego i ostatniego klienta przypisujemy 
-     \brief puste wartosci bo nie ma co usuwac
-     \brief w drugim warunku jesli poprzedni klient ma pusta wartosc, a nastepny ma jakas wartosc
-     \brief to usuwamy pierwszego klienta
-     \brief w trzecim warunku jesli nastepny klient ma pusta wartosc, a poprzedni ma jakas wartosc
-     \brief to usuwamy ostatniego klienta
-      \brief w czwartym warunku jesli nastepny i poprzedni klient maja jakas wartosc
-     \brief to usuwamy klienta ktorego chcemy usunac
+    \brief 
+    
+    - W pierwszym warunku jesli pierwszy i nastepny klient maja puste wartosci
+      oznacza to ze nie ma co usuwac i do pierwszego i ostatniego klienta przypisujemy 
+      puste wartosci bo nie ma co usuwac 
+    - W drugim warunku jesli poprzedni klient ma pusta wartosc, 
+      a nastepny ma jakas wartosc to usuwamy pierwszego klienta
+    - W trzecim warunku jesli nastepny klient ma pusta wartosc, a poprzedni ma jakas wartosc 
+      to usuwamy ostatniego klienta
+    - W czwartym warunku jesli nastepny i poprzedni klient maja jakas wartosc
+      to usuwamy klienta ktorego chcemy usunac
     \param wpis na podstawie parametru wpisu uzytkownika usuwany jest klient
 */
 
@@ -212,6 +232,15 @@ void usun_klienta(Klient *wpis)
         nastepny->poprzedni = poprzedni;
     }
 }
+
+
+/*! \fn void wczytaniepliku_klienci()
+    \brief 
+    
+    Na poczatku sprawdzamy czy wczytywany plik nie jest pusty
+    
+*/
+
 
 void wczytaniepliku_klienci()
 {

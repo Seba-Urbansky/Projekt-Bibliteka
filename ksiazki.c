@@ -328,7 +328,7 @@ void dodaj_ksiazke()
 
 void edytuj_liczbe_egzemplarzy(Ksiazka *wpis)
 {
-    printf("Podaj nowa liczbe egzemplarzy: \n");
+    printf("Podaj  liczbe egzemplarzy: \n");
     scanf("%d", &wpis->liczba_egzemplarzy);
 }
 
@@ -382,7 +382,7 @@ void wydrukuj_ksiazke(Ksiazka *wpis)
 void edytuj_tytul_ksiazki(Ksiazka *wpis)
 {
     char tytul[MAX] = " ";
-    printf("Podaj nowy tytul: \n");
+    printf("Podaj tytul: \n");
     fflush(stdin);
     scanf("%[^\n]%*c", &tytul);
     if (tytul == " ")
@@ -398,20 +398,20 @@ void edytuj_tytul_ksiazki(Ksiazka *wpis)
 
 void edytuj_autora(Ksiazka *wpis)
 {
-    printf("Podaj nowego autora: \n");
+    printf("Podaj autora: \n");
     fflush(stdin);
     scanf("%[^\n]%*c", &wpis->autor);
 }
 
 void edytuj_rok(Ksiazka *wpis)
 {
-    printf("Podaj nowy rok: \n");
+    printf("Podaj rok: \n");
     scanf("%d", &wpis->rok);
 }
 
 void edytuj_gatunek_ksiazki(Ksiazka *wpis)
 {
-    printf("Podaj nowy gatunek literacki: \n");
+    printf("Podaj gatunek literacki: \n");
     fflush(stdin);
     scanf("%[^\n]%*c", &wpis->gatunek);
 }

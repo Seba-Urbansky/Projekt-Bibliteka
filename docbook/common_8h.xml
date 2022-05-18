@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_common_8h" xml:lang="en-US">
+<title>/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/common.h File Reference</title>
+<indexterm><primary>/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/common.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+</programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_common_8h_1a392fb874e547e582e9c66a08a1f23326">MAX</link>   32</para>
+</listitem>
+            <listitem><para>#define <link linkend="_common_8h_1a3758fc6ffc4db9225b50917305de91fe">GODZINA</link>   3600</para>
+</listitem>
+            <listitem><para>#define <link linkend="_common_8h_1aba57c60157386b81476b3e3691d203be">DZIEN</link>   24 * <link linkend="_common_8h_1a3758fc6ffc4db9225b50917305de91fe">GODZINA</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_common_8h_1a50cba53c4a3bb23fdd14db613fa201b9">TYDZIEN</link>   7 * <link linkend="_common_8h_1aba57c60157386b81476b3e3691d203be">DZIEN</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_common_8h_1a5e2faf2aa618174a4cfe8f9b7e6611df">czy_plik_jest_pusty</link> (FILE *<link linkend="_common_8c_1a90d47b08c54484fff89d044586c78347">plik</link>)</para>
+
+<para>Funkcja czy_plik_jest_pusty sprawdza czy plik ma pusta zawartosc. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_common_8h_1aba57c60157386b81476b3e3691d203be"/><section>
+    <title>DZIEN</title>
+<indexterm><primary>DZIEN</primary><secondary>common.h</secondary></indexterm>
+<indexterm><primary>common.h</primary><secondary>DZIEN</secondary></indexterm>
+<para><computeroutput>#define DZIEN   24 * <link linkend="_common_8h_1a3758fc6ffc4db9225b50917305de91fe">GODZINA</link></computeroutput></para></section>
+<anchor xml:id="_common_8h_1a3758fc6ffc4db9225b50917305de91fe"/><section>
+    <title>GODZINA</title>
+<indexterm><primary>GODZINA</primary><secondary>common.h</secondary></indexterm>
+<indexterm><primary>common.h</primary><secondary>GODZINA</secondary></indexterm>
+<para><computeroutput>#define GODZINA   3600</computeroutput></para></section>
+<anchor xml:id="_common_8h_1a392fb874e547e582e9c66a08a1f23326"/><section>
+    <title>MAX</title>
+<indexterm><primary>MAX</primary><secondary>common.h</secondary></indexterm>
+<indexterm><primary>common.h</primary><secondary>MAX</secondary></indexterm>
+<para><computeroutput>#define MAX   32</computeroutput></para></section>
+<anchor xml:id="_common_8h_1a50cba53c4a3bb23fdd14db613fa201b9"/><section>
+    <title>TYDZIEN</title>
+<indexterm><primary>TYDZIEN</primary><secondary>common.h</secondary></indexterm>
+<indexterm><primary>common.h</primary><secondary>TYDZIEN</secondary></indexterm>
+<para><computeroutput>#define TYDZIEN   7 * <link linkend="_common_8h_1aba57c60157386b81476b3e3691d203be">DZIEN</link></computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_common_8h_1a5e2faf2aa618174a4cfe8f9b7e6611df"/><section>
+    <title>czy_plik_jest_pusty()</title>
+<indexterm><primary>czy_plik_jest_pusty</primary><secondary>common.h</secondary></indexterm>
+<indexterm><primary>common.h</primary><secondary>czy_plik_jest_pusty</secondary></indexterm>
+<para><computeroutput>int czy_plik_jest_pusty (FILE * plik)</computeroutput></para><para>
+
+<para>Funkcja czy_plik_jest_pusty sprawdza czy plik ma pusta zawartosc. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>plik</entry><entry>
+<para>przekazuje parametr do pliku </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Funkcja zwraca 0 w przypadku, gdy plik jest pusty, a zwraca 1 gdy plik jest pelny. </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

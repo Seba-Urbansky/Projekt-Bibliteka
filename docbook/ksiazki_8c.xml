@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_ksiazki_8c" xml:lang="en-US">
+<title>/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/ksiazki.c File Reference</title>
+<indexterm><primary>/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/ksiazki.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &quot;ksiazki.h&quot;
+#include &quot;common.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> * <link linkend="_ksiazki_8c_1a892873c6de7b41a058e8775ea9ce8e01">zamien</link> (<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> *a, <link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> *b)</para>
+</listitem>
+            <listitem><para>int <link linkend="_ksiazki_8c_1a7d6a8320245d228b8ac22330befab405">policz_ksiazki</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_ksiazki_8c_1ad5f77aa48d5aa3392bd2f3e22e388acc">sortowanie</link> (enum <link linkend="_ksiazki_8h_1a92b3cf569043e5ddcb058a54db66783b">SortowanieKolejnosc</link> kolejnosc, enum <link linkend="_ksiazki_8h_1accccfdb15134c7ccaf2cfabf210ad929">SortowanieAtrybut</link> atrybut)</para>
+</listitem>
+            <listitem><para>void <link linkend="_ksiazki_8c_1adfb816e67ef893d997c5e6ee642b8df7">wyszukaj_ksiazki_po_tytule</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_ksiazki_8c_1ac557385e6d4385e0274ff6a6a8aeee00">wyszukaj_ksiazki_po_autorze</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_ksiazki_8c_1a3e817d138006527a2369e47f458236d3">wyszukaj_ksiazki_po_gatunku</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_ksiazki_8c_1a8b6eab3e3b55d5fe5951f2b17db81c44">wyszukaj_ksiazki_po_roku</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_ksiazki_8c_1a0b4df348f6c432f40490eb8bdbcee3c6">wyszukaj_po_liczbie_wypozyczonych</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_ksiazki_8c_1a768352a5223d9e1841ce9692aaf43f8d">wyszukaj_po_liczbie_egzemplarzy</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_ksiazki_8c_1ae189b52f9d8a0e053a3482a79a26f1c6">wydrukuj_po_ID</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_ksiazki_8c_1a48119a789c118bca048ac95c6e159e14">wyswietl_baze_ksiazek</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_ksiazki_8c_1a18018b143b960db33a39ebcaa5c6c06c">dodaj_ksiazke</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_ksiazki_8c_1a4c6052636c8b6375611bc320b29ff22f">edytuj_liczbe_egzemplarzy</link> (<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> *wpis)</para>
+</listitem>
+            <listitem><para>void <link linkend="_ksiazki_8c_1a05d1aa1ffff346a6f439481cf14434f8">edytuj_liczbe_wypozyczonych</link> (<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> *wpis)</para>
+</listitem>
+            <listitem><para>int <link linkend="_ksiazki_8c_1ab253baef3a79eb201a1e7551e5e2a95d">znajdz_najwyzsze_ID_ksiazki</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_ksiazki_8c_1ac5e4aaf398428ba485855a36f3f1494e">edytuj_ksiazki_ID_ksiazki</link> (<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> *wpis)</para>
+</listitem>
+            <listitem><para><link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> * <link linkend="_ksiazki_8c_1af68f877082bb74fc15a27b90d96a2b4d">wyszukaj_ksiazke</link> (int <link linkend="_ksiazki_8h_1accccfdb15134c7ccaf2cfabf210ad929a001479a58fb44c39a29b20d565081a68">ID</link>)</para>
+</listitem>
+            <listitem><para>void <link linkend="_ksiazki_8c_1a84180dfd861f8a7eccb6505bebeb26a8">wydrukuj_ksiazke</link> (<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> *wpis)</para>
+</listitem>
+            <listitem><para>void <link linkend="_ksiazki_8c_1a93f5816116ef4382f87dab1e5695e00f">edytuj_tytul_ksiazki</link> (<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> *wpis)</para>
+</listitem>
+            <listitem><para>void <link linkend="_ksiazki_8c_1a966ffe3ef2449f7a256ac6d703c7ec24">edytuj_autora</link> (<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> *wpis)</para>
+</listitem>
+            <listitem><para>void <link linkend="_ksiazki_8c_1ab6f2c6d841a1887aa7bd2e2ca5b99648">edytuj_rok</link> (<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> *wpis)</para>
+</listitem>
+            <listitem><para>void <link linkend="_ksiazki_8c_1acfcccbe02004a890d7f3bac5900ecf21">edytuj_gatunek_ksiazki</link> (<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> *wpis)</para>
+</listitem>
+            <listitem><para>void <link linkend="_ksiazki_8c_1aca655863bc1a08656db7d46ab1766d37">usun_ksiazke</link> (<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> *wpis)</para>
+</listitem>
+            <listitem><para>void <link linkend="_ksiazki_8c_1aa7bc6b44a7b7d6db12d0fdaca2b47998">wczytaniepliku_ksiazki</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_ksiazki_8c_1a84101ca77a61569379a0275f73d8cfd4">zapispliku_ksiazki</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> * <link linkend="_ksiazki_8c_1a2cdbda7f13c2d0ae4bb1d79cba5ee0bf">pierwsza_ksiazka</link> = NULL</para>
+</listitem>
+            <listitem><para><link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> * <link linkend="_ksiazki_8c_1a13f1e0d824b0710021423bae2269be58">ostatnia_ksiazka</link> = NULL</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_ksiazki_8c_1a18018b143b960db33a39ebcaa5c6c06c"/><section>
+    <title>dodaj_ksiazke()</title>
+<indexterm><primary>dodaj_ksiazke</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>dodaj_ksiazke</secondary></indexterm>
+<para><computeroutput>void dodaj_ksiazke ( )</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1a966ffe3ef2449f7a256ac6d703c7ec24"/><section>
+    <title>edytuj_autora()</title>
+<indexterm><primary>edytuj_autora</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>edytuj_autora</secondary></indexterm>
+<para><computeroutput>void edytuj_autora (<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> * wpis)</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1acfcccbe02004a890d7f3bac5900ecf21"/><section>
+    <title>edytuj_gatunek_ksiazki()</title>
+<indexterm><primary>edytuj_gatunek_ksiazki</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>edytuj_gatunek_ksiazki</secondary></indexterm>
+<para><computeroutput>void edytuj_gatunek_ksiazki (<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> * wpis)</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1ac5e4aaf398428ba485855a36f3f1494e"/><section>
+    <title>edytuj_ksiazki_ID_ksiazki()</title>
+<indexterm><primary>edytuj_ksiazki_ID_ksiazki</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>edytuj_ksiazki_ID_ksiazki</secondary></indexterm>
+<para><computeroutput>void edytuj_ksiazki_ID_ksiazki (<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> * wpis)</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1a4c6052636c8b6375611bc320b29ff22f"/><section>
+    <title>edytuj_liczbe_egzemplarzy()</title>
+<indexterm><primary>edytuj_liczbe_egzemplarzy</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>edytuj_liczbe_egzemplarzy</secondary></indexterm>
+<para><computeroutput>void edytuj_liczbe_egzemplarzy (<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> * wpis)</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1a05d1aa1ffff346a6f439481cf14434f8"/><section>
+    <title>edytuj_liczbe_wypozyczonych()</title>
+<indexterm><primary>edytuj_liczbe_wypozyczonych</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>edytuj_liczbe_wypozyczonych</secondary></indexterm>
+<para><computeroutput>void edytuj_liczbe_wypozyczonych (<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> * wpis)</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1ab6f2c6d841a1887aa7bd2e2ca5b99648"/><section>
+    <title>edytuj_rok()</title>
+<indexterm><primary>edytuj_rok</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>edytuj_rok</secondary></indexterm>
+<para><computeroutput>void edytuj_rok (<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> * wpis)</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1a93f5816116ef4382f87dab1e5695e00f"/><section>
+    <title>edytuj_tytul_ksiazki()</title>
+<indexterm><primary>edytuj_tytul_ksiazki</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>edytuj_tytul_ksiazki</secondary></indexterm>
+<para><computeroutput>void edytuj_tytul_ksiazki (<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> * wpis)</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1a7d6a8320245d228b8ac22330befab405"/><section>
+    <title>policz_ksiazki()</title>
+<indexterm><primary>policz_ksiazki</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>policz_ksiazki</secondary></indexterm>
+<para><computeroutput>int policz_ksiazki ( )</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1ad5f77aa48d5aa3392bd2f3e22e388acc"/><section>
+    <title>sortowanie()</title>
+<indexterm><primary>sortowanie</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>sortowanie</secondary></indexterm>
+<para><computeroutput>void sortowanie (enum <link linkend="_ksiazki_8h_1a92b3cf569043e5ddcb058a54db66783b">SortowanieKolejnosc</link> kolejnosc, enum <link linkend="_ksiazki_8h_1accccfdb15134c7ccaf2cfabf210ad929">SortowanieAtrybut</link> atrybut)</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1aca655863bc1a08656db7d46ab1766d37"/><section>
+    <title>usun_ksiazke()</title>
+<indexterm><primary>usun_ksiazke</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>usun_ksiazke</secondary></indexterm>
+<para><computeroutput>void usun_ksiazke (<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> * wpis)</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1aa7bc6b44a7b7d6db12d0fdaca2b47998"/><section>
+    <title>wczytaniepliku_ksiazki()</title>
+<indexterm><primary>wczytaniepliku_ksiazki</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>wczytaniepliku_ksiazki</secondary></indexterm>
+<para><computeroutput>void wczytaniepliku_ksiazki ( )</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1a84180dfd861f8a7eccb6505bebeb26a8"/><section>
+    <title>wydrukuj_ksiazke()</title>
+<indexterm><primary>wydrukuj_ksiazke</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>wydrukuj_ksiazke</secondary></indexterm>
+<para><computeroutput>void wydrukuj_ksiazke (<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> * wpis)</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1ae189b52f9d8a0e053a3482a79a26f1c6"/><section>
+    <title>wydrukuj_po_ID()</title>
+<indexterm><primary>wydrukuj_po_ID</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>wydrukuj_po_ID</secondary></indexterm>
+<para><computeroutput>void wydrukuj_po_ID ( )</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1a48119a789c118bca048ac95c6e159e14"/><section>
+    <title>wyswietl_baze_ksiazek()</title>
+<indexterm><primary>wyswietl_baze_ksiazek</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>wyswietl_baze_ksiazek</secondary></indexterm>
+<para><computeroutput>void wyswietl_baze_ksiazek ( )</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1af68f877082bb74fc15a27b90d96a2b4d"/><section>
+    <title>wyszukaj_ksiazke()</title>
+<indexterm><primary>wyszukaj_ksiazke</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>wyszukaj_ksiazke</secondary></indexterm>
+<para><computeroutput><link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> * wyszukaj_ksiazke (int ID)</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1ac557385e6d4385e0274ff6a6a8aeee00"/><section>
+    <title>wyszukaj_ksiazki_po_autorze()</title>
+<indexterm><primary>wyszukaj_ksiazki_po_autorze</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>wyszukaj_ksiazki_po_autorze</secondary></indexterm>
+<para><computeroutput>void wyszukaj_ksiazki_po_autorze ( )</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1a3e817d138006527a2369e47f458236d3"/><section>
+    <title>wyszukaj_ksiazki_po_gatunku()</title>
+<indexterm><primary>wyszukaj_ksiazki_po_gatunku</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>wyszukaj_ksiazki_po_gatunku</secondary></indexterm>
+<para><computeroutput>void wyszukaj_ksiazki_po_gatunku ( )</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1a8b6eab3e3b55d5fe5951f2b17db81c44"/><section>
+    <title>wyszukaj_ksiazki_po_roku()</title>
+<indexterm><primary>wyszukaj_ksiazki_po_roku</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>wyszukaj_ksiazki_po_roku</secondary></indexterm>
+<para><computeroutput>void wyszukaj_ksiazki_po_roku ( )</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1adfb816e67ef893d997c5e6ee642b8df7"/><section>
+    <title>wyszukaj_ksiazki_po_tytule()</title>
+<indexterm><primary>wyszukaj_ksiazki_po_tytule</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>wyszukaj_ksiazki_po_tytule</secondary></indexterm>
+<para><computeroutput>void wyszukaj_ksiazki_po_tytule ( )</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1a768352a5223d9e1841ce9692aaf43f8d"/><section>
+    <title>wyszukaj_po_liczbie_egzemplarzy()</title>
+<indexterm><primary>wyszukaj_po_liczbie_egzemplarzy</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>wyszukaj_po_liczbie_egzemplarzy</secondary></indexterm>
+<para><computeroutput>void wyszukaj_po_liczbie_egzemplarzy ( )</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1a0b4df348f6c432f40490eb8bdbcee3c6"/><section>
+    <title>wyszukaj_po_liczbie_wypozyczonych()</title>
+<indexterm><primary>wyszukaj_po_liczbie_wypozyczonych</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>wyszukaj_po_liczbie_wypozyczonych</secondary></indexterm>
+<para><computeroutput>void wyszukaj_po_liczbie_wypozyczonych ( )</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1a892873c6de7b41a058e8775ea9ce8e01"/><section>
+    <title>zamien()</title>
+<indexterm><primary>zamien</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>zamien</secondary></indexterm>
+<para><computeroutput><link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> * zamien (<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> * a, <link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> * b)</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1a84101ca77a61569379a0275f73d8cfd4"/><section>
+    <title>zapispliku_ksiazki()</title>
+<indexterm><primary>zapispliku_ksiazki</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>zapispliku_ksiazki</secondary></indexterm>
+<para><computeroutput>void zapispliku_ksiazki ( )</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1ab253baef3a79eb201a1e7551e5e2a95d"/><section>
+    <title>znajdz_najwyzsze_ID_ksiazki()</title>
+<indexterm><primary>znajdz_najwyzsze_ID_ksiazki</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>znajdz_najwyzsze_ID_ksiazki</secondary></indexterm>
+<para><computeroutput>int znajdz_najwyzsze_ID_ksiazki ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_ksiazki_8c_1a13f1e0d824b0710021423bae2269be58"/><section>
+    <title>ostatnia_ksiazka</title>
+<indexterm><primary>ostatnia_ksiazka</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>ostatnia_ksiazka</secondary></indexterm>
+<para><computeroutput><link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link>* ostatnia_ksiazka = NULL</computeroutput></para></section>
+<anchor xml:id="_ksiazki_8c_1a2cdbda7f13c2d0ae4bb1d79cba5ee0bf"/><section>
+    <title>pierwsza_ksiazka</title>
+<indexterm><primary>pierwsza_ksiazka</primary><secondary>ksiazki.c</secondary></indexterm>
+<indexterm><primary>ksiazki.c</primary><secondary>pierwsza_ksiazka</secondary></indexterm>
+<para><computeroutput><link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link>* pierwsza_ksiazka = NULL</computeroutput></para></section>
+</section>
+</section>

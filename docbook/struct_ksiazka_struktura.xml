@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_ksiazka_struktura" xml:lang="en-US">
+<title>KsiazkaStruktura Struct Reference</title>
+<indexterm><primary>KsiazkaStruktura</primary></indexterm>
+<para>
+<computeroutput>#include &lt;ksiazki.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_ksiazka_struktura_1af180e926633cde08a05ccbc3af397ee4">ID</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_ksiazka_struktura_1ab216bb7eaebb4b2665b3a7e9d52d98d0">rok</link></para>
+</listitem>
+            <listitem><para>char * <link linkend="_struct_ksiazka_struktura_1a113a6ab6773565fe27cdb876d0db9fb5">tytul</link> [<link linkend="_menu_8h_1a392fb874e547e582e9c66a08a1f23326">MAX</link>]</para>
+</listitem>
+            <listitem><para>char * <link linkend="_struct_ksiazka_struktura_1a8b31666ce548fc477da9eada27fba523">autor</link> [<link linkend="_menu_8h_1a392fb874e547e582e9c66a08a1f23326">MAX</link>]</para>
+</listitem>
+            <listitem><para>char * <link linkend="_struct_ksiazka_struktura_1a0cdb3fcd8923353f1cb289d6766c8a4b">gatunek</link> [<link linkend="_menu_8h_1a392fb874e547e582e9c66a08a1f23326">MAX</link>]</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_ksiazka_struktura_1a4994bb2527f97d2a36044762a8d75a08">liczba_egzemplarzy</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_ksiazka_struktura_1a43bb912c5994f48c4e74182136e53467">liczba_wypozyczonych</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_ksiazka_struktura">KsiazkaStruktura</link> * <link linkend="_struct_ksiazka_struktura_1af66406297937206eae33b7a6399f3d56">poprzedni</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_ksiazka_struktura">KsiazkaStruktura</link> * <link linkend="_struct_ksiazka_struktura_1a6647f51c3f7b5777e35ee7608478b79e">nastepny</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_struct_ksiazka_struktura_1a8b31666ce548fc477da9eada27fba523"/><section>
+    <title>autor</title>
+<indexterm><primary>autor</primary><secondary>KsiazkaStruktura</secondary></indexterm>
+<indexterm><primary>KsiazkaStruktura</primary><secondary>autor</secondary></indexterm>
+<para><computeroutput>char* autor[<link linkend="_menu_8h_1a392fb874e547e582e9c66a08a1f23326">MAX</link>]</computeroutput></para></section>
+<anchor xml:id="_struct_ksiazka_struktura_1a0cdb3fcd8923353f1cb289d6766c8a4b"/><section>
+    <title>gatunek</title>
+<indexterm><primary>gatunek</primary><secondary>KsiazkaStruktura</secondary></indexterm>
+<indexterm><primary>KsiazkaStruktura</primary><secondary>gatunek</secondary></indexterm>
+<para><computeroutput>char* gatunek[<link linkend="_menu_8h_1a392fb874e547e582e9c66a08a1f23326">MAX</link>]</computeroutput></para></section>
+<anchor xml:id="_struct_ksiazka_struktura_1af180e926633cde08a05ccbc3af397ee4"/><section>
+    <title>ID</title>
+<indexterm><primary>ID</primary><secondary>KsiazkaStruktura</secondary></indexterm>
+<indexterm><primary>KsiazkaStruktura</primary><secondary>ID</secondary></indexterm>
+<para><computeroutput>int ID</computeroutput></para></section>
+<anchor xml:id="_struct_ksiazka_struktura_1a4994bb2527f97d2a36044762a8d75a08"/><section>
+    <title>liczba_egzemplarzy</title>
+<indexterm><primary>liczba_egzemplarzy</primary><secondary>KsiazkaStruktura</secondary></indexterm>
+<indexterm><primary>KsiazkaStruktura</primary><secondary>liczba_egzemplarzy</secondary></indexterm>
+<para><computeroutput>int liczba_egzemplarzy</computeroutput></para></section>
+<anchor xml:id="_struct_ksiazka_struktura_1a43bb912c5994f48c4e74182136e53467"/><section>
+    <title>liczba_wypozyczonych</title>
+<indexterm><primary>liczba_wypozyczonych</primary><secondary>KsiazkaStruktura</secondary></indexterm>
+<indexterm><primary>KsiazkaStruktura</primary><secondary>liczba_wypozyczonych</secondary></indexterm>
+<para><computeroutput>int liczba_wypozyczonych</computeroutput></para></section>
+<anchor xml:id="_struct_ksiazka_struktura_1a6647f51c3f7b5777e35ee7608478b79e"/><section>
+    <title>nastepny</title>
+<indexterm><primary>nastepny</primary><secondary>KsiazkaStruktura</secondary></indexterm>
+<indexterm><primary>KsiazkaStruktura</primary><secondary>nastepny</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_struct_ksiazka_struktura">KsiazkaStruktura</link> * nastepny</computeroutput></para></section>
+<anchor xml:id="_struct_ksiazka_struktura_1af66406297937206eae33b7a6399f3d56"/><section>
+    <title>poprzedni</title>
+<indexterm><primary>poprzedni</primary><secondary>KsiazkaStruktura</secondary></indexterm>
+<indexterm><primary>KsiazkaStruktura</primary><secondary>poprzedni</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_struct_ksiazka_struktura">KsiazkaStruktura</link>* poprzedni</computeroutput></para></section>
+<anchor xml:id="_struct_ksiazka_struktura_1ab216bb7eaebb4b2665b3a7e9d52d98d0"/><section>
+    <title>rok</title>
+<indexterm><primary>rok</primary><secondary>KsiazkaStruktura</secondary></indexterm>
+<indexterm><primary>KsiazkaStruktura</primary><secondary>rok</secondary></indexterm>
+<para><computeroutput>int rok</computeroutput></para></section>
+<anchor xml:id="_struct_ksiazka_struktura_1a113a6ab6773565fe27cdb876d0db9fb5"/><section>
+    <title>tytul</title>
+<indexterm><primary>tytul</primary><secondary>KsiazkaStruktura</secondary></indexterm>
+<indexterm><primary>KsiazkaStruktura</primary><secondary>tytul</secondary></indexterm>
+<para><computeroutput>char* tytul[<link linkend="_menu_8h_1a392fb874e547e582e9c66a08a1f23326">MAX</link>]</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/<link linkend="_ksiazki_8h">ksiazki.h</link></section>
+</section>

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_ksiazki_8h_source" xml:lang="en-US">
+<title>ksiazki.h</title>
+<indexterm><primary>/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/ksiazki.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+2 
+3 <emphasis role="preprocessor">#ifndef&#32;KSIAZKI_H</emphasis>
+4 <emphasis role="preprocessor">#define&#32;KSIAZKI_H</emphasis>
+5 
+6 <emphasis role="preprocessor">#include&#32;&lt;stdio.h&gt;</emphasis>
+7 <emphasis role="preprocessor">#include&#32;&lt;stdlib.h&gt;</emphasis>
+8 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_common_8h">common.h</link>&quot;</emphasis>
+9 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_ksiazka_struktura">KsiazkaStruktura</link>
+10 {
+11 
+12 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_ksiazka_struktura_1af180e926633cde08a05ccbc3af397ee4">ID</link>;
+13 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_ksiazka_struktura_1ab216bb7eaebb4b2665b3a7e9d52d98d0">rok</link>;
+14 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*<link linkend="_struct_ksiazka_struktura_1a113a6ab6773565fe27cdb876d0db9fb5">tytul</link>[<link linkend="_common_8c_1a392fb874e547e582e9c66a08a1f23326">MAX</link>];
+15 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*<link linkend="_struct_ksiazka_struktura_1a8b31666ce548fc477da9eada27fba523">autor</link>[<link linkend="_common_8c_1a392fb874e547e582e9c66a08a1f23326">MAX</link>];
+16 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*<link linkend="_struct_ksiazka_struktura_1a0cdb3fcd8923353f1cb289d6766c8a4b">gatunek</link>[<link linkend="_common_8c_1a392fb874e547e582e9c66a08a1f23326">MAX</link>];
+17 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_ksiazka_struktura_1a4994bb2527f97d2a36044762a8d75a08">liczba_egzemplarzy</link>;
+18 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_ksiazka_struktura_1a43bb912c5994f48c4e74182136e53467">liczba_wypozyczonych</link>;
+19 &#32;&#32;&#32;&#32;
+20 
+21 &#32;&#32;&#32;&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_ksiazka_struktura">KsiazkaStruktura</link>&#32;*<link linkend="_struct_ksiazka_struktura_1af66406297937206eae33b7a6399f3d56">poprzedni</link>,&#32;*<link linkend="_struct_ksiazka_struktura_1a6647f51c3f7b5777e35ee7608478b79e">nastepny</link>;
+22 
+23 }&#32;<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link>;
+24 
+25 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1a48119a789c118bca048ac95c6e159e14">wyswietl_baze_ksiazek</link>();
+26 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1a18018b143b960db33a39ebcaa5c6c06c">dodaj_ksiazke</link>();
+27 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1abff38f583e5964764ae641674fc76148">edytuj_ksiazke</link>();
+28 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1a31ad71269e0f171ff6bbf775a7d6a253">usun_ksiazke</link>();
+29 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1ad515018a91175fffa50289ef40ca4342">menu_ksiazek</link>();
+30 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1aa7bc6b44a7b7d6db12d0fdaca2b47998">wczytaniepliku_ksiazki</link>();
+31 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1a84101ca77a61569379a0275f73d8cfd4">zapispliku_ksiazki</link>();
+32 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1a023661b73ad6f5af935c1bc928429310">ksiazka_do_zarzadzania</link>();
+33 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1a84180dfd861f8a7eccb6505bebeb26a8">wydrukuj_ksiazke</link>(<link linkend="_struct_ksiazka_struktura">Ksiazka</link>&#32;*wpis);
+34 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1a93f5816116ef4382f87dab1e5695e00f">edytuj_tytul_ksiazki</link>(<link linkend="_struct_ksiazka_struktura">Ksiazka</link>&#32;*wpis);
+35 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1acfcccbe02004a890d7f3bac5900ecf21">edytuj_gatunek_ksiazki</link>(<link linkend="_struct_ksiazka_struktura">Ksiazka</link>&#32;*wpis);
+36 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1a966ffe3ef2449f7a256ac6d703c7ec24">edytuj_autora</link>(<link linkend="_struct_ksiazka_struktura">Ksiazka</link>&#32;*wpis);
+37 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1ab6f2c6d841a1887aa7bd2e2ca5b99648">edytuj_rok</link>(<link linkend="_struct_ksiazka_struktura">Ksiazka</link>&#32;*wpis);
+38 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1a48119a789c118bca048ac95c6e159e14">wyswietl_baze_ksiazek</link>();
+39 <link linkend="_struct_ksiazka_struktura">Ksiazka</link>&#32;*<link linkend="_ksiazki_8h_1af68f877082bb74fc15a27b90d96a2b4d">wyszukaj_ksiazke</link>(<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_ksiazki_8h_1accccfdb15134c7ccaf2cfabf210ad929a001479a58fb44c39a29b20d565081a68">ID</link>);
+40 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_ksiazki_8h_1ab253baef3a79eb201a1e7551e5e2a95d">znajdz_najwyzsze_ID_ksiazki</link>();
+41 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1ac5e4aaf398428ba485855a36f3f1494e">edytuj_ksiazki_ID_ksiazki</link>(<link linkend="_struct_ksiazka_struktura">Ksiazka</link>&#32;*wpis);
+42 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1a38b28d0a614a50c26b8920620dcf0d1d">sortowanie_ksiazek_niemalejace</link>(<link linkend="_struct_ksiazka_struktura">Ksiazka</link>&#32;*<link linkend="_ksiazki_8h_1accccfdb15134c7ccaf2cfabf210ad929a001479a58fb44c39a29b20d565081a68">ID</link>);
+43 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1adfb816e67ef893d997c5e6ee642b8df7">wyszukaj_ksiazki_po_tytule</link>();
+44 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1ac557385e6d4385e0274ff6a6a8aeee00">wyszukaj_ksiazki_po_autorze</link>();
+45 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1a8b6eab3e3b55d5fe5951f2b17db81c44">wyszukaj_ksiazki_po_roku</link>();
+46 <link linkend="_struct_ksiazka_struktura">Ksiazka</link>*&#32;<link linkend="_ksiazki_8h_1a892873c6de7b41a058e8775ea9ce8e01">zamien</link>(<link linkend="_struct_ksiazka_struktura">Ksiazka</link>*&#32;a,&#32;<link linkend="_struct_ksiazka_struktura">Ksiazka</link>*&#32;b);
+47 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_ksiazki_8h_1a7d6a8320245d228b8ac22330befab405">policz_ksiazki</link>();
+48 <emphasis role="keyword">enum</emphasis>&#32;<link linkend="_ksiazki_8h_1a92b3cf569043e5ddcb058a54db66783b">SortowanieKolejnosc</link>&#32;{<link linkend="_ksiazki_8h_1a92b3cf569043e5ddcb058a54db66783bab283ea85da4665bf15c06eb4769f5cc7">Rosnaca</link>&#32;=&#32;1,&#32;<link linkend="_ksiazki_8h_1a92b3cf569043e5ddcb058a54db66783bae98de48074de837da6952478f5fc5a14">Malejaca</link>&#32;=&#32;0};&#32;
+49 <emphasis role="keyword">enum</emphasis>&#32;<link linkend="_ksiazki_8h_1accccfdb15134c7ccaf2cfabf210ad929">SortowanieAtrybut</link>&#32;{<link linkend="_ksiazki_8h_1accccfdb15134c7ccaf2cfabf210ad929a12e278122fae812b3ad8c18cb5c4e8eb">Tytul</link>&#32;=&#32;0,&#32;<link linkend="_ksiazki_8h_1accccfdb15134c7ccaf2cfabf210ad929a7655ae0771c3f4176026e8a834f646dc">Autor</link>&#32;=&#32;1,&#32;<link linkend="_ksiazki_8h_1accccfdb15134c7ccaf2cfabf210ad929af9326a3865bd3a77f6307af749fd7af8">Rok</link>&#32;=&#32;2,&#32;<link linkend="_ksiazki_8h_1accccfdb15134c7ccaf2cfabf210ad929a66b379b90f0cd74d1e8c011179766a60">Gatunek</link>&#32;=&#32;3,&#32;<link linkend="_ksiazki_8h_1accccfdb15134c7ccaf2cfabf210ad929a001479a58fb44c39a29b20d565081a68">ID</link>&#32;=&#32;4,&#32;<link linkend="_ksiazki_8h_1accccfdb15134c7ccaf2cfabf210ad929ab4f1215e808b4bcd3283a822d8937324">LiczbaEgzemplarzy</link>&#32;=&#32;5,&#32;<link linkend="_ksiazki_8h_1accccfdb15134c7ccaf2cfabf210ad929acd29f0cb8e075f658f31f3f754f34b7d">LiczbaWypozyczonych</link>&#32;=&#32;6&#32;};
+50 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1ad5f77aa48d5aa3392bd2f3e22e388acc">sortowanie</link>(<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_ksiazki_8h_1a92b3cf569043e5ddcb058a54db66783b">SortowanieKolejnosc</link>&#32;kolejnosc,&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_ksiazki_8h_1accccfdb15134c7ccaf2cfabf210ad929">SortowanieAtrybut</link>&#32;atrybut);
+51 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1a4c6052636c8b6375611bc320b29ff22f">edytuj_liczbe_egzemplarzy</link>(<link linkend="_struct_ksiazka_struktura">Ksiazka</link>&#32;*wpis);
+52 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1a05d1aa1ffff346a6f439481cf14434f8">edytuj_liczbe_wypozyczonych</link>(<link linkend="_struct_ksiazka_struktura">Ksiazka</link>&#32;*wpis);
+53 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1a3e817d138006527a2369e47f458236d3">wyszukaj_ksiazki_po_gatunku</link>();
+54 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1a0b4df348f6c432f40490eb8bdbcee3c6">wyszukaj_po_liczbie_wypozyczonych</link>();
+55 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1a768352a5223d9e1841ce9692aaf43f8d">wyszukaj_po_liczbie_egzemplarzy</link>();
+56 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_ksiazki_8h_1ae189b52f9d8a0e053a3482a79a26f1c6">wydrukuj_po_ID</link>();
+57 
+58 
+59 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

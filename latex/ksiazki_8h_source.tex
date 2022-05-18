@@ -1,6 +1,6 @@
-\hypertarget{ksiazki_8h_source}{}\doxysection{ksiazki.\+h}
+\doxysection{ksiazki.\+h}
 \label{ksiazki_8h_source}\index{/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/ksiazki.h@{/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/ksiazki.h}}
-
+\textbf{ Go to the documentation of this file.}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 }
 \DoxyCodeLine{2 }
@@ -10,7 +10,7 @@
 \DoxyCodeLine{6 \textcolor{preprocessor}{\#include <stdio.h>}}
 \DoxyCodeLine{7 \textcolor{preprocessor}{\#include <stdlib.h>}}
 \DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}common.h"{}}}
-\DoxyCodeLine{9 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_ksiazka_struktura}{KsiazkaStruktura}}}
+\DoxyCodeLine{9 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }KsiazkaStruktura}
 \DoxyCodeLine{10 \{}
 \DoxyCodeLine{11 }
 \DoxyCodeLine{12     \textcolor{keywordtype}{int} ID;}
@@ -22,9 +22,9 @@
 \DoxyCodeLine{18     \textcolor{keywordtype}{int} liczba\_wypozyczonych;}
 \DoxyCodeLine{19     }
 \DoxyCodeLine{20 }
-\DoxyCodeLine{21     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_ksiazka_struktura}{KsiazkaStruktura}} *poprzedni, *nastepny;}
+\DoxyCodeLine{21     \textcolor{keyword}{struct }KsiazkaStruktura *poprzedni, *nastepny;}
 \DoxyCodeLine{22 }
-\DoxyCodeLine{23 \} \mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}};}
+\DoxyCodeLine{23 \} Ksiazka;}
 \DoxyCodeLine{24 }
 \DoxyCodeLine{25 \textcolor{keywordtype}{void} wyswietl\_baze\_ksiazek();}
 \DoxyCodeLine{26 \textcolor{keywordtype}{void} dodaj\_ksiazke();}
@@ -34,26 +34,26 @@
 \DoxyCodeLine{30 \textcolor{keywordtype}{void} wczytaniepliku\_ksiazki();}
 \DoxyCodeLine{31 \textcolor{keywordtype}{void} zapispliku\_ksiazki();}
 \DoxyCodeLine{32 \textcolor{keywordtype}{void} ksiazka\_do\_zarzadzania();}
-\DoxyCodeLine{33 \textcolor{keywordtype}{void} wydrukuj\_ksiazke(\mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}} *wpis);}
-\DoxyCodeLine{34 \textcolor{keywordtype}{void} edytuj\_tytul\_ksiazki(\mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}} *wpis);}
-\DoxyCodeLine{35 \textcolor{keywordtype}{void} edytuj\_gatunek\_ksiazki(\mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}} *wpis);}
-\DoxyCodeLine{36 \textcolor{keywordtype}{void} edytuj\_autora(\mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}} *wpis);}
-\DoxyCodeLine{37 \textcolor{keywordtype}{void} edytuj\_rok(\mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}} *wpis);}
+\DoxyCodeLine{33 \textcolor{keywordtype}{void} wydrukuj\_ksiazke(Ksiazka *wpis);}
+\DoxyCodeLine{34 \textcolor{keywordtype}{void} edytuj\_tytul\_ksiazki(Ksiazka *wpis);}
+\DoxyCodeLine{35 \textcolor{keywordtype}{void} edytuj\_gatunek\_ksiazki(Ksiazka *wpis);}
+\DoxyCodeLine{36 \textcolor{keywordtype}{void} edytuj\_autora(Ksiazka *wpis);}
+\DoxyCodeLine{37 \textcolor{keywordtype}{void} edytuj\_rok(Ksiazka *wpis);}
 \DoxyCodeLine{38 \textcolor{keywordtype}{void} wyswietl\_baze\_ksiazek();}
-\DoxyCodeLine{39 \mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}} *wyszukaj\_ksiazke(\textcolor{keywordtype}{int} ID);}
+\DoxyCodeLine{39 Ksiazka *wyszukaj\_ksiazke(\textcolor{keywordtype}{int} ID);}
 \DoxyCodeLine{40 \textcolor{keywordtype}{int} znajdz\_najwyzsze\_ID\_ksiazki();}
-\DoxyCodeLine{41 \textcolor{keywordtype}{void} edytuj\_ksiazki\_ID\_ksiazki(\mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}} *wpis);}
-\DoxyCodeLine{42 \textcolor{keywordtype}{void} sortowanie\_ksiazek\_niemalejace(\mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}} *ID);}
+\DoxyCodeLine{41 \textcolor{keywordtype}{void} edytuj\_ksiazki\_ID\_ksiazki(Ksiazka *wpis);}
+\DoxyCodeLine{42 \textcolor{keywordtype}{void} sortowanie\_ksiazek\_niemalejace(Ksiazka *ID);}
 \DoxyCodeLine{43 \textcolor{keywordtype}{void} wyszukaj\_ksiazki\_po\_tytule();}
 \DoxyCodeLine{44 \textcolor{keywordtype}{void} wyszukaj\_ksiazki\_po\_autorze();}
 \DoxyCodeLine{45 \textcolor{keywordtype}{void} wyszukaj\_ksiazki\_po\_roku();}
-\DoxyCodeLine{46 \mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}}* zamien(\mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}}* a, \mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}}* b);}
+\DoxyCodeLine{46 Ksiazka* zamien(Ksiazka* a, Ksiazka* b);}
 \DoxyCodeLine{47 \textcolor{keywordtype}{int} policz\_ksiazki();}
 \DoxyCodeLine{48 \textcolor{keyword}{enum} SortowanieKolejnosc \{Rosnaca = 1, Malejaca = 0\}; }
 \DoxyCodeLine{49 \textcolor{keyword}{enum} SortowanieAtrybut \{Tytul = 0, Autor = 1, Rok = 2, Gatunek = 3, ID = 4, LiczbaEgzemplarzy = 5, LiczbaWypozyczonych = 6 \};}
 \DoxyCodeLine{50 \textcolor{keywordtype}{void} sortowanie(\textcolor{keyword}{enum} SortowanieKolejnosc kolejnosc, \textcolor{keyword}{enum} SortowanieAtrybut atrybut);}
-\DoxyCodeLine{51 \textcolor{keywordtype}{void} edytuj\_liczbe\_egzemplarzy(\mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}} *wpis);}
-\DoxyCodeLine{52 \textcolor{keywordtype}{void} edytuj\_liczbe\_wypozyczonych(\mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}} *wpis);}
+\DoxyCodeLine{51 \textcolor{keywordtype}{void} edytuj\_liczbe\_egzemplarzy(Ksiazka *wpis);}
+\DoxyCodeLine{52 \textcolor{keywordtype}{void} edytuj\_liczbe\_wypozyczonych(Ksiazka *wpis);}
 \DoxyCodeLine{53 \textcolor{keywordtype}{void} wyszukaj\_ksiazki\_po\_gatunku();}
 \DoxyCodeLine{54 \textcolor{keywordtype}{void} wyszukaj\_po\_liczbie\_wypozyczonych();}
 \DoxyCodeLine{55 \textcolor{keywordtype}{void} wyszukaj\_po\_liczbie\_egzemplarzy();}

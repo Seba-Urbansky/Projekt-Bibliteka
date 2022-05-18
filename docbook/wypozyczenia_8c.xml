@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_wypozyczenia_8c" xml:lang="en-US">
+<title>/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/wypozyczenia.c File Reference</title>
+<indexterm><primary>/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/wypozyczenia.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &quot;wypozyczenia.h&quot;
+#include &quot;common.h&quot;
+#include &quot;klienci.h&quot;
+#include &quot;ksiazki.h&quot;
+#include &lt;time.h&gt;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_wypozyczenia_8c_1a1ace47d8c8a599b371bb033aaa4006fa">wydrukuj_wypozyczenia</link> (<link linkend="_wypozyczenia_8h_1a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</link> *wpis)</para>
+</listitem>
+            <listitem><para>void <link linkend="_wypozyczenia_8c_1a1ad62ce3ada3806a59561dbd8868b3aa">wyswietl_kto_wypozyczyl</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_wypozyczenia_8c_1a8e7e4f1699ef7653e588fa877116cfdb">czy_klient_ma_wypozyczenia</link> (<link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link> *klient)</para>
+</listitem>
+            <listitem><para>int <link linkend="_wypozyczenia_8c_1accf309e4d88d00176ac21cf0d1d4fb8e">czy_ksiazka_jest_wypozyczona</link> (<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> *ksiazka)</para>
+</listitem>
+            <listitem><para>float <link linkend="_wypozyczenia_8c_1a65b934851a82f89f3e684f6021a09e24">policz_kare</link> (<link linkend="_wypozyczenia_8h_1a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</link> *wpis)</para>
+</listitem>
+            <listitem><para>int <link linkend="_wypozyczenia_8c_1a73c4ffad06374a721eeb8ed60d421821">zalegle_wypozyczenia</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_wypozyczenia_8c_1a242894dcf63fe7ce16734b33ee52de5a">znajdz_najwyzsze_ID</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_wypozyczenia_8c_1a58b0f0c25ad1f4a3ea56de0b29e0194c">edytuj_wypozyczenia_ID_ksiazki</link> (<link linkend="_wypozyczenia_8h_1a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</link> *wypozyczenie)</para>
+</listitem>
+            <listitem><para>void <link linkend="_wypozyczenia_8c_1a53dfbd5acde67310c956b1c31ecb8f3b">edytuj_wypozyczenia_numer_karty</link> (<link linkend="_wypozyczenia_8h_1a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</link> *wpis)</para>
+</listitem>
+            <listitem><para>void <link linkend="_wypozyczenia_8c_1afd5606f068669c3669e5ec45ac6192b2">zwroc_wypozyczenie</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_wypozyczenia_8c_1a7c1d3c89910025671788a0afceccc9db">usun_wypozyczenie</link> (<link linkend="_wypozyczenia_8h_1a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</link> *wpis)</para>
+</listitem>
+            <listitem><para>void <link linkend="_wypozyczenia_8c_1a2bf906adc10478314379e50d61bfd6f5">edytuj_wypozyczenia_ID</link> (<link linkend="_wypozyczenia_8h_1a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</link> *wpis)</para>
+</listitem>
+            <listitem><para>void <link linkend="_wypozyczenia_8c_1ab4d7bce300ef21148db92a04bf30dfc8">dodaj_wypozyczenie</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_wypozyczenia_8c_1a1ed9abde669d8ae22e4b7594016ada7c">wczytaniepliku_wypozyczenia</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_wypozyczenia_8c_1ad142cd21806abde6e1b232865f125bb2">edytuj_wypozyczenia_kiedy</link> (<link linkend="_wypozyczenia_8h_1a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</link> *wpis)</para>
+</listitem>
+            <listitem><para>void <link linkend="_wypozyczenia_8c_1a528dd1f42767194ed55cf4f9bd04713e">edytuj_wypozyczenia_do_kiedy</link> (<link linkend="_wypozyczenia_8h_1a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</link> *wpis)</para>
+</listitem>
+            <listitem><para>void <link linkend="_wypozyczenia_8c_1ab8fb617326e316fb5a174c38eb474d17">zapispliku_wypozyczenia</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_wypozyczenia_8h_1a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</link> * <link linkend="_wypozyczenia_8c_1ae7da09e695b94b1786003929ba21c4a1">pierwsze_wypozyczenie</link> = NULL</para>
+</listitem>
+            <listitem><para><link linkend="_wypozyczenia_8h_1a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</link> * <link linkend="_wypozyczenia_8c_1aa8349178c8f33d18a4ae5b32fdefb469">ostatnie_wypozyczenie</link> = NULL</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_wypozyczenia_8c_1a8e7e4f1699ef7653e588fa877116cfdb"/><section>
+    <title>czy_klient_ma_wypozyczenia()</title>
+<indexterm><primary>czy_klient_ma_wypozyczenia</primary><secondary>wypozyczenia.c</secondary></indexterm>
+<indexterm><primary>wypozyczenia.c</primary><secondary>czy_klient_ma_wypozyczenia</secondary></indexterm>
+<para><computeroutput>int czy_klient_ma_wypozyczenia (<link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link> * klient)</computeroutput></para></section>
+<anchor xml:id="_wypozyczenia_8c_1accf309e4d88d00176ac21cf0d1d4fb8e"/><section>
+    <title>czy_ksiazka_jest_wypozyczona()</title>
+<indexterm><primary>czy_ksiazka_jest_wypozyczona</primary><secondary>wypozyczenia.c</secondary></indexterm>
+<indexterm><primary>wypozyczenia.c</primary><secondary>czy_ksiazka_jest_wypozyczona</secondary></indexterm>
+<para><computeroutput>int czy_ksiazka_jest_wypozyczona (<link linkend="_ksiazki_8h_1add1e74192a9c069b274f645990a6a6b4">Ksiazka</link> * ksiazka)</computeroutput></para></section>
+<anchor xml:id="_wypozyczenia_8c_1ab4d7bce300ef21148db92a04bf30dfc8"/><section>
+    <title>dodaj_wypozyczenie()</title>
+<indexterm><primary>dodaj_wypozyczenie</primary><secondary>wypozyczenia.c</secondary></indexterm>
+<indexterm><primary>wypozyczenia.c</primary><secondary>dodaj_wypozyczenie</secondary></indexterm>
+<para><computeroutput>void dodaj_wypozyczenie ( )</computeroutput></para></section>
+<anchor xml:id="_wypozyczenia_8c_1a528dd1f42767194ed55cf4f9bd04713e"/><section>
+    <title>edytuj_wypozyczenia_do_kiedy()</title>
+<indexterm><primary>edytuj_wypozyczenia_do_kiedy</primary><secondary>wypozyczenia.c</secondary></indexterm>
+<indexterm><primary>wypozyczenia.c</primary><secondary>edytuj_wypozyczenia_do_kiedy</secondary></indexterm>
+<para><computeroutput>void edytuj_wypozyczenia_do_kiedy (<link linkend="_wypozyczenia_8h_1a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</link> * wpis)</computeroutput></para></section>
+<anchor xml:id="_wypozyczenia_8c_1a2bf906adc10478314379e50d61bfd6f5"/><section>
+    <title>edytuj_wypozyczenia_ID()</title>
+<indexterm><primary>edytuj_wypozyczenia_ID</primary><secondary>wypozyczenia.c</secondary></indexterm>
+<indexterm><primary>wypozyczenia.c</primary><secondary>edytuj_wypozyczenia_ID</secondary></indexterm>
+<para><computeroutput>void edytuj_wypozyczenia_ID (<link linkend="_wypozyczenia_8h_1a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</link> * wpis)</computeroutput></para></section>
+<anchor xml:id="_wypozyczenia_8c_1a58b0f0c25ad1f4a3ea56de0b29e0194c"/><section>
+    <title>edytuj_wypozyczenia_ID_ksiazki()</title>
+<indexterm><primary>edytuj_wypozyczenia_ID_ksiazki</primary><secondary>wypozyczenia.c</secondary></indexterm>
+<indexterm><primary>wypozyczenia.c</primary><secondary>edytuj_wypozyczenia_ID_ksiazki</secondary></indexterm>
+<para><computeroutput>void edytuj_wypozyczenia_ID_ksiazki (<link linkend="_wypozyczenia_8h_1a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</link> * wypozyczenie)</computeroutput></para></section>
+<anchor xml:id="_wypozyczenia_8c_1ad142cd21806abde6e1b232865f125bb2"/><section>
+    <title>edytuj_wypozyczenia_kiedy()</title>
+<indexterm><primary>edytuj_wypozyczenia_kiedy</primary><secondary>wypozyczenia.c</secondary></indexterm>
+<indexterm><primary>wypozyczenia.c</primary><secondary>edytuj_wypozyczenia_kiedy</secondary></indexterm>
+<para><computeroutput>void edytuj_wypozyczenia_kiedy (<link linkend="_wypozyczenia_8h_1a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</link> * wpis)</computeroutput></para></section>
+<anchor xml:id="_wypozyczenia_8c_1a53dfbd5acde67310c956b1c31ecb8f3b"/><section>
+    <title>edytuj_wypozyczenia_numer_karty()</title>
+<indexterm><primary>edytuj_wypozyczenia_numer_karty</primary><secondary>wypozyczenia.c</secondary></indexterm>
+<indexterm><primary>wypozyczenia.c</primary><secondary>edytuj_wypozyczenia_numer_karty</secondary></indexterm>
+<para><computeroutput>void edytuj_wypozyczenia_numer_karty (<link linkend="_wypozyczenia_8h_1a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</link> * wpis)</computeroutput></para></section>
+<anchor xml:id="_wypozyczenia_8c_1a65b934851a82f89f3e684f6021a09e24"/><section>
+    <title>policz_kare()</title>
+<indexterm><primary>policz_kare</primary><secondary>wypozyczenia.c</secondary></indexterm>
+<indexterm><primary>wypozyczenia.c</primary><secondary>policz_kare</secondary></indexterm>
+<para><computeroutput>float policz_kare (<link linkend="_wypozyczenia_8h_1a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</link> * wpis)</computeroutput></para></section>
+<anchor xml:id="_wypozyczenia_8c_1a7c1d3c89910025671788a0afceccc9db"/><section>
+    <title>usun_wypozyczenie()</title>
+<indexterm><primary>usun_wypozyczenie</primary><secondary>wypozyczenia.c</secondary></indexterm>
+<indexterm><primary>wypozyczenia.c</primary><secondary>usun_wypozyczenie</secondary></indexterm>
+<para><computeroutput>void usun_wypozyczenie (<link linkend="_wypozyczenia_8h_1a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</link> * wpis)</computeroutput></para></section>
+<anchor xml:id="_wypozyczenia_8c_1a1ed9abde669d8ae22e4b7594016ada7c"/><section>
+    <title>wczytaniepliku_wypozyczenia()</title>
+<indexterm><primary>wczytaniepliku_wypozyczenia</primary><secondary>wypozyczenia.c</secondary></indexterm>
+<indexterm><primary>wypozyczenia.c</primary><secondary>wczytaniepliku_wypozyczenia</secondary></indexterm>
+<para><computeroutput>void wczytaniepliku_wypozyczenia ( )</computeroutput></para></section>
+<anchor xml:id="_wypozyczenia_8c_1a1ace47d8c8a599b371bb033aaa4006fa"/><section>
+    <title>wydrukuj_wypozyczenia()</title>
+<indexterm><primary>wydrukuj_wypozyczenia</primary><secondary>wypozyczenia.c</secondary></indexterm>
+<indexterm><primary>wypozyczenia.c</primary><secondary>wydrukuj_wypozyczenia</secondary></indexterm>
+<para><computeroutput>void wydrukuj_wypozyczenia (<link linkend="_wypozyczenia_8h_1a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</link> * wpis)</computeroutput></para></section>
+<anchor xml:id="_wypozyczenia_8c_1a1ad62ce3ada3806a59561dbd8868b3aa"/><section>
+    <title>wyswietl_kto_wypozyczyl()</title>
+<indexterm><primary>wyswietl_kto_wypozyczyl</primary><secondary>wypozyczenia.c</secondary></indexterm>
+<indexterm><primary>wypozyczenia.c</primary><secondary>wyswietl_kto_wypozyczyl</secondary></indexterm>
+<para><computeroutput>void wyswietl_kto_wypozyczyl ( )</computeroutput></para></section>
+<anchor xml:id="_wypozyczenia_8c_1a73c4ffad06374a721eeb8ed60d421821"/><section>
+    <title>zalegle_wypozyczenia()</title>
+<indexterm><primary>zalegle_wypozyczenia</primary><secondary>wypozyczenia.c</secondary></indexterm>
+<indexterm><primary>wypozyczenia.c</primary><secondary>zalegle_wypozyczenia</secondary></indexterm>
+<para><computeroutput>int zalegle_wypozyczenia ( )</computeroutput></para></section>
+<anchor xml:id="_wypozyczenia_8c_1ab8fb617326e316fb5a174c38eb474d17"/><section>
+    <title>zapispliku_wypozyczenia()</title>
+<indexterm><primary>zapispliku_wypozyczenia</primary><secondary>wypozyczenia.c</secondary></indexterm>
+<indexterm><primary>wypozyczenia.c</primary><secondary>zapispliku_wypozyczenia</secondary></indexterm>
+<para><computeroutput>void zapispliku_wypozyczenia ( )</computeroutput></para></section>
+<anchor xml:id="_wypozyczenia_8c_1a242894dcf63fe7ce16734b33ee52de5a"/><section>
+    <title>znajdz_najwyzsze_ID()</title>
+<indexterm><primary>znajdz_najwyzsze_ID</primary><secondary>wypozyczenia.c</secondary></indexterm>
+<indexterm><primary>wypozyczenia.c</primary><secondary>znajdz_najwyzsze_ID</secondary></indexterm>
+<para><computeroutput>int znajdz_najwyzsze_ID ( )</computeroutput></para></section>
+<anchor xml:id="_wypozyczenia_8c_1afd5606f068669c3669e5ec45ac6192b2"/><section>
+    <title>zwroc_wypozyczenie()</title>
+<indexterm><primary>zwroc_wypozyczenie</primary><secondary>wypozyczenia.c</secondary></indexterm>
+<indexterm><primary>wypozyczenia.c</primary><secondary>zwroc_wypozyczenie</secondary></indexterm>
+<para><computeroutput>void zwroc_wypozyczenie ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_wypozyczenia_8c_1aa8349178c8f33d18a4ae5b32fdefb469"/><section>
+    <title>ostatnie_wypozyczenie</title>
+<indexterm><primary>ostatnie_wypozyczenie</primary><secondary>wypozyczenia.c</secondary></indexterm>
+<indexterm><primary>wypozyczenia.c</primary><secondary>ostatnie_wypozyczenie</secondary></indexterm>
+<para><computeroutput><link linkend="_wypozyczenia_8h_1a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</link>* ostatnie_wypozyczenie = NULL</computeroutput></para></section>
+<anchor xml:id="_wypozyczenia_8c_1ae7da09e695b94b1786003929ba21c4a1"/><section>
+    <title>pierwsze_wypozyczenie</title>
+<indexterm><primary>pierwsze_wypozyczenie</primary><secondary>wypozyczenia.c</secondary></indexterm>
+<indexterm><primary>wypozyczenia.c</primary><secondary>pierwsze_wypozyczenie</secondary></indexterm>
+<para><computeroutput><link linkend="_wypozyczenia_8h_1a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</link>* pierwsze_wypozyczenie = NULL</computeroutput></para></section>
+</section>
+</section>

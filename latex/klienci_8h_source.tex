@@ -1,6 +1,6 @@
-\hypertarget{klienci_8h_source}{}\doxysection{klienci.\+h}
+\doxysection{klienci.\+h}
 \label{klienci_8h_source}\index{/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/klienci.h@{/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/klienci.h}}
-
+\textbf{ Go to the documentation of this file.}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 }
 \DoxyCodeLine{2 }
@@ -12,45 +12,47 @@
 \DoxyCodeLine{8 \textcolor{preprocessor}{\#include <stdio.h>}}
 \DoxyCodeLine{9 \textcolor{preprocessor}{\#include <stdlib.h>}}
 \DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}common.h"{}}}
-\DoxyCodeLine{61 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_klient_struktura}{KlientStruktura}}}
-\DoxyCodeLine{62 \{}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }KlientStruktura}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16     \textcolor{keywordtype}{int} numer\_karty;}
+\DoxyCodeLine{17     \textcolor{keywordtype}{char}* imie[MAX];}
+\DoxyCodeLine{18     \textcolor{keywordtype}{char}* nazwisko[MAX];}
+\DoxyCodeLine{19     \textcolor{keywordtype}{char}* telefon[MAX];}
+\DoxyCodeLine{20     \textcolor{keywordtype}{char}* email[MAX];}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{keyword}{struct }KlientStruktura *poprzedni, *nastepny;}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \} Klient;}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 }
+\DoxyCodeLine{32 \textcolor{keywordtype}{void} wyswietl\_baze\_klientow();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{42 \textcolor{keywordtype}{void} dodaj\_klienta();}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{keywordtype}{void} edytuj\_klienta();}
+\DoxyCodeLine{46 \textcolor{keywordtype}{void} usun\_klienta();}
+\DoxyCodeLine{47 \textcolor{keywordtype}{void} menu\_klientow();}
+\DoxyCodeLine{48 \textcolor{keywordtype}{void} wczytaniepliku\_klienci();}
+\DoxyCodeLine{49 \textcolor{keywordtype}{void} zapispliku\_klienci();}
+\DoxyCodeLine{50 \textcolor{keywordtype}{void} znajdz\_klienta\_do\_zarzadzania();}
+\DoxyCodeLine{51 \textcolor{keywordtype}{void} wydrukuj\_klienta(Klient* wpis);}
+\DoxyCodeLine{52 \textcolor{keywordtype}{void} edytuj\_imie\_klienta(Klient* wpis);}
+\DoxyCodeLine{53 \textcolor{keywordtype}{void} edytuj\_nazwisko\_klienta(Klient* wpis);}
+\DoxyCodeLine{54 \textcolor{keywordtype}{void} edytuj\_telefon\_klienta(Klient* wpis);}
+\DoxyCodeLine{55 \textcolor{keywordtype}{void} edytuj\_email\_klienta(Klient* wpis);}
+\DoxyCodeLine{56 \textcolor{keywordtype}{void} wyswietl\_baze\_klientow();}
+\DoxyCodeLine{57 Klient* wyszukaj\_klienta(\textcolor{keywordtype}{int} numer\_karty);}
+\DoxyCodeLine{58 \textcolor{keywordtype}{int} znajdz\_najwyzsze\_ID\_klienci();}
+\DoxyCodeLine{59 \textcolor{keywordtype}{void} edytuj\_wypozyczenia\_numer\_karty\_abc(Klient* wpis);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 }
 \DoxyCodeLine{63 }
-\DoxyCodeLine{64     \textcolor{keywordtype}{int} numer\_karty;}
-\DoxyCodeLine{65     \textcolor{keywordtype}{char}* imie[MAX];}
-\DoxyCodeLine{66     \textcolor{keywordtype}{char}* nazwisko[MAX];}
-\DoxyCodeLine{67     \textcolor{keywordtype}{char}* telefon[MAX];}
-\DoxyCodeLine{68     \textcolor{keywordtype}{char}* email[MAX];}
-\DoxyCodeLine{69 }
-\DoxyCodeLine{70     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_klient_struktura}{KlientStruktura}} *poprzedni, *nastepny;}
-\DoxyCodeLine{71 }
-\DoxyCodeLine{72 \} \mbox{\hyperlink{struct_klient_struktura}{Klient}};}
-\DoxyCodeLine{73 }
-\DoxyCodeLine{74 }
-\DoxyCodeLine{80 \textcolor{keywordtype}{void} wyswietl\_baze\_klientow();}
-\DoxyCodeLine{81 }
-\DoxyCodeLine{90 \textcolor{keywordtype}{void} dodaj\_klienta();}
-\DoxyCodeLine{91 }
-\DoxyCodeLine{92 }
-\DoxyCodeLine{93 \textcolor{keywordtype}{void} edytuj\_klienta();}
-\DoxyCodeLine{94 \textcolor{keywordtype}{void} usun\_klienta();}
-\DoxyCodeLine{95 \textcolor{keywordtype}{void} menu\_klientow();}
-\DoxyCodeLine{96 \textcolor{keywordtype}{void} wczytaniepliku\_klienci();}
-\DoxyCodeLine{97 \textcolor{keywordtype}{void} zapispliku\_klienci();}
-\DoxyCodeLine{98 \textcolor{keywordtype}{void} znajdz\_klienta\_do\_zarzadzania();}
-\DoxyCodeLine{99 \textcolor{keywordtype}{void} wydrukuj\_klienta(\mbox{\hyperlink{struct_klient_struktura}{Klient}}* wpis);}
-\DoxyCodeLine{100 \textcolor{keywordtype}{void} edytuj\_imie\_klienta(\mbox{\hyperlink{struct_klient_struktura}{Klient}}* wpis);}
-\DoxyCodeLine{101 \textcolor{keywordtype}{void} edytuj\_nazwisko\_klienta(\mbox{\hyperlink{struct_klient_struktura}{Klient}}* wpis);}
-\DoxyCodeLine{102 \textcolor{keywordtype}{void} edytuj\_telefon\_klienta(\mbox{\hyperlink{struct_klient_struktura}{Klient}}* wpis);}
-\DoxyCodeLine{103 \textcolor{keywordtype}{void} edytuj\_email\_klienta(\mbox{\hyperlink{struct_klient_struktura}{Klient}}* wpis);}
-\DoxyCodeLine{104 \textcolor{keywordtype}{void} wyswietl\_baze\_klientow();}
-\DoxyCodeLine{105 \mbox{\hyperlink{struct_klient_struktura}{Klient}}* wyszukaj\_klienta(\textcolor{keywordtype}{int} numer\_karty);}
-\DoxyCodeLine{106 \textcolor{keywordtype}{int} znajdz\_najwyzsze\_ID\_klienci();}
-\DoxyCodeLine{107 \textcolor{keywordtype}{void} edytuj\_wypozyczenia\_numer\_karty\_abc(\mbox{\hyperlink{struct_klient_struktura}{Klient}}* wpis);}
-\DoxyCodeLine{108 }
-\DoxyCodeLine{109 }
-\DoxyCodeLine{110 }
-\DoxyCodeLine{111 }
-\DoxyCodeLine{112 }
-\DoxyCodeLine{113 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

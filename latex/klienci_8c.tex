@@ -1,0 +1,203 @@
+\doxysection{/\+Users/sebastian/\+Projects/\+PP2.PRO.1ID15\+B.\+SIWEK.\+URBAŃ\+SKI.\+KM.2/\+PP2.PRO.1ID15\+B.\+SIWEK.\+URBAŃ\+SKI.\+KM.2/klienci.c File Reference}
+\label{klienci_8c}\index{/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/klienci.c@{/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/klienci.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}klienci.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ MAX}~32
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ wyswietl\+\_\+baze\+\_\+klientow} ()
+\begin{DoxyCompactList}\small\item\em Funkcja wyswietl\+\_\+baze\+\_\+klientow wyswietla dane klientow z plikku. \end{DoxyCompactList}\item 
+void \textbf{ dodaj\+\_\+klienta} ()
+\begin{DoxyCompactList}\small\item\em Funkcja wyswietl\+\_\+baze\+\_\+klientow wyswietla dane klientow z pliku. \end{DoxyCompactList}\item 
+int \textbf{ znajdz\+\_\+najwyzsze\+\_\+\+ID\+\_\+klienci} ()
+\begin{DoxyCompactList}\small\item\em Funkcja wyszukuje w pliku ID klienta o najwyzszej wartosci. \end{DoxyCompactList}\item 
+void \textbf{ edytuj\+\_\+wypozyczenia\+\_\+numer\+\_\+karty\+\_\+abc} (\textbf{ Klient} $\ast$wpis)
+\begin{DoxyCompactList}\small\item\em Funkcja wyszukuje w pliku ID klienta o najwyzszej wartosci. \end{DoxyCompactList}\item 
+\textbf{ Klient} $\ast$ \textbf{ wyszukaj\+\_\+klienta} (int numer\+\_\+karty)
+\item 
+void \textbf{ wydrukuj\+\_\+klienta} (\textbf{ Klient} $\ast$wpis)
+\item 
+void \textbf{ edytuj\+\_\+imie\+\_\+klienta} (\textbf{ Klient} $\ast$wpis)
+\item 
+void \textbf{ edytuj\+\_\+telefon\+\_\+klienta} (\textbf{ Klient} $\ast$wpis)
+\item 
+void \textbf{ edytuj\+\_\+email\+\_\+klienta} (\textbf{ Klient} $\ast$wpis)
+\item 
+void \textbf{ edytuj\+\_\+nazwisko\+\_\+klienta} (\textbf{ Klient} $\ast$wpis)
+\item 
+void \textbf{ usun\+\_\+klienta} (\textbf{ Klient} $\ast$wpis)
+\item 
+void \textbf{ wczytaniepliku\+\_\+klienci} ()
+\item 
+void \textbf{ zapispliku\+\_\+klienci} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Klient} $\ast$ \textbf{ pierwszy\+\_\+klient} = NULL
+\item 
+\textbf{ Klient} $\ast$ \textbf{ ostatni\+\_\+klient} = NULL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{klienci_8c_a392fb874e547e582e9c66a08a1f23326}} 
+\index{klienci.c@{klienci.c}!MAX@{MAX}}
+\index{MAX@{MAX}!klienci.c@{klienci.c}}
+\doxysubsubsection{MAX}
+{\footnotesize\ttfamily \#define MAX~32}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{klienci_8c_ab0f0128ac537d0a9c981f44d93517ec9}} 
+\index{klienci.c@{klienci.c}!dodaj\_klienta@{dodaj\_klienta}}
+\index{dodaj\_klienta@{dodaj\_klienta}!klienci.c@{klienci.c}}
+\doxysubsubsection{dodaj\_klienta()}
+{\footnotesize\ttfamily void dodaj\+\_\+klienta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funkcja wyswietl\+\_\+baze\+\_\+klientow wyswietla dane klientow z pliku. 
+
+Jesli nie ma klientow w bazie to tworzymy nowego klienta
+
+w przeciwnym wypadku wpis uzytkownika dodaje nastepnego klienta do bazy klientow 
+\begin{DoxyParams}{Parameters}
+{\em (brak} & parametru) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Dodaje do bazy w pliku nowego klienta na podstawie danych podanych przez uzytkownika 
+\end{DoxyReturn}
+\mbox{\label{klienci_8c_a39e781ff7f36da456490a5df2e0224c4}} 
+\index{klienci.c@{klienci.c}!edytuj\_email\_klienta@{edytuj\_email\_klienta}}
+\index{edytuj\_email\_klienta@{edytuj\_email\_klienta}!klienci.c@{klienci.c}}
+\doxysubsubsection{edytuj\_email\_klienta()}
+{\footnotesize\ttfamily void edytuj\+\_\+email\+\_\+klienta (\begin{DoxyParamCaption}\item[{\textbf{ Klient} $\ast$}]{wpis }\end{DoxyParamCaption})}
+
+\mbox{\label{klienci_8c_ad0aa69f2005242c3b2a4080f2cdc2549}} 
+\index{klienci.c@{klienci.c}!edytuj\_imie\_klienta@{edytuj\_imie\_klienta}}
+\index{edytuj\_imie\_klienta@{edytuj\_imie\_klienta}!klienci.c@{klienci.c}}
+\doxysubsubsection{edytuj\_imie\_klienta()}
+{\footnotesize\ttfamily void edytuj\+\_\+imie\+\_\+klienta (\begin{DoxyParamCaption}\item[{\textbf{ Klient} $\ast$}]{wpis }\end{DoxyParamCaption})}
+
+\mbox{\label{klienci_8c_aa15d3041ef12ae2395ec4c333348ed54}} 
+\index{klienci.c@{klienci.c}!edytuj\_nazwisko\_klienta@{edytuj\_nazwisko\_klienta}}
+\index{edytuj\_nazwisko\_klienta@{edytuj\_nazwisko\_klienta}!klienci.c@{klienci.c}}
+\doxysubsubsection{edytuj\_nazwisko\_klienta()}
+{\footnotesize\ttfamily void edytuj\+\_\+nazwisko\+\_\+klienta (\begin{DoxyParamCaption}\item[{\textbf{ Klient} $\ast$}]{wpis }\end{DoxyParamCaption})}
+
+\mbox{\label{klienci_8c_a968b0adcc99972b069d561afc5bf3fb2}} 
+\index{klienci.c@{klienci.c}!edytuj\_telefon\_klienta@{edytuj\_telefon\_klienta}}
+\index{edytuj\_telefon\_klienta@{edytuj\_telefon\_klienta}!klienci.c@{klienci.c}}
+\doxysubsubsection{edytuj\_telefon\_klienta()}
+{\footnotesize\ttfamily void edytuj\+\_\+telefon\+\_\+klienta (\begin{DoxyParamCaption}\item[{\textbf{ Klient} $\ast$}]{wpis }\end{DoxyParamCaption})}
+
+\mbox{\label{klienci_8c_ae5c2b50f7b091e15b790fdc2bedd2338}} 
+\index{klienci.c@{klienci.c}!edytuj\_wypozyczenia\_numer\_karty\_abc@{edytuj\_wypozyczenia\_numer\_karty\_abc}}
+\index{edytuj\_wypozyczenia\_numer\_karty\_abc@{edytuj\_wypozyczenia\_numer\_karty\_abc}!klienci.c@{klienci.c}}
+\doxysubsubsection{edytuj\_wypozyczenia\_numer\_karty\_abc()}
+{\footnotesize\ttfamily void edytuj\+\_\+wypozyczenia\+\_\+numer\+\_\+karty\+\_\+abc (\begin{DoxyParamCaption}\item[{\textbf{ Klient} $\ast$}]{wpis }\end{DoxyParamCaption})}
+
+
+
+Funkcja wyszukuje w pliku ID klienta o najwyzszej wartosci. 
+
+jesli wpis uzytkownika jest wiekszy od aktualnego max, to nastepuje nowe maksimum 
+\begin{DoxyParams}{Parameters}
+{\em (brak} & parametru) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zwracane jest najwyzsze ID klienta 
+\end{DoxyReturn}
+\mbox{\label{klienci_8c_a764ec0a74093c8d3d0f311dcc3c92366}} 
+\index{klienci.c@{klienci.c}!usun\_klienta@{usun\_klienta}}
+\index{usun\_klienta@{usun\_klienta}!klienci.c@{klienci.c}}
+\doxysubsubsection{usun\_klienta()}
+{\footnotesize\ttfamily void usun\+\_\+klienta (\begin{DoxyParamCaption}\item[{\textbf{ Klient} $\ast$}]{wpis }\end{DoxyParamCaption})}
+
+\mbox{\label{klienci_8c_a17266993cbb25779b37136a32f5438e7}} 
+\index{klienci.c@{klienci.c}!wczytaniepliku\_klienci@{wczytaniepliku\_klienci}}
+\index{wczytaniepliku\_klienci@{wczytaniepliku\_klienci}!klienci.c@{klienci.c}}
+\doxysubsubsection{wczytaniepliku\_klienci()}
+{\footnotesize\ttfamily void wczytaniepliku\+\_\+klienci (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{klienci_8c_a420de625e3c38ba1dad8c333fbd6447c}} 
+\index{klienci.c@{klienci.c}!wydrukuj\_klienta@{wydrukuj\_klienta}}
+\index{wydrukuj\_klienta@{wydrukuj\_klienta}!klienci.c@{klienci.c}}
+\doxysubsubsection{wydrukuj\_klienta()}
+{\footnotesize\ttfamily void wydrukuj\+\_\+klienta (\begin{DoxyParamCaption}\item[{\textbf{ Klient} $\ast$}]{wpis }\end{DoxyParamCaption})}
+
+\mbox{\label{klienci_8c_a3eb845814072e027fabee9798ceda9a2}} 
+\index{klienci.c@{klienci.c}!wyswietl\_baze\_klientow@{wyswietl\_baze\_klientow}}
+\index{wyswietl\_baze\_klientow@{wyswietl\_baze\_klientow}!klienci.c@{klienci.c}}
+\doxysubsubsection{wyswietl\_baze\_klientow()}
+{\footnotesize\ttfamily void wyswietl\+\_\+baze\+\_\+klientow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funkcja wyswietl\+\_\+baze\+\_\+klientow wyswietla dane klientow z plikku. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em (brak} & parametru) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zwracane sa dane klientow z pliku 
+\end{DoxyReturn}
+\mbox{\label{klienci_8c_a83984b8b6bc1f51e064eeb74ea2c7403}} 
+\index{klienci.c@{klienci.c}!wyszukaj\_klienta@{wyszukaj\_klienta}}
+\index{wyszukaj\_klienta@{wyszukaj\_klienta}!klienci.c@{klienci.c}}
+\doxysubsubsection{wyszukaj\_klienta()}
+{\footnotesize\ttfamily \textbf{ Klient} $\ast$ wyszukaj\+\_\+klienta (\begin{DoxyParamCaption}\item[{int}]{numer\+\_\+karty }\end{DoxyParamCaption})}
+
+\mbox{\label{klienci_8c_ac4a3e4f8dfde3d84742d574c7cfcd162}} 
+\index{klienci.c@{klienci.c}!zapispliku\_klienci@{zapispliku\_klienci}}
+\index{zapispliku\_klienci@{zapispliku\_klienci}!klienci.c@{klienci.c}}
+\doxysubsubsection{zapispliku\_klienci()}
+{\footnotesize\ttfamily void zapispliku\+\_\+klienci (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{klienci_8c_a460e7e1b92717eb9ae93cdf294abc66d}} 
+\index{klienci.c@{klienci.c}!znajdz\_najwyzsze\_ID\_klienci@{znajdz\_najwyzsze\_ID\_klienci}}
+\index{znajdz\_najwyzsze\_ID\_klienci@{znajdz\_najwyzsze\_ID\_klienci}!klienci.c@{klienci.c}}
+\doxysubsubsection{znajdz\_najwyzsze\_ID\_klienci()}
+{\footnotesize\ttfamily int znajdz\+\_\+najwyzsze\+\_\+\+ID\+\_\+klienci (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funkcja wyszukuje w pliku ID klienta o najwyzszej wartosci. 
+
+jesli wpis uzytkownika jest wiekszy od aktualnego max, to nastepuje nowe maksimum 
+\begin{DoxyParams}{Parameters}
+{\em (brak} & parametru) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zwracane jest najwyzsze ID klienta 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{klienci_8c_aae7759d523352a376b850bdf6a3a2e9c}} 
+\index{klienci.c@{klienci.c}!ostatni\_klient@{ostatni\_klient}}
+\index{ostatni\_klient@{ostatni\_klient}!klienci.c@{klienci.c}}
+\doxysubsubsection{ostatni\_klient}
+{\footnotesize\ttfamily \textbf{ Klient}$\ast$ ostatni\+\_\+klient = NULL}
+
+\mbox{\label{klienci_8c_a3c0de94a34b41d515e5375a87a93e31e}} 
+\index{klienci.c@{klienci.c}!pierwszy\_klient@{pierwszy\_klient}}
+\index{pierwszy\_klient@{pierwszy\_klient}!klienci.c@{klienci.c}}
+\doxysubsubsection{pierwszy\_klient}
+{\footnotesize\ttfamily \textbf{ Klient}$\ast$ pierwszy\+\_\+klient = NULL}
+

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_menu_8h_source" xml:lang="en-US">
+<title>menu.h</title>
+<indexterm><primary>/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/menu.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+2 
+3 
+4 
+5 <emphasis role="preprocessor">#ifndef&#32;MENU_H</emphasis>
+6 <emphasis role="preprocessor">#define&#32;MENU_H</emphasis>
+7 <emphasis role="preprocessor">#define&#32;MAX&#32;32</emphasis>
+8 
+9 <emphasis role="preprocessor">#include&#32;&lt;stdio.h&gt;</emphasis>
+10 <emphasis role="preprocessor">#include&#32;&lt;stdlib.h&gt;</emphasis>
+11 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_klienci_8h">klienci.h</link>&quot;</emphasis>
+12 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_wypozyczenia_8h">wypozyczenia.h</link>&quot;</emphasis>
+13 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_ksiazki_8h">ksiazki.h</link>&quot;</emphasis>
+14 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_common_8h">common.h</link>&quot;</emphasis>
+15 
+16 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_menu_8h_1a2a0e843767aeea4f433a28b9c54f573a">menu</link>();
+17 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_menu_8h_1aec8790f898cfbcbe5f55f64d5261171b">menu_klientow</link>();
+18 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_menu_8h_1a3f3facc3495396c3b0568da2e6c07531">menu_glowne</link>();
+19 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_menu_8h_1ad515018a91175fffa50289ef40ca4342">menu_ksiazek</link>();
+20 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_menu_8h_1a504fe70d21c7505d5de373dde5f6e7cf">menu_wypozyczen</link>();
+21 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_menu_8h_1a468e8dc64b84ff2cfd08f982464af171">menu_klienta</link>(<link linkend="_struct_klient_struktura">Klient</link>*&#32;klient);
+22 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_menu_8h_1a51fd419160a2d5ba63553f19185de849">menu_zarzadzaj_klientem</link>();
+23 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_menu_8h_1a3f215175ff850c6a9a352eeca19393ee">menu_ksiazki</link>(<link linkend="_struct_ksiazka_struktura">Ksiazka</link>*&#32;ksiazka);
+24 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_menu_8h_1a24975b5a3c4431b6beeba2c253bc1e8e">menu_zarzadzaj_ksiazkami</link>();
+25 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_menu_8h_1a6d8fe156ede2cb6e105696fea61a911b">wyjscie</link>();
+26 
+27 
+28 
+29 
+30 
+31 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

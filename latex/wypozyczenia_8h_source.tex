@@ -1,6 +1,6 @@
-\hypertarget{wypozyczenia_8h_source}{}\doxysection{wypozyczenia.\+h}
+\doxysection{wypozyczenia.\+h}
 \label{wypozyczenia_8h_source}\index{/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/wypozyczenia.h@{/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/wypozyczenia.h}}
-
+\textbf{ Go to the documentation of this file.}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 }
 \DoxyCodeLine{2 }
@@ -17,7 +17,7 @@
 \DoxyCodeLine{13 \textcolor{preprocessor}{\#include <time.h>}}
 \DoxyCodeLine{14 }
 \DoxyCodeLine{15 }
-\DoxyCodeLine{16 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_wypozyczenia_struktura}{WypozyczeniaStruktura}}}
+\DoxyCodeLine{16 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }WypozyczeniaStruktura}
 \DoxyCodeLine{17 \{}
 \DoxyCodeLine{18     \textcolor{keywordtype}{int} numer\_karty;}
 \DoxyCodeLine{19     \textcolor{keywordtype}{int} ID\_ksiazki;}
@@ -25,9 +25,9 @@
 \DoxyCodeLine{21     time\_t kiedy;}
 \DoxyCodeLine{22     time\_t dokiedy;}
 \DoxyCodeLine{23 }
-\DoxyCodeLine{24     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_wypozyczenia_struktura}{WypozyczeniaStruktura}} *poprzedni, *nastepny;}
+\DoxyCodeLine{24     \textcolor{keyword}{struct }WypozyczeniaStruktura *poprzedni, *nastepny;}
 \DoxyCodeLine{25 }
-\DoxyCodeLine{26 \} \mbox{\hyperlink{struct_wypozyczenia_struktura}{Wypozyczenie}};}
+\DoxyCodeLine{26 \} Wypozyczenie;}
 \DoxyCodeLine{27 }
 \DoxyCodeLine{28 }
 \DoxyCodeLine{29 }
@@ -39,22 +39,22 @@
 \DoxyCodeLine{35 \textcolor{keywordtype}{void} wydrukuj\_wypozyczenia();}
 \DoxyCodeLine{36 \textcolor{keywordtype}{void} zapispliku\_wypozyczenia();}
 \DoxyCodeLine{37 \textcolor{keywordtype}{void} wczytaniepliku\_wypozyczenia();}
-\DoxyCodeLine{38 \textcolor{keywordtype}{void} edytuj\_wypozyczenia\_ID\_ksiazki(\mbox{\hyperlink{struct_wypozyczenia_struktura}{Wypozyczenie}} *wypozyczenie);}
-\DoxyCodeLine{39 \textcolor{keywordtype}{void} edytuj\_wypozyczenia\_numer\_karty(\mbox{\hyperlink{struct_wypozyczenia_struktura}{Wypozyczenie}}* wpis);}
+\DoxyCodeLine{38 \textcolor{keywordtype}{void} edytuj\_wypozyczenia\_ID\_ksiazki(Wypozyczenie *wypozyczenie);}
+\DoxyCodeLine{39 \textcolor{keywordtype}{void} edytuj\_wypozyczenia\_numer\_karty(Wypozyczenie* wpis);}
 \DoxyCodeLine{40 \textcolor{keywordtype}{int} znajdz\_najwyzsze\_ID();}
-\DoxyCodeLine{41 \textcolor{keywordtype}{void} edytuj\_wypozyczenia\_ID(\mbox{\hyperlink{struct_wypozyczenia_struktura}{Wypozyczenie}}* wpis);}
+\DoxyCodeLine{41 \textcolor{keywordtype}{void} edytuj\_wypozyczenia\_ID(Wypozyczenie* wpis);}
 \DoxyCodeLine{42 \textcolor{keywordtype}{void} dodaj\_wypozyczenie();}
 \DoxyCodeLine{43 \textcolor{keywordtype}{void} ustaw\_ID\_nowego\_wypozyczenia();}
-\DoxyCodeLine{44 \textcolor{keywordtype}{void} edytuj\_wypozyczenia\_kiedy(\mbox{\hyperlink{struct_wypozyczenia_struktura}{Wypozyczenie}} *wpis);}
-\DoxyCodeLine{45 \textcolor{keywordtype}{void} edytuj\_wypozyczenia\_do\_kiedy(\mbox{\hyperlink{struct_wypozyczenia_struktura}{Wypozyczenie}}  *wpis);}
+\DoxyCodeLine{44 \textcolor{keywordtype}{void} edytuj\_wypozyczenia\_kiedy(Wypozyczenie *wpis);}
+\DoxyCodeLine{45 \textcolor{keywordtype}{void} edytuj\_wypozyczenia\_do\_kiedy(Wypozyczenie  *wpis);}
 \DoxyCodeLine{46 \textcolor{keywordtype}{void} na\_dwa\_tygodnie();}
 \DoxyCodeLine{47 \textcolor{keywordtype}{int} zalegle\_wypozyczenia();}
-\DoxyCodeLine{48 \textcolor{keywordtype}{float} policz\_kare(\mbox{\hyperlink{struct_wypozyczenia_struktura}{Wypozyczenie}}* wpis);}
-\DoxyCodeLine{49 \textcolor{keywordtype}{void} oddawanie\_ksiazki(\mbox{\hyperlink{struct_wypozyczenia_struktura}{Wypozyczenie}} *wpis);}
-\DoxyCodeLine{50 \textcolor{keywordtype}{int} czy\_klient\_ma\_wypozyczenia(\mbox{\hyperlink{struct_klient_struktura}{Klient}} *klient);}
-\DoxyCodeLine{51 \textcolor{keywordtype}{int} czy\_ksiazka\_jest\_wypozyczona(\mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}} *ID\_ksiazki);}
+\DoxyCodeLine{48 \textcolor{keywordtype}{float} policz\_kare(Wypozyczenie* wpis);}
+\DoxyCodeLine{49 \textcolor{keywordtype}{void} oddawanie\_ksiazki(Wypozyczenie *wpis);}
+\DoxyCodeLine{50 \textcolor{keywordtype}{int} czy\_klient\_ma\_wypozyczenia(Klient *klient);}
+\DoxyCodeLine{51 \textcolor{keywordtype}{int} czy\_ksiazka\_jest\_wypozyczona(Ksiazka *ID\_ksiazki);}
 \DoxyCodeLine{52 \textcolor{keywordtype}{void} zwroc\_wypozyczenie();}
-\DoxyCodeLine{53 \textcolor{keywordtype}{void} usun\_wypozyczenie(\mbox{\hyperlink{struct_wypozyczenia_struktura}{Wypozyczenie}} *wpis);}
+\DoxyCodeLine{53 \textcolor{keywordtype}{void} usun\_wypozyczenie(Wypozyczenie *wpis);}
 \DoxyCodeLine{54 }
 \DoxyCodeLine{55 \textcolor{preprocessor}{\#endif}}
 

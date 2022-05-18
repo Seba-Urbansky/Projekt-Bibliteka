@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_klient_struktura" xml:lang="en-US">
+<title>KlientStruktura Struct Reference</title>
+<indexterm><primary>KlientStruktura</primary></indexterm>
+<para>
+<computeroutput>#include &lt;klienci.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_klient_struktura_1ac06e2ac007dc7c50c5b41b72a68c13c4">numer_karty</link></para>
+</listitem>
+            <listitem><para>char * <link linkend="_struct_klient_struktura_1a92537e473ad1b872ea9de82d034af9fc">imie</link> [<link linkend="_menu_8h_1a392fb874e547e582e9c66a08a1f23326">MAX</link>]</para>
+</listitem>
+            <listitem><para>char * <link linkend="_struct_klient_struktura_1ab1ffe95ed34e27db3d38e32d67ce7db0">nazwisko</link> [<link linkend="_menu_8h_1a392fb874e547e582e9c66a08a1f23326">MAX</link>]</para>
+</listitem>
+            <listitem><para>char * <link linkend="_struct_klient_struktura_1aa508677aeb7d14af19a46ce6386a183c">telefon</link> [<link linkend="_menu_8h_1a392fb874e547e582e9c66a08a1f23326">MAX</link>]</para>
+</listitem>
+            <listitem><para>char * <link linkend="_struct_klient_struktura_1a9b55ce5bd1586a4da1061c5b1772e1fd">email</link> [<link linkend="_menu_8h_1a392fb874e547e582e9c66a08a1f23326">MAX</link>]</para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_klient_struktura">KlientStruktura</link> * <link linkend="_struct_klient_struktura_1a05f570bf0ad3291ecf44c2e82c0d71e0">poprzedni</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_klient_struktura">KlientStruktura</link> * <link linkend="_struct_klient_struktura_1a817041601c186fdf3356703fa64a5159">nastepny</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_struct_klient_struktura_1a9b55ce5bd1586a4da1061c5b1772e1fd"/><section>
+    <title>email</title>
+<indexterm><primary>email</primary><secondary>KlientStruktura</secondary></indexterm>
+<indexterm><primary>KlientStruktura</primary><secondary>email</secondary></indexterm>
+<para><computeroutput>char* email[<link linkend="_menu_8h_1a392fb874e547e582e9c66a08a1f23326">MAX</link>]</computeroutput></para></section>
+<anchor xml:id="_struct_klient_struktura_1a92537e473ad1b872ea9de82d034af9fc"/><section>
+    <title>imie</title>
+<indexterm><primary>imie</primary><secondary>KlientStruktura</secondary></indexterm>
+<indexterm><primary>KlientStruktura</primary><secondary>imie</secondary></indexterm>
+<para><computeroutput>char* imie[<link linkend="_menu_8h_1a392fb874e547e582e9c66a08a1f23326">MAX</link>]</computeroutput></para></section>
+<anchor xml:id="_struct_klient_struktura_1a817041601c186fdf3356703fa64a5159"/><section>
+    <title>nastepny</title>
+<indexterm><primary>nastepny</primary><secondary>KlientStruktura</secondary></indexterm>
+<indexterm><primary>KlientStruktura</primary><secondary>nastepny</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_struct_klient_struktura">KlientStruktura</link> * nastepny</computeroutput></para></section>
+<anchor xml:id="_struct_klient_struktura_1ab1ffe95ed34e27db3d38e32d67ce7db0"/><section>
+    <title>nazwisko</title>
+<indexterm><primary>nazwisko</primary><secondary>KlientStruktura</secondary></indexterm>
+<indexterm><primary>KlientStruktura</primary><secondary>nazwisko</secondary></indexterm>
+<para><computeroutput>char* nazwisko[<link linkend="_menu_8h_1a392fb874e547e582e9c66a08a1f23326">MAX</link>]</computeroutput></para></section>
+<anchor xml:id="_struct_klient_struktura_1ac06e2ac007dc7c50c5b41b72a68c13c4"/><section>
+    <title>numer_karty</title>
+<indexterm><primary>numer_karty</primary><secondary>KlientStruktura</secondary></indexterm>
+<indexterm><primary>KlientStruktura</primary><secondary>numer_karty</secondary></indexterm>
+<para><computeroutput>int numer_karty</computeroutput></para></section>
+<anchor xml:id="_struct_klient_struktura_1a05f570bf0ad3291ecf44c2e82c0d71e0"/><section>
+    <title>poprzedni</title>
+<indexterm><primary>poprzedni</primary><secondary>KlientStruktura</secondary></indexterm>
+<indexterm><primary>KlientStruktura</primary><secondary>poprzedni</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_struct_klient_struktura">KlientStruktura</link>* poprzedni</computeroutput></para></section>
+<anchor xml:id="_struct_klient_struktura_1aa508677aeb7d14af19a46ce6386a183c"/><section>
+    <title>telefon</title>
+<indexterm><primary>telefon</primary><secondary>KlientStruktura</secondary></indexterm>
+<indexterm><primary>KlientStruktura</primary><secondary>telefon</secondary></indexterm>
+<para><computeroutput>char* telefon[<link linkend="_menu_8h_1a392fb874e547e582e9c66a08a1f23326">MAX</link>]</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/<link linkend="_klienci_8h">klienci.h</link></section>
+</section>

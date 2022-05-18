@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_wypozyczenia_struktura" xml:lang="en-US">
+<title>WypozyczeniaStruktura Struct Reference</title>
+<indexterm><primary>WypozyczeniaStruktura</primary></indexterm>
+<para>
+<computeroutput>#include &lt;wypozyczenia.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_wypozyczenia_struktura_1ac06e2ac007dc7c50c5b41b72a68c13c4">numer_karty</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_wypozyczenia_struktura_1a723e925d991082df1e064e1db35ff206">ID_ksiazki</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_wypozyczenia_struktura_1af180e926633cde08a05ccbc3af397ee4">ID</link></para>
+</listitem>
+            <listitem><para>time_t <link linkend="_struct_wypozyczenia_struktura_1a467fa1c2f84280517a73c3c891a6d2d3">kiedy</link></para>
+</listitem>
+            <listitem><para>time_t <link linkend="_struct_wypozyczenia_struktura_1a74096617f602a04e48193ef79aa8b560">dokiedy</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_wypozyczenia_struktura">WypozyczeniaStruktura</link> * <link linkend="_struct_wypozyczenia_struktura_1a4e5b6d6160b2305a9cb8a76f6c0c7867">poprzedni</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_wypozyczenia_struktura">WypozyczeniaStruktura</link> * <link linkend="_struct_wypozyczenia_struktura_1ae61e47a25f9714e343a8e1a437c89b44">nastepny</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_struct_wypozyczenia_struktura_1a74096617f602a04e48193ef79aa8b560"/><section>
+    <title>dokiedy</title>
+<indexterm><primary>dokiedy</primary><secondary>WypozyczeniaStruktura</secondary></indexterm>
+<indexterm><primary>WypozyczeniaStruktura</primary><secondary>dokiedy</secondary></indexterm>
+<para><computeroutput>time_t dokiedy</computeroutput></para></section>
+<anchor xml:id="_struct_wypozyczenia_struktura_1af180e926633cde08a05ccbc3af397ee4"/><section>
+    <title>ID</title>
+<indexterm><primary>ID</primary><secondary>WypozyczeniaStruktura</secondary></indexterm>
+<indexterm><primary>WypozyczeniaStruktura</primary><secondary>ID</secondary></indexterm>
+<para><computeroutput>int ID</computeroutput></para></section>
+<anchor xml:id="_struct_wypozyczenia_struktura_1a723e925d991082df1e064e1db35ff206"/><section>
+    <title>ID_ksiazki</title>
+<indexterm><primary>ID_ksiazki</primary><secondary>WypozyczeniaStruktura</secondary></indexterm>
+<indexterm><primary>WypozyczeniaStruktura</primary><secondary>ID_ksiazki</secondary></indexterm>
+<para><computeroutput>int ID_ksiazki</computeroutput></para></section>
+<anchor xml:id="_struct_wypozyczenia_struktura_1a467fa1c2f84280517a73c3c891a6d2d3"/><section>
+    <title>kiedy</title>
+<indexterm><primary>kiedy</primary><secondary>WypozyczeniaStruktura</secondary></indexterm>
+<indexterm><primary>WypozyczeniaStruktura</primary><secondary>kiedy</secondary></indexterm>
+<para><computeroutput>time_t kiedy</computeroutput></para></section>
+<anchor xml:id="_struct_wypozyczenia_struktura_1ae61e47a25f9714e343a8e1a437c89b44"/><section>
+    <title>nastepny</title>
+<indexterm><primary>nastepny</primary><secondary>WypozyczeniaStruktura</secondary></indexterm>
+<indexterm><primary>WypozyczeniaStruktura</primary><secondary>nastepny</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_struct_wypozyczenia_struktura">WypozyczeniaStruktura</link> * nastepny</computeroutput></para></section>
+<anchor xml:id="_struct_wypozyczenia_struktura_1ac06e2ac007dc7c50c5b41b72a68c13c4"/><section>
+    <title>numer_karty</title>
+<indexterm><primary>numer_karty</primary><secondary>WypozyczeniaStruktura</secondary></indexterm>
+<indexterm><primary>WypozyczeniaStruktura</primary><secondary>numer_karty</secondary></indexterm>
+<para><computeroutput>int numer_karty</computeroutput></para></section>
+<anchor xml:id="_struct_wypozyczenia_struktura_1a4e5b6d6160b2305a9cb8a76f6c0c7867"/><section>
+    <title>poprzedni</title>
+<indexterm><primary>poprzedni</primary><secondary>WypozyczeniaStruktura</secondary></indexterm>
+<indexterm><primary>WypozyczeniaStruktura</primary><secondary>poprzedni</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_struct_wypozyczenia_struktura">WypozyczeniaStruktura</link>* poprzedni</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/<link linkend="_wypozyczenia_8h">wypozyczenia.h</link></section>
+</section>

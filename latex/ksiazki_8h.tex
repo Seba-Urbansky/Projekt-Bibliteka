@@ -1,0 +1,335 @@
+\doxysection{/\+Users/sebastian/\+Projects/\+PP2.PRO.1ID15\+B.\+SIWEK.\+URBAŃ\+SKI.\+KM.2/\+PP2.PRO.1ID15\+B.\+SIWEK.\+URBAŃ\+SKI.\+KM.2/ksiazki.h File Reference}
+\label{ksiazki_8h}\index{/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/ksiazki.h@{/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/ksiazki.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ Ksiazka\+Struktura}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \textbf{ Ksiazka\+Struktura} \textbf{ Ksiazka}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ Sortowanie\+Kolejnosc} \{ \textbf{ Rosnaca} = 1
+, \textbf{ Malejaca} = 0
+ \}
+\item 
+enum \textbf{ Sortowanie\+Atrybut} \{ \newline
+\textbf{ Tytul} = 0
+, \textbf{ Autor} = 1
+, \textbf{ Rok} = 2
+, \textbf{ Gatunek} = 3
+, \newline
+\textbf{ ID} = 4
+, \textbf{ Liczba\+Egzemplarzy} = 5
+, \textbf{ Liczba\+Wypozyczonych} = 6
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ wyswietl\+\_\+baze\+\_\+ksiazek} ()
+\item 
+void \textbf{ dodaj\+\_\+ksiazke} ()
+\item 
+void \textbf{ edytuj\+\_\+ksiazke} ()
+\item 
+void \textbf{ usun\+\_\+ksiazke} ()
+\item 
+void \textbf{ menu\+\_\+ksiazek} ()
+\item 
+void \textbf{ wczytaniepliku\+\_\+ksiazki} ()
+\item 
+void \textbf{ zapispliku\+\_\+ksiazki} ()
+\item 
+void \textbf{ ksiazka\+\_\+do\+\_\+zarzadzania} ()
+\item 
+void \textbf{ wydrukuj\+\_\+ksiazke} (\textbf{ Ksiazka} $\ast$wpis)
+\item 
+void \textbf{ edytuj\+\_\+tytul\+\_\+ksiazki} (\textbf{ Ksiazka} $\ast$wpis)
+\item 
+void \textbf{ edytuj\+\_\+gatunek\+\_\+ksiazki} (\textbf{ Ksiazka} $\ast$wpis)
+\item 
+void \textbf{ edytuj\+\_\+autora} (\textbf{ Ksiazka} $\ast$wpis)
+\item 
+void \textbf{ edytuj\+\_\+rok} (\textbf{ Ksiazka} $\ast$wpis)
+\item 
+\textbf{ Ksiazka} $\ast$ \textbf{ wyszukaj\+\_\+ksiazke} (int \textbf{ ID})
+\item 
+int \textbf{ znajdz\+\_\+najwyzsze\+\_\+\+ID\+\_\+ksiazki} ()
+\item 
+void \textbf{ edytuj\+\_\+ksiazki\+\_\+\+ID\+\_\+ksiazki} (\textbf{ Ksiazka} $\ast$wpis)
+\item 
+void \textbf{ sortowanie\+\_\+ksiazek\+\_\+niemalejace} (\textbf{ Ksiazka} $\ast$\textbf{ ID})
+\item 
+void \textbf{ wyszukaj\+\_\+ksiazki\+\_\+po\+\_\+tytule} ()
+\item 
+void \textbf{ wyszukaj\+\_\+ksiazki\+\_\+po\+\_\+autorze} ()
+\item 
+void \textbf{ wyszukaj\+\_\+ksiazki\+\_\+po\+\_\+roku} ()
+\item 
+\textbf{ Ksiazka} $\ast$ \textbf{ zamien} (\textbf{ Ksiazka} $\ast$a, \textbf{ Ksiazka} $\ast$b)
+\item 
+int \textbf{ policz\+\_\+ksiazki} ()
+\item 
+void \textbf{ sortowanie} (enum \textbf{ Sortowanie\+Kolejnosc} kolejnosc, enum \textbf{ Sortowanie\+Atrybut} atrybut)
+\item 
+void \textbf{ edytuj\+\_\+liczbe\+\_\+egzemplarzy} (\textbf{ Ksiazka} $\ast$wpis)
+\item 
+void \textbf{ edytuj\+\_\+liczbe\+\_\+wypozyczonych} (\textbf{ Ksiazka} $\ast$wpis)
+\item 
+void \textbf{ wyszukaj\+\_\+ksiazki\+\_\+po\+\_\+gatunku} ()
+\item 
+void \textbf{ wyszukaj\+\_\+po\+\_\+liczbie\+\_\+wypozyczonych} ()
+\item 
+void \textbf{ wyszukaj\+\_\+po\+\_\+liczbie\+\_\+egzemplarzy} ()
+\item 
+void \textbf{ wydrukuj\+\_\+po\+\_\+\+ID} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}} 
+\index{ksiazki.h@{ksiazki.h}!Ksiazka@{Ksiazka}}
+\index{Ksiazka@{Ksiazka}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{Ksiazka}
+{\footnotesize\ttfamily typedef struct \textbf{ Ksiazka\+Struktura} \textbf{ Ksiazka}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\label{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929}} 
+\index{ksiazki.h@{ksiazki.h}!SortowanieAtrybut@{SortowanieAtrybut}}
+\index{SortowanieAtrybut@{SortowanieAtrybut}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{SortowanieAtrybut}
+{\footnotesize\ttfamily enum \textbf{ Sortowanie\+Atrybut}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Tytul@{Tytul}!ksiazki.h@{ksiazki.h}}\index{ksiazki.h@{ksiazki.h}!Tytul@{Tytul}}}\mbox{\label{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929a12e278122fae812b3ad8c18cb5c4e8eb}} 
+Tytul&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Autor@{Autor}!ksiazki.h@{ksiazki.h}}\index{ksiazki.h@{ksiazki.h}!Autor@{Autor}}}\mbox{\label{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929a7655ae0771c3f4176026e8a834f646dc}} 
+Autor&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Rok@{Rok}!ksiazki.h@{ksiazki.h}}\index{ksiazki.h@{ksiazki.h}!Rok@{Rok}}}\mbox{\label{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929af9326a3865bd3a77f6307af749fd7af8}} 
+Rok&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Gatunek@{Gatunek}!ksiazki.h@{ksiazki.h}}\index{ksiazki.h@{ksiazki.h}!Gatunek@{Gatunek}}}\mbox{\label{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929a66b379b90f0cd74d1e8c011179766a60}} 
+Gatunek&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ID@{ID}!ksiazki.h@{ksiazki.h}}\index{ksiazki.h@{ksiazki.h}!ID@{ID}}}\mbox{\label{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929a001479a58fb44c39a29b20d565081a68}} 
+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LiczbaEgzemplarzy@{LiczbaEgzemplarzy}!ksiazki.h@{ksiazki.h}}\index{ksiazki.h@{ksiazki.h}!LiczbaEgzemplarzy@{LiczbaEgzemplarzy}}}\mbox{\label{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929ab4f1215e808b4bcd3283a822d8937324}} 
+Liczba\+Egzemplarzy&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LiczbaWypozyczonych@{LiczbaWypozyczonych}!ksiazki.h@{ksiazki.h}}\index{ksiazki.h@{ksiazki.h}!LiczbaWypozyczonych@{LiczbaWypozyczonych}}}\mbox{\label{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929acd29f0cb8e075f658f31f3f754f34b7d}} 
+Liczba\+Wypozyczonych&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\label{ksiazki_8h_a92b3cf569043e5ddcb058a54db66783b}} 
+\index{ksiazki.h@{ksiazki.h}!SortowanieKolejnosc@{SortowanieKolejnosc}}
+\index{SortowanieKolejnosc@{SortowanieKolejnosc}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{SortowanieKolejnosc}
+{\footnotesize\ttfamily enum \textbf{ Sortowanie\+Kolejnosc}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Rosnaca@{Rosnaca}!ksiazki.h@{ksiazki.h}}\index{ksiazki.h@{ksiazki.h}!Rosnaca@{Rosnaca}}}\mbox{\label{ksiazki_8h_a92b3cf569043e5ddcb058a54db66783bab283ea85da4665bf15c06eb4769f5cc7}} 
+Rosnaca&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Malejaca@{Malejaca}!ksiazki.h@{ksiazki.h}}\index{ksiazki.h@{ksiazki.h}!Malejaca@{Malejaca}}}\mbox{\label{ksiazki_8h_a92b3cf569043e5ddcb058a54db66783bae98de48074de837da6952478f5fc5a14}} 
+Malejaca&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{ksiazki_8h_a18018b143b960db33a39ebcaa5c6c06c}} 
+\index{ksiazki.h@{ksiazki.h}!dodaj\_ksiazke@{dodaj\_ksiazke}}
+\index{dodaj\_ksiazke@{dodaj\_ksiazke}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{dodaj\_ksiazke()}
+{\footnotesize\ttfamily void dodaj\+\_\+ksiazke (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_a966ffe3ef2449f7a256ac6d703c7ec24}} 
+\index{ksiazki.h@{ksiazki.h}!edytuj\_autora@{edytuj\_autora}}
+\index{edytuj\_autora@{edytuj\_autora}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{edytuj\_autora()}
+{\footnotesize\ttfamily void edytuj\+\_\+autora (\begin{DoxyParamCaption}\item[{\textbf{ Ksiazka} $\ast$}]{wpis }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_acfcccbe02004a890d7f3bac5900ecf21}} 
+\index{ksiazki.h@{ksiazki.h}!edytuj\_gatunek\_ksiazki@{edytuj\_gatunek\_ksiazki}}
+\index{edytuj\_gatunek\_ksiazki@{edytuj\_gatunek\_ksiazki}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{edytuj\_gatunek\_ksiazki()}
+{\footnotesize\ttfamily void edytuj\+\_\+gatunek\+\_\+ksiazki (\begin{DoxyParamCaption}\item[{\textbf{ Ksiazka} $\ast$}]{wpis }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_abff38f583e5964764ae641674fc76148}} 
+\index{ksiazki.h@{ksiazki.h}!edytuj\_ksiazke@{edytuj\_ksiazke}}
+\index{edytuj\_ksiazke@{edytuj\_ksiazke}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{edytuj\_ksiazke()}
+{\footnotesize\ttfamily void edytuj\+\_\+ksiazke (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_ac5e4aaf398428ba485855a36f3f1494e}} 
+\index{ksiazki.h@{ksiazki.h}!edytuj\_ksiazki\_ID\_ksiazki@{edytuj\_ksiazki\_ID\_ksiazki}}
+\index{edytuj\_ksiazki\_ID\_ksiazki@{edytuj\_ksiazki\_ID\_ksiazki}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{edytuj\_ksiazki\_ID\_ksiazki()}
+{\footnotesize\ttfamily void edytuj\+\_\+ksiazki\+\_\+\+ID\+\_\+ksiazki (\begin{DoxyParamCaption}\item[{\textbf{ Ksiazka} $\ast$}]{wpis }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_a4c6052636c8b6375611bc320b29ff22f}} 
+\index{ksiazki.h@{ksiazki.h}!edytuj\_liczbe\_egzemplarzy@{edytuj\_liczbe\_egzemplarzy}}
+\index{edytuj\_liczbe\_egzemplarzy@{edytuj\_liczbe\_egzemplarzy}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{edytuj\_liczbe\_egzemplarzy()}
+{\footnotesize\ttfamily void edytuj\+\_\+liczbe\+\_\+egzemplarzy (\begin{DoxyParamCaption}\item[{\textbf{ Ksiazka} $\ast$}]{wpis }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_a05d1aa1ffff346a6f439481cf14434f8}} 
+\index{ksiazki.h@{ksiazki.h}!edytuj\_liczbe\_wypozyczonych@{edytuj\_liczbe\_wypozyczonych}}
+\index{edytuj\_liczbe\_wypozyczonych@{edytuj\_liczbe\_wypozyczonych}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{edytuj\_liczbe\_wypozyczonych()}
+{\footnotesize\ttfamily void edytuj\+\_\+liczbe\+\_\+wypozyczonych (\begin{DoxyParamCaption}\item[{\textbf{ Ksiazka} $\ast$}]{wpis }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_ab6f2c6d841a1887aa7bd2e2ca5b99648}} 
+\index{ksiazki.h@{ksiazki.h}!edytuj\_rok@{edytuj\_rok}}
+\index{edytuj\_rok@{edytuj\_rok}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{edytuj\_rok()}
+{\footnotesize\ttfamily void edytuj\+\_\+rok (\begin{DoxyParamCaption}\item[{\textbf{ Ksiazka} $\ast$}]{wpis }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_a93f5816116ef4382f87dab1e5695e00f}} 
+\index{ksiazki.h@{ksiazki.h}!edytuj\_tytul\_ksiazki@{edytuj\_tytul\_ksiazki}}
+\index{edytuj\_tytul\_ksiazki@{edytuj\_tytul\_ksiazki}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{edytuj\_tytul\_ksiazki()}
+{\footnotesize\ttfamily void edytuj\+\_\+tytul\+\_\+ksiazki (\begin{DoxyParamCaption}\item[{\textbf{ Ksiazka} $\ast$}]{wpis }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_a023661b73ad6f5af935c1bc928429310}} 
+\index{ksiazki.h@{ksiazki.h}!ksiazka\_do\_zarzadzania@{ksiazka\_do\_zarzadzania}}
+\index{ksiazka\_do\_zarzadzania@{ksiazka\_do\_zarzadzania}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{ksiazka\_do\_zarzadzania()}
+{\footnotesize\ttfamily void ksiazka\+\_\+do\+\_\+zarzadzania (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_ad515018a91175fffa50289ef40ca4342}} 
+\index{ksiazki.h@{ksiazki.h}!menu\_ksiazek@{menu\_ksiazek}}
+\index{menu\_ksiazek@{menu\_ksiazek}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{menu\_ksiazek()}
+{\footnotesize\ttfamily void menu\+\_\+ksiazek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_a7d6a8320245d228b8ac22330befab405}} 
+\index{ksiazki.h@{ksiazki.h}!policz\_ksiazki@{policz\_ksiazki}}
+\index{policz\_ksiazki@{policz\_ksiazki}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{policz\_ksiazki()}
+{\footnotesize\ttfamily int policz\+\_\+ksiazki (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_ad5f77aa48d5aa3392bd2f3e22e388acc}} 
+\index{ksiazki.h@{ksiazki.h}!sortowanie@{sortowanie}}
+\index{sortowanie@{sortowanie}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{sortowanie()}
+{\footnotesize\ttfamily void sortowanie (\begin{DoxyParamCaption}\item[{enum \textbf{ Sortowanie\+Kolejnosc}}]{kolejnosc,  }\item[{enum \textbf{ Sortowanie\+Atrybut}}]{atrybut }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_a38b28d0a614a50c26b8920620dcf0d1d}} 
+\index{ksiazki.h@{ksiazki.h}!sortowanie\_ksiazek\_niemalejace@{sortowanie\_ksiazek\_niemalejace}}
+\index{sortowanie\_ksiazek\_niemalejace@{sortowanie\_ksiazek\_niemalejace}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{sortowanie\_ksiazek\_niemalejace()}
+{\footnotesize\ttfamily void sortowanie\+\_\+ksiazek\+\_\+niemalejace (\begin{DoxyParamCaption}\item[{\textbf{ Ksiazka} $\ast$}]{ID }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_a31ad71269e0f171ff6bbf775a7d6a253}} 
+\index{ksiazki.h@{ksiazki.h}!usun\_ksiazke@{usun\_ksiazke}}
+\index{usun\_ksiazke@{usun\_ksiazke}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{usun\_ksiazke()}
+{\footnotesize\ttfamily void usun\+\_\+ksiazke (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_aa7bc6b44a7b7d6db12d0fdaca2b47998}} 
+\index{ksiazki.h@{ksiazki.h}!wczytaniepliku\_ksiazki@{wczytaniepliku\_ksiazki}}
+\index{wczytaniepliku\_ksiazki@{wczytaniepliku\_ksiazki}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{wczytaniepliku\_ksiazki()}
+{\footnotesize\ttfamily void wczytaniepliku\+\_\+ksiazki (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_a84180dfd861f8a7eccb6505bebeb26a8}} 
+\index{ksiazki.h@{ksiazki.h}!wydrukuj\_ksiazke@{wydrukuj\_ksiazke}}
+\index{wydrukuj\_ksiazke@{wydrukuj\_ksiazke}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{wydrukuj\_ksiazke()}
+{\footnotesize\ttfamily void wydrukuj\+\_\+ksiazke (\begin{DoxyParamCaption}\item[{\textbf{ Ksiazka} $\ast$}]{wpis }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_ae189b52f9d8a0e053a3482a79a26f1c6}} 
+\index{ksiazki.h@{ksiazki.h}!wydrukuj\_po\_ID@{wydrukuj\_po\_ID}}
+\index{wydrukuj\_po\_ID@{wydrukuj\_po\_ID}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{wydrukuj\_po\_ID()}
+{\footnotesize\ttfamily void wydrukuj\+\_\+po\+\_\+\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_a48119a789c118bca048ac95c6e159e14}} 
+\index{ksiazki.h@{ksiazki.h}!wyswietl\_baze\_ksiazek@{wyswietl\_baze\_ksiazek}}
+\index{wyswietl\_baze\_ksiazek@{wyswietl\_baze\_ksiazek}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{wyswietl\_baze\_ksiazek()}
+{\footnotesize\ttfamily void wyswietl\+\_\+baze\+\_\+ksiazek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_af68f877082bb74fc15a27b90d96a2b4d}} 
+\index{ksiazki.h@{ksiazki.h}!wyszukaj\_ksiazke@{wyszukaj\_ksiazke}}
+\index{wyszukaj\_ksiazke@{wyszukaj\_ksiazke}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{wyszukaj\_ksiazke()}
+{\footnotesize\ttfamily \textbf{ Ksiazka} $\ast$ wyszukaj\+\_\+ksiazke (\begin{DoxyParamCaption}\item[{int}]{ID }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_ac557385e6d4385e0274ff6a6a8aeee00}} 
+\index{ksiazki.h@{ksiazki.h}!wyszukaj\_ksiazki\_po\_autorze@{wyszukaj\_ksiazki\_po\_autorze}}
+\index{wyszukaj\_ksiazki\_po\_autorze@{wyszukaj\_ksiazki\_po\_autorze}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{wyszukaj\_ksiazki\_po\_autorze()}
+{\footnotesize\ttfamily void wyszukaj\+\_\+ksiazki\+\_\+po\+\_\+autorze (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_a3e817d138006527a2369e47f458236d3}} 
+\index{ksiazki.h@{ksiazki.h}!wyszukaj\_ksiazki\_po\_gatunku@{wyszukaj\_ksiazki\_po\_gatunku}}
+\index{wyszukaj\_ksiazki\_po\_gatunku@{wyszukaj\_ksiazki\_po\_gatunku}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{wyszukaj\_ksiazki\_po\_gatunku()}
+{\footnotesize\ttfamily void wyszukaj\+\_\+ksiazki\+\_\+po\+\_\+gatunku (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_a8b6eab3e3b55d5fe5951f2b17db81c44}} 
+\index{ksiazki.h@{ksiazki.h}!wyszukaj\_ksiazki\_po\_roku@{wyszukaj\_ksiazki\_po\_roku}}
+\index{wyszukaj\_ksiazki\_po\_roku@{wyszukaj\_ksiazki\_po\_roku}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{wyszukaj\_ksiazki\_po\_roku()}
+{\footnotesize\ttfamily void wyszukaj\+\_\+ksiazki\+\_\+po\+\_\+roku (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_adfb816e67ef893d997c5e6ee642b8df7}} 
+\index{ksiazki.h@{ksiazki.h}!wyszukaj\_ksiazki\_po\_tytule@{wyszukaj\_ksiazki\_po\_tytule}}
+\index{wyszukaj\_ksiazki\_po\_tytule@{wyszukaj\_ksiazki\_po\_tytule}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{wyszukaj\_ksiazki\_po\_tytule()}
+{\footnotesize\ttfamily void wyszukaj\+\_\+ksiazki\+\_\+po\+\_\+tytule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_a768352a5223d9e1841ce9692aaf43f8d}} 
+\index{ksiazki.h@{ksiazki.h}!wyszukaj\_po\_liczbie\_egzemplarzy@{wyszukaj\_po\_liczbie\_egzemplarzy}}
+\index{wyszukaj\_po\_liczbie\_egzemplarzy@{wyszukaj\_po\_liczbie\_egzemplarzy}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{wyszukaj\_po\_liczbie\_egzemplarzy()}
+{\footnotesize\ttfamily void wyszukaj\+\_\+po\+\_\+liczbie\+\_\+egzemplarzy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_a0b4df348f6c432f40490eb8bdbcee3c6}} 
+\index{ksiazki.h@{ksiazki.h}!wyszukaj\_po\_liczbie\_wypozyczonych@{wyszukaj\_po\_liczbie\_wypozyczonych}}
+\index{wyszukaj\_po\_liczbie\_wypozyczonych@{wyszukaj\_po\_liczbie\_wypozyczonych}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{wyszukaj\_po\_liczbie\_wypozyczonych()}
+{\footnotesize\ttfamily void wyszukaj\+\_\+po\+\_\+liczbie\+\_\+wypozyczonych (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_a892873c6de7b41a058e8775ea9ce8e01}} 
+\index{ksiazki.h@{ksiazki.h}!zamien@{zamien}}
+\index{zamien@{zamien}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{zamien()}
+{\footnotesize\ttfamily \textbf{ Ksiazka} $\ast$ zamien (\begin{DoxyParamCaption}\item[{\textbf{ Ksiazka} $\ast$}]{a,  }\item[{\textbf{ Ksiazka} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_a84101ca77a61569379a0275f73d8cfd4}} 
+\index{ksiazki.h@{ksiazki.h}!zapispliku\_ksiazki@{zapispliku\_ksiazki}}
+\index{zapispliku\_ksiazki@{zapispliku\_ksiazki}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{zapispliku\_ksiazki()}
+{\footnotesize\ttfamily void zapispliku\+\_\+ksiazki (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{ksiazki_8h_ab253baef3a79eb201a1e7551e5e2a95d}} 
+\index{ksiazki.h@{ksiazki.h}!znajdz\_najwyzsze\_ID\_ksiazki@{znajdz\_najwyzsze\_ID\_ksiazki}}
+\index{znajdz\_najwyzsze\_ID\_ksiazki@{znajdz\_najwyzsze\_ID\_ksiazki}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{znajdz\_najwyzsze\_ID\_ksiazki()}
+{\footnotesize\ttfamily int znajdz\+\_\+najwyzsze\+\_\+\+ID\+\_\+ksiazki (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_klienci_8c" xml:lang="en-US">
+<title>/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/klienci.c File Reference</title>
+<indexterm><primary>/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/klienci.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &quot;klienci.h&quot;
+#include &quot;common.h&quot;
+</programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_klienci_8c_1a392fb874e547e582e9c66a08a1f23326">MAX</link>   32</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_klienci_8c_1a3eb845814072e027fabee9798ceda9a2">wyswietl_baze_klientow</link> ()</para>
+
+<para>Funkcja wyswietl_baze_klientow wyswietla dane klientow z plikku. </para>
+</listitem>
+            <listitem><para>void <link linkend="_klienci_8c_1ab0f0128ac537d0a9c981f44d93517ec9">dodaj_klienta</link> ()</para>
+
+<para>Funkcja wyswietl_baze_klientow wyswietla dane klientow z pliku. </para>
+</listitem>
+            <listitem><para>int <link linkend="_klienci_8c_1a460e7e1b92717eb9ae93cdf294abc66d">znajdz_najwyzsze_ID_klienci</link> ()</para>
+
+<para>Funkcja wyszukuje w pliku ID klienta o najwyzszej wartosci. </para>
+</listitem>
+            <listitem><para>void <link linkend="_klienci_8c_1ae5c2b50f7b091e15b790fdc2bedd2338">edytuj_wypozyczenia_numer_karty_abc</link> (<link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link> *wpis)</para>
+
+<para>Funkcja wyszukuje w pliku ID klienta o najwyzszej wartosci. </para>
+</listitem>
+            <listitem><para><link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link> * <link linkend="_klienci_8c_1a83984b8b6bc1f51e064eeb74ea2c7403">wyszukaj_klienta</link> (int numer_karty)</para>
+</listitem>
+            <listitem><para>void <link linkend="_klienci_8c_1a420de625e3c38ba1dad8c333fbd6447c">wydrukuj_klienta</link> (<link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link> *wpis)</para>
+</listitem>
+            <listitem><para>void <link linkend="_klienci_8c_1ad0aa69f2005242c3b2a4080f2cdc2549">edytuj_imie_klienta</link> (<link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link> *wpis)</para>
+</listitem>
+            <listitem><para>void <link linkend="_klienci_8c_1a968b0adcc99972b069d561afc5bf3fb2">edytuj_telefon_klienta</link> (<link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link> *wpis)</para>
+</listitem>
+            <listitem><para>void <link linkend="_klienci_8c_1a39e781ff7f36da456490a5df2e0224c4">edytuj_email_klienta</link> (<link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link> *wpis)</para>
+</listitem>
+            <listitem><para>void <link linkend="_klienci_8c_1aa15d3041ef12ae2395ec4c333348ed54">edytuj_nazwisko_klienta</link> (<link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link> *wpis)</para>
+</listitem>
+            <listitem><para>void <link linkend="_klienci_8c_1a764ec0a74093c8d3d0f311dcc3c92366">usun_klienta</link> (<link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link> *wpis)</para>
+</listitem>
+            <listitem><para>void <link linkend="_klienci_8c_1a17266993cbb25779b37136a32f5438e7">wczytaniepliku_klienci</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_klienci_8c_1ac4a3e4f8dfde3d84742d574c7cfcd162">zapispliku_klienci</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link> * <link linkend="_klienci_8c_1a3c0de94a34b41d515e5375a87a93e31e">pierwszy_klient</link> = NULL</para>
+</listitem>
+            <listitem><para><link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link> * <link linkend="_klienci_8c_1aae7759d523352a376b850bdf6a3a2e9c">ostatni_klient</link> = NULL</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_klienci_8c_1a392fb874e547e582e9c66a08a1f23326"/><section>
+    <title>MAX</title>
+<indexterm><primary>MAX</primary><secondary>klienci.c</secondary></indexterm>
+<indexterm><primary>klienci.c</primary><secondary>MAX</secondary></indexterm>
+<para><computeroutput>#define MAX   32</computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_klienci_8c_1ab0f0128ac537d0a9c981f44d93517ec9"/><section>
+    <title>dodaj_klienta()</title>
+<indexterm><primary>dodaj_klienta</primary><secondary>klienci.c</secondary></indexterm>
+<indexterm><primary>klienci.c</primary><secondary>dodaj_klienta</secondary></indexterm>
+<para><computeroutput>void dodaj_klienta ( )</computeroutput></para><para>
+
+<para>Funkcja wyswietl_baze_klientow wyswietla dane klientow z pliku. </para>
+</para>
+
+<para>Jesli nie ma klientow w bazie to tworzymy nowego klienta</para>
+
+<para>w przeciwnym wypadku wpis uzytkownika dodaje nastepnego klienta do bazy klientow 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>(brak</entry><entry>
+<para>parametru) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Dodaje do bazy w pliku nowego klienta na podstawie danych podanych przez uzytkownika </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_klienci_8c_1a39e781ff7f36da456490a5df2e0224c4"/><section>
+    <title>edytuj_email_klienta()</title>
+<indexterm><primary>edytuj_email_klienta</primary><secondary>klienci.c</secondary></indexterm>
+<indexterm><primary>klienci.c</primary><secondary>edytuj_email_klienta</secondary></indexterm>
+<para><computeroutput>void edytuj_email_klienta (<link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link> * wpis)</computeroutput></para></section>
+<anchor xml:id="_klienci_8c_1ad0aa69f2005242c3b2a4080f2cdc2549"/><section>
+    <title>edytuj_imie_klienta()</title>
+<indexterm><primary>edytuj_imie_klienta</primary><secondary>klienci.c</secondary></indexterm>
+<indexterm><primary>klienci.c</primary><secondary>edytuj_imie_klienta</secondary></indexterm>
+<para><computeroutput>void edytuj_imie_klienta (<link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link> * wpis)</computeroutput></para></section>
+<anchor xml:id="_klienci_8c_1aa15d3041ef12ae2395ec4c333348ed54"/><section>
+    <title>edytuj_nazwisko_klienta()</title>
+<indexterm><primary>edytuj_nazwisko_klienta</primary><secondary>klienci.c</secondary></indexterm>
+<indexterm><primary>klienci.c</primary><secondary>edytuj_nazwisko_klienta</secondary></indexterm>
+<para><computeroutput>void edytuj_nazwisko_klienta (<link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link> * wpis)</computeroutput></para></section>
+<anchor xml:id="_klienci_8c_1a968b0adcc99972b069d561afc5bf3fb2"/><section>
+    <title>edytuj_telefon_klienta()</title>
+<indexterm><primary>edytuj_telefon_klienta</primary><secondary>klienci.c</secondary></indexterm>
+<indexterm><primary>klienci.c</primary><secondary>edytuj_telefon_klienta</secondary></indexterm>
+<para><computeroutput>void edytuj_telefon_klienta (<link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link> * wpis)</computeroutput></para></section>
+<anchor xml:id="_klienci_8c_1ae5c2b50f7b091e15b790fdc2bedd2338"/><section>
+    <title>edytuj_wypozyczenia_numer_karty_abc()</title>
+<indexterm><primary>edytuj_wypozyczenia_numer_karty_abc</primary><secondary>klienci.c</secondary></indexterm>
+<indexterm><primary>klienci.c</primary><secondary>edytuj_wypozyczenia_numer_karty_abc</secondary></indexterm>
+<para><computeroutput>void edytuj_wypozyczenia_numer_karty_abc (<link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link> * wpis)</computeroutput></para><para>
+
+<para>Funkcja wyszukuje w pliku ID klienta o najwyzszej wartosci. </para>
+</para>
+
+<para>jesli wpis uzytkownika jest wiekszy od aktualnego max, to nastepuje nowe maksimum 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>(brak</entry><entry>
+<para>parametru) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zwracane jest najwyzsze ID klienta </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_klienci_8c_1a764ec0a74093c8d3d0f311dcc3c92366"/><section>
+    <title>usun_klienta()</title>
+<indexterm><primary>usun_klienta</primary><secondary>klienci.c</secondary></indexterm>
+<indexterm><primary>klienci.c</primary><secondary>usun_klienta</secondary></indexterm>
+<para><computeroutput>void usun_klienta (<link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link> * wpis)</computeroutput></para></section>
+<anchor xml:id="_klienci_8c_1a17266993cbb25779b37136a32f5438e7"/><section>
+    <title>wczytaniepliku_klienci()</title>
+<indexterm><primary>wczytaniepliku_klienci</primary><secondary>klienci.c</secondary></indexterm>
+<indexterm><primary>klienci.c</primary><secondary>wczytaniepliku_klienci</secondary></indexterm>
+<para><computeroutput>void wczytaniepliku_klienci ( )</computeroutput></para></section>
+<anchor xml:id="_klienci_8c_1a420de625e3c38ba1dad8c333fbd6447c"/><section>
+    <title>wydrukuj_klienta()</title>
+<indexterm><primary>wydrukuj_klienta</primary><secondary>klienci.c</secondary></indexterm>
+<indexterm><primary>klienci.c</primary><secondary>wydrukuj_klienta</secondary></indexterm>
+<para><computeroutput>void wydrukuj_klienta (<link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link> * wpis)</computeroutput></para></section>
+<anchor xml:id="_klienci_8c_1a3eb845814072e027fabee9798ceda9a2"/><section>
+    <title>wyswietl_baze_klientow()</title>
+<indexterm><primary>wyswietl_baze_klientow</primary><secondary>klienci.c</secondary></indexterm>
+<indexterm><primary>klienci.c</primary><secondary>wyswietl_baze_klientow</secondary></indexterm>
+<para><computeroutput>void wyswietl_baze_klientow ( )</computeroutput></para><para>
+
+<para>Funkcja wyswietl_baze_klientow wyswietla dane klientow z plikku. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>(brak</entry><entry>
+<para>parametru) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zwracane sa dane klientow z pliku </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_klienci_8c_1a83984b8b6bc1f51e064eeb74ea2c7403"/><section>
+    <title>wyszukaj_klienta()</title>
+<indexterm><primary>wyszukaj_klienta</primary><secondary>klienci.c</secondary></indexterm>
+<indexterm><primary>klienci.c</primary><secondary>wyszukaj_klienta</secondary></indexterm>
+<para><computeroutput><link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link> * wyszukaj_klienta (int numer_karty)</computeroutput></para></section>
+<anchor xml:id="_klienci_8c_1ac4a3e4f8dfde3d84742d574c7cfcd162"/><section>
+    <title>zapispliku_klienci()</title>
+<indexterm><primary>zapispliku_klienci</primary><secondary>klienci.c</secondary></indexterm>
+<indexterm><primary>klienci.c</primary><secondary>zapispliku_klienci</secondary></indexterm>
+<para><computeroutput>void zapispliku_klienci ( )</computeroutput></para></section>
+<anchor xml:id="_klienci_8c_1a460e7e1b92717eb9ae93cdf294abc66d"/><section>
+    <title>znajdz_najwyzsze_ID_klienci()</title>
+<indexterm><primary>znajdz_najwyzsze_ID_klienci</primary><secondary>klienci.c</secondary></indexterm>
+<indexterm><primary>klienci.c</primary><secondary>znajdz_najwyzsze_ID_klienci</secondary></indexterm>
+<para><computeroutput>int znajdz_najwyzsze_ID_klienci ( )</computeroutput></para><para>
+
+<para>Funkcja wyszukuje w pliku ID klienta o najwyzszej wartosci. </para>
+</para>
+
+<para>jesli wpis uzytkownika jest wiekszy od aktualnego max, to nastepuje nowe maksimum 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>(brak</entry><entry>
+<para>parametru) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zwracane jest najwyzsze ID klienta </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_klienci_8c_1aae7759d523352a376b850bdf6a3a2e9c"/><section>
+    <title>ostatni_klient</title>
+<indexterm><primary>ostatni_klient</primary><secondary>klienci.c</secondary></indexterm>
+<indexterm><primary>klienci.c</primary><secondary>ostatni_klient</secondary></indexterm>
+<para><computeroutput><link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link>* ostatni_klient = NULL</computeroutput></para></section>
+<anchor xml:id="_klienci_8c_1a3c0de94a34b41d515e5375a87a93e31e"/><section>
+    <title>pierwszy_klient</title>
+<indexterm><primary>pierwszy_klient</primary><secondary>klienci.c</secondary></indexterm>
+<indexterm><primary>klienci.c</primary><secondary>pierwszy_klient</secondary></indexterm>
+<para><computeroutput><link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link>* pierwszy_klient = NULL</computeroutput></para></section>
+</section>
+</section>

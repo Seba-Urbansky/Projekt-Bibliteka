@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_klienci_8h_source" xml:lang="en-US">
+<title>klienci.h</title>
+<indexterm><primary>/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/klienci.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+2 
+3 <emphasis role="preprocessor">#ifndef&#32;KLIENCI_H</emphasis>
+4 <emphasis role="preprocessor">#define&#32;KLIENCI_H</emphasis>
+5 
+6 
+7 
+8 <emphasis role="preprocessor">#include&#32;&lt;stdio.h&gt;</emphasis>
+9 <emphasis role="preprocessor">#include&#32;&lt;stdlib.h&gt;</emphasis>
+10 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_common_8h">common.h</link>&quot;</emphasis>
+11 
+12 
+13 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_klient_struktura">KlientStruktura</link>
+14 {
+15 
+16 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_klient_struktura_1ac06e2ac007dc7c50c5b41b72a68c13c4">numer_karty</link>;
+17 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>*&#32;<link linkend="_struct_klient_struktura_1a92537e473ad1b872ea9de82d034af9fc">imie</link>[<link linkend="_common_8c_1a392fb874e547e582e9c66a08a1f23326">MAX</link>];
+18 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>*&#32;<link linkend="_struct_klient_struktura_1ab1ffe95ed34e27db3d38e32d67ce7db0">nazwisko</link>[<link linkend="_common_8c_1a392fb874e547e582e9c66a08a1f23326">MAX</link>];
+19 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>*&#32;<link linkend="_struct_klient_struktura_1aa508677aeb7d14af19a46ce6386a183c">telefon</link>[<link linkend="_common_8c_1a392fb874e547e582e9c66a08a1f23326">MAX</link>];
+20 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>*&#32;<link linkend="_struct_klient_struktura_1a9b55ce5bd1586a4da1061c5b1772e1fd">email</link>[<link linkend="_common_8c_1a392fb874e547e582e9c66a08a1f23326">MAX</link>];
+21 
+22 &#32;&#32;&#32;&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_klient_struktura">KlientStruktura</link>&#32;*<link linkend="_struct_klient_struktura_1a05f570bf0ad3291ecf44c2e82c0d71e0">poprzedni</link>,&#32;*<link linkend="_struct_klient_struktura_1a817041601c186fdf3356703fa64a5159">nastepny</link>;
+23 
+24 }&#32;<link linkend="_klienci_8h_1a38fd7bcc190edf278f27823dfc7c3eb1">Klient</link>;
+25 
+26 
+32 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_klienci_8h_1a3eb845814072e027fabee9798ceda9a2">wyswietl_baze_klientow</link>();
+33 
+42 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_klienci_8h_1ab0f0128ac537d0a9c981f44d93517ec9">dodaj_klienta</link>();
+43 
+44 
+45 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_klienci_8h_1a48f827507e320816d9fb5932f3f52ef2">edytuj_klienta</link>();
+46 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_klienci_8h_1abf5c5d1ffd7b3804189034956ac86005">usun_klienta</link>();
+47 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_klienci_8h_1aec8790f898cfbcbe5f55f64d5261171b">menu_klientow</link>();
+48 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_klienci_8h_1a17266993cbb25779b37136a32f5438e7">wczytaniepliku_klienci</link>();
+49 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_klienci_8h_1ac4a3e4f8dfde3d84742d574c7cfcd162">zapispliku_klienci</link>();
+50 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_klienci_8h_1add5a1ecc7feb98cba96ac4a0240dd17e">znajdz_klienta_do_zarzadzania</link>();
+51 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_klienci_8h_1a420de625e3c38ba1dad8c333fbd6447c">wydrukuj_klienta</link>(<link linkend="_struct_klient_struktura">Klient</link>*&#32;wpis);
+52 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_klienci_8h_1ad0aa69f2005242c3b2a4080f2cdc2549">edytuj_imie_klienta</link>(<link linkend="_struct_klient_struktura">Klient</link>*&#32;wpis);
+53 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_klienci_8h_1aa15d3041ef12ae2395ec4c333348ed54">edytuj_nazwisko_klienta</link>(<link linkend="_struct_klient_struktura">Klient</link>*&#32;wpis);
+54 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_klienci_8h_1a968b0adcc99972b069d561afc5bf3fb2">edytuj_telefon_klienta</link>(<link linkend="_struct_klient_struktura">Klient</link>*&#32;wpis);
+55 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_klienci_8h_1a39e781ff7f36da456490a5df2e0224c4">edytuj_email_klienta</link>(<link linkend="_struct_klient_struktura">Klient</link>*&#32;wpis);
+56 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_klienci_8h_1a3eb845814072e027fabee9798ceda9a2">wyswietl_baze_klientow</link>();
+57 <link linkend="_struct_klient_struktura">Klient</link>*&#32;<link linkend="_klienci_8h_1a83984b8b6bc1f51e064eeb74ea2c7403">wyszukaj_klienta</link>(<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_klient_struktura_1ac06e2ac007dc7c50c5b41b72a68c13c4">numer_karty</link>);
+58 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_klienci_8h_1a460e7e1b92717eb9ae93cdf294abc66d">znajdz_najwyzsze_ID_klienci</link>();
+59 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_klienci_8h_1ae5c2b50f7b091e15b790fdc2bedd2338">edytuj_wypozyczenia_numer_karty_abc</link>(<link linkend="_struct_klient_struktura">Klient</link>*&#32;wpis);
+60 
+61 
+62 
+63 
+64 
+65 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

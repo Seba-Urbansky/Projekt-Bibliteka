@@ -1,0 +1,217 @@
+\doxysection{/\+Users/sebastian/\+Projects/\+PP2.PRO.1ID15\+B.\+SIWEK.\+URBAŃ\+SKI.\+KM.2/\+PP2.PRO.1ID15\+B.\+SIWEK.\+URBAŃ\+SKI.\+KM.2/wypozyczenia.h File Reference}
+\label{wypozyczenia_8h}\index{/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/wypozyczenia.h@{/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/wypozyczenia.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}klienci.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ksiazki.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ Wypozyczenia\+Struktura}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \textbf{ Wypozyczenia\+Struktura} \textbf{ Wypozyczenie}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ wyswietl\+\_\+kto\+\_\+wypozyczyl} ()
+\item 
+void \textbf{ ID\+\_\+ksiazki} ()
+\item 
+void \textbf{ kiedy} ()
+\item 
+void \textbf{ do\+\_\+kiedy} ()
+\item 
+void \textbf{ wydrukuj\+\_\+wypozyczenia} ()
+\item 
+void \textbf{ zapispliku\+\_\+wypozyczenia} ()
+\item 
+void \textbf{ wczytaniepliku\+\_\+wypozyczenia} ()
+\item 
+void \textbf{ edytuj\+\_\+wypozyczenia\+\_\+\+ID\+\_\+ksiazki} (\textbf{ Wypozyczenie} $\ast$wypozyczenie)
+\item 
+void \textbf{ edytuj\+\_\+wypozyczenia\+\_\+numer\+\_\+karty} (\textbf{ Wypozyczenie} $\ast$wpis)
+\item 
+int \textbf{ znajdz\+\_\+najwyzsze\+\_\+\+ID} ()
+\item 
+void \textbf{ edytuj\+\_\+wypozyczenia\+\_\+\+ID} (\textbf{ Wypozyczenie} $\ast$wpis)
+\item 
+void \textbf{ dodaj\+\_\+wypozyczenie} ()
+\item 
+void \textbf{ ustaw\+\_\+\+ID\+\_\+nowego\+\_\+wypozyczenia} ()
+\item 
+void \textbf{ edytuj\+\_\+wypozyczenia\+\_\+kiedy} (\textbf{ Wypozyczenie} $\ast$wpis)
+\item 
+void \textbf{ edytuj\+\_\+wypozyczenia\+\_\+do\+\_\+kiedy} (\textbf{ Wypozyczenie} $\ast$wpis)
+\item 
+void \textbf{ na\+\_\+dwa\+\_\+tygodnie} ()
+\item 
+int \textbf{ zalegle\+\_\+wypozyczenia} ()
+\item 
+float \textbf{ policz\+\_\+kare} (\textbf{ Wypozyczenie} $\ast$wpis)
+\item 
+void \textbf{ oddawanie\+\_\+ksiazki} (\textbf{ Wypozyczenie} $\ast$wpis)
+\item 
+int \textbf{ czy\+\_\+klient\+\_\+ma\+\_\+wypozyczenia} (\textbf{ Klient} $\ast$klient)
+\item 
+int \textbf{ czy\+\_\+ksiazka\+\_\+jest\+\_\+wypozyczona} (\textbf{ Ksiazka} $\ast$\textbf{ ID\+\_\+ksiazki})
+\item 
+void \textbf{ zwroc\+\_\+wypozyczenie} ()
+\item 
+void \textbf{ usun\+\_\+wypozyczenie} (\textbf{ Wypozyczenie} $\ast$wpis)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{wypozyczenia_8h_a2e41bcc4e8df9eda8cec674691c02967}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!Wypozyczenie@{Wypozyczenie}}
+\index{Wypozyczenie@{Wypozyczenie}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{Wypozyczenie}
+{\footnotesize\ttfamily typedef struct \textbf{ Wypozyczenia\+Struktura} \textbf{ Wypozyczenie}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{wypozyczenia_8h_a8e7e4f1699ef7653e588fa877116cfdb}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!czy\_klient\_ma\_wypozyczenia@{czy\_klient\_ma\_wypozyczenia}}
+\index{czy\_klient\_ma\_wypozyczenia@{czy\_klient\_ma\_wypozyczenia}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{czy\_klient\_ma\_wypozyczenia()}
+{\footnotesize\ttfamily int czy\+\_\+klient\+\_\+ma\+\_\+wypozyczenia (\begin{DoxyParamCaption}\item[{\textbf{ Klient} $\ast$}]{klient }\end{DoxyParamCaption})}
+
+\mbox{\label{wypozyczenia_8h_afef897a95d3200280235e9c5b52c78dd}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!czy\_ksiazka\_jest\_wypozyczona@{czy\_ksiazka\_jest\_wypozyczona}}
+\index{czy\_ksiazka\_jest\_wypozyczona@{czy\_ksiazka\_jest\_wypozyczona}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{czy\_ksiazka\_jest\_wypozyczona()}
+{\footnotesize\ttfamily int czy\+\_\+ksiazka\+\_\+jest\+\_\+wypozyczona (\begin{DoxyParamCaption}\item[{\textbf{ Ksiazka} $\ast$}]{ID\+\_\+ksiazki }\end{DoxyParamCaption})}
+
+\mbox{\label{wypozyczenia_8h_ac576a9dac5ce2f6e51b45ceef23778d9}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!do\_kiedy@{do\_kiedy}}
+\index{do\_kiedy@{do\_kiedy}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{do\_kiedy()}
+{\footnotesize\ttfamily void do\+\_\+kiedy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{wypozyczenia_8h_ab4d7bce300ef21148db92a04bf30dfc8}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!dodaj\_wypozyczenie@{dodaj\_wypozyczenie}}
+\index{dodaj\_wypozyczenie@{dodaj\_wypozyczenie}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{dodaj\_wypozyczenie()}
+{\footnotesize\ttfamily void dodaj\+\_\+wypozyczenie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{wypozyczenia_8h_a528dd1f42767194ed55cf4f9bd04713e}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!edytuj\_wypozyczenia\_do\_kiedy@{edytuj\_wypozyczenia\_do\_kiedy}}
+\index{edytuj\_wypozyczenia\_do\_kiedy@{edytuj\_wypozyczenia\_do\_kiedy}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{edytuj\_wypozyczenia\_do\_kiedy()}
+{\footnotesize\ttfamily void edytuj\+\_\+wypozyczenia\+\_\+do\+\_\+kiedy (\begin{DoxyParamCaption}\item[{\textbf{ Wypozyczenie} $\ast$}]{wpis }\end{DoxyParamCaption})}
+
+\mbox{\label{wypozyczenia_8h_a2bf906adc10478314379e50d61bfd6f5}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!edytuj\_wypozyczenia\_ID@{edytuj\_wypozyczenia\_ID}}
+\index{edytuj\_wypozyczenia\_ID@{edytuj\_wypozyczenia\_ID}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{edytuj\_wypozyczenia\_ID()}
+{\footnotesize\ttfamily void edytuj\+\_\+wypozyczenia\+\_\+\+ID (\begin{DoxyParamCaption}\item[{\textbf{ Wypozyczenie} $\ast$}]{wpis }\end{DoxyParamCaption})}
+
+\mbox{\label{wypozyczenia_8h_a58b0f0c25ad1f4a3ea56de0b29e0194c}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!edytuj\_wypozyczenia\_ID\_ksiazki@{edytuj\_wypozyczenia\_ID\_ksiazki}}
+\index{edytuj\_wypozyczenia\_ID\_ksiazki@{edytuj\_wypozyczenia\_ID\_ksiazki}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{edytuj\_wypozyczenia\_ID\_ksiazki()}
+{\footnotesize\ttfamily void edytuj\+\_\+wypozyczenia\+\_\+\+ID\+\_\+ksiazki (\begin{DoxyParamCaption}\item[{\textbf{ Wypozyczenie} $\ast$}]{wypozyczenie }\end{DoxyParamCaption})}
+
+\mbox{\label{wypozyczenia_8h_ad142cd21806abde6e1b232865f125bb2}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!edytuj\_wypozyczenia\_kiedy@{edytuj\_wypozyczenia\_kiedy}}
+\index{edytuj\_wypozyczenia\_kiedy@{edytuj\_wypozyczenia\_kiedy}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{edytuj\_wypozyczenia\_kiedy()}
+{\footnotesize\ttfamily void edytuj\+\_\+wypozyczenia\+\_\+kiedy (\begin{DoxyParamCaption}\item[{\textbf{ Wypozyczenie} $\ast$}]{wpis }\end{DoxyParamCaption})}
+
+\mbox{\label{wypozyczenia_8h_a53dfbd5acde67310c956b1c31ecb8f3b}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!edytuj\_wypozyczenia\_numer\_karty@{edytuj\_wypozyczenia\_numer\_karty}}
+\index{edytuj\_wypozyczenia\_numer\_karty@{edytuj\_wypozyczenia\_numer\_karty}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{edytuj\_wypozyczenia\_numer\_karty()}
+{\footnotesize\ttfamily void edytuj\+\_\+wypozyczenia\+\_\+numer\+\_\+karty (\begin{DoxyParamCaption}\item[{\textbf{ Wypozyczenie} $\ast$}]{wpis }\end{DoxyParamCaption})}
+
+\mbox{\label{wypozyczenia_8h_ac0a2eb32da7dacf3b36c40216dc1c238}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!ID\_ksiazki@{ID\_ksiazki}}
+\index{ID\_ksiazki@{ID\_ksiazki}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{ID\_ksiazki()}
+{\footnotesize\ttfamily void ID\+\_\+ksiazki (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{wypozyczenia_8h_a4a869ed0d033a3528ea50022b87796f4}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!kiedy@{kiedy}}
+\index{kiedy@{kiedy}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{kiedy()}
+{\footnotesize\ttfamily void kiedy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{wypozyczenia_8h_a7110aeaf9f2661365c1311fa96eacd3a}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!na\_dwa\_tygodnie@{na\_dwa\_tygodnie}}
+\index{na\_dwa\_tygodnie@{na\_dwa\_tygodnie}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{na\_dwa\_tygodnie()}
+{\footnotesize\ttfamily void na\+\_\+dwa\+\_\+tygodnie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{wypozyczenia_8h_a05ec969a5ebface5c85d81fa362c29b9}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!oddawanie\_ksiazki@{oddawanie\_ksiazki}}
+\index{oddawanie\_ksiazki@{oddawanie\_ksiazki}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{oddawanie\_ksiazki()}
+{\footnotesize\ttfamily void oddawanie\+\_\+ksiazki (\begin{DoxyParamCaption}\item[{\textbf{ Wypozyczenie} $\ast$}]{wpis }\end{DoxyParamCaption})}
+
+\mbox{\label{wypozyczenia_8h_a65b934851a82f89f3e684f6021a09e24}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!policz\_kare@{policz\_kare}}
+\index{policz\_kare@{policz\_kare}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{policz\_kare()}
+{\footnotesize\ttfamily float policz\+\_\+kare (\begin{DoxyParamCaption}\item[{\textbf{ Wypozyczenie} $\ast$}]{wpis }\end{DoxyParamCaption})}
+
+\mbox{\label{wypozyczenia_8h_a2f1f2e5cb61d827bb3ccf316ef2ba227}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!ustaw\_ID\_nowego\_wypozyczenia@{ustaw\_ID\_nowego\_wypozyczenia}}
+\index{ustaw\_ID\_nowego\_wypozyczenia@{ustaw\_ID\_nowego\_wypozyczenia}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{ustaw\_ID\_nowego\_wypozyczenia()}
+{\footnotesize\ttfamily void ustaw\+\_\+\+ID\+\_\+nowego\+\_\+wypozyczenia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{wypozyczenia_8h_a7c1d3c89910025671788a0afceccc9db}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!usun\_wypozyczenie@{usun\_wypozyczenie}}
+\index{usun\_wypozyczenie@{usun\_wypozyczenie}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{usun\_wypozyczenie()}
+{\footnotesize\ttfamily void usun\+\_\+wypozyczenie (\begin{DoxyParamCaption}\item[{\textbf{ Wypozyczenie} $\ast$}]{wpis }\end{DoxyParamCaption})}
+
+\mbox{\label{wypozyczenia_8h_a1ed9abde669d8ae22e4b7594016ada7c}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!wczytaniepliku\_wypozyczenia@{wczytaniepliku\_wypozyczenia}}
+\index{wczytaniepliku\_wypozyczenia@{wczytaniepliku\_wypozyczenia}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{wczytaniepliku\_wypozyczenia()}
+{\footnotesize\ttfamily void wczytaniepliku\+\_\+wypozyczenia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{wypozyczenia_8h_aab5fb2af45c9524a3acd98f0f14b6fa1}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!wydrukuj\_wypozyczenia@{wydrukuj\_wypozyczenia}}
+\index{wydrukuj\_wypozyczenia@{wydrukuj\_wypozyczenia}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{wydrukuj\_wypozyczenia()}
+{\footnotesize\ttfamily void wydrukuj\+\_\+wypozyczenia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{wypozyczenia_8h_a1ad62ce3ada3806a59561dbd8868b3aa}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!wyswietl\_kto\_wypozyczyl@{wyswietl\_kto\_wypozyczyl}}
+\index{wyswietl\_kto\_wypozyczyl@{wyswietl\_kto\_wypozyczyl}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{wyswietl\_kto\_wypozyczyl()}
+{\footnotesize\ttfamily void wyswietl\+\_\+kto\+\_\+wypozyczyl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{wypozyczenia_8h_a73c4ffad06374a721eeb8ed60d421821}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!zalegle\_wypozyczenia@{zalegle\_wypozyczenia}}
+\index{zalegle\_wypozyczenia@{zalegle\_wypozyczenia}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{zalegle\_wypozyczenia()}
+{\footnotesize\ttfamily int zalegle\+\_\+wypozyczenia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{wypozyczenia_8h_ab8fb617326e316fb5a174c38eb474d17}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!zapispliku\_wypozyczenia@{zapispliku\_wypozyczenia}}
+\index{zapispliku\_wypozyczenia@{zapispliku\_wypozyczenia}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{zapispliku\_wypozyczenia()}
+{\footnotesize\ttfamily void zapispliku\+\_\+wypozyczenia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{wypozyczenia_8h_a242894dcf63fe7ce16734b33ee52de5a}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!znajdz\_najwyzsze\_ID@{znajdz\_najwyzsze\_ID}}
+\index{znajdz\_najwyzsze\_ID@{znajdz\_najwyzsze\_ID}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{znajdz\_najwyzsze\_ID()}
+{\footnotesize\ttfamily int znajdz\+\_\+najwyzsze\+\_\+\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{wypozyczenia_8h_afd5606f068669c3669e5ec45ac6192b2}} 
+\index{wypozyczenia.h@{wypozyczenia.h}!zwroc\_wypozyczenie@{zwroc\_wypozyczenie}}
+\index{zwroc\_wypozyczenie@{zwroc\_wypozyczenie}!wypozyczenia.h@{wypozyczenia.h}}
+\doxysubsubsection{zwroc\_wypozyczenie()}
+{\footnotesize\ttfamily void zwroc\+\_\+wypozyczenie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

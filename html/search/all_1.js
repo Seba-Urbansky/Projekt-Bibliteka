@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['projekt_2dbibliteka_0',['Projekt-Bibliteka',['../md___users_sebastian__projects__p_p2__p_r_o_1_i_d15_b__s_i_w_e_k__u_r_b_a_n_xCC_x81_s_k_i__k_m_220883177c562bed7bdb4ad29db557c64.html',1,'']]]
+  ['common_2ec_0',['common.c',['../common_8c.html',1,'']]],
+  ['common_2eh_1',['common.h',['../common_8h.html',1,'']]],
+  ['czy_5fklient_5fma_5fwypozyczenia_2',['czy_klient_ma_wypozyczenia',['../wypozyczenia_8h.html#a8e7e4f1699ef7653e588fa877116cfdb',1,'czy_klient_ma_wypozyczenia(Klient *klient):&#160;wypozyczenia.c'],['../wypozyczenia_8c.html#a8e7e4f1699ef7653e588fa877116cfdb',1,'czy_klient_ma_wypozyczenia(Klient *klient):&#160;wypozyczenia.c']]],
+  ['czy_5fksiazka_5fjest_5fwypozyczona_3',['czy_ksiazka_jest_wypozyczona',['../wypozyczenia_8h.html#afef897a95d3200280235e9c5b52c78dd',1,'czy_ksiazka_jest_wypozyczona(Ksiazka *ID_ksiazki):&#160;wypozyczenia.c'],['../wypozyczenia_8c.html#accf309e4d88d00176ac21cf0d1d4fb8e',1,'czy_ksiazka_jest_wypozyczona(Ksiazka *ksiazka):&#160;wypozyczenia.c']]],
+  ['czy_5fplik_5fjest_5fpusty_4',['czy_plik_jest_pusty',['../common_8c.html#a5e2faf2aa618174a4cfe8f9b7e6611df',1,'czy_plik_jest_pusty(FILE *plik):&#160;common.c'],['../common_8h.html#a5e2faf2aa618174a4cfe8f9b7e6611df',1,'czy_plik_jest_pusty(FILE *plik):&#160;common.c']]]
 ];

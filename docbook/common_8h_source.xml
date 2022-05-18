@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_common_8h_source" xml:lang="en-US">
+<title>common.h</title>
+<indexterm><primary>/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/common.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+2 <emphasis role="preprocessor">#ifndef&#32;COMMON_H</emphasis>
+3 <emphasis role="preprocessor">#define&#32;COMMON_H</emphasis>
+4 <emphasis role="preprocessor">#define&#32;MAX&#32;32</emphasis>
+5 
+6 <emphasis role="preprocessor">#include&#32;&lt;stdio.h&gt;</emphasis>
+7 <emphasis role="preprocessor">#include&#32;&lt;stdlib.h&gt;</emphasis>
+8 
+9 <emphasis role="preprocessor">#define&#32;GODZINA&#32;3600</emphasis>
+10 <emphasis role="preprocessor">#define&#32;DZIEN&#32;24&#32;*&#32;GODZINA</emphasis>
+11 <emphasis role="preprocessor">#define&#32;TYDZIEN&#32;7&#32;*&#32;DZIEN</emphasis>
+12 
+13 
+14 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_common_8h_1a5e2faf2aa618174a4cfe8f9b7e6611df">czy_plik_jest_pusty</link>(FILE*&#32;<link linkend="_common_8c_1a90d47b08c54484fff89d044586c78347">plik</link>);
+15 
+16 
+17 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

@@ -11,9 +11,7 @@ Klient *pierwszy_klient = NULL;
 Klient *ostatni_klient = NULL;
 
 /*! \fn void wyswietl_baze_klientow()
-     \brief Funkcja wyswietl_baze_klientow wyswietla dane klientow z plikku
-    \param (brak parametru)
-    \return  Zwracane sa dane klientow z pliku
+     \brief Funkcja wyswietl_baze_klientow wyswietla dane klientow z pliku
 */
 
 void wyswietl_baze_klientow()
@@ -27,11 +25,9 @@ void wyswietl_baze_klientow()
 }
 
 /*! \fn void dodaj_klienta()
-    \brief Funkcja wyswietl_baze_klientow wyswietla dane klientow z pliku
+    \brief Funkcja dodaj_klienta dodaje nowego klienta do bazy danych
     \brief Jesli nie ma klientow w bazie to tworzymy nowego klienta
     \brief w przeciwnym wypadku wpis uzytkownika dodaje nastepnego klienta do bazy klientow
-    \param (brak parametru)
-    \return  Dodaje do bazy w pliku nowego klienta na podstawie danych podanych przez uzytkownika
 */
 
 void dodaj_klienta()
@@ -79,10 +75,9 @@ int znajdz_najwyzsze_ID_klienci()
 }
 
 /*! \fn void edytuj_wypozyczenia_numer_karty_abc(Klient *wpis)
-     \brief Funkcja wyszukuje w pliku ID klienta o najwyzszej wartosci
-     \brief jesli wpis uzytkownika jest wiekszy od aktualnego max, to nastepuje nowe maksimum
-    \param (brak parametru)
-    \return Zwracane jest najwyzsze ID klienta
+     \brief wpis uzytkownika jest przypisywany do numeru karty ktory jest rowny
+     \brief najwyzszemu ID klienta + 1
+    \param wpis pobierany jest parametr z wpisu uzytkownika, ktory chce cos edytowac
 */
 
 void edytuj_wypozyczenia_numer_karty_abc(Klient *wpis)

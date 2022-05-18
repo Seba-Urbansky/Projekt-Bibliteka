@@ -1,6 +1,6 @@
-\doxysection{ksiazki.\+h}
+\hypertarget{ksiazki_8h_source}{}\doxysection{ksiazki.\+h}
 \label{ksiazki_8h_source}\index{/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/ksiazki.h@{/Users/sebastian/Projects/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/PP2.PRO.1ID15B.SIWEK.URBAŃSKI.KM.2/ksiazki.h}}
-\textbf{ Go to the documentation of this file.}
+\mbox{\hyperlink{ksiazki_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 }
 \DoxyCodeLine{2 }
@@ -9,55 +9,55 @@
 \DoxyCodeLine{5 }
 \DoxyCodeLine{6 \textcolor{preprocessor}{\#include <stdio.h>}}
 \DoxyCodeLine{7 \textcolor{preprocessor}{\#include <stdlib.h>}}
-\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}common.h"{}}}
-\DoxyCodeLine{9 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }KsiazkaStruktura}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{common_8h}{common.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_ksiazka_struktura}{KsiazkaStruktura}}}
 \DoxyCodeLine{10 \{}
 \DoxyCodeLine{11 }
-\DoxyCodeLine{12     \textcolor{keywordtype}{int} ID;}
-\DoxyCodeLine{13     \textcolor{keywordtype}{int} rok;}
-\DoxyCodeLine{14     \textcolor{keywordtype}{char} *tytul[MAX];}
-\DoxyCodeLine{15     \textcolor{keywordtype}{char} *autor[MAX];}
-\DoxyCodeLine{16     \textcolor{keywordtype}{char} *gatunek[MAX];}
-\DoxyCodeLine{17     \textcolor{keywordtype}{int} liczba\_egzemplarzy;}
-\DoxyCodeLine{18     \textcolor{keywordtype}{int} liczba\_wypozyczonych;}
+\DoxyCodeLine{12     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_ksiazka_struktura_af180e926633cde08a05ccbc3af397ee4}{ID}};}
+\DoxyCodeLine{13     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_ksiazka_struktura_ab216bb7eaebb4b2665b3a7e9d52d98d0}{rok}};}
+\DoxyCodeLine{14     \textcolor{keywordtype}{char} *\mbox{\hyperlink{struct_ksiazka_struktura_a113a6ab6773565fe27cdb876d0db9fb5}{tytul}}[\mbox{\hyperlink{common_8c_a392fb874e547e582e9c66a08a1f23326}{MAX}}];}
+\DoxyCodeLine{15     \textcolor{keywordtype}{char} *\mbox{\hyperlink{struct_ksiazka_struktura_a8b31666ce548fc477da9eada27fba523}{autor}}[\mbox{\hyperlink{common_8c_a392fb874e547e582e9c66a08a1f23326}{MAX}}];}
+\DoxyCodeLine{16     \textcolor{keywordtype}{char} *\mbox{\hyperlink{struct_ksiazka_struktura_a0cdb3fcd8923353f1cb289d6766c8a4b}{gatunek}}[\mbox{\hyperlink{common_8c_a392fb874e547e582e9c66a08a1f23326}{MAX}}];}
+\DoxyCodeLine{17     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_ksiazka_struktura_a4994bb2527f97d2a36044762a8d75a08}{liczba\_egzemplarzy}};}
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_ksiazka_struktura_a43bb912c5994f48c4e74182136e53467}{liczba\_wypozyczonych}};}
 \DoxyCodeLine{19     }
 \DoxyCodeLine{20 }
-\DoxyCodeLine{21     \textcolor{keyword}{struct }KsiazkaStruktura *poprzedni, *nastepny;}
+\DoxyCodeLine{21     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_ksiazka_struktura}{KsiazkaStruktura}} *\mbox{\hyperlink{struct_ksiazka_struktura_af66406297937206eae33b7a6399f3d56}{poprzedni}}, *\mbox{\hyperlink{struct_ksiazka_struktura_a6647f51c3f7b5777e35ee7608478b79e}{nastepny}};}
 \DoxyCodeLine{22 }
-\DoxyCodeLine{23 \} Ksiazka;}
+\DoxyCodeLine{23 \} \mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}};}
 \DoxyCodeLine{24 }
-\DoxyCodeLine{25 \textcolor{keywordtype}{void} wyswietl\_baze\_ksiazek();}
-\DoxyCodeLine{26 \textcolor{keywordtype}{void} dodaj\_ksiazke();}
-\DoxyCodeLine{27 \textcolor{keywordtype}{void} edytuj\_ksiazke();}
-\DoxyCodeLine{28 \textcolor{keywordtype}{void} usun\_ksiazke();}
-\DoxyCodeLine{29 \textcolor{keywordtype}{void} menu\_ksiazek();}
-\DoxyCodeLine{30 \textcolor{keywordtype}{void} wczytaniepliku\_ksiazki();}
-\DoxyCodeLine{31 \textcolor{keywordtype}{void} zapispliku\_ksiazki();}
-\DoxyCodeLine{32 \textcolor{keywordtype}{void} ksiazka\_do\_zarzadzania();}
-\DoxyCodeLine{33 \textcolor{keywordtype}{void} wydrukuj\_ksiazke(Ksiazka *wpis);}
-\DoxyCodeLine{34 \textcolor{keywordtype}{void} edytuj\_tytul\_ksiazki(Ksiazka *wpis);}
-\DoxyCodeLine{35 \textcolor{keywordtype}{void} edytuj\_gatunek\_ksiazki(Ksiazka *wpis);}
-\DoxyCodeLine{36 \textcolor{keywordtype}{void} edytuj\_autora(Ksiazka *wpis);}
-\DoxyCodeLine{37 \textcolor{keywordtype}{void} edytuj\_rok(Ksiazka *wpis);}
-\DoxyCodeLine{38 \textcolor{keywordtype}{void} wyswietl\_baze\_ksiazek();}
-\DoxyCodeLine{39 Ksiazka *wyszukaj\_ksiazke(\textcolor{keywordtype}{int} ID);}
-\DoxyCodeLine{40 \textcolor{keywordtype}{int} znajdz\_najwyzsze\_ID\_ksiazki();}
-\DoxyCodeLine{41 \textcolor{keywordtype}{void} edytuj\_ksiazki\_ID\_ksiazki(Ksiazka *wpis);}
-\DoxyCodeLine{42 \textcolor{keywordtype}{void} sortowanie\_ksiazek\_niemalejace(Ksiazka *ID);}
-\DoxyCodeLine{43 \textcolor{keywordtype}{void} wyszukaj\_ksiazki\_po\_tytule();}
-\DoxyCodeLine{44 \textcolor{keywordtype}{void} wyszukaj\_ksiazki\_po\_autorze();}
-\DoxyCodeLine{45 \textcolor{keywordtype}{void} wyszukaj\_ksiazki\_po\_roku();}
-\DoxyCodeLine{46 Ksiazka* zamien(Ksiazka* a, Ksiazka* b);}
-\DoxyCodeLine{47 \textcolor{keywordtype}{int} policz\_ksiazki();}
-\DoxyCodeLine{48 \textcolor{keyword}{enum} SortowanieKolejnosc \{Rosnaca = 1, Malejaca = 0\}; }
-\DoxyCodeLine{49 \textcolor{keyword}{enum} SortowanieAtrybut \{Tytul = 0, Autor = 1, Rok = 2, Gatunek = 3, ID = 4, LiczbaEgzemplarzy = 5, LiczbaWypozyczonych = 6 \};}
-\DoxyCodeLine{50 \textcolor{keywordtype}{void} sortowanie(\textcolor{keyword}{enum} SortowanieKolejnosc kolejnosc, \textcolor{keyword}{enum} SortowanieAtrybut atrybut);}
-\DoxyCodeLine{51 \textcolor{keywordtype}{void} edytuj\_liczbe\_egzemplarzy(Ksiazka *wpis);}
-\DoxyCodeLine{52 \textcolor{keywordtype}{void} edytuj\_liczbe\_wypozyczonych(Ksiazka *wpis);}
-\DoxyCodeLine{53 \textcolor{keywordtype}{void} wyszukaj\_ksiazki\_po\_gatunku();}
-\DoxyCodeLine{54 \textcolor{keywordtype}{void} wyszukaj\_po\_liczbie\_wypozyczonych();}
-\DoxyCodeLine{55 \textcolor{keywordtype}{void} wyszukaj\_po\_liczbie\_egzemplarzy();}
-\DoxyCodeLine{56 \textcolor{keywordtype}{void} wydrukuj\_po\_ID();}
+\DoxyCodeLine{25 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_a48119a789c118bca048ac95c6e159e14}{wyswietl\_baze\_ksiazek}}();}
+\DoxyCodeLine{26 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_a18018b143b960db33a39ebcaa5c6c06c}{dodaj\_ksiazke}}();}
+\DoxyCodeLine{27 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_abff38f583e5964764ae641674fc76148}{edytuj\_ksiazke}}();}
+\DoxyCodeLine{28 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_a31ad71269e0f171ff6bbf775a7d6a253}{usun\_ksiazke}}();}
+\DoxyCodeLine{29 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_ad515018a91175fffa50289ef40ca4342}{menu\_ksiazek}}();}
+\DoxyCodeLine{30 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_aa7bc6b44a7b7d6db12d0fdaca2b47998}{wczytaniepliku\_ksiazki}}();}
+\DoxyCodeLine{31 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_a84101ca77a61569379a0275f73d8cfd4}{zapispliku\_ksiazki}}();}
+\DoxyCodeLine{32 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_a023661b73ad6f5af935c1bc928429310}{ksiazka\_do\_zarzadzania}}();}
+\DoxyCodeLine{33 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_a84180dfd861f8a7eccb6505bebeb26a8}{wydrukuj\_ksiazke}}(\mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}} *wpis);}
+\DoxyCodeLine{34 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_a93f5816116ef4382f87dab1e5695e00f}{edytuj\_tytul\_ksiazki}}(\mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}} *wpis);}
+\DoxyCodeLine{35 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_acfcccbe02004a890d7f3bac5900ecf21}{edytuj\_gatunek\_ksiazki}}(\mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}} *wpis);}
+\DoxyCodeLine{36 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_a966ffe3ef2449f7a256ac6d703c7ec24}{edytuj\_autora}}(\mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}} *wpis);}
+\DoxyCodeLine{37 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_ab6f2c6d841a1887aa7bd2e2ca5b99648}{edytuj\_rok}}(\mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}} *wpis);}
+\DoxyCodeLine{38 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_a48119a789c118bca048ac95c6e159e14}{wyswietl\_baze\_ksiazek}}();}
+\DoxyCodeLine{39 \mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}} *\mbox{\hyperlink{ksiazki_8h_af68f877082bb74fc15a27b90d96a2b4d}{wyszukaj\_ksiazke}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929a001479a58fb44c39a29b20d565081a68}{ID}});}
+\DoxyCodeLine{40 \textcolor{keywordtype}{int} \mbox{\hyperlink{ksiazki_8h_ab253baef3a79eb201a1e7551e5e2a95d}{znajdz\_najwyzsze\_ID\_ksiazki}}();}
+\DoxyCodeLine{41 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_ac5e4aaf398428ba485855a36f3f1494e}{edytuj\_ksiazki\_ID\_ksiazki}}(\mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}} *wpis);}
+\DoxyCodeLine{42 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_a38b28d0a614a50c26b8920620dcf0d1d}{sortowanie\_ksiazek\_niemalejace}}(\mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}} *\mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929a001479a58fb44c39a29b20d565081a68}{ID}});}
+\DoxyCodeLine{43 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_adfb816e67ef893d997c5e6ee642b8df7}{wyszukaj\_ksiazki\_po\_tytule}}();}
+\DoxyCodeLine{44 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_ac557385e6d4385e0274ff6a6a8aeee00}{wyszukaj\_ksiazki\_po\_autorze}}();}
+\DoxyCodeLine{45 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_a8b6eab3e3b55d5fe5951f2b17db81c44}{wyszukaj\_ksiazki\_po\_roku}}();}
+\DoxyCodeLine{46 \mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}}* \mbox{\hyperlink{ksiazki_8h_a892873c6de7b41a058e8775ea9ce8e01}{zamien}}(\mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}}* a, \mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}}* b);}
+\DoxyCodeLine{47 \textcolor{keywordtype}{int} \mbox{\hyperlink{ksiazki_8h_a7d6a8320245d228b8ac22330befab405}{policz\_ksiazki}}();}
+\DoxyCodeLine{48 \textcolor{keyword}{enum} \mbox{\hyperlink{ksiazki_8h_a92b3cf569043e5ddcb058a54db66783b}{SortowanieKolejnosc}} \{\mbox{\hyperlink{ksiazki_8h_a92b3cf569043e5ddcb058a54db66783bab283ea85da4665bf15c06eb4769f5cc7}{Rosnaca}} = 1, \mbox{\hyperlink{ksiazki_8h_a92b3cf569043e5ddcb058a54db66783bae98de48074de837da6952478f5fc5a14}{Malejaca}} = 0\}; }
+\DoxyCodeLine{49 \textcolor{keyword}{enum} \mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929}{SortowanieAtrybut}} \{\mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929a12e278122fae812b3ad8c18cb5c4e8eb}{Tytul}} = 0, \mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929a7655ae0771c3f4176026e8a834f646dc}{Autor}} = 1, \mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929af9326a3865bd3a77f6307af749fd7af8}{Rok}} = 2, \mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929a66b379b90f0cd74d1e8c011179766a60}{Gatunek}} = 3, \mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929a001479a58fb44c39a29b20d565081a68}{ID}} = 4, \mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929ab4f1215e808b4bcd3283a822d8937324}{LiczbaEgzemplarzy}} = 5, \mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929acd29f0cb8e075f658f31f3f754f34b7d}{LiczbaWypozyczonych}} = 6 \};}
+\DoxyCodeLine{50 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_ad5f77aa48d5aa3392bd2f3e22e388acc}{sortowanie}}(\textcolor{keyword}{enum} \mbox{\hyperlink{ksiazki_8h_a92b3cf569043e5ddcb058a54db66783b}{SortowanieKolejnosc}} kolejnosc, \textcolor{keyword}{enum} \mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929}{SortowanieAtrybut}} atrybut);}
+\DoxyCodeLine{51 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_a4c6052636c8b6375611bc320b29ff22f}{edytuj\_liczbe\_egzemplarzy}}(\mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}} *wpis);}
+\DoxyCodeLine{52 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_a05d1aa1ffff346a6f439481cf14434f8}{edytuj\_liczbe\_wypozyczonych}}(\mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}} *wpis);}
+\DoxyCodeLine{53 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_a3e817d138006527a2369e47f458236d3}{wyszukaj\_ksiazki\_po\_gatunku}}();}
+\DoxyCodeLine{54 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_a0b4df348f6c432f40490eb8bdbcee3c6}{wyszukaj\_po\_liczbie\_wypozyczonych}}();}
+\DoxyCodeLine{55 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_a768352a5223d9e1841ce9692aaf43f8d}{wyszukaj\_po\_liczbie\_egzemplarzy}}();}
+\DoxyCodeLine{56 \textcolor{keywordtype}{void} \mbox{\hyperlink{ksiazki_8h_ae189b52f9d8a0e053a3482a79a26f1c6}{wydrukuj\_po\_ID}}();}
 \DoxyCodeLine{57 }
 \DoxyCodeLine{58 }
 \DoxyCodeLine{59 \textcolor{preprocessor}{\#endif}}

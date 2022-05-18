@@ -27,13 +27,13 @@ void \mbox{\hyperlink{klienci_8h_abf5c5d1ffd7b3804189034956ac86005}{usun\+\_\+kl
 void \mbox{\hyperlink{klienci_8h_aec8790f898cfbcbe5f55f64d5261171b}{menu\+\_\+klientow}} ()
 \item 
 void \mbox{\hyperlink{klienci_8h_a17266993cbb25779b37136a32f5438e7}{wczytaniepliku\+\_\+klienci}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Na poczatku sprawdzamy czy wczytywany plik nie jest pusty i wczytujemy z niego zawartosc. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{klienci_8h_ac4a3e4f8dfde3d84742d574c7cfcd162}{zapispliku\+\_\+klienci}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Przechodzimy petla po wszystkich klientach i zapisujemy najnowsze dane dla numer\+\_\+karty, imie, nazwisko, telefon, email. Jezeli wpis uzytkownika na nastepny element nie jest pusty to zapisuj do pliku. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{klienci_8h_add5a1ecc7feb98cba96ac4a0240dd17e}{znajdz\+\_\+klienta\+\_\+do\+\_\+zarzadzania}} ()
 \item 
 void \mbox{\hyperlink{klienci_8h_a420de625e3c38ba1dad8c333fbd6447c}{wydrukuj\+\_\+klienta}} (\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$wpis)
-\begin{DoxyCompactList}\small\item\em Funkcja wydrukowuje na ekran numer\+\_\+karty, imie, nazwisko, , telefon, email klienta. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Funkcja wydrukowuje na ekran numer\+\_\+karty, imie, nazwisko,, telefon, email klienta. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{klienci_8h_ad0aa69f2005242c3b2a4080f2cdc2549}{edytuj\+\_\+imie\+\_\+klienta}} (\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$wpis)
 \begin{DoxyCompactList}\small\item\em Funkcja edytuje dane imie klienta na podstawie wpisu uzytkownika. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{klienci_8h_aa15d3041ef12ae2395ec4c333348ed54}{edytuj\+\_\+nazwisko\+\_\+klienta}} (\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$wpis)
@@ -43,11 +43,11 @@ void \mbox{\hyperlink{klienci_8h_a968b0adcc99972b069d561afc5bf3fb2}{edytuj\+\_\+
 void \mbox{\hyperlink{klienci_8h_a39e781ff7f36da456490a5df2e0224c4}{edytuj\+\_\+email\+\_\+klienta}} (\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$wpis)
 \begin{DoxyCompactList}\small\item\em Funkcja edytuje email klienta na podstawie wpisu uzytkownika. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$ \mbox{\hyperlink{klienci_8h_a83984b8b6bc1f51e064eeb74ea2c7403}{wyszukaj\+\_\+klienta}} (int numer\+\_\+karty)
-\begin{DoxyCompactList}\small\item\em przechodzimy w petli przez wszystkich klientow jesli wpis uzytkownika szukajacego numeru\+\_\+karty jest rowny szukanemu numerowi karty zwroc wpis jezeli uzytkownik nic nie wpisze nie zwracaj niczego \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Przechodzimy w petli przez wszystkich klientow Jesli wpis uzytkownika szukajacego numeru\+\_\+karty jest rowny szukanemu numerowi karty zwroc wpis Jezeli uzytkownik nic nie wpisze nie zwracaj niczego. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{klienci_8h_a460e7e1b92717eb9ae93cdf294abc66d}{znajdz\+\_\+najwyzsze\+\_\+\+ID\+\_\+klienci}} ()
 \begin{DoxyCompactList}\small\item\em Funkcja wyszukuje w pliku ID klienta o najwyzszej wartosci jesli wpis uzytkownika jest wiekszy od aktualnego max, to nastepuje nowe maksimum. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{klienci_8h_ae5c2b50f7b091e15b790fdc2bedd2338}{edytuj\+\_\+wypozyczenia\+\_\+numer\+\_\+karty\+\_\+abc}} (\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$wpis)
-\begin{DoxyCompactList}\small\item\em wpis uzytkownika jest przypisywany do numeru karty ktory jest rowny najwyzszemu ID klienta + 1 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Wpis uzytkownika jest przypisywany do numeru karty ktory jest rowny najwyzszemu ID klienta + 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Typedef Documentation}
@@ -144,7 +144,7 @@ Funkcja edytuje dane telefonu klienta na podstawie wpisu uzytkownika.
 
 
 
-wpis uzytkownika jest przypisywany do numeru karty ktory jest rowny najwyzszemu ID klienta + 1 
+Wpis uzytkownika jest przypisywany do numeru karty ktory jest rowny najwyzszemu ID klienta + 1. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -169,7 +169,16 @@ wpis uzytkownika jest przypisywany do numeru karty ktory jest rowny najwyzszemu 
 \doxysubsubsection{\texorpdfstring{wczytaniepliku\_klienci()}{wczytaniepliku\_klienci()}}
 {\footnotesize\ttfamily void wczytaniepliku\+\_\+klienci (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{klienci_8h_a420de625e3c38ba1dad8c333fbd6447c}\label{klienci_8h_a420de625e3c38ba1dad8c333fbd6447c}} 
+
+
+Na poczatku sprawdzamy czy wczytywany plik nie jest pusty i wczytujemy z niego zawartosc. 
+
+
+\begin{DoxyItemize}
+\item Natomiast jesli pierwszy klient bedzie mial pusta wartosc wpis uzytkownika zrownujemy z wartoscia pierwszego\+\_\+klienta i poprzedniego
+\item Natomiast jesli wpis uzytkownika nie bedzie pusty to do wpisu przypisujemy wskaznik na nastepny element, a do wpisu wskaznik na poprzedni element
+\item W ostatnim warunku jezeli wpis uzytkownika nie bedzie pusty to ostatni klient, jest rowny wpisowi uzytkownika 
+\end{DoxyItemize}\mbox{\Hypertarget{klienci_8h_a420de625e3c38ba1dad8c333fbd6447c}\label{klienci_8h_a420de625e3c38ba1dad8c333fbd6447c}} 
 \index{klienci.h@{klienci.h}!wydrukuj\_klienta@{wydrukuj\_klienta}}
 \index{wydrukuj\_klienta@{wydrukuj\_klienta}!klienci.h@{klienci.h}}
 \doxysubsubsection{\texorpdfstring{wydrukuj\_klienta()}{wydrukuj\_klienta()}}
@@ -177,7 +186,7 @@ wpis uzytkownika jest przypisywany do numeru karty ktory jest rowny najwyzszemu 
 
 
 
-Funkcja wydrukowuje na ekran numer\+\_\+karty, imie, nazwisko, , telefon, email klienta. 
+Funkcja wydrukowuje na ekran numer\+\_\+karty, imie, nazwisko,, telefon, email klienta. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -202,7 +211,7 @@ Funkcja wyswietl\+\_\+baze\+\_\+klientow wyswietla dane klientow z pliku.
 
 
 
-przechodzimy w petli przez wszystkich klientow jesli wpis uzytkownika szukajacego numeru\+\_\+karty jest rowny szukanemu numerowi karty zwroc wpis jezeli uzytkownik nic nie wpisze nie zwracaj niczego 
+Przechodzimy w petli przez wszystkich klientow Jesli wpis uzytkownika szukajacego numeru\+\_\+karty jest rowny szukanemu numerowi karty zwroc wpis Jezeli uzytkownik nic nie wpisze nie zwracaj niczego. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -217,6 +226,10 @@ Funkcja zwraca szukanego klienta
 \index{zapispliku\_klienci@{zapispliku\_klienci}!klienci.h@{klienci.h}}
 \doxysubsubsection{\texorpdfstring{zapispliku\_klienci()}{zapispliku\_klienci()}}
 {\footnotesize\ttfamily void zapispliku\+\_\+klienci (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Przechodzimy petla po wszystkich klientach i zapisujemy najnowsze dane dla numer\+\_\+karty, imie, nazwisko, telefon, email. Jezeli wpis uzytkownika na nastepny element nie jest pusty to zapisuj do pliku. 
 
 \mbox{\Hypertarget{klienci_8h_add5a1ecc7feb98cba96ac4a0240dd17e}\label{klienci_8h_add5a1ecc7feb98cba96ac4a0240dd17e}} 
 \index{klienci.h@{klienci.h}!znajdz\_klienta\_do\_zarzadzania@{znajdz\_klienta\_do\_zarzadzania}}

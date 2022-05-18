@@ -26,6 +26,12 @@ void wyswietl_baze_klientow()
     }
 }
 
+/*! \fn void dodaj_klienta()
+     \brief Funkcja wyswietl_baze_klientow wyswietla dane klientow z pliku
+    \param (brak parametru)
+    \return  Dodaje do bazy w pliku nowego klienta na podstawie danych podanych przez uzytkownika
+*/
+
 void dodaj_klienta()
 {
     Klient *wpis = (Klient *)malloc(sizeof(Klient));
@@ -49,6 +55,14 @@ void dodaj_klienta()
         ostatni_klient = wpis;
     }
 }
+
+/*! \fn int znajdz_najwyzsze_ID_klienci()
+     \brief Funkcja wyszukuje w pliku ID klienta o najwyzszej wartosci
+     \brief jesli wpis uzytkownika jest wiekszy od aktualnego max, to nastepuje nowe maksimum
+    \param (brak parametru)
+    \return Zwracane jest najwyzsze ID klienta
+*/
+
 int znajdz_najwyzsze_ID_klienci()
 {
     int max = 0;
@@ -61,6 +75,13 @@ int znajdz_najwyzsze_ID_klienci()
     }
     return max;
 }
+
+/*! \fn void edytuj_wypozyczenia_numer_karty_abc(Klient *wpis)
+     \brief Funkcja wyszukuje w pliku ID klienta o najwyzszej wartosci
+     \brief jesli wpis uzytkownika jest wiekszy od aktualnego max, to nastepuje nowe maksimum
+    \param (brak parametru)
+    \return Zwracane jest najwyzsze ID klienta
+*/
 
 void edytuj_wypozyczenia_numer_karty_abc(Klient *wpis)
 {
@@ -160,7 +181,7 @@ void wczytaniepliku_klienci()
     {
         while (!feof(plik))
         {
-            wpis = (Klient *) malloc(sizeof(Klient));
+            wpis = (Klient *)malloc(sizeof(Klient));
             fscanf(plik, "%d %s %s %s %s", &wpis->numer_karty, &wpis->imie, &wpis->nazwisko, &wpis->telefon, &wpis->email);
 
             if (pierwszy_klient == NULL)

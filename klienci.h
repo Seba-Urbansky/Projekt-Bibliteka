@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include "common.h"
 
+
 typedef struct KlientStruktura
 {
 
@@ -23,8 +24,24 @@ typedef struct KlientStruktura
 } Klient;
 
 
+/*! \fn void wyswietl_baze_klientow()
+     \brief Funkcja wyswietl_baze_klientow wyswietla dane klientow z plikku
+    \param (brak parametru)
+    \return  Zwracane sa dane klientow z pliku
+*/
 void wyswietl_baze_klientow();
+
+/*! \fn void dodaj_klienta()
+    \brief Funkcja wyswietl_baze_klientow wyswietla dane klientow z pliku
+    \brief Jesli nie ma klientow w bazie to tworzymy nowego klienta
+    \brief w przeciwnym wypadku wpis uzytkownika dodaje nastepnego klienta do bazy klientow
+    \param (brak parametru)
+    \return  Dodaje do bazy w pliku nowego klienta na podstawie danych podanych przez uzytkownika
+*/
+
 void dodaj_klienta();
+
+
 void edytuj_klienta();
 void usun_klienta();
 void menu_klientow();

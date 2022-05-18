@@ -27,7 +27,9 @@ void wyswietl_baze_klientow()
 }
 
 /*! \fn void dodaj_klienta()
-     \brief Funkcja wyswietl_baze_klientow wyswietla dane klientow z pliku
+    \brief Funkcja wyswietl_baze_klientow wyswietla dane klientow z pliku
+    \brief Jesli nie ma klientow w bazie to tworzymy nowego klienta
+    \brief w przeciwnym wypadku wpis uzytkownika dodaje nastepnego klienta do bazy klientow
     \param (brak parametru)
     \return  Dodaje do bazy w pliku nowego klienta na podstawie danych podanych przez uzytkownika
 */

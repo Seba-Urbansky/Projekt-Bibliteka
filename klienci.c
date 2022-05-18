@@ -237,7 +237,13 @@ void usun_klienta(Klient *wpis)
 /*! \fn void wczytaniepliku_klienci()
     \brief 
     
-    Na poczatku sprawdzamy czy wczytywany plik nie jest pusty
+    Na poczatku sprawdzamy czy wczytywany plik nie jest pusty i wczytujemy z niego zawartosc
+    - Natomiast jesli pierwszy klient bedzie mial pusta wartosc wpis uzytkownika zrownujemy z 
+    wartoscia pierwszego_klienta i poprzedniego
+    - Natomiast jesli wpis uzytkownika nie bedzie pusty to do wpisu przypisujemy wskaznik na nastepny element, a do wpisu wskaznik na 
+    poprzedni element
+    - W ostatnim warunku jezeli wpis uzytkownika nie bedzie pusty to ostatni klient, jest rowny
+    wpisowi uzytkownika
     
 */
 
@@ -275,6 +281,16 @@ void wczytaniepliku_klienci()
         }
     }
 }
+
+/*! \fn void zapispliku_klienci()
+    \brief 
+    
+    Przechodzimy petla po wszystkich klientach i zapisujemy najnowsze dane dla
+    numer_karty, imie, nazwisko, telefon, email. Jezeli wpis uzytkownika na nastepny
+    element nie jest pusty to zapisuj do pliku
+    
+*/
+
 
 void zapispliku_klienci()
 {

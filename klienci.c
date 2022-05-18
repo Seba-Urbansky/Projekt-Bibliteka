@@ -10,6 +10,11 @@
 Klient *pierwszy_klient = NULL;
 Klient *ostatni_klient = NULL;
 
+/*! \fn void wyswietl_baze_klientow()
+     \brief Funkcja wyswietl_baze_klientow wyswietla dane klientow z plikku
+    \param (brak parametru)
+    \return  Zwracane sa dane klientow z pliku
+*/
 
 void wyswietl_baze_klientow()
 {

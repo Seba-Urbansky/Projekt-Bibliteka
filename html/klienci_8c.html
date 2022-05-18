@@ -87,16 +87,16 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a3eb845814072e027fabee9798ceda9a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="klienci_8c.html#a3eb845814072e027fabee9798ceda9a2">wyswietl_baze_klientow</a> ()</td></tr>
-<tr class="memdesc:a3eb845814072e027fabee9798ceda9a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja wyswietl_baze_klientow wyswietla dane klientow z plikku.  <a href="klienci_8c.html#a3eb845814072e027fabee9798ceda9a2">More...</a><br /></td></tr>
+<tr class="memdesc:a3eb845814072e027fabee9798ceda9a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja wyswietl_baze_klientow wyswietla dane klientow z pliku.  <a href="klienci_8c.html#a3eb845814072e027fabee9798ceda9a2">More...</a><br /></td></tr>
 <tr class="separator:a3eb845814072e027fabee9798ceda9a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0f0128ac537d0a9c981f44d93517ec9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="klienci_8c.html#ab0f0128ac537d0a9c981f44d93517ec9">dodaj_klienta</a> ()</td></tr>
-<tr class="memdesc:ab0f0128ac537d0a9c981f44d93517ec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja wyswietl_baze_klientow wyswietla dane klientow z pliku.  <a href="klienci_8c.html#ab0f0128ac537d0a9c981f44d93517ec9">More...</a><br /></td></tr>
+<tr class="memdesc:ab0f0128ac537d0a9c981f44d93517ec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja dodaj_klienta dodaje nowego klienta do bazy danych.  <a href="klienci_8c.html#ab0f0128ac537d0a9c981f44d93517ec9">More...</a><br /></td></tr>
 <tr class="separator:ab0f0128ac537d0a9c981f44d93517ec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a460e7e1b92717eb9ae93cdf294abc66d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="klienci_8c.html#a460e7e1b92717eb9ae93cdf294abc66d">znajdz_najwyzsze_ID_klienci</a> ()</td></tr>
 <tr class="memdesc:a460e7e1b92717eb9ae93cdf294abc66d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja wyszukuje w pliku ID klienta o najwyzszej wartosci.  <a href="klienci_8c.html#a460e7e1b92717eb9ae93cdf294abc66d">More...</a><br /></td></tr>
 <tr class="separator:a460e7e1b92717eb9ae93cdf294abc66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5c2b50f7b091e15b790fdc2bedd2338"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="klienci_8c.html#ae5c2b50f7b091e15b790fdc2bedd2338">edytuj_wypozyczenia_numer_karty_abc</a> (<a class="el" href="klienci_8h.html#a38fd7bcc190edf278f27823dfc7c3eb1">Klient</a> *wpis)</td></tr>
-<tr class="memdesc:ae5c2b50f7b091e15b790fdc2bedd2338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja wyszukuje w pliku ID klienta o najwyzszej wartosci.  <a href="klienci_8c.html#ae5c2b50f7b091e15b790fdc2bedd2338">More...</a><br /></td></tr>
+<tr class="memdesc:ae5c2b50f7b091e15b790fdc2bedd2338"><td class="mdescLeft">&#160;</td><td class="mdescRight">wpis uzytkownika jest przypisywany do numeru karty ktory jest rowny  <a href="klienci_8c.html#ae5c2b50f7b091e15b790fdc2bedd2338">More...</a><br /></td></tr>
 <tr class="separator:ae5c2b50f7b091e15b790fdc2bedd2338"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83984b8b6bc1f51e064eeb74ea2c7403"><td class="memItemLeft" align="right" valign="top"><a class="el" href="klienci_8h.html#a38fd7bcc190edf278f27823dfc7c3eb1">Klient</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="klienci_8c.html#a83984b8b6bc1f51e064eeb74ea2c7403">wyszukaj_klienta</a> (int numer_karty)</td></tr>
 <tr class="separator:a83984b8b6bc1f51e064eeb74ea2c7403"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,15 +155,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Funkcja wyswietl_baze_klientow wyswietla dane klientow z pliku. </p>
+<p>Funkcja dodaj_klienta dodaje nowego klienta do bazy danych. </p>
 <p >Jesli nie ma klientow w bazie to tworzymy nowego klienta</p>
-<p >w przeciwnym wypadku wpis uzytkownika dodaje nastepnego klienta do bazy klientow </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">(brak</td><td>parametru) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Dodaje do bazy w pliku nowego klienta na podstawie danych podanych przez uzytkownika </dd></dl>
+<p >w przeciwnym wypadku wpis uzytkownika dodaje nastepnego klienta do bazy klientow </p>
 
 </div>
 </div>
@@ -255,14 +249,13 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Funkcja wyszukuje w pliku ID klienta o najwyzszej wartosci. </p>
-<p >jesli wpis uzytkownika jest wiekszy od aktualnego max, to nastepuje nowe maksimum </p><dl class="params"><dt>Parameters</dt><dd>
+<p>wpis uzytkownika jest przypisywany do numeru karty ktory jest rowny </p>
+<p >najwyzszemu ID klienta + 1 </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">(brak</td><td>parametru) </td></tr>
+    <tr><td class="paramname">wpis</td><td>pobierany jest parametr z wpisu uzytkownika, ktory chce cos edytowac </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Zwracane jest najwyzsze ID klienta </dd></dl>
 
 </div>
 </div>
@@ -334,14 +327,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Funkcja wyswietl_baze_klientow wyswietla dane klientow z plikku. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">(brak</td><td>parametru) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Zwracane sa dane klientow z pliku </dd></dl>
+<p>Funkcja wyswietl_baze_klientow wyswietla dane klientow z pliku. </p>
 
 </div>
 </div>

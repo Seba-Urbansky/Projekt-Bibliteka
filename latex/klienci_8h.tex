@@ -17,9 +17,9 @@ typedef struct \mbox{\hyperlink{struct_klient_struktura}{Klient\+Struktura}} \mb
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{klienci_8h_a3eb845814072e027fabee9798ceda9a2}{wyswietl\+\_\+baze\+\_\+klientow}} ()
-\begin{DoxyCompactList}\small\item\em Funkcja wyswietl\+\_\+baze\+\_\+klientow wyswietla dane klientow z plikku. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{klienci_8h_ab0f0128ac537d0a9c981f44d93517ec9}{dodaj\+\_\+klienta}} ()
 \begin{DoxyCompactList}\small\item\em Funkcja wyswietl\+\_\+baze\+\_\+klientow wyswietla dane klientow z pliku. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{klienci_8h_ab0f0128ac537d0a9c981f44d93517ec9}{dodaj\+\_\+klienta}} ()
+\begin{DoxyCompactList}\small\item\em Funkcja dodaj\+\_\+klienta dodaje nowego klienta do bazy danych. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{klienci_8h_a48f827507e320816d9fb5932f3f52ef2}{edytuj\+\_\+klienta}} ()
 \item 
 void \mbox{\hyperlink{klienci_8h_abf5c5d1ffd7b3804189034956ac86005}{usun\+\_\+klienta}} ()
@@ -47,7 +47,7 @@ void \mbox{\hyperlink{klienci_8h_a39e781ff7f36da456490a5df2e0224c4}{edytuj\+\_\+
 int \mbox{\hyperlink{klienci_8h_a460e7e1b92717eb9ae93cdf294abc66d}{znajdz\+\_\+najwyzsze\+\_\+\+ID\+\_\+klienci}} ()
 \begin{DoxyCompactList}\small\item\em Funkcja wyszukuje w pliku ID klienta o najwyzszej wartosci. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{klienci_8h_ae5c2b50f7b091e15b790fdc2bedd2338}{edytuj\+\_\+wypozyczenia\+\_\+numer\+\_\+karty\+\_\+abc}} (\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$wpis)
-\begin{DoxyCompactList}\small\item\em Funkcja wyszukuje w pliku ID klienta o najwyzszej wartosci. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em wpis uzytkownika jest przypisywany do numeru karty ktory jest rowny \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Typedef Documentation}
@@ -68,19 +68,11 @@ void \mbox{\hyperlink{klienci_8h_ae5c2b50f7b091e15b790fdc2bedd2338}{edytuj\+\_\+
 
 
 
-Funkcja wyswietl\+\_\+baze\+\_\+klientow wyswietla dane klientow z pliku. 
+Funkcja dodaj\+\_\+klienta dodaje nowego klienta do bazy danych. 
 
 Jesli nie ma klientow w bazie to tworzymy nowego klienta
 
-w przeciwnym wypadku wpis uzytkownika dodaje nastepnego klienta do bazy klientow 
-\begin{DoxyParams}{Parameters}
-{\em (brak} & parametru) \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Dodaje do bazy w pliku nowego klienta na podstawie danych podanych przez uzytkownika 
-\end{DoxyReturn}
-\mbox{\Hypertarget{klienci_8h_a39e781ff7f36da456490a5df2e0224c4}\label{klienci_8h_a39e781ff7f36da456490a5df2e0224c4}} 
+w przeciwnym wypadku wpis uzytkownika dodaje nastepnego klienta do bazy klientow \mbox{\Hypertarget{klienci_8h_a39e781ff7f36da456490a5df2e0224c4}\label{klienci_8h_a39e781ff7f36da456490a5df2e0224c4}} 
 \index{klienci.h@{klienci.h}!edytuj\_email\_klienta@{edytuj\_email\_klienta}}
 \index{edytuj\_email\_klienta@{edytuj\_email\_klienta}!klienci.h@{klienci.h}}
 \doxysubsubsection{\texorpdfstring{edytuj\_email\_klienta()}{edytuj\_email\_klienta()}}
@@ -118,16 +110,13 @@ Dodaje do bazy w pliku nowego klienta na podstawie danych podanych przez uzytkow
 
 
 
-Funkcja wyszukuje w pliku ID klienta o najwyzszej wartosci. 
+wpis uzytkownika jest przypisywany do numeru karty ktory jest rowny 
 
-jesli wpis uzytkownika jest wiekszy od aktualnego max, to nastepuje nowe maksimum 
+najwyzszemu ID klienta + 1 
 \begin{DoxyParams}{Parameters}
-{\em (brak} & parametru) \\
+{\em wpis} & pobierany jest parametr z wpisu uzytkownika, ktory chce cos edytowac \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Zwracane jest najwyzsze ID klienta 
-\end{DoxyReturn}
 \mbox{\Hypertarget{klienci_8h_aec8790f898cfbcbe5f55f64d5261171b}\label{klienci_8h_aec8790f898cfbcbe5f55f64d5261171b}} 
 \index{klienci.h@{klienci.h}!menu\_klientow@{menu\_klientow}}
 \index{menu\_klientow@{menu\_klientow}!klienci.h@{klienci.h}}
@@ -160,16 +149,8 @@ Zwracane jest najwyzsze ID klienta
 
 
 
-Funkcja wyswietl\+\_\+baze\+\_\+klientow wyswietla dane klientow z plikku. 
+Funkcja wyswietl\+\_\+baze\+\_\+klientow wyswietla dane klientow z pliku. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em (brak} & parametru) \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Zwracane sa dane klientow z pliku 
-\end{DoxyReturn}
 \mbox{\Hypertarget{klienci_8h_a83984b8b6bc1f51e064eeb74ea2c7403}\label{klienci_8h_a83984b8b6bc1f51e064eeb74ea2c7403}} 
 \index{klienci.h@{klienci.h}!wyszukaj\_klienta@{wyszukaj\_klienta}}
 \index{wyszukaj\_klienta@{wyszukaj\_klienta}!klienci.h@{klienci.h}}

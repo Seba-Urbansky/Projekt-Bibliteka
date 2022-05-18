@@ -85,6 +85,14 @@ void edytuj_wypozyczenia_numer_karty_abc(Klient *wpis)
     wpis->numer_karty = znajdz_najwyzsze_ID_klienci() + 1;
 }
 
+/*! \fn Klient *wyszukaj_klienta(int numer_karty)
+     \brief przechodzimy w petli przez wszystkich klientow
+     \brief jesli wpis uzytkownika szukajacego numeru_karty jest rowny szukanemu numerowi karty zwroc wpis
+     \brief jezeli uzytkownik nic nie wpisze nie zwracaj niczego
+    \param numer_karty dany klient wyszukiwany jest po numerze karty
+    \return Funkcja zwraca szukanego klienta
+*/
+
 Klient *wyszukaj_klienta(int numer_karty)
 {
     for (Klient *wpis = pierwszy_klient; NULL != wpis; wpis = wpis->nastepny)
@@ -97,6 +105,12 @@ Klient *wyszukaj_klienta(int numer_karty)
     return NULL;
 }
 
+/*! \fn void wydrukuj_klienta(Klient *wpis)
+     \brief Funkcja wydrukowuje na ekran numer_karty, imie, nazwisko,
+     \brief , telefon, email klienta
+    \param wpis Dane klienta sa wydrukowywane na podstawie wpisu klienta
+*/
+
 void wydrukuj_klienta(Klient *wpis)
 {
     printf("%-20s | %d \n", "Numer Karty", wpis->numer_karty);
@@ -105,6 +119,11 @@ void wydrukuj_klienta(Klient *wpis)
     printf("%-20s | %s \n", "Telefon", wpis->telefon);
     printf("%-20s | %s \n", "Email", wpis->email);
 }
+
+/*! \fn void edytuj_imie_klienta(Klient *wpis)
+     \brief Funkcja edytuje dane imie klienta na podstawie wpisu uzytkownika
+    \param wpis na podstawie parametru wpisu uzytkownika edytowane jest biezace imie
+*/
 
 void edytuj_imie_klienta(Klient *wpis)
 {
@@ -122,11 +141,21 @@ void edytuj_imie_klienta(Klient *wpis)
     }
 }
 
+/*! \fn void edytuj_telefon_klienta(Klient *wpis)
+     \brief Funkcja edytuje dane telefonu klienta na podstawie wpisu uzytkownika
+    \param wpis na podstawie parametru wpisu uzytkownika edytowany jest biezacy telefon
+*/
+
 void edytuj_telefon_klienta(Klient *wpis)
 {
     printf("Podaj telefon: \n");
     scanf("%s", &wpis->telefon);
 }
+
+/*! \fn void edytuj_email_klienta(Klient *wpis)
+     \brief Funkcja edytuje email klienta na podstawie wpisu uzytkownika
+    \param wpis na podstawie parametru wpisu uzytkownika edytowany jest biezacy email uzytkownika
+*/
 
 void edytuj_email_klienta(Klient *wpis)
 {
@@ -134,11 +163,29 @@ void edytuj_email_klienta(Klient *wpis)
     scanf("%s", &wpis->email);
 }
 
+/*! \fn void edytuj_nazwisko_klienta(Klient *wpis)
+     \brief Funkcja edytuje nazwisko klienta na podstawie wpisu uzytkownika
+    \param wpis na podstawie parametru wpisu uzytkownika edytowane jest biezace nazwisko klienta
+*/
+
 void edytuj_nazwisko_klienta(Klient *wpis)
 {
     printf("Podaj nazwisko: \n");
     scanf("%s", &wpis->nazwisko);
 }
+
+/*! \fn void usun_klienta(Klient *wpis)
+     \brief w pierwszym warunku jesli pierwszy i nastepny klient maja puste wartosci
+     \brief oznacza to ze nie ma co usuwac i do pierwszego i ostatniego klienta przypisujemy 
+     \brief puste wartosci bo nie ma co usuwac
+     \brief w drugim warunku jesli poprzedni klient ma pusta wartosc, a nastepny ma jakas wartosc
+     \brief to usuwamy pierwszego klienta
+     \brief w trzecim warunku jesli nastepny klient ma pusta wartosc, a poprzedni ma jakas wartosc
+     \brief to usuwamy ostatniego klienta
+      \brief w czwartym warunku jesli nastepny i poprzedni klient maja jakas wartosc
+     \brief to usuwamy klienta ktorego chcemy usunac
+    \param wpis na podstawie parametru wpisu uzytkownika usuwany jest klient
+*/
 
 void usun_klienta(Klient *wpis)
 {

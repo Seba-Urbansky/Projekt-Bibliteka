@@ -35,9 +35,9 @@ enum \mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929}{Sortowanie\+
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{ksiazki_8h_a48119a789c118bca048ac95c6e159e14}{wyswietl\+\_\+baze\+\_\+ksiazek}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Wyswietla cala baze ksiazek. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_a18018b143b960db33a39ebcaa5c6c06c}{dodaj\+\_\+ksiazke}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Za pomoca wpisu uzytkownika dotyczacego (ID ksiazki, tytulu ksiazki, gatunku ksiazki, autora roku, liczby egzemplarzy) dodaje ksiazke wedlug wpisu uzytkownika do bazy ksiazek. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_abff38f583e5964764ae641674fc76148}{edytuj\+\_\+ksiazke}} ()
 \item 
 void \mbox{\hyperlink{ksiazki_8h_a31ad71269e0f171ff6bbf775a7d6a253}{usun\+\_\+ksiazke}} ()
@@ -51,47 +51,48 @@ void \mbox{\hyperlink{ksiazki_8h_a84101ca77a61569379a0275f73d8cfd4}{zapispliku\+
 void \mbox{\hyperlink{ksiazki_8h_a023661b73ad6f5af935c1bc928429310}{ksiazka\+\_\+do\+\_\+zarzadzania}} ()
 \item 
 void \mbox{\hyperlink{ksiazki_8h_a84180dfd861f8a7eccb6505bebeb26a8}{wydrukuj\+\_\+ksiazke}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$wpis)
-\item 
+\begin{DoxyCompactList}\small\item\em W tej funkcji drukujemy wszystkie dane ksiazki (ID, Tytul, Autora, Rok, Liczbe egzemplarzy, Liczbe wypozyczonych) oraz wyswietlamy te dane na ekranie. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_a93f5816116ef4382f87dab1e5695e00f}{edytuj\+\_\+tytul\+\_\+ksiazki}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$wpis)
-\item 
+\begin{DoxyCompactList}\small\item\em W tej funkcji uzytkownik edytuje tytul danej ksiazki. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_acfcccbe02004a890d7f3bac5900ecf21}{edytuj\+\_\+gatunek\+\_\+ksiazki}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$wpis)
 \item 
 void \mbox{\hyperlink{ksiazki_8h_a966ffe3ef2449f7a256ac6d703c7ec24}{edytuj\+\_\+autora}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$wpis)
-\item 
+\begin{DoxyCompactList}\small\item\em W tej funkcji uzytkownik edytuje autora danej ksiazki. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_ab6f2c6d841a1887aa7bd2e2ca5b99648}{edytuj\+\_\+rok}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$wpis)
 \item 
 \mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$ \mbox{\hyperlink{ksiazki_8h_af68f877082bb74fc15a27b90d96a2b4d}{wyszukaj\+\_\+ksiazke}} (int \mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929a001479a58fb44c39a29b20d565081a68}{ID}})
-\item 
+\begin{DoxyCompactList}\small\item\em W tej funkcji przechodzimy petla po wszystkich ksiazkach i jesli wpis uzytownika jest rowny ID danej ksiazki to ksiazka jest znaleziona i jest wypisywana na ekran. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{ksiazki_8h_ab253baef3a79eb201a1e7551e5e2a95d}{znajdz\+\_\+najwyzsze\+\_\+\+ID\+\_\+ksiazki}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Szukanie najwyzszego ID ksiazki polega na tym, ze petlo for przechodzimy po wszystkich ksiazkach i w warunku if sprawdzamy czy aktualne ID jest wieksze od aktualnego max, jesli tak to napisujemy max nowym max (aktualne ID) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_ac5e4aaf398428ba485855a36f3f1494e}{edytuj\+\_\+ksiazki\+\_\+\+ID\+\_\+ksiazki}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$wpis)
-\item 
+\begin{DoxyCompactList}\small\item\em Wpis uzytkownika dokonuje zmiany ID danej ksiazki. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_a38b28d0a614a50c26b8920620dcf0d1d}{sortowanie\+\_\+ksiazek\+\_\+niemalejace}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$\mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929a001479a58fb44c39a29b20d565081a68}{ID}})
 \item 
 void \mbox{\hyperlink{ksiazki_8h_adfb816e67ef893d997c5e6ee642b8df7}{wyszukaj\+\_\+ksiazki\+\_\+po\+\_\+tytule}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja ta po podaniu wpisu przez uzytkownika, ktory wpisal tytul ksiazki ktorej szukajl wyszukuje dany tytul ksiazki i wyswietla ja na ekran. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_ac557385e6d4385e0274ff6a6a8aeee00}{wyszukaj\+\_\+ksiazki\+\_\+po\+\_\+autorze}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja ta po podaniu wpisu przez uzytkownika, ktory wpisal autora ksiazki, wyszukuje danego autora i wyswietla go na ekran. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_a8b6eab3e3b55d5fe5951f2b17db81c44}{wyszukaj\+\_\+ksiazki\+\_\+po\+\_\+roku}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja ta po podaniu wpisu przez uzytkownika, zwraca ksiazke z roku ktory uzytkownik podal i zwraca ja na ekran. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$ \mbox{\hyperlink{ksiazki_8h_a892873c6de7b41a058e8775ea9ce8e01}{zamien}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$a, \mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$b)
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja zamienia poprzednia ksiazke z nastepna ksiazke. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{ksiazki_8h_a7d6a8320245d228b8ac22330befab405}{policz\+\_\+ksiazki}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja w petli przechodzi po wszystkich ksiazkach i zlicza ksiazki liczac kazda ksiazke po ktorej przechodzi. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_ad5f77aa48d5aa3392bd2f3e22e388acc}{sortowanie}} (enum \mbox{\hyperlink{ksiazki_8h_a92b3cf569043e5ddcb058a54db66783b}{Sortowanie\+Kolejnosc}} kolejnosc, enum \mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929}{Sortowanie\+Atrybut}} atrybut)
-\item 
+\begin{DoxyCompactList}\small\item\em Sortowanie babelkowe ~\newline
+Funkcja sortowania działa na dwoch petlach for, ktore przechodza po wszytskich ksiazkach W funkcji korzystam z dwoch zmiennych p1 oraz p2 oraz korzystam z funkcji strcasecmp ktora porownuje wartosci string, natomiast w funkcjach sortujacych wartosci liczbowe uzywam operatorow porownania \char`\"{}$>$\char`\"{} i \char`\"{}$<$\char`\"{} . \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_a4c6052636c8b6375611bc320b29ff22f}{edytuj\+\_\+liczbe\+\_\+egzemplarzy}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$wpis)
-\item 
+\begin{DoxyCompactList}\small\item\em Wpis uzytkownika dokonuje zmiane liczby egzemplarzy danej ksiazki. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_a05d1aa1ffff346a6f439481cf14434f8}{edytuj\+\_\+liczbe\+\_\+wypozyczonych}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$wpis)
-\item 
+\begin{DoxyCompactList}\small\item\em Wpis uzytkownika dokonuje zmiane liczby wypozyczonych danej ksiazki. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_a3e817d138006527a2369e47f458236d3}{wyszukaj\+\_\+ksiazki\+\_\+po\+\_\+gatunku}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja ta po podaniu wpisu przez uzytkownika, ktory wpisal gatunek danej ksiazki, wypisuje mu zawartosc na ekran. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_a0b4df348f6c432f40490eb8bdbcee3c6}{wyszukaj\+\_\+po\+\_\+liczbie\+\_\+wypozyczonych}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja ta po podaniu przez uzytkownika liczbe wypozyczonych ksiazek, zwraca na ekran dane ksiazki, ktora posiada liczbe wypozyczonych ksiazek ktore uzytkownik podal przy wpisie. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_a768352a5223d9e1841ce9692aaf43f8d}{wyszukaj\+\_\+po\+\_\+liczbie\+\_\+egzemplarzy}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja ta po podaniu przez uzytkownika liczby egzemplarzy ksiazek, zwraca na ekran dane ksiazki, ktora posiada dana liczbe egzemplarzy ksiazek ktore uzytkownik podal przy wpisie. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_ae189b52f9d8a0e053a3482a79a26f1c6}{wydrukuj\+\_\+po\+\_\+\+ID}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Drukuje na ekran dane ksiazki, po wpisie uzytkownika, ktory wpisal chciane ID ksiazki. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Typedef Documentation}
@@ -165,12 +166,30 @@ Malejaca&\\
 \doxysubsubsection{\texorpdfstring{dodaj\_ksiazke()}{dodaj\_ksiazke()}}
 {\footnotesize\ttfamily void dodaj\+\_\+ksiazke (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Za pomoca wpisu uzytkownika dotyczacego (ID ksiazki, tytulu ksiazki, gatunku ksiazki, autora roku, liczby egzemplarzy) dodaje ksiazke wedlug wpisu uzytkownika do bazy ksiazek. 
+
 \mbox{\Hypertarget{ksiazki_8h_a966ffe3ef2449f7a256ac6d703c7ec24}\label{ksiazki_8h_a966ffe3ef2449f7a256ac6d703c7ec24}} 
 \index{ksiazki.h@{ksiazki.h}!edytuj\_autora@{edytuj\_autora}}
 \index{edytuj\_autora@{edytuj\_autora}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{edytuj\_autora()}{edytuj\_autora()}}
 {\footnotesize\ttfamily void edytuj\+\_\+autora (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
+
+
+W tej funkcji uzytkownik edytuje autora danej ksiazki. 
+
+
+\begin{DoxyItemize}
+\item Dzieki fflush uzytkownik moze edytowac rowniez dwuwyrazowego autora np. (Jan Kowalski na Bartek Bartkalski), bez fflush mozliwe byloby edytowanie jednowyrazowego autora (Jan na Bartek) lub (Nowakowski na Urbanski)
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em wpis} & edytuje tytul ksiazki po wpisie uzytkownika \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{ksiazki_8h_acfcccbe02004a890d7f3bac5900ecf21}\label{ksiazki_8h_acfcccbe02004a890d7f3bac5900ecf21}} 
 \index{ksiazki.h@{ksiazki.h}!edytuj\_gatunek\_ksiazki@{edytuj\_gatunek\_ksiazki}}
 \index{edytuj\_gatunek\_ksiazki@{edytuj\_gatunek\_ksiazki}!ksiazki.h@{ksiazki.h}}
@@ -189,18 +208,45 @@ Malejaca&\\
 \doxysubsubsection{\texorpdfstring{edytuj\_ksiazki\_ID\_ksiazki()}{edytuj\_ksiazki\_ID\_ksiazki()}}
 {\footnotesize\ttfamily void edytuj\+\_\+ksiazki\+\_\+\+ID\+\_\+ksiazki (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
+
+
+Wpis uzytkownika dokonuje zmiany ID danej ksiazki. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wpis} & oznacza wpis uzytkownika dokonujacego zmiany \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{ksiazki_8h_a4c6052636c8b6375611bc320b29ff22f}\label{ksiazki_8h_a4c6052636c8b6375611bc320b29ff22f}} 
 \index{ksiazki.h@{ksiazki.h}!edytuj\_liczbe\_egzemplarzy@{edytuj\_liczbe\_egzemplarzy}}
 \index{edytuj\_liczbe\_egzemplarzy@{edytuj\_liczbe\_egzemplarzy}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{edytuj\_liczbe\_egzemplarzy()}{edytuj\_liczbe\_egzemplarzy()}}
 {\footnotesize\ttfamily void edytuj\+\_\+liczbe\+\_\+egzemplarzy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
+
+
+Wpis uzytkownika dokonuje zmiane liczby egzemplarzy danej ksiazki. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wpis} & oznacza wpis uzytkownika dokonujacego zmiany \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{ksiazki_8h_a05d1aa1ffff346a6f439481cf14434f8}\label{ksiazki_8h_a05d1aa1ffff346a6f439481cf14434f8}} 
 \index{ksiazki.h@{ksiazki.h}!edytuj\_liczbe\_wypozyczonych@{edytuj\_liczbe\_wypozyczonych}}
 \index{edytuj\_liczbe\_wypozyczonych@{edytuj\_liczbe\_wypozyczonych}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{edytuj\_liczbe\_wypozyczonych()}{edytuj\_liczbe\_wypozyczonych()}}
 {\footnotesize\ttfamily void edytuj\+\_\+liczbe\+\_\+wypozyczonych (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
+
+
+Wpis uzytkownika dokonuje zmiane liczby wypozyczonych danej ksiazki. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wpis} & oznacza wpis uzytkownika dokonujacego zmiany \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{ksiazki_8h_ab6f2c6d841a1887aa7bd2e2ca5b99648}\label{ksiazki_8h_ab6f2c6d841a1887aa7bd2e2ca5b99648}} 
 \index{ksiazki.h@{ksiazki.h}!edytuj\_rok@{edytuj\_rok}}
 \index{edytuj\_rok@{edytuj\_rok}!ksiazki.h@{ksiazki.h}}
@@ -213,6 +259,20 @@ Malejaca&\\
 \doxysubsubsection{\texorpdfstring{edytuj\_tytul\_ksiazki()}{edytuj\_tytul\_ksiazki()}}
 {\footnotesize\ttfamily void edytuj\+\_\+tytul\+\_\+ksiazki (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
+
+
+W tej funkcji uzytkownik edytuje tytul danej ksiazki. 
+
+
+\begin{DoxyItemize}
+\item Dzieki fflush uzytkownik moze edytowac rowniez dwuwyrazowe tytuly, bez tego bylby w stanie edytowac jednowyrazowe tytuly.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em wpis} & edytuje tytul ksiazki po wpisie uzytkownika \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{ksiazki_8h_a023661b73ad6f5af935c1bc928429310}\label{ksiazki_8h_a023661b73ad6f5af935c1bc928429310}} 
 \index{ksiazki.h@{ksiazki.h}!ksiazka\_do\_zarzadzania@{ksiazka\_do\_zarzadzania}}
 \index{ksiazka\_do\_zarzadzania@{ksiazka\_do\_zarzadzania}!ksiazki.h@{ksiazki.h}}
@@ -231,12 +291,31 @@ Malejaca&\\
 \doxysubsubsection{\texorpdfstring{policz\_ksiazki()}{policz\_ksiazki()}}
 {\footnotesize\ttfamily int policz\+\_\+ksiazki (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Funkcja w petli przechodzi po wszystkich ksiazkach i zlicza ksiazki liczac kazda ksiazke po ktorej przechodzi. 
+
+\begin{DoxyReturn}{Returns}
+funkcja zwraca zliczona wartosc ksiazek 
+\end{DoxyReturn}
 \mbox{\Hypertarget{ksiazki_8h_ad5f77aa48d5aa3392bd2f3e22e388acc}\label{ksiazki_8h_ad5f77aa48d5aa3392bd2f3e22e388acc}} 
 \index{ksiazki.h@{ksiazki.h}!sortowanie@{sortowanie}}
 \index{sortowanie@{sortowanie}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{sortowanie()}{sortowanie()}}
 {\footnotesize\ttfamily void sortowanie (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{ksiazki_8h_a92b3cf569043e5ddcb058a54db66783b}{Sortowanie\+Kolejnosc}}}]{kolejnosc,  }\item[{enum \mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929}{Sortowanie\+Atrybut}}}]{atrybut }\end{DoxyParamCaption})}
 
+
+
+Sortowanie babelkowe ~\newline
+Funkcja sortowania działa na dwoch petlach for, ktore przechodza po wszytskich ksiazkach W funkcji korzystam z dwoch zmiennych p1 oraz p2 oraz korzystam z funkcji strcasecmp ktora porownuje wartosci string, natomiast w funkcjach sortujacych wartosci liczbowe uzywam operatorow porownania \char`\"{}$>$\char`\"{} i \char`\"{}$<$\char`\"{} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kolejnosc} & parametr ten odpowiada za wyswietlanie w kolejnosci malejacej lub rosnacej \\
+\hline
+{\em atrybut} & parametr ten odpowiada za wybranie co mamy sortowac (tytul, autora, rok, gatunek, l. egzamplarzy, l.\+wypozyczonych) \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{ksiazki_8h_a38b28d0a614a50c26b8920620dcf0d1d}\label{ksiazki_8h_a38b28d0a614a50c26b8920620dcf0d1d}} 
 \index{ksiazki.h@{ksiazki.h}!sortowanie\_ksiazek\_niemalejace@{sortowanie\_ksiazek\_niemalejace}}
 \index{sortowanie\_ksiazek\_niemalejace@{sortowanie\_ksiazek\_niemalejace}!ksiazki.h@{ksiazki.h}}
@@ -261,11 +340,24 @@ Malejaca&\\
 \doxysubsubsection{\texorpdfstring{wydrukuj\_ksiazke()}{wydrukuj\_ksiazke()}}
 {\footnotesize\ttfamily void wydrukuj\+\_\+ksiazke (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
+
+
+W tej funkcji drukujemy wszystkie dane ksiazki (ID, Tytul, Autora, Rok, Liczbe egzemplarzy, Liczbe wypozyczonych) oraz wyswietlamy te dane na ekranie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wpis} & parametr do wydruku wszystkich danych ksiazki \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{ksiazki_8h_ae189b52f9d8a0e053a3482a79a26f1c6}\label{ksiazki_8h_ae189b52f9d8a0e053a3482a79a26f1c6}} 
 \index{ksiazki.h@{ksiazki.h}!wydrukuj\_po\_ID@{wydrukuj\_po\_ID}}
 \index{wydrukuj\_po\_ID@{wydrukuj\_po\_ID}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{wydrukuj\_po\_ID()}{wydrukuj\_po\_ID()}}
 {\footnotesize\ttfamily void wydrukuj\+\_\+po\+\_\+\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Drukuje na ekran dane ksiazki, po wpisie uzytkownika, ktory wpisal chciane ID ksiazki. 
 
 \mbox{\Hypertarget{ksiazki_8h_a48119a789c118bca048ac95c6e159e14}\label{ksiazki_8h_a48119a789c118bca048ac95c6e159e14}} 
 \index{ksiazki.h@{ksiazki.h}!wyswietl\_baze\_ksiazek@{wyswietl\_baze\_ksiazek}}
@@ -273,29 +365,60 @@ Malejaca&\\
 \doxysubsubsection{\texorpdfstring{wyswietl\_baze\_ksiazek()}{wyswietl\_baze\_ksiazek()}}
 {\footnotesize\ttfamily void wyswietl\+\_\+baze\+\_\+ksiazek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Wyswietla cala baze ksiazek. 
+
 \mbox{\Hypertarget{ksiazki_8h_af68f877082bb74fc15a27b90d96a2b4d}\label{ksiazki_8h_af68f877082bb74fc15a27b90d96a2b4d}} 
 \index{ksiazki.h@{ksiazki.h}!wyszukaj\_ksiazke@{wyszukaj\_ksiazke}}
 \index{wyszukaj\_ksiazke@{wyszukaj\_ksiazke}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{wyszukaj\_ksiazke()}{wyszukaj\_ksiazke()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$ wyszukaj\+\_\+ksiazke (\begin{DoxyParamCaption}\item[{int}]{ID }\end{DoxyParamCaption})}
 
+
+
+W tej funkcji przechodzimy petla po wszystkich ksiazkach i jesli wpis uzytownika jest rowny ID danej ksiazki to ksiazka jest znaleziona i jest wypisywana na ekran. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & ksiazka wyszukiwana jest po ID \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{ksiazki_8h_ac557385e6d4385e0274ff6a6a8aeee00}\label{ksiazki_8h_ac557385e6d4385e0274ff6a6a8aeee00}} 
 \index{ksiazki.h@{ksiazki.h}!wyszukaj\_ksiazki\_po\_autorze@{wyszukaj\_ksiazki\_po\_autorze}}
 \index{wyszukaj\_ksiazki\_po\_autorze@{wyszukaj\_ksiazki\_po\_autorze}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{wyszukaj\_ksiazki\_po\_autorze()}{wyszukaj\_ksiazki\_po\_autorze()}}
 {\footnotesize\ttfamily void wyszukaj\+\_\+ksiazki\+\_\+po\+\_\+autorze (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{ksiazki_8h_a3e817d138006527a2369e47f458236d3}\label{ksiazki_8h_a3e817d138006527a2369e47f458236d3}} 
+
+
+Funkcja ta po podaniu wpisu przez uzytkownika, ktory wpisal autora ksiazki, wyszukuje danego autora i wyswietla go na ekran. 
+
+
+\begin{DoxyItemize}
+\item Korzystam tutaj z fflush, ktore umozliwa mi wyszukiwanie dwuwyrazowych autorow np.(Jan Kowalski), bez tego by szukalo jednowyrazowego autora np. (Jan) 
+\end{DoxyItemize}\mbox{\Hypertarget{ksiazki_8h_a3e817d138006527a2369e47f458236d3}\label{ksiazki_8h_a3e817d138006527a2369e47f458236d3}} 
 \index{ksiazki.h@{ksiazki.h}!wyszukaj\_ksiazki\_po\_gatunku@{wyszukaj\_ksiazki\_po\_gatunku}}
 \index{wyszukaj\_ksiazki\_po\_gatunku@{wyszukaj\_ksiazki\_po\_gatunku}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{wyszukaj\_ksiazki\_po\_gatunku()}{wyszukaj\_ksiazki\_po\_gatunku()}}
 {\footnotesize\ttfamily void wyszukaj\+\_\+ksiazki\+\_\+po\+\_\+gatunku (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{ksiazki_8h_a8b6eab3e3b55d5fe5951f2b17db81c44}\label{ksiazki_8h_a8b6eab3e3b55d5fe5951f2b17db81c44}} 
+
+
+Funkcja ta po podaniu wpisu przez uzytkownika, ktory wpisal gatunek danej ksiazki, wypisuje mu zawartosc na ekran. 
+
+
+\begin{DoxyItemize}
+\item Korzystam tutaj z fflush, ktore umozliwa mi wyszukiwanie dwuwyrazowych gatunkow (Sc Fi) bez tego by szukalo tylko jednowyrazowe gatunki (scfi) 
+\end{DoxyItemize}\mbox{\Hypertarget{ksiazki_8h_a8b6eab3e3b55d5fe5951f2b17db81c44}\label{ksiazki_8h_a8b6eab3e3b55d5fe5951f2b17db81c44}} 
 \index{ksiazki.h@{ksiazki.h}!wyszukaj\_ksiazki\_po\_roku@{wyszukaj\_ksiazki\_po\_roku}}
 \index{wyszukaj\_ksiazki\_po\_roku@{wyszukaj\_ksiazki\_po\_roku}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{wyszukaj\_ksiazki\_po\_roku()}{wyszukaj\_ksiazki\_po\_roku()}}
 {\footnotesize\ttfamily void wyszukaj\+\_\+ksiazki\+\_\+po\+\_\+roku (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funkcja ta po podaniu wpisu przez uzytkownika, zwraca ksiazke z roku ktory uzytkownik podal i zwraca ja na ekran. 
 
 \mbox{\Hypertarget{ksiazki_8h_adfb816e67ef893d997c5e6ee642b8df7}\label{ksiazki_8h_adfb816e67ef893d997c5e6ee642b8df7}} 
 \index{ksiazki.h@{ksiazki.h}!wyszukaj\_ksiazki\_po\_tytule@{wyszukaj\_ksiazki\_po\_tytule}}
@@ -303,11 +426,22 @@ Malejaca&\\
 \doxysubsubsection{\texorpdfstring{wyszukaj\_ksiazki\_po\_tytule()}{wyszukaj\_ksiazki\_po\_tytule()}}
 {\footnotesize\ttfamily void wyszukaj\+\_\+ksiazki\+\_\+po\+\_\+tytule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{ksiazki_8h_a768352a5223d9e1841ce9692aaf43f8d}\label{ksiazki_8h_a768352a5223d9e1841ce9692aaf43f8d}} 
+
+
+Funkcja ta po podaniu wpisu przez uzytkownika, ktory wpisal tytul ksiazki ktorej szukajl wyszukuje dany tytul ksiazki i wyswietla ja na ekran. 
+
+
+\begin{DoxyItemize}
+\item Korzystam tutaj z fflush, ktore umozliwa mi wyszukiwanie dwuwyrazowych tytulow, bez tego by szukalo jednowyrazowe tytuly 
+\end{DoxyItemize}\mbox{\Hypertarget{ksiazki_8h_a768352a5223d9e1841ce9692aaf43f8d}\label{ksiazki_8h_a768352a5223d9e1841ce9692aaf43f8d}} 
 \index{ksiazki.h@{ksiazki.h}!wyszukaj\_po\_liczbie\_egzemplarzy@{wyszukaj\_po\_liczbie\_egzemplarzy}}
 \index{wyszukaj\_po\_liczbie\_egzemplarzy@{wyszukaj\_po\_liczbie\_egzemplarzy}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{wyszukaj\_po\_liczbie\_egzemplarzy()}{wyszukaj\_po\_liczbie\_egzemplarzy()}}
 {\footnotesize\ttfamily void wyszukaj\+\_\+po\+\_\+liczbie\+\_\+egzemplarzy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funkcja ta po podaniu przez uzytkownika liczby egzemplarzy ksiazek, zwraca na ekran dane ksiazki, ktora posiada dana liczbe egzemplarzy ksiazek ktore uzytkownik podal przy wpisie. 
 
 \mbox{\Hypertarget{ksiazki_8h_a0b4df348f6c432f40490eb8bdbcee3c6}\label{ksiazki_8h_a0b4df348f6c432f40490eb8bdbcee3c6}} 
 \index{ksiazki.h@{ksiazki.h}!wyszukaj\_po\_liczbie\_wypozyczonych@{wyszukaj\_po\_liczbie\_wypozyczonych}}
@@ -315,12 +449,30 @@ Malejaca&\\
 \doxysubsubsection{\texorpdfstring{wyszukaj\_po\_liczbie\_wypozyczonych()}{wyszukaj\_po\_liczbie\_wypozyczonych()}}
 {\footnotesize\ttfamily void wyszukaj\+\_\+po\+\_\+liczbie\+\_\+wypozyczonych (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Funkcja ta po podaniu przez uzytkownika liczbe wypozyczonych ksiazek, zwraca na ekran dane ksiazki, ktora posiada liczbe wypozyczonych ksiazek ktore uzytkownik podal przy wpisie. 
+
 \mbox{\Hypertarget{ksiazki_8h_a892873c6de7b41a058e8775ea9ce8e01}\label{ksiazki_8h_a892873c6de7b41a058e8775ea9ce8e01}} 
 \index{ksiazki.h@{ksiazki.h}!zamien@{zamien}}
 \index{zamien@{zamien}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{zamien()}{zamien()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$ zamien (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{b }\end{DoxyParamCaption})}
 
+
+
+Funkcja zamienia poprzednia ksiazke z nastepna ksiazke. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+{\em b} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+funkcja zwraca wartosc zamienionej ksiazki 
+\end{DoxyReturn}
 \mbox{\Hypertarget{ksiazki_8h_a84101ca77a61569379a0275f73d8cfd4}\label{ksiazki_8h_a84101ca77a61569379a0275f73d8cfd4}} 
 \index{ksiazki.h@{ksiazki.h}!zapispliku\_ksiazki@{zapispliku\_ksiazki}}
 \index{zapispliku\_ksiazki@{zapispliku\_ksiazki}!ksiazki.h@{ksiazki.h}}
@@ -333,3 +485,10 @@ Malejaca&\\
 \doxysubsubsection{\texorpdfstring{znajdz\_najwyzsze\_ID\_ksiazki()}{znajdz\_najwyzsze\_ID\_ksiazki()}}
 {\footnotesize\ttfamily int znajdz\+\_\+najwyzsze\+\_\+\+ID\+\_\+ksiazki (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Szukanie najwyzszego ID ksiazki polega na tym, ze petlo for przechodzimy po wszystkich ksiazkach i w warunku if sprawdzamy czy aktualne ID jest wieksze od aktualnego max, jesli tak to napisujemy max nowym max (aktualne ID) 
+
+\begin{DoxyReturn}{Returns}
+Funkcja zwraca ksiazke o najwyzszym ID 
+\end{DoxyReturn}

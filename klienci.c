@@ -195,7 +195,7 @@ void edytuj_nazwisko_klienta(Klient *wpis)
 /*! \fn void usun_klienta(Klient *wpis)
     \brief 
     
-    - W pierwszym warunku jesli pierwszy i nastepny klient maja puste wartosci
+    - W pierwszym warunku jesli poprzedni i nastepny klient maja puste wartosci
       oznacza to ze nie ma co usuwac i do pierwszego i ostatniego klienta przypisujemy 
       puste wartosci bo nie ma co usuwac 
     - W drugim warunku jesli poprzedni klient ma pusta wartosc, 

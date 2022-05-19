@@ -20,7 +20,7 @@ typedef struct \mbox{\hyperlink{struct_wypozyczenia_struktura}{Wypozyczenia\+Str
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{wypozyczenia_8h_a1ad62ce3ada3806a59561dbd8868b3aa}{wyswietl\+\_\+kto\+\_\+wypozyczyl}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em W tej funkcji przechodzimy petla po wszystkich wypozyczeniach i drukujemy cala baze wypozyczen. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{wypozyczenia_8h_ac0a2eb32da7dacf3b36c40216dc1c238}{ID\+\_\+ksiazki}} ()
 \item 
 void \mbox{\hyperlink{wypozyczenia_8h_a4a869ed0d033a3528ea50022b87796f4}{kiedy}} ()
@@ -30,39 +30,39 @@ void \mbox{\hyperlink{wypozyczenia_8h_ac576a9dac5ce2f6e51b45ceef23778d9}{do\+\_\
 void \mbox{\hyperlink{wypozyczenia_8h_aab5fb2af45c9524a3acd98f0f14b6fa1}{wydrukuj\+\_\+wypozyczenia}} ()
 \item 
 void \mbox{\hyperlink{wypozyczenia_8h_ab8fb617326e316fb5a174c38eb474d17}{zapispliku\+\_\+wypozyczenia}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Przechodzimy petla po wszystkich wypozyczeniach. Zapisujemy do pliku wartosci (ID Ksiazki, ID wypozyczenia, kiedy ksiazka zostala wypozyczona i kiedy jest termin jej oddania) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{wypozyczenia_8h_a1ed9abde669d8ae22e4b7594016ada7c}{wczytaniepliku\+\_\+wypozyczenia}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em W tej funkcji wcztujemy dane z pliku wypozyczenia.\+csv. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{wypozyczenia_8h_a58b0f0c25ad1f4a3ea56de0b29e0194c}{edytuj\+\_\+wypozyczenia\+\_\+\+ID\+\_\+ksiazki}} (\mbox{\hyperlink{wypozyczenia_8h_a2e41bcc4e8df9eda8cec674691c02967}{Wypozyczenie}} $\ast$wypozyczenie)
-\item 
+\begin{DoxyCompactList}\small\item\em W tej funkcji edytowane jest ID ksiazki na podstawie wpisu uzytkownika. Natomiast jesli ksiazka jest pusta wartoscia to nie ma takiej ksiazki, w przeciwnym wypadku przypisujemy do wypozyczenia ID ksiazki ktore jest rowne ID wypozyczenia. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{wypozyczenia_8h_a53dfbd5acde67310c956b1c31ecb8f3b}{edytuj\+\_\+wypozyczenia\+\_\+numer\+\_\+karty}} (\mbox{\hyperlink{wypozyczenia_8h_a2e41bcc4e8df9eda8cec674691c02967}{Wypozyczenie}} $\ast$wpis)
-\item 
+\begin{DoxyCompactList}\small\item\em Na poczatku funkcji na podstawie wpisu uzytkownika edytowane jest ID klienta ktory ma wypozyczenie. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{wypozyczenia_8h_a242894dcf63fe7ce16734b33ee52de5a}{znajdz\+\_\+najwyzsze\+\_\+\+ID}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em W funkcji realizowane jest znajdowanie najwyzszego ID w wyzyczeniach. W petli przechodzimy przez wszytstkie wypozyczenia i jesli wpis na ID bedzie wieksze od aktualnego max ID to wtedy bedzie nowe maksimum. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{wypozyczenia_8h_a2bf906adc10478314379e50d61bfd6f5}{edytuj\+\_\+wypozyczenia\+\_\+\+ID}} (\mbox{\hyperlink{wypozyczenia_8h_a2e41bcc4e8df9eda8cec674691c02967}{Wypozyczenie}} $\ast$wpis)
-\item 
-void \mbox{\hyperlink{wypozyczenia_8h_ab4d7bce300ef21148db92a04bf30dfc8}{dodaj\+\_\+wypozyczenie}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja korzysta z wyszukania najwyzszego ID + 1 a nastepnie wpis uzytkownika edytuje ID wypozyczenia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wypozyczenia_8h_aaac626409a07d96baa8968071ea8ecf2}{dodaj\+\_\+wypozyczenie}} ()
+\begin{DoxyCompactList}\small\item\em Najpierw korzystamy z funkcji edycji wypozyczenia ID ksiazki. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{wypozyczenia_8h_a2f1f2e5cb61d827bb3ccf316ef2ba227}{ustaw\+\_\+\+ID\+\_\+nowego\+\_\+wypozyczenia}} ()
 \item 
 void \mbox{\hyperlink{wypozyczenia_8h_ad142cd21806abde6e1b232865f125bb2}{edytuj\+\_\+wypozyczenia\+\_\+kiedy}} (\mbox{\hyperlink{wypozyczenia_8h_a2e41bcc4e8df9eda8cec674691c02967}{Wypozyczenie}} $\ast$wpis)
-\item 
+\begin{DoxyCompactList}\small\item\em W tej funkcji mozemy edytowac kiedy uzytkownik wypozyczyl dana ksiazke. Wpis uzytkownika zmienia wartosc kiedy ksiazka zostala wypozyczona. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{wypozyczenia_8h_a528dd1f42767194ed55cf4f9bd04713e}{edytuj\+\_\+wypozyczenia\+\_\+do\+\_\+kiedy}} (\mbox{\hyperlink{wypozyczenia_8h_a2e41bcc4e8df9eda8cec674691c02967}{Wypozyczenie}} $\ast$wpis)
-\item 
+\begin{DoxyCompactList}\small\item\em W tej funkcji mozemy edytowac do kiedy uzytkownik wypozyczyl dana ksiazke. Wpis uzytkownika zmienia wartosc do kiedy ksiazka zostala wypozyczona. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{wypozyczenia_8h_a7110aeaf9f2661365c1311fa96eacd3a}{na\+\_\+dwa\+\_\+tygodnie}} ()
 \item 
 int \mbox{\hyperlink{wypozyczenia_8h_a73c4ffad06374a721eeb8ed60d421821}{zalegle\+\_\+wypozyczenia}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em W funkcji realizowane jest wyswietlanie zaleglych wypozyczen klienta. W petli przechodzimy po wszystkich wypozyczeniach i jesli teraz bedzie wieksze od wpisu uzytkownika na do kiedy jest termin oddania ksiazki to drukujemy zalegle wypozyczenie. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{wypozyczenia_8h_a65b934851a82f89f3e684f6021a09e24}{policz\+\_\+kare}} (\mbox{\hyperlink{wypozyczenia_8h_a2e41bcc4e8df9eda8cec674691c02967}{Wypozyczenie}} $\ast$wpis)
-\item 
+\begin{DoxyCompactList}\small\item\em W funkcji realizowane jest obliczanie kary dla klienta. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{wypozyczenia_8h_a05ec969a5ebface5c85d81fa362c29b9}{oddawanie\+\_\+ksiazki}} (\mbox{\hyperlink{wypozyczenia_8h_a2e41bcc4e8df9eda8cec674691c02967}{Wypozyczenie}} $\ast$wpis)
 \item 
 int \mbox{\hyperlink{wypozyczenia_8h_a8e7e4f1699ef7653e588fa877116cfdb}{czy\+\_\+klient\+\_\+ma\+\_\+wypozyczenia}} (\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$klient)
-\item 
+\begin{DoxyCompactList}\small\item\em W petli for przechodzimy po wszystkich wypozyczeniach i jesli wpis uzytkownika na dany numer karty klienta jest rowny numerowi karty klienta to zwracamy true, w przeciwnym wypadku false. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{wypozyczenia_8h_afef897a95d3200280235e9c5b52c78dd}{czy\+\_\+ksiazka\+\_\+jest\+\_\+wypozyczona}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$\mbox{\hyperlink{wypozyczenia_8h_ac0a2eb32da7dacf3b36c40216dc1c238}{ID\+\_\+ksiazki}})
-\item 
+\begin{DoxyCompactList}\small\item\em W petli przechodze przez wszystkie wypozyczenia i jesli wpis uzytkowniaka na dane ID ksiazki jest rowne ID ksiazki to wtedy zwracam true w przeciwnym wypadku zwracam false. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{wypozyczenia_8h_afd5606f068669c3669e5ec45ac6192b2}{zwroc\+\_\+wypozyczenie}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Na poczatku funkcji odpowiedzialnej za zwracanie wypozyczen na poczatku uzytkownik podaje numer karty klienta oraz podaje ID ksiazki ktora chce zwrocic. W petli przechodzimy przez wszystkie wypozyczenia. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{wypozyczenia_8h_a7c1d3c89910025671788a0afceccc9db}{usun\+\_\+wypozyczenie}} (\mbox{\hyperlink{wypozyczenia_8h_a2e41bcc4e8df9eda8cec674691c02967}{Wypozyczenie}} $\ast$wpis)
 \end{DoxyCompactItemize}
 
@@ -83,54 +83,138 @@ void \mbox{\hyperlink{wypozyczenia_8h_a7c1d3c89910025671788a0afceccc9db}{usun\+\
 \doxysubsubsection{\texorpdfstring{czy\_klient\_ma\_wypozyczenia()}{czy\_klient\_ma\_wypozyczenia()}}
 {\footnotesize\ttfamily int czy\+\_\+klient\+\_\+ma\+\_\+wypozyczenia (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$}]{klient }\end{DoxyParamCaption})}
 
+
+
+W petli for przechodzimy po wszystkich wypozyczeniach i jesli wpis uzytkownika na dany numer karty klienta jest rowny numerowi karty klienta to zwracamy true, w przeciwnym wypadku false. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em klient} & korzystam z parametru weryfikujacego wypozyczenia klienta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Funkcja zwraca 1 jesli klient ma wypozyczenia, jesli ich nie ma funkcja zwraca 0 
+\end{DoxyReturn}
 \mbox{\Hypertarget{wypozyczenia_8h_afef897a95d3200280235e9c5b52c78dd}\label{wypozyczenia_8h_afef897a95d3200280235e9c5b52c78dd}} 
 \index{wypozyczenia.h@{wypozyczenia.h}!czy\_ksiazka\_jest\_wypozyczona@{czy\_ksiazka\_jest\_wypozyczona}}
 \index{czy\_ksiazka\_jest\_wypozyczona@{czy\_ksiazka\_jest\_wypozyczona}!wypozyczenia.h@{wypozyczenia.h}}
 \doxysubsubsection{\texorpdfstring{czy\_ksiazka\_jest\_wypozyczona()}{czy\_ksiazka\_jest\_wypozyczona()}}
-{\footnotesize\ttfamily int czy\+\_\+ksiazka\+\_\+jest\+\_\+wypozyczona (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{ID\+\_\+ksiazki }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int czy\+\_\+ksiazka\+\_\+jest\+\_\+wypozyczona (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{ksiazka }\end{DoxyParamCaption})}
 
+
+
+W petli przechodze przez wszystkie wypozyczenia i jesli wpis uzytkowniaka na dane ID ksiazki jest rowne ID ksiazki to wtedy zwracam true w przeciwnym wypadku zwracam false. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ksiazka} & korzystam z parametru weryfikujacego wypozyczenia ksiazek \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Funkcja zwraca 1 jesli ksiazka jest wypozyczona, w przeciwnym wypadku zwraca 0 
+\end{DoxyReturn}
 \mbox{\Hypertarget{wypozyczenia_8h_ac576a9dac5ce2f6e51b45ceef23778d9}\label{wypozyczenia_8h_ac576a9dac5ce2f6e51b45ceef23778d9}} 
 \index{wypozyczenia.h@{wypozyczenia.h}!do\_kiedy@{do\_kiedy}}
 \index{do\_kiedy@{do\_kiedy}!wypozyczenia.h@{wypozyczenia.h}}
 \doxysubsubsection{\texorpdfstring{do\_kiedy()}{do\_kiedy()}}
 {\footnotesize\ttfamily void do\+\_\+kiedy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{wypozyczenia_8h_ab4d7bce300ef21148db92a04bf30dfc8}\label{wypozyczenia_8h_ab4d7bce300ef21148db92a04bf30dfc8}} 
+\mbox{\Hypertarget{wypozyczenia_8h_aaac626409a07d96baa8968071ea8ecf2}\label{wypozyczenia_8h_aaac626409a07d96baa8968071ea8ecf2}} 
 \index{wypozyczenia.h@{wypozyczenia.h}!dodaj\_wypozyczenie@{dodaj\_wypozyczenie}}
 \index{dodaj\_wypozyczenie@{dodaj\_wypozyczenie}!wypozyczenia.h@{wypozyczenia.h}}
 \doxysubsubsection{\texorpdfstring{dodaj\_wypozyczenie()}{dodaj\_wypozyczenie()}}
-{\footnotesize\ttfamily void dodaj\+\_\+wypozyczenie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily dodaj\+\_\+wypozyczenie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{wypozyczenia_8h_a528dd1f42767194ed55cf4f9bd04713e}\label{wypozyczenia_8h_a528dd1f42767194ed55cf4f9bd04713e}} 
+
+
+Najpierw korzystamy z funkcji edycji wypozyczenia ID ksiazki. 
+
+
+\begin{DoxyItemize}
+\item Jesli liczba wypozyczonych jest mniejsza od liczby egzemplarzy to wtedy dodajemy ksiazki do liczby wypozyczonych
+\item W przeciwnym wypadku wszystkim wypadku wszystkei egzemplarze sa wypozyczone
+\item Korzystam z funkcji do edycji (numeru karty, ID, kiedy ksiazka zostala wypozyczona i do kiedy)
+\item Natomiast jesli pierwsze wypozyczenie ma pusta wartosc to pierwsze i ostatnie wypozyczenie jest rowne wpisowi uzytkownika, w przeciwnym wypadku wpis uzytkownika dotyczy ostatniego wypozyczenia 
+\end{DoxyItemize}\mbox{\Hypertarget{wypozyczenia_8h_a528dd1f42767194ed55cf4f9bd04713e}\label{wypozyczenia_8h_a528dd1f42767194ed55cf4f9bd04713e}} 
 \index{wypozyczenia.h@{wypozyczenia.h}!edytuj\_wypozyczenia\_do\_kiedy@{edytuj\_wypozyczenia\_do\_kiedy}}
 \index{edytuj\_wypozyczenia\_do\_kiedy@{edytuj\_wypozyczenia\_do\_kiedy}!wypozyczenia.h@{wypozyczenia.h}}
 \doxysubsubsection{\texorpdfstring{edytuj\_wypozyczenia\_do\_kiedy()}{edytuj\_wypozyczenia\_do\_kiedy()}}
 {\footnotesize\ttfamily void edytuj\+\_\+wypozyczenia\+\_\+do\+\_\+kiedy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{wypozyczenia_8h_a2e41bcc4e8df9eda8cec674691c02967}{Wypozyczenie}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
+
+
+W tej funkcji mozemy edytowac do kiedy uzytkownik wypozyczyl dana ksiazke. Wpis uzytkownika zmienia wartosc do kiedy ksiazka zostala wypozyczona. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wpis} & na podstawie wpisu uzytkownika ustawiamy wartosc do kiedy ksiazka zostala wypozyczona \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{wypozyczenia_8h_a2bf906adc10478314379e50d61bfd6f5}\label{wypozyczenia_8h_a2bf906adc10478314379e50d61bfd6f5}} 
 \index{wypozyczenia.h@{wypozyczenia.h}!edytuj\_wypozyczenia\_ID@{edytuj\_wypozyczenia\_ID}}
 \index{edytuj\_wypozyczenia\_ID@{edytuj\_wypozyczenia\_ID}!wypozyczenia.h@{wypozyczenia.h}}
 \doxysubsubsection{\texorpdfstring{edytuj\_wypozyczenia\_ID()}{edytuj\_wypozyczenia\_ID()}}
 {\footnotesize\ttfamily void edytuj\+\_\+wypozyczenia\+\_\+\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{wypozyczenia_8h_a2e41bcc4e8df9eda8cec674691c02967}{Wypozyczenie}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
+
+
+Funkcja korzysta z wyszukania najwyzszego ID + 1 a nastepnie wpis uzytkownika edytuje ID wypozyczenia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wpis} & ID wypozyczenia jest edytowane na podstawie wpisu \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{wypozyczenia_8h_a58b0f0c25ad1f4a3ea56de0b29e0194c}\label{wypozyczenia_8h_a58b0f0c25ad1f4a3ea56de0b29e0194c}} 
 \index{wypozyczenia.h@{wypozyczenia.h}!edytuj\_wypozyczenia\_ID\_ksiazki@{edytuj\_wypozyczenia\_ID\_ksiazki}}
 \index{edytuj\_wypozyczenia\_ID\_ksiazki@{edytuj\_wypozyczenia\_ID\_ksiazki}!wypozyczenia.h@{wypozyczenia.h}}
 \doxysubsubsection{\texorpdfstring{edytuj\_wypozyczenia\_ID\_ksiazki()}{edytuj\_wypozyczenia\_ID\_ksiazki()}}
 {\footnotesize\ttfamily void edytuj\+\_\+wypozyczenia\+\_\+\+ID\+\_\+ksiazki (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{wypozyczenia_8h_a2e41bcc4e8df9eda8cec674691c02967}{Wypozyczenie}} $\ast$}]{wypozyczenie }\end{DoxyParamCaption})}
 
+
+
+W tej funkcji edytowane jest ID ksiazki na podstawie wpisu uzytkownika. Natomiast jesli ksiazka jest pusta wartoscia to nie ma takiej ksiazki, w przeciwnym wypadku przypisujemy do wypozyczenia ID ksiazki ktore jest rowne ID wypozyczenia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wypozyczenie} & korzystajac z parametru wypozyczenie edytowane jest ID ksiazki \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{wypozyczenia_8h_ad142cd21806abde6e1b232865f125bb2}\label{wypozyczenia_8h_ad142cd21806abde6e1b232865f125bb2}} 
 \index{wypozyczenia.h@{wypozyczenia.h}!edytuj\_wypozyczenia\_kiedy@{edytuj\_wypozyczenia\_kiedy}}
 \index{edytuj\_wypozyczenia\_kiedy@{edytuj\_wypozyczenia\_kiedy}!wypozyczenia.h@{wypozyczenia.h}}
 \doxysubsubsection{\texorpdfstring{edytuj\_wypozyczenia\_kiedy()}{edytuj\_wypozyczenia\_kiedy()}}
 {\footnotesize\ttfamily void edytuj\+\_\+wypozyczenia\+\_\+kiedy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{wypozyczenia_8h_a2e41bcc4e8df9eda8cec674691c02967}{Wypozyczenie}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
+
+
+W tej funkcji mozemy edytowac kiedy uzytkownik wypozyczyl dana ksiazke. Wpis uzytkownika zmienia wartosc kiedy ksiazka zostala wypozyczona. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wpis} & na podstawie wpisu uzytkownika ustawiamy wartosc kiedy ksiazka zostala wypozyczona \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{wypozyczenia_8h_a53dfbd5acde67310c956b1c31ecb8f3b}\label{wypozyczenia_8h_a53dfbd5acde67310c956b1c31ecb8f3b}} 
 \index{wypozyczenia.h@{wypozyczenia.h}!edytuj\_wypozyczenia\_numer\_karty@{edytuj\_wypozyczenia\_numer\_karty}}
 \index{edytuj\_wypozyczenia\_numer\_karty@{edytuj\_wypozyczenia\_numer\_karty}!wypozyczenia.h@{wypozyczenia.h}}
 \doxysubsubsection{\texorpdfstring{edytuj\_wypozyczenia\_numer\_karty()}{edytuj\_wypozyczenia\_numer\_karty()}}
 {\footnotesize\ttfamily void edytuj\+\_\+wypozyczenia\+\_\+numer\+\_\+karty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{wypozyczenia_8h_a2e41bcc4e8df9eda8cec674691c02967}{Wypozyczenie}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
+
+
+Na poczatku funkcji na podstawie wpisu uzytkownika edytowane jest ID klienta ktory ma wypozyczenie. 
+
+
+\begin{DoxyItemize}
+\item Jesli numer\+\_\+karty ma pusta wartosc to znaczy ze nie ma takiego klienta i on nie istnieje, w przeciwnym wypadku dla wpisu uzytkownika edytowany jest numer karty klienta
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em wpis} & na podstawie tego parametru edytowany jest numer karty danego wypozyczenia \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{wypozyczenia_8h_ac0a2eb32da7dacf3b36c40216dc1c238}\label{wypozyczenia_8h_ac0a2eb32da7dacf3b36c40216dc1c238}} 
 \index{wypozyczenia.h@{wypozyczenia.h}!ID\_ksiazki@{ID\_ksiazki}}
 \index{ID\_ksiazki@{ID\_ksiazki}!wypozyczenia.h@{wypozyczenia.h}}
@@ -161,6 +245,18 @@ void \mbox{\hyperlink{wypozyczenia_8h_a7c1d3c89910025671788a0afceccc9db}{usun\+\
 \doxysubsubsection{\texorpdfstring{policz\_kare()}{policz\_kare()}}
 {\footnotesize\ttfamily float policz\+\_\+kare (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{wypozyczenia_8h_a2e41bcc4e8df9eda8cec674691c02967}{Wypozyczenie}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
+
+
+W funkcji realizowane jest obliczanie kary dla klienta. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wpis} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Funkcja zwraca kare ktora nalezy sie klientowi biblioteki, typ float moze zwrocic liczby ulamkowe 
+\end{DoxyReturn}
 \mbox{\Hypertarget{wypozyczenia_8h_a2f1f2e5cb61d827bb3ccf316ef2ba227}\label{wypozyczenia_8h_a2f1f2e5cb61d827bb3ccf316ef2ba227}} 
 \index{wypozyczenia.h@{wypozyczenia.h}!ustaw\_ID\_nowego\_wypozyczenia@{ustaw\_ID\_nowego\_wypozyczenia}}
 \index{ustaw\_ID\_nowego\_wypozyczenia@{ustaw\_ID\_nowego\_wypozyczenia}!wypozyczenia.h@{wypozyczenia.h}}
@@ -173,13 +269,37 @@ void \mbox{\hyperlink{wypozyczenia_8h_a7c1d3c89910025671788a0afceccc9db}{usun\+\
 \doxysubsubsection{\texorpdfstring{usun\_wypozyczenie()}{usun\_wypozyczenie()}}
 {\footnotesize\ttfamily void usun\+\_\+wypozyczenie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{wypozyczenia_8h_a2e41bcc4e8df9eda8cec674691c02967}{Wypozyczenie}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
+
+\begin{DoxyItemize}
+\item Jesli poprzedni i nastepny element maja puste wartosci to pierwsze i ostatnie wypozyczenie ma miec puste wartosci
+\item Natomiast jesli poprzedni element ma pusta wartosc a nastepny ma jakas wartosc to poprzedni element ma pusta wartosc oraz pierwsze wypozyczenie jest rowne nastepnemu elementowi
+\item Natomiast jesli nastepny element ma pusta wartosc a natomiast poprzedni ma jakas wartosc to wtedy nastepny element ma pusta wartosc oraz ostatnie wypozyczenie jest rowne poprzedniemu elementowi
+\item W przeciwnym wypadku nastepny element jest rowny wskaznikowi na nastepny element, a poprzedni wskaznikowi na poprzedni element.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em wpis} & wpis uzytkownika decyduje ktore wypozyczenie ma byc usuniete \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{wypozyczenia_8h_a1ed9abde669d8ae22e4b7594016ada7c}\label{wypozyczenia_8h_a1ed9abde669d8ae22e4b7594016ada7c}} 
 \index{wypozyczenia.h@{wypozyczenia.h}!wczytaniepliku\_wypozyczenia@{wczytaniepliku\_wypozyczenia}}
 \index{wczytaniepliku\_wypozyczenia@{wczytaniepliku\_wypozyczenia}!wypozyczenia.h@{wypozyczenia.h}}
 \doxysubsubsection{\texorpdfstring{wczytaniepliku\_wypozyczenia()}{wczytaniepliku\_wypozyczenia()}}
 {\footnotesize\ttfamily void wczytaniepliku\+\_\+wypozyczenia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{wypozyczenia_8h_aab5fb2af45c9524a3acd98f0f14b6fa1}\label{wypozyczenia_8h_aab5fb2af45c9524a3acd98f0f14b6fa1}} 
+
+
+W tej funkcji wcztujemy dane z pliku wypozyczenia.\+csv. 
+
+
+\begin{DoxyItemize}
+\item Sprawdzamy czy zawartosc pliku nie jest pusta
+\item I w while wczytujemy (ID ksiazki, ID, kiedy ksiazka jest wypozyczona i do kiedy)
+\item Jesli pierwsze wypozyczenie ma pusta wartosc to poprzedni element jest rowny wpisowi
+\item Natomiast jesli wpis ma jakas wartosc to wpis jest rowny wskaznikowi na poprzedniego na nastepny element, poprzedni element jest rowny wpisowi na poprzedni i wpis jest rowny poprzedniemu wypozyczeniu
+\item Jesli wpis nie ma pustej wartosci to wtedy ostatnie wypozyczenie jest rowne wpisowi uzytkownika 
+\end{DoxyItemize}\mbox{\Hypertarget{wypozyczenia_8h_aab5fb2af45c9524a3acd98f0f14b6fa1}\label{wypozyczenia_8h_aab5fb2af45c9524a3acd98f0f14b6fa1}} 
 \index{wypozyczenia.h@{wypozyczenia.h}!wydrukuj\_wypozyczenia@{wydrukuj\_wypozyczenia}}
 \index{wydrukuj\_wypozyczenia@{wydrukuj\_wypozyczenia}!wypozyczenia.h@{wypozyczenia.h}}
 \doxysubsubsection{\texorpdfstring{wydrukuj\_wypozyczenia()}{wydrukuj\_wypozyczenia()}}
@@ -191,27 +311,62 @@ void \mbox{\hyperlink{wypozyczenia_8h_a7c1d3c89910025671788a0afceccc9db}{usun\+\
 \doxysubsubsection{\texorpdfstring{wyswietl\_kto\_wypozyczyl()}{wyswietl\_kto\_wypozyczyl()}}
 {\footnotesize\ttfamily void wyswietl\+\_\+kto\+\_\+wypozyczyl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+W tej funkcji przechodzimy petla po wszystkich wypozyczeniach i drukujemy cala baze wypozyczen. 
+
 \mbox{\Hypertarget{wypozyczenia_8h_a73c4ffad06374a721eeb8ed60d421821}\label{wypozyczenia_8h_a73c4ffad06374a721eeb8ed60d421821}} 
 \index{wypozyczenia.h@{wypozyczenia.h}!zalegle\_wypozyczenia@{zalegle\_wypozyczenia}}
 \index{zalegle\_wypozyczenia@{zalegle\_wypozyczenia}!wypozyczenia.h@{wypozyczenia.h}}
 \doxysubsubsection{\texorpdfstring{zalegle\_wypozyczenia()}{zalegle\_wypozyczenia()}}
 {\footnotesize\ttfamily int zalegle\+\_\+wypozyczenia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+W funkcji realizowane jest wyswietlanie zaleglych wypozyczen klienta. W petli przechodzimy po wszystkich wypozyczeniach i jesli teraz bedzie wieksze od wpisu uzytkownika na do kiedy jest termin oddania ksiazki to drukujemy zalegle wypozyczenie. 
+
+\begin{DoxyReturn}{Returns}
+Funkcja zwraca zalegajace wypozyczenia klienta 
+\end{DoxyReturn}
 \mbox{\Hypertarget{wypozyczenia_8h_ab8fb617326e316fb5a174c38eb474d17}\label{wypozyczenia_8h_ab8fb617326e316fb5a174c38eb474d17}} 
 \index{wypozyczenia.h@{wypozyczenia.h}!zapispliku\_wypozyczenia@{zapispliku\_wypozyczenia}}
 \index{zapispliku\_wypozyczenia@{zapispliku\_wypozyczenia}!wypozyczenia.h@{wypozyczenia.h}}
 \doxysubsubsection{\texorpdfstring{zapispliku\_wypozyczenia()}{zapispliku\_wypozyczenia()}}
 {\footnotesize\ttfamily void zapispliku\+\_\+wypozyczenia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{wypozyczenia_8h_a242894dcf63fe7ce16734b33ee52de5a}\label{wypozyczenia_8h_a242894dcf63fe7ce16734b33ee52de5a}} 
+
+
+Przechodzimy petla po wszystkich wypozyczeniach. Zapisujemy do pliku wartosci (ID Ksiazki, ID wypozyczenia, kiedy ksiazka zostala wypozyczona i kiedy jest termin jej oddania) 
+
+
+\begin{DoxyItemize}
+\item Jesli wpis na nastepny element nie jest pusty to drukuj zawartosc pliku. 
+\end{DoxyItemize}\mbox{\Hypertarget{wypozyczenia_8h_a242894dcf63fe7ce16734b33ee52de5a}\label{wypozyczenia_8h_a242894dcf63fe7ce16734b33ee52de5a}} 
 \index{wypozyczenia.h@{wypozyczenia.h}!znajdz\_najwyzsze\_ID@{znajdz\_najwyzsze\_ID}}
 \index{znajdz\_najwyzsze\_ID@{znajdz\_najwyzsze\_ID}!wypozyczenia.h@{wypozyczenia.h}}
 \doxysubsubsection{\texorpdfstring{znajdz\_najwyzsze\_ID()}{znajdz\_najwyzsze\_ID()}}
 {\footnotesize\ttfamily int znajdz\+\_\+najwyzsze\+\_\+\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+W funkcji realizowane jest znajdowanie najwyzszego ID w wyzyczeniach. W petli przechodzimy przez wszytstkie wypozyczenia i jesli wpis na ID bedzie wieksze od aktualnego max ID to wtedy bedzie nowe maksimum. 
+
+\begin{DoxyReturn}{Returns}
+Funkcja zwraca najwyzsze ID wypozyczenia 
+\end{DoxyReturn}
 \mbox{\Hypertarget{wypozyczenia_8h_afd5606f068669c3669e5ec45ac6192b2}\label{wypozyczenia_8h_afd5606f068669c3669e5ec45ac6192b2}} 
 \index{wypozyczenia.h@{wypozyczenia.h}!zwroc\_wypozyczenie@{zwroc\_wypozyczenie}}
 \index{zwroc\_wypozyczenie@{zwroc\_wypozyczenie}!wypozyczenia.h@{wypozyczenia.h}}
 \doxysubsubsection{\texorpdfstring{zwroc\_wypozyczenie()}{zwroc\_wypozyczenie()}}
 {\footnotesize\ttfamily void zwroc\+\_\+wypozyczenie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Na poczatku funkcji odpowiedzialnej za zwracanie wypozyczen na poczatku uzytkownik podaje numer karty klienta oraz podaje ID ksiazki ktora chce zwrocic. W petli przechodzimy przez wszystkie wypozyczenia. 
+
+
+\begin{DoxyItemize}
+\item Jesli numer karty jest rowny wpisowi uzytkownika oraz jesli ID ksiazki jest rowne wpisowi uzytkownika
+\item Natomiast jesli funkcja policz kare policzy kare wieksza niz 0 to wtedy w zwracaniu wypozyczenia powinna byc napisana kara dla danego uzytkownika
+\item Na koncu uzywamy funkcji do usuwania wypozyczen do ususniecia wypozyczenia 
+\end{DoxyItemize}

@@ -84,38 +84,54 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a1ace47d8c8a599b371bb033aaa4006fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wypozyczenia_8c.html#a1ace47d8c8a599b371bb033aaa4006fa">wydrukuj_wypozyczenia</a> (<a class="el" href="wypozyczenia_8h.html#a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</a> *wpis)</td></tr>
+<tr class="memdesc:a1ace47d8c8a599b371bb033aaa4006fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">W funkcji realizowane jest drukowanie danych dotyczacych wypozyczen na ekran (ID(wypozyczenia), ID ksiazki, kiedy zostala wypozyczona ksiazka i do kiedy ma byc wypozyczona, kara)  <a href="wypozyczenia_8c.html#a1ace47d8c8a599b371bb033aaa4006fa">More...</a><br /></td></tr>
 <tr class="separator:a1ace47d8c8a599b371bb033aaa4006fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ad62ce3ada3806a59561dbd8868b3aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wypozyczenia_8c.html#a1ad62ce3ada3806a59561dbd8868b3aa">wyswietl_kto_wypozyczyl</a> ()</td></tr>
+<tr class="memdesc:a1ad62ce3ada3806a59561dbd8868b3aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">W tej funkcji przechodzimy petla po wszystkich wypozyczeniach i drukujemy cala baze wypozyczen.  <a href="wypozyczenia_8c.html#a1ad62ce3ada3806a59561dbd8868b3aa">More...</a><br /></td></tr>
 <tr class="separator:a1ad62ce3ada3806a59561dbd8868b3aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e7e4f1699ef7653e588fa877116cfdb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wypozyczenia_8c.html#a8e7e4f1699ef7653e588fa877116cfdb">czy_klient_ma_wypozyczenia</a> (<a class="el" href="klienci_8h.html#a38fd7bcc190edf278f27823dfc7c3eb1">Klient</a> *klient)</td></tr>
+<tr class="memdesc:a8e7e4f1699ef7653e588fa877116cfdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">W petli for przechodzimy po wszystkich wypozyczeniach i jesli wpis uzytkownika na dany numer karty klienta jest rowny numerowi karty klienta to zwracamy true, w przeciwnym wypadku false.  <a href="wypozyczenia_8c.html#a8e7e4f1699ef7653e588fa877116cfdb">More...</a><br /></td></tr>
 <tr class="separator:a8e7e4f1699ef7653e588fa877116cfdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accf309e4d88d00176ac21cf0d1d4fb8e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wypozyczenia_8c.html#accf309e4d88d00176ac21cf0d1d4fb8e">czy_ksiazka_jest_wypozyczona</a> (<a class="el" href="ksiazki_8h.html#add1e74192a9c069b274f645990a6a6b4">Ksiazka</a> *ksiazka)</td></tr>
+<tr class="memdesc:accf309e4d88d00176ac21cf0d1d4fb8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">W petli przechodze przez wszystkie wypozyczenia i jesli wpis uzytkowniaka na dane ID ksiazki jest rowne ID ksiazki to wtedy zwracam true w przeciwnym wypadku zwracam false.  <a href="wypozyczenia_8c.html#accf309e4d88d00176ac21cf0d1d4fb8e">More...</a><br /></td></tr>
 <tr class="separator:accf309e4d88d00176ac21cf0d1d4fb8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65b934851a82f89f3e684f6021a09e24"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wypozyczenia_8c.html#a65b934851a82f89f3e684f6021a09e24">policz_kare</a> (<a class="el" href="wypozyczenia_8h.html#a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</a> *wpis)</td></tr>
+<tr class="memdesc:a65b934851a82f89f3e684f6021a09e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">W funkcji realizowane jest obliczanie kary dla klienta.  <a href="wypozyczenia_8c.html#a65b934851a82f89f3e684f6021a09e24">More...</a><br /></td></tr>
 <tr class="separator:a65b934851a82f89f3e684f6021a09e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73c4ffad06374a721eeb8ed60d421821"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wypozyczenia_8c.html#a73c4ffad06374a721eeb8ed60d421821">zalegle_wypozyczenia</a> ()</td></tr>
+<tr class="memdesc:a73c4ffad06374a721eeb8ed60d421821"><td class="mdescLeft">&#160;</td><td class="mdescRight">W funkcji realizowane jest wyswietlanie zaleglych wypozyczen klienta. W petli przechodzimy po wszystkich wypozyczeniach i jesli teraz bedzie wieksze od wpisu uzytkownika na do kiedy jest termin oddania ksiazki to drukujemy zalegle wypozyczenie.  <a href="wypozyczenia_8c.html#a73c4ffad06374a721eeb8ed60d421821">More...</a><br /></td></tr>
 <tr class="separator:a73c4ffad06374a721eeb8ed60d421821"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a242894dcf63fe7ce16734b33ee52de5a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wypozyczenia_8c.html#a242894dcf63fe7ce16734b33ee52de5a">znajdz_najwyzsze_ID</a> ()</td></tr>
+<tr class="memdesc:a242894dcf63fe7ce16734b33ee52de5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">W funkcji realizowane jest znajdowanie najwyzszego ID w wyzyczeniach. W petli przechodzimy przez wszytstkie wypozyczenia i jesli wpis na ID bedzie wieksze od aktualnego max ID to wtedy bedzie nowe maksimum.  <a href="wypozyczenia_8c.html#a242894dcf63fe7ce16734b33ee52de5a">More...</a><br /></td></tr>
 <tr class="separator:a242894dcf63fe7ce16734b33ee52de5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58b0f0c25ad1f4a3ea56de0b29e0194c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wypozyczenia_8c.html#a58b0f0c25ad1f4a3ea56de0b29e0194c">edytuj_wypozyczenia_ID_ksiazki</a> (<a class="el" href="wypozyczenia_8h.html#a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</a> *wypozyczenie)</td></tr>
+<tr class="memdesc:a58b0f0c25ad1f4a3ea56de0b29e0194c"><td class="mdescLeft">&#160;</td><td class="mdescRight">W tej funkcji edytowane jest ID ksiazki na podstawie wpisu uzytkownika. Natomiast jesli ksiazka jest pusta wartoscia to nie ma takiej ksiazki, w przeciwnym wypadku przypisujemy do wypozyczenia ID ksiazki ktore jest rowne ID wypozyczenia.  <a href="wypozyczenia_8c.html#a58b0f0c25ad1f4a3ea56de0b29e0194c">More...</a><br /></td></tr>
 <tr class="separator:a58b0f0c25ad1f4a3ea56de0b29e0194c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53dfbd5acde67310c956b1c31ecb8f3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wypozyczenia_8c.html#a53dfbd5acde67310c956b1c31ecb8f3b">edytuj_wypozyczenia_numer_karty</a> (<a class="el" href="wypozyczenia_8h.html#a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</a> *wpis)</td></tr>
+<tr class="memdesc:a53dfbd5acde67310c956b1c31ecb8f3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Na poczatku funkcji na podstawie wpisu uzytkownika edytowane jest ID klienta ktory ma wypozyczenie.  <a href="wypozyczenia_8c.html#a53dfbd5acde67310c956b1c31ecb8f3b">More...</a><br /></td></tr>
 <tr class="separator:a53dfbd5acde67310c956b1c31ecb8f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd5606f068669c3669e5ec45ac6192b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wypozyczenia_8c.html#afd5606f068669c3669e5ec45ac6192b2">zwroc_wypozyczenie</a> ()</td></tr>
+<tr class="memdesc:afd5606f068669c3669e5ec45ac6192b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Na poczatku funkcji odpowiedzialnej za zwracanie wypozyczen na poczatku uzytkownik podaje numer karty klienta oraz podaje ID ksiazki ktora chce zwrocic. W petli przechodzimy przez wszystkie wypozyczenia.  <a href="wypozyczenia_8c.html#afd5606f068669c3669e5ec45ac6192b2">More...</a><br /></td></tr>
 <tr class="separator:afd5606f068669c3669e5ec45ac6192b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c1d3c89910025671788a0afceccc9db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wypozyczenia_8c.html#a7c1d3c89910025671788a0afceccc9db">usun_wypozyczenie</a> (<a class="el" href="wypozyczenia_8h.html#a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</a> *wpis)</td></tr>
 <tr class="separator:a7c1d3c89910025671788a0afceccc9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bf906adc10478314379e50d61bfd6f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wypozyczenia_8c.html#a2bf906adc10478314379e50d61bfd6f5">edytuj_wypozyczenia_ID</a> (<a class="el" href="wypozyczenia_8h.html#a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</a> *wpis)</td></tr>
+<tr class="memdesc:a2bf906adc10478314379e50d61bfd6f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja korzysta z wyszukania najwyzszego ID + 1 a nastepnie wpis uzytkownika edytuje ID wypozyczenia.  <a href="wypozyczenia_8c.html#a2bf906adc10478314379e50d61bfd6f5">More...</a><br /></td></tr>
 <tr class="separator:a2bf906adc10478314379e50d61bfd6f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4d7bce300ef21148db92a04bf30dfc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wypozyczenia_8c.html#ab4d7bce300ef21148db92a04bf30dfc8">dodaj_wypozyczenie</a> ()</td></tr>
+<tr class="memdesc:ab4d7bce300ef21148db92a04bf30dfc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Najpierw korzystamy z funkcji edycji wypozyczenia ID ksiazki.  <a href="wypozyczenia_8c.html#ab4d7bce300ef21148db92a04bf30dfc8">More...</a><br /></td></tr>
 <tr class="separator:ab4d7bce300ef21148db92a04bf30dfc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ed9abde669d8ae22e4b7594016ada7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wypozyczenia_8c.html#a1ed9abde669d8ae22e4b7594016ada7c">wczytaniepliku_wypozyczenia</a> ()</td></tr>
+<tr class="memdesc:a1ed9abde669d8ae22e4b7594016ada7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">W tej funkcji wcztujemy dane z pliku wypozyczenia.csv.  <a href="wypozyczenia_8c.html#a1ed9abde669d8ae22e4b7594016ada7c">More...</a><br /></td></tr>
 <tr class="separator:a1ed9abde669d8ae22e4b7594016ada7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad142cd21806abde6e1b232865f125bb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wypozyczenia_8c.html#ad142cd21806abde6e1b232865f125bb2">edytuj_wypozyczenia_kiedy</a> (<a class="el" href="wypozyczenia_8h.html#a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</a> *wpis)</td></tr>
+<tr class="memdesc:ad142cd21806abde6e1b232865f125bb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">W tej funkcji mozemy edytowac kiedy uzytkownik wypozyczyl dana ksiazke. Wpis uzytkownika zmienia wartosc kiedy ksiazka zostala wypozyczona.  <a href="wypozyczenia_8c.html#ad142cd21806abde6e1b232865f125bb2">More...</a><br /></td></tr>
 <tr class="separator:ad142cd21806abde6e1b232865f125bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a528dd1f42767194ed55cf4f9bd04713e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wypozyczenia_8c.html#a528dd1f42767194ed55cf4f9bd04713e">edytuj_wypozyczenia_do_kiedy</a> (<a class="el" href="wypozyczenia_8h.html#a2e41bcc4e8df9eda8cec674691c02967">Wypozyczenie</a> *wpis)</td></tr>
+<tr class="memdesc:a528dd1f42767194ed55cf4f9bd04713e"><td class="mdescLeft">&#160;</td><td class="mdescRight">W tej funkcji mozemy edytowac do kiedy uzytkownik wypozyczyl dana ksiazke. Wpis uzytkownika zmienia wartosc do kiedy ksiazka zostala wypozyczona.  <a href="wypozyczenia_8c.html#a528dd1f42767194ed55cf4f9bd04713e">More...</a><br /></td></tr>
 <tr class="separator:a528dd1f42767194ed55cf4f9bd04713e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8fb617326e316fb5a174c38eb474d17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wypozyczenia_8c.html#ab8fb617326e316fb5a174c38eb474d17">zapispliku_wypozyczenia</a> ()</td></tr>
+<tr class="memdesc:ab8fb617326e316fb5a174c38eb474d17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Przechodzimy petla po wszystkich wypozyczeniach. Zapisujemy do pliku wartosci (ID Ksiazki, ID wypozyczenia, kiedy ksiazka zostala wypozyczona i kiedy jest termin jej oddania)  <a href="wypozyczenia_8c.html#ab8fb617326e316fb5a174c38eb474d17">More...</a><br /></td></tr>
 <tr class="separator:ab8fb617326e316fb5a174c38eb474d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -142,6 +158,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>W petli for przechodzimy po wszystkich wypozyczeniach i jesli wpis uzytkownika na dany numer karty klienta jest rowny numerowi karty klienta to zwracamy true, w przeciwnym wypadku false. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">klient</td><td>korzystam z parametru weryfikujacego wypozyczenia klienta </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Funkcja zwraca 1 jesli klient ma wypozyczenia, jesli ich nie ma funkcja zwraca 0 </dd></dl>
+
 </div>
 </div>
 <a id="accf309e4d88d00176ac21cf0d1d4fb8e" name="accf309e4d88d00176ac21cf0d1d4fb8e"></a>
@@ -160,6 +185,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>W petli przechodze przez wszystkie wypozyczenia i jesli wpis uzytkowniaka na dane ID ksiazki jest rowne ID ksiazki to wtedy zwracam true w przeciwnym wypadku zwracam false. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ksiazka</td><td>korzystam z parametru weryfikujacego wypozyczenia ksiazek </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Funkcja zwraca 1 jesli ksiazka jest wypozyczona, w przeciwnym wypadku zwraca 0 </dd></dl>
+
 </div>
 </div>
 <a id="ab4d7bce300ef21148db92a04bf30dfc8" name="ab4d7bce300ef21148db92a04bf30dfc8"></a>
@@ -176,6 +210,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Najpierw korzystamy z funkcji edycji wypozyczenia ID ksiazki. </p>
+<ul>
+<li>Jesli liczba wypozyczonych jest mniejsza od liczby egzemplarzy to wtedy dodajemy ksiazki do liczby wypozyczonych</li>
+<li>W przeciwnym wypadku wszystkim wypadku wszystkei egzemplarze sa wypozyczone</li>
+<li>Korzystam z funkcji do edycji (numeru karty, ID, kiedy ksiazka zostala wypozyczona i do kiedy)</li>
+<li>Natomiast jesli pierwsze wypozyczenie ma pusta wartosc to pierwsze i ostatnie wypozyczenie jest rowne wpisowi uzytkownika, w przeciwnym wypadku wpis uzytkownika dotyczy ostatniego wypozyczenia </li>
+</ul>
 
 </div>
 </div>
@@ -195,6 +237,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>W tej funkcji mozemy edytowac do kiedy uzytkownik wypozyczyl dana ksiazke. Wpis uzytkownika zmienia wartosc do kiedy ksiazka zostala wypozyczona. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wpis</td><td>na podstawie wpisu uzytkownika ustawiamy wartosc do kiedy ksiazka zostala wypozyczona </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a2bf906adc10478314379e50d61bfd6f5" name="a2bf906adc10478314379e50d61bfd6f5"></a>
@@ -212,6 +262,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Funkcja korzysta z wyszukania najwyzszego ID + 1 a nastepnie wpis uzytkownika edytuje ID wypozyczenia. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wpis</td><td>ID wypozyczenia jest edytowane na podstawie wpisu </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -231,6 +289,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>W tej funkcji edytowane jest ID ksiazki na podstawie wpisu uzytkownika. Natomiast jesli ksiazka jest pusta wartoscia to nie ma takiej ksiazki, w przeciwnym wypadku przypisujemy do wypozyczenia ID ksiazki ktore jest rowne ID wypozyczenia. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wypozyczenie</td><td>korzystajac z parametru wypozyczenie edytowane jest ID ksiazki </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ad142cd21806abde6e1b232865f125bb2" name="ad142cd21806abde6e1b232865f125bb2"></a>
@@ -248,6 +314,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>W tej funkcji mozemy edytowac kiedy uzytkownik wypozyczyl dana ksiazke. Wpis uzytkownika zmienia wartosc kiedy ksiazka zostala wypozyczona. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wpis</td><td>na podstawie wpisu uzytkownika ustawiamy wartosc kiedy ksiazka zostala wypozyczona </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -267,6 +341,17 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Na poczatku funkcji na podstawie wpisu uzytkownika edytowane jest ID klienta ktory ma wypozyczenie. </p>
+<ul>
+<li>Jesli numer_karty ma pusta wartosc to znaczy ze nie ma takiego klienta i on nie istnieje, w przeciwnym wypadku dla wpisu uzytkownika edytowany jest numer karty klienta</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wpis</td><td>na podstawie tego parametru edytowany jest numer karty danego wypozyczenia </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a65b934851a82f89f3e684f6021a09e24" name="a65b934851a82f89f3e684f6021a09e24"></a>
@@ -285,6 +370,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>W funkcji realizowane jest obliczanie kary dla klienta. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wpis</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Funkcja zwraca kare ktora nalezy sie klientowi biblioteki, typ float moze zwrocic liczby ulamkowe </dd></dl>
+
 </div>
 </div>
 <a id="a7c1d3c89910025671788a0afceccc9db" name="a7c1d3c89910025671788a0afceccc9db"></a>
@@ -302,6 +396,18 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<ul>
+<li>Jesli poprzedni i nastepny element maja puste wartosci to pierwsze i ostatnie wypozyczenie ma miec puste wartosci</li>
+<li>Natomiast jesli poprzedni element ma pusta wartosc a nastepny ma jakas wartosc to poprzedni element ma pusta wartosc oraz pierwsze wypozyczenie jest rowne nastepnemu elementowi</li>
+<li>Natomiast jesli nastepny element ma pusta wartosc a natomiast poprzedni ma jakas wartosc to wtedy nastepny element ma pusta wartosc oraz ostatnie wypozyczenie jest rowne poprzedniemu elementowi</li>
+<li>W przeciwnym wypadku nastepny element jest rowny wskaznikowi na nastepny element, a poprzedni wskaznikowi na poprzedni element.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wpis</td><td>wpis uzytkownika decyduje ktore wypozyczenie ma byc usuniete </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -319,6 +425,15 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>W tej funkcji wcztujemy dane z pliku wypozyczenia.csv. </p>
+<ul>
+<li>Sprawdzamy czy zawartosc pliku nie jest pusta</li>
+<li>I w while wczytujemy (ID ksiazki, ID, kiedy ksiazka jest wypozyczona i do kiedy)</li>
+<li>Jesli pierwsze wypozyczenie ma pusta wartosc to poprzedni element jest rowny wpisowi</li>
+<li>Natomiast jesli wpis ma jakas wartosc to wpis jest rowny wskaznikowi na poprzedniego na nastepny element, poprzedni element jest rowny wpisowi na poprzedni i wpis jest rowny poprzedniemu wypozyczeniu</li>
+<li>Jesli wpis nie ma pustej wartosci to wtedy ostatnie wypozyczenie jest rowne wpisowi uzytkownika </li>
+</ul>
 
 </div>
 </div>
@@ -338,6 +453,17 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>W funkcji realizowane jest drukowanie danych dotyczacych wypozyczen na ekran (ID(wypozyczenia), ID ksiazki, kiedy zostala wypozyczona ksiazka i do kiedy ma byc wypozyczona, kara) </p>
+<ul>
+<li>W funkcji korzystam takze z warunku if ktory wyswietla klienta ktory ma naliczona kare wieksza niz 0</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wpis</td><td>na podstawie wpisu na ekran drukowane sa dane o wypozyczeniach </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a1ad62ce3ada3806a59561dbd8868b3aa" name="a1ad62ce3ada3806a59561dbd8868b3aa"></a>
@@ -354,6 +480,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>W tej funkcji przechodzimy petla po wszystkich wypozyczeniach i drukujemy cala baze wypozyczen. </p>
 
 </div>
 </div>
@@ -372,6 +500,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>W funkcji realizowane jest wyswietlanie zaleglych wypozyczen klienta. W petli przechodzimy po wszystkich wypozyczeniach i jesli teraz bedzie wieksze od wpisu uzytkownika na do kiedy jest termin oddania ksiazki to drukujemy zalegle wypozyczenie. </p>
+<dl class="section return"><dt>Returns</dt><dd>Funkcja zwraca zalegajace wypozyczenia klienta </dd></dl>
+
 </div>
 </div>
 <a id="ab8fb617326e316fb5a174c38eb474d17" name="ab8fb617326e316fb5a174c38eb474d17"></a>
@@ -388,6 +519,11 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Przechodzimy petla po wszystkich wypozyczeniach. Zapisujemy do pliku wartosci (ID Ksiazki, ID wypozyczenia, kiedy ksiazka zostala wypozyczona i kiedy jest termin jej oddania) </p>
+<ul>
+<li>Jesli wpis na nastepny element nie jest pusty to drukuj zawartosc pliku. </li>
+</ul>
 
 </div>
 </div>
@@ -406,6 +542,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>W funkcji realizowane jest znajdowanie najwyzszego ID w wyzyczeniach. W petli przechodzimy przez wszytstkie wypozyczenia i jesli wpis na ID bedzie wieksze od aktualnego max ID to wtedy bedzie nowe maksimum. </p>
+<dl class="section return"><dt>Returns</dt><dd>Funkcja zwraca najwyzsze ID wypozyczenia </dd></dl>
+
 </div>
 </div>
 <a id="afd5606f068669c3669e5ec45ac6192b2" name="afd5606f068669c3669e5ec45ac6192b2"></a>
@@ -422,6 +561,13 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Na poczatku funkcji odpowiedzialnej za zwracanie wypozyczen na poczatku uzytkownik podaje numer karty klienta oraz podaje ID ksiazki ktora chce zwrocic. W petli przechodzimy przez wszystkie wypozyczenia. </p>
+<ul>
+<li>Jesli numer karty jest rowny wpisowi uzytkownika oraz jesli ID ksiazki jest rowne wpisowi uzytkownika</li>
+<li>Natomiast jesli funkcja policz kare policzy kare wieksza niz 0 to wtedy w zwracaniu wypozyczenia powinna byc napisana kara dla danego uzytkownika</li>
+<li>Na koncu uzywamy funkcji do usuwania wypozyczen do ususniecia wypozyczenia </li>
+</ul>
 
 </div>
 </div>

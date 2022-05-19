@@ -45,9 +45,9 @@ void \mbox{\hyperlink{ksiazki_8h_a31ad71269e0f171ff6bbf775a7d6a253}{usun\+\_\+ks
 void \mbox{\hyperlink{ksiazki_8h_ad515018a91175fffa50289ef40ca4342}{menu\+\_\+ksiazek}} ()
 \item 
 void \mbox{\hyperlink{ksiazki_8h_aa7bc6b44a7b7d6db12d0fdaca2b47998}{wczytaniepliku\+\_\+ksiazki}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Wczytujemy z pliku ksiazki.\+csv korzystajac z petli while wszystkie dane na ktore wskazuje wpis (gatunek, tytul, autor, ID, rok, liczba egzemplarzy, liczba wypozyczonych). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_a84101ca77a61569379a0275f73d8cfd4}{zapispliku\+\_\+ksiazki}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Prechodzimy w petli przez wszystkie ksiazki i zapisujemy do pliku wszystkie ksiazki na ktore wskazuje wpis (gatunek, tytul, autor, ID, rok, liczba egzemplarzy, liczba wypozyczonych) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_a023661b73ad6f5af935c1bc928429310}{ksiazka\+\_\+do\+\_\+zarzadzania}} ()
 \item 
 void \mbox{\hyperlink{ksiazki_8h_a84180dfd861f8a7eccb6505bebeb26a8}{wydrukuj\+\_\+ksiazke}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$wpis)
@@ -55,11 +55,11 @@ void \mbox{\hyperlink{ksiazki_8h_a84180dfd861f8a7eccb6505bebeb26a8}{wydrukuj\+\_
 void \mbox{\hyperlink{ksiazki_8h_a93f5816116ef4382f87dab1e5695e00f}{edytuj\+\_\+tytul\+\_\+ksiazki}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$wpis)
 \begin{DoxyCompactList}\small\item\em W tej funkcji uzytkownik edytuje tytul danej ksiazki. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_acfcccbe02004a890d7f3bac5900ecf21}{edytuj\+\_\+gatunek\+\_\+ksiazki}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$wpis)
-\item 
+\begin{DoxyCompactList}\small\item\em W tej funkcji edytowany jest gatunek danej ksiazki np(romans na fantasty). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_a966ffe3ef2449f7a256ac6d703c7ec24}{edytuj\+\_\+autora}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$wpis)
 \begin{DoxyCompactList}\small\item\em W tej funkcji uzytkownik edytuje autora danej ksiazki. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_ab6f2c6d841a1887aa7bd2e2ca5b99648}{edytuj\+\_\+rok}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$wpis)
-\item 
+\begin{DoxyCompactList}\small\item\em W tej funkcji za pomoca wpisu uzytkownika mozemy zmienic rok danej ksiazki przykladowo z 1999 na 2004. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$ \mbox{\hyperlink{ksiazki_8h_af68f877082bb74fc15a27b90d96a2b4d}{wyszukaj\+\_\+ksiazke}} (int \mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929a001479a58fb44c39a29b20d565081a68}{ID}})
 \begin{DoxyCompactList}\small\item\em W tej funkcji przechodzimy petla po wszystkich ksiazkach i jesli wpis uzytownika jest rowny ID danej ksiazki to ksiazka jest znaleziona i jest wypisywana na ekran. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{ksiazki_8h_ab253baef3a79eb201a1e7551e5e2a95d}{znajdz\+\_\+najwyzsze\+\_\+\+ID\+\_\+ksiazki}} ()
@@ -196,6 +196,20 @@ W tej funkcji uzytkownik edytuje autora danej ksiazki.
 \doxysubsubsection{\texorpdfstring{edytuj\_gatunek\_ksiazki()}{edytuj\_gatunek\_ksiazki()}}
 {\footnotesize\ttfamily void edytuj\+\_\+gatunek\+\_\+ksiazki (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
+
+
+W tej funkcji edytowany jest gatunek danej ksiazki np(romans na fantasty). 
+
+
+\begin{DoxyItemize}
+\item dzieki fflush mozemy edytowac nawet dwuwyrazowe gatunki ksiazek
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em wpis} & zmienia gatunek ksiazki \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{ksiazki_8h_abff38f583e5964764ae641674fc76148}\label{ksiazki_8h_abff38f583e5964764ae641674fc76148}} 
 \index{ksiazki.h@{ksiazki.h}!edytuj\_ksiazke@{edytuj\_ksiazke}}
 \index{edytuj\_ksiazke@{edytuj\_ksiazke}!ksiazki.h@{ksiazki.h}}
@@ -253,6 +267,15 @@ Wpis uzytkownika dokonuje zmiane liczby wypozyczonych danej ksiazki.
 \doxysubsubsection{\texorpdfstring{edytuj\_rok()}{edytuj\_rok()}}
 {\footnotesize\ttfamily void edytuj\+\_\+rok (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
+
+
+W tej funkcji za pomoca wpisu uzytkownika mozemy zmienic rok danej ksiazki przykladowo z 1999 na 2004. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wpis} & na podstawie wpisu zmieniany jest rok danej ksiazki \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{ksiazki_8h_a93f5816116ef4382f87dab1e5695e00f}\label{ksiazki_8h_a93f5816116ef4382f87dab1e5695e00f}} 
 \index{ksiazki.h@{ksiazki.h}!edytuj\_tytul\_ksiazki@{edytuj\_tytul\_ksiazki}}
 \index{edytuj\_tytul\_ksiazki@{edytuj\_tytul\_ksiazki}!ksiazki.h@{ksiazki.h}}
@@ -334,7 +357,18 @@ Funkcja sortowania działa na dwoch petlach for, ktore przechodza po wszytskich 
 \doxysubsubsection{\texorpdfstring{wczytaniepliku\_ksiazki()}{wczytaniepliku\_ksiazki()}}
 {\footnotesize\ttfamily void wczytaniepliku\+\_\+ksiazki (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{ksiazki_8h_a84180dfd861f8a7eccb6505bebeb26a8}\label{ksiazki_8h_a84180dfd861f8a7eccb6505bebeb26a8}} 
+
+
+Wczytujemy z pliku ksiazki.\+csv korzystajac z petli while wszystkie dane na ktore wskazuje wpis (gatunek, tytul, autor, ID, rok, liczba egzemplarzy, liczba wypozyczonych). 
+
+
+\begin{DoxyItemize}
+\item W pierwszym if korzystamy z funkcji sprawdzajcej czy plik nie jest pusty
+\item Jesli pierwsza ksiazka ma pusta wartosc to jest ona rowna wpisowi na pierwsza ksiazke oraz poprzednia ksiazke
+\item Natomiast jesli wpis nie jest pusty to wtedy wpis jest rowny nastepnemu elementowi oraz poprzedni jest rowny wpisowi na poprzednia ksiazke
+\end{DoxyItemize}
+
+I na koncu jesli wpis nie jest pusty to wtedy ostatnia ksiazka jest rowna wpisowi \mbox{\Hypertarget{ksiazki_8h_a84180dfd861f8a7eccb6505bebeb26a8}\label{ksiazki_8h_a84180dfd861f8a7eccb6505bebeb26a8}} 
 \index{ksiazki.h@{ksiazki.h}!wydrukuj\_ksiazke@{wydrukuj\_ksiazke}}
 \index{wydrukuj\_ksiazke@{wydrukuj\_ksiazke}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{wydrukuj\_ksiazke()}{wydrukuj\_ksiazke()}}
@@ -479,7 +513,14 @@ funkcja zwraca wartosc zamienionej ksiazki
 \doxysubsubsection{\texorpdfstring{zapispliku\_ksiazki()}{zapispliku\_ksiazki()}}
 {\footnotesize\ttfamily void zapispliku\+\_\+ksiazki (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{ksiazki_8h_ab253baef3a79eb201a1e7551e5e2a95d}\label{ksiazki_8h_ab253baef3a79eb201a1e7551e5e2a95d}} 
+
+
+Prechodzimy w petli przez wszystkie ksiazki i zapisujemy do pliku wszystkie ksiazki na ktore wskazuje wpis (gatunek, tytul, autor, ID, rok, liczba egzemplarzy, liczba wypozyczonych) 
+
+
+\begin{DoxyItemize}
+\item Jesli wpis na nastepny element nie jest pusty to wtedy zapisujemy do pliku 
+\end{DoxyItemize}\mbox{\Hypertarget{ksiazki_8h_ab253baef3a79eb201a1e7551e5e2a95d}\label{ksiazki_8h_ab253baef3a79eb201a1e7551e5e2a95d}} 
 \index{ksiazki.h@{ksiazki.h}!znajdz\_najwyzsze\_ID\_ksiazki@{znajdz\_najwyzsze\_ID\_ksiazki}}
 \index{znajdz\_najwyzsze\_ID\_ksiazki@{znajdz\_najwyzsze\_ID\_ksiazki}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{znajdz\_najwyzsze\_ID\_ksiazki()}{znajdz\_najwyzsze\_ID\_ksiazki()}}

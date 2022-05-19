@@ -17,6 +17,16 @@ Wypozyczenie *pierwsze_wypozyczenie = NULL;
 Wypozyczenie *ostatnie_wypozyczenie = NULL;
 
 
+
+/*! \fn void wydrukuj_wypozyczenia(Wypozyczenie *wpis)
+    \brief
+    
+
+
+
+    \param wpis na podstawie wpisu na ekran drukowane sa dane o wypozyczeniach
+*/
+
 void wydrukuj_wypozyczenia(Wypozyczenie *wpis)
 {
     float kara = policz_kare(wpis);

@@ -142,14 +142,18 @@ Funkcja sortowania działa na dwoch petlach for, ktore przechodza po wszytskich 
 <tr class="memdesc:a966ffe3ef2449f7a256ac6d703c7ec24"><td class="mdescLeft">&#160;</td><td class="mdescRight">W tej funkcji uzytkownik edytuje autora danej ksiazki.  <a href="ksiazki_8c.html#a966ffe3ef2449f7a256ac6d703c7ec24">More...</a><br /></td></tr>
 <tr class="separator:a966ffe3ef2449f7a256ac6d703c7ec24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6f2c6d841a1887aa7bd2e2ca5b99648"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ksiazki_8c.html#ab6f2c6d841a1887aa7bd2e2ca5b99648">edytuj_rok</a> (<a class="el" href="ksiazki_8h.html#add1e74192a9c069b274f645990a6a6b4">Ksiazka</a> *wpis)</td></tr>
+<tr class="memdesc:ab6f2c6d841a1887aa7bd2e2ca5b99648"><td class="mdescLeft">&#160;</td><td class="mdescRight">W tej funkcji za pomoca wpisu uzytkownika mozemy zmienic rok danej ksiazki przykladowo z 1999 na 2004.  <a href="ksiazki_8c.html#ab6f2c6d841a1887aa7bd2e2ca5b99648">More...</a><br /></td></tr>
 <tr class="separator:ab6f2c6d841a1887aa7bd2e2ca5b99648"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfcccbe02004a890d7f3bac5900ecf21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ksiazki_8c.html#acfcccbe02004a890d7f3bac5900ecf21">edytuj_gatunek_ksiazki</a> (<a class="el" href="ksiazki_8h.html#add1e74192a9c069b274f645990a6a6b4">Ksiazka</a> *wpis)</td></tr>
+<tr class="memdesc:acfcccbe02004a890d7f3bac5900ecf21"><td class="mdescLeft">&#160;</td><td class="mdescRight">W tej funkcji edytowany jest gatunek danej ksiazki np(romans na fantasty).  <a href="ksiazki_8c.html#acfcccbe02004a890d7f3bac5900ecf21">More...</a><br /></td></tr>
 <tr class="separator:acfcccbe02004a890d7f3bac5900ecf21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca655863bc1a08656db7d46ab1766d37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ksiazki_8c.html#aca655863bc1a08656db7d46ab1766d37">usun_ksiazke</a> (<a class="el" href="ksiazki_8h.html#add1e74192a9c069b274f645990a6a6b4">Ksiazka</a> *wpis)</td></tr>
 <tr class="separator:aca655863bc1a08656db7d46ab1766d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7bc6b44a7b7d6db12d0fdaca2b47998"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ksiazki_8c.html#aa7bc6b44a7b7d6db12d0fdaca2b47998">wczytaniepliku_ksiazki</a> ()</td></tr>
+<tr class="memdesc:aa7bc6b44a7b7d6db12d0fdaca2b47998"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wczytujemy z pliku ksiazki.csv korzystajac z petli while wszystkie dane na ktore wskazuje wpis (gatunek, tytul, autor, ID, rok, liczba egzemplarzy, liczba wypozyczonych).  <a href="ksiazki_8c.html#aa7bc6b44a7b7d6db12d0fdaca2b47998">More...</a><br /></td></tr>
 <tr class="separator:aa7bc6b44a7b7d6db12d0fdaca2b47998"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84101ca77a61569379a0275f73d8cfd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ksiazki_8c.html#a84101ca77a61569379a0275f73d8cfd4">zapispliku_ksiazki</a> ()</td></tr>
+<tr class="memdesc:a84101ca77a61569379a0275f73d8cfd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prechodzimy w petli przez wszystkie ksiazki i zapisujemy do pliku wszystkie ksiazki na ktore wskazuje wpis (gatunek, tytul, autor, ID, rok, liczba egzemplarzy, liczba wypozyczonych)  <a href="ksiazki_8c.html#a84101ca77a61569379a0275f73d8cfd4">More...</a><br /></td></tr>
 <tr class="separator:a84101ca77a61569379a0275f73d8cfd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -223,6 +227,17 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>W tej funkcji edytowany jest gatunek danej ksiazki np(romans na fantasty). </p>
+<ul>
+<li>dzieki fflush mozemy edytowac nawet dwuwyrazowe gatunki ksiazek</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wpis</td><td>zmienia gatunek ksiazki </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -319,6 +334,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>W tej funkcji za pomoca wpisu uzytkownika mozemy zmienic rok danej ksiazki przykladowo z 1999 na 2004. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wpis</td><td>na podstawie wpisu zmieniany jest rok danej ksiazki </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -424,6 +447,19 @@ Funkcja sortowania działa na dwoch petlach for, ktore przechodza po wszytskich 
         </tr>
       </table>
 </div><div class="memdoc">
+<ul>
+<li>W pierwszym warunku jesli poprzednia i nastepna ksiazka maja puste wartosci oznacza to ze nie ma co usuwac i do pierwszej i ostatniej ksiazki przypisujemy puste wartosci bo nie ma co usuwac</li>
+</ul>
+<p >W drugim warunku jesli poprzednia ksiazka ma pusta wartosc, a nastepna ma jakas wartosc to usuwamy pierwsza ksiazke</p><ul>
+<li>W trzecim warunku jesli nastepna ksiazka ma pusta wartosc, a poprzednia ma jakas wartosc to usuwamy ostatnia ksiazke</li>
+<li>W czwartym warunku jesli nastepna i poprzednia ksiazka maja jakas wartosd to usuwamy ksiazke ktora chcemy usunac</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wpis</td><td>usuwa ksiazke na podstawie wpisu uzytkownika </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -441,6 +477,14 @@ Funkcja sortowania działa na dwoch petlach for, ktore przechodza po wszytskich 
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Wczytujemy z pliku ksiazki.csv korzystajac z petli while wszystkie dane na ktore wskazuje wpis (gatunek, tytul, autor, ID, rok, liczba egzemplarzy, liczba wypozyczonych). </p>
+<ul>
+<li>W pierwszym if korzystamy z funkcji sprawdzajcej czy plik nie jest pusty</li>
+<li>Jesli pierwsza ksiazka ma pusta wartosc to jest ona rowna wpisowi na pierwsza ksiazke oraz poprzednia ksiazke</li>
+<li>Natomiast jesli wpis nie jest pusty to wtedy wpis jest rowny nastepnemu elementowi oraz poprzedni jest rowny wpisowi na poprzednia ksiazke</li>
+</ul>
+<p >I na koncu jesli wpis nie jest pusty to wtedy ostatnia ksiazka jest rowna wpisowi </p>
 
 </div>
 </div>
@@ -709,6 +753,11 @@ Funkcja sortowania działa na dwoch petlach for, ktore przechodza po wszytskich 
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Prechodzimy w petli przez wszystkie ksiazki i zapisujemy do pliku wszystkie ksiazki na ktore wskazuje wpis (gatunek, tytul, autor, ID, rok, liczba egzemplarzy, liczba wypozyczonych) </p>
+<ul>
+<li>Jesli wpis na nastepny element nie jest pusty to wtedy zapisujemy do pliku </li>
+</ul>
 
 </div>
 </div>

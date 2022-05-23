@@ -4,7 +4,7 @@ var searchData=
   ['main_2ec_1',['main.c',['../main_8c.html',1,'']]],
   ['malejaca_2',['Malejaca',['../ksiazki_8h.html#a92b3cf569043e5ddcb058a54db66783bae98de48074de837da6952478f5fc5a14',1,'ksiazki.h']]],
   ['max_3',['MAX',['../common_8c.html#a392fb874e547e582e9c66a08a1f23326',1,'MAX():&#160;common.c'],['../menu_8c.html#a392fb874e547e582e9c66a08a1f23326',1,'MAX():&#160;menu.c'],['../klienci_8c.html#a392fb874e547e582e9c66a08a1f23326',1,'MAX():&#160;klienci.c'],['../common_8h.html#a392fb874e547e582e9c66a08a1f23326',1,'MAX():&#160;common.h'],['../menu_8h.html#a392fb874e547e582e9c66a08a1f23326',1,'MAX():&#160;menu.h']]],
-  ['menu_4',['menu',['../menu_8c.html#a2a0e843767aeea4f433a28b9c54f573a',1,'menu():&#160;menu.c'],['../menu_8h.html#a2a0e843767aeea4f433a28b9c54f573a',1,'menu():&#160;menu.c']]],
+  ['menu_4',['menu',['../menu_8c.html#abc8ef234b1df6f3ad9440149ef4c7de1',1,'menu():&#160;menu.c'],['../menu_8h.html#a2a0e843767aeea4f433a28b9c54f573a',1,'menu():&#160;menu.c']]],
   ['menu_2ec_5',['menu.c',['../menu_8c.html',1,'']]],
   ['menu_2eh_6',['menu.h',['../menu_8h.html',1,'']]],
   ['menu_5fglowne_7',['menu_glowne',['../menu_8c.html#a3f3facc3495396c3b0568da2e6c07531',1,'menu_glowne():&#160;menu.c'],['../menu_8h.html#a3f3facc3495396c3b0568da2e6c07531',1,'menu_glowne():&#160;menu.c']]],

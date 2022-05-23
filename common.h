@@ -10,6 +10,12 @@
 #define DZIEN 24 * GODZINA
 #define TYDZIEN 7 * DZIEN
 
+/*! \fn Funkcje  
+     \brief 
+     Tutaj sa funkcje uzywane w innych modulach
+   
+*/
+ 
 
 int czy_plik_jest_pusty(FILE* plik);
 

@@ -6,6 +6,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "common.h"
+
+/*! \fn KsiazkaStruktura
+     \brief 
+     Jest to struktura uzywana w ksiazki.c
+   
+*/
+
 typedef struct KsiazkaStruktura
 {
 
@@ -21,6 +28,13 @@ typedef struct KsiazkaStruktura
     struct KsiazkaStruktura *poprzedni, *nastepny;
 
 } Ksiazka;
+
+/*! \fn Funkcje ksiazki
+     \brief 
+     Ponizej sa deklaracje funkcji dotyczace ksiazek
+   
+*/
+
 
 void wyswietl_baze_ksiazek();
 void dodaj_ksiazke();

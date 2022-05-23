@@ -9,7 +9,13 @@
 #include "ksiazki.h"
 #include "common.h"
 #include "menu.h"
-// menu calego programu
+
+/*! \fn void menu()
+     \brief 
+     Funkcja odpowiada za wczywanie dostepnych menu.
+   
+*/
+
 void menu()
 {
     wczytaniepliku_klienci();
@@ -17,6 +23,12 @@ void menu()
     wczytaniepliku_wypozyczenia();
     menu_glowne();
 }
+
+/*! \fn void menu_glowne()
+     \brief 
+     Jest to menu glowne calego programu.
+   
+*/
 
 void menu_glowne()
 {
@@ -56,7 +68,13 @@ void menu_glowne()
     }
 }
 
-// menu glowne plikow
+
+
+/*! \fn void menu_klientow()
+     \brief 
+     Jest to menu klientow.
+   
+*/
 
 void menu_klientow()
 {
@@ -97,6 +115,12 @@ void menu_klientow()
         break;
     }
 }
+
+/*! \fn void menu_ksiazek()
+     \brief 
+     Jest to menu ksiazek.
+   
+*/
 
 void menu_ksiazek()
 {
@@ -150,6 +174,12 @@ void menu_ksiazek()
     }
 }
 
+/*! \fn void menu_ksiazek_wyszukiwania()
+     \brief 
+     Jest to menu ksiazek, dotyczace opcji samego wyszukiwania.
+   
+*/
+
 void menu_ksiazek_wyszukiwania()
 {
     int wybor;
@@ -196,6 +226,12 @@ void menu_ksiazek_wyszukiwania()
         break;
     }
 }
+
+/*! \fn void menu_ksiazek_sortowania()
+     \brief 
+     Jest to menu ksiazek, dotyczace samego sortowania.
+   
+*/
 
 void menu_ksiazek_sortowania()
 {
@@ -295,6 +331,12 @@ void menu_ksiazek_sortowania()
     }
 }
 
+/*! \fn void menu_wypozyczen()
+     \brief 
+     Jest to menu wypozyczen.
+   
+*/
+
 void menu_wypozyczen()
 {
     int wybor;
@@ -343,7 +385,11 @@ void menu_wypozyczen()
     }
 }
 
-// menu do edycji + zarzadzanie
+/*! \fn void menu_zarzadzaj_klientem()
+     \brief 
+     Jest to funkcja do wyszukiwania klienta, ktorym chcemy zarzadzac.
+   
+*/
 
 void menu_zarzadzaj_klientem()
 {
@@ -361,6 +407,14 @@ void menu_zarzadzaj_klientem()
         menu_klienta(wpis);
     }
 }
+
+/*! \fn void menu_klienta(Klient *klient)
+     \brief 
+     Jest to menu dotyczace edycji klienta
+
+     \param klient paramater, ktory zezwala na dzialanie w klientach
+   
+*/
 
 void menu_klienta(Klient *klient)
 {
@@ -428,6 +482,11 @@ void menu_klienta(Klient *klient)
         break;
     }
 }
+/*! \fn void  menu_zarzadzaj_ksiazkami()
+     \brief 
+     Jest to funkcja dotyczaca wyszukania ksiazki, ktora chcemy edytowac
+
+*/
 
 void menu_zarzadzaj_ksiazkami()
 {
@@ -445,6 +504,12 @@ void menu_zarzadzaj_ksiazkami()
         menu_ksiazki(wpis);
     }
 }
+
+/*! \fn void menu_ksiazki(Ksiazka *ksiazka)
+     \brief 
+     Jest to menu edycji ksiazek
+    \param ksiazka parametr pozwala na dzialanie na ksiazce
+*/
 
 void menu_ksiazki(Ksiazka *ksiazka)
 {
@@ -517,6 +582,13 @@ void menu_ksiazki(Ksiazka *ksiazka)
         break;
     }
 }
+
+/*! \fn void wyjscie()
+     \brief 
+     Funkcja odpowiadajaca za wyjscie z programu.
+    
+*/
+
 
 void wyjscie()
 {

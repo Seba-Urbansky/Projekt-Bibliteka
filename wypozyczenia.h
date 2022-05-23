@@ -12,6 +12,12 @@
 #include "ksiazki.h"
 #include <time.h>
 
+/*! \fn Wypozyczenia struktura
+     \brief 
+     Jest to struktura uzywana w wypozyczenia.c
+   
+*/
+
 
 typedef struct WypozyczeniaStruktura
 {
@@ -25,7 +31,11 @@ typedef struct WypozyczeniaStruktura
 
 } Wypozyczenie;
 
-
+/*! \fn Funkcje wypozyczenia
+     \brief 
+     Ponizej sa deklaracje funkcji dotyczace wypozyczen.
+   
+*/
 
 
 void wyswietl_kto_wypozyczyl();

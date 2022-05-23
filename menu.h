@@ -13,6 +13,12 @@
 #include "ksiazki.h"
 #include "common.h"
 
+/*! \fn Funkcje menu
+     \brief 
+     Ponizej sa deklaracje funkcji dotyczace menu
+   
+*/
+
 void menu();
 void menu_klientow();
 void menu_glowne();

@@ -9,6 +9,11 @@
 #include <stdlib.h>
 #include "common.h"
 
+/*! \fn KlientStrukura 
+     \brief 
+     Jest to struktura uzywana w klienci.c
+   
+*/
 
 typedef struct KlientStruktura
 {
@@ -23,6 +28,11 @@ typedef struct KlientStruktura
 
 } Klient;
 
+/*! \fn Funkcje klienci
+     \brief 
+     Ponizej sa deklaracje funkcji dotyczace klientow
+   
+*/
 
 
 void wyswietl_baze_klientow();

@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include "common.h"
 
-/*! \struct Struktura uzywana do przechowywania danych ksiazek */
+/*! \fn Struktura uzywana do przechowywania danych ksiazek */
 typedef struct KsiazkaStruktura 
 {
 

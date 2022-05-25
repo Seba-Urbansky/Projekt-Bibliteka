@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include "common.h"
 
-/** Struktura uzywana do przechowywania danych klientow */
+/** \typedef Struktura uzywana do przechowywania danych klientow */
 typedef struct KlientStruktura 
 {
 

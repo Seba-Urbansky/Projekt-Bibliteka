@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['struktura_0',['Struktura',['../struct_struktura.html',1,'']]]
+  ['wypozyczeniastruktura_0',['WypozyczeniaStruktura',['../struct_wypozyczenia_struktura.html',1,'']]]
 ];

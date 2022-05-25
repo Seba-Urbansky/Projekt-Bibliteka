@@ -1,14 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define MAX 32
 #include "klienci.h"
 #include "common.h"
 
 // http://fizyka.umk.pl/~leii/wskaznikiStrukturyAiR.pdf
 
-Klient *pierwszy_klient = NULL;  /*!< Poczatkowa wartosc pierwszego klienta w bazie */
-Klient *ostatni_klient = NULL;   /*!< Poczatkowa wartosc ostatniego klienta w bazie */
+Klient *pierwszy_klient = NULL;  /*!< Wskaznik na pierwszego klienta w bazie */
+Klient *ostatni_klient = NULL;   /*!< Wskaznik na ostatniego klienta w bazie */
 
 /*! \fn void wyswietl_baze_klientow()
      \brief 

@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define MAX 32 /*!< Deklaracja maksymalnej wartosci tekstowej zmiennej  */
+
 
 #include "klienci.h"
 #include "wypozyczenia.h"

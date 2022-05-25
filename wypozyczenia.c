@@ -13,8 +13,8 @@
 
 // automatyczne zapisywanie ID w ksiazkach i klientach //
 
-Wypozyczenie *pierwsze_wypozyczenie = NULL; /*!< Poczatkowa wartosc pierwszego wypozyczenia w bazie */
-Wypozyczenie *ostatnie_wypozyczenie = NULL; /*!< Poczatkowa wartosc ostatniego wypozyczenia w bazie */
+Wypozyczenie *pierwsze_wypozyczenie = NULL; /*!< Wskaznik na pierwsze wypozyczenie w bazie */
+Wypozyczenie *ostatnie_wypozyczenie = NULL; /*!< Wskaznik na ostatnie wypozyczenie w bazie */
 
 /*! \fn void wydrukuj_wypozyczenia(Wypozyczenie *wpis)
     \brief

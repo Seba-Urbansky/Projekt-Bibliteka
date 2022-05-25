@@ -1,7 +1,7 @@
 
 #ifndef COMMON_H
 #define COMMON_H /*!< Deklaracja common */
-#define MAX 32  /*!< Deklaracja maksymalnej wartosci tekstowej zmiennej  */
+#define MAX 32  /*!< Deklaracja maksymalnej dlugosci tekstu  */
 
 #include <stdio.h>
 #include <stdlib.h>

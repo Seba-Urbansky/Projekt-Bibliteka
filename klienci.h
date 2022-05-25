@@ -9,13 +9,8 @@
 #include <stdlib.h>
 #include "common.h"
 
-/*! \fn KlientStrukura 
-     \brief 
-     Jest to struktura uzywana w klienci.c
-   
-*/
 
-typedef struct KlientStruktura
+typedef struct KlientStruktura /*! \struct Struktura uzywana do przechowywania danych klientow */
 {
 
     int numer_karty;

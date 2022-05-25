@@ -7,8 +7,8 @@
 #include <stdlib.h>
 
 #define GODZINA 3600 /*!< Deklaracja godziny w sekundach */
-#define DZIEN 24 * GODZINA /*!< Deklaracja dnia */
-#define TYDZIEN 7 * DZIEN /*!< Deklaracja tygodnia */
+#define DZIEN 24 * GODZINA /*!< Deklaracja dnia w sekundach */
+#define TYDZIEN 7 * DZIEN /*!< Deklaracja tygodnia w sekundach */
 
 /*! \fn Funkcje  
      \brief 

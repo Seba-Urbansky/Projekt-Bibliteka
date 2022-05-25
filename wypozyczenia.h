@@ -12,14 +12,8 @@
 #include "ksiazki.h"
 #include <time.h>
 
-/*! \fn Wypozyczenia struktura
-     \brief 
-     Jest to struktura uzywana w wypozyczenia.c
-   
-*/
 
-
-typedef struct WypozyczeniaStruktura
+typedef struct WypozyczeniaStruktura /*! \struct Struktura uzywana do przechowywania danych wypozyczen*/
 {
     int numer_karty;
     int ID_ksiazki;

@@ -14,42 +14,43 @@
 \DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{ksiazki_8h}{ksiazki.h}}"{}}}
 \DoxyCodeLine{13 \textcolor{preprocessor}{\#include <time.h>}}
 \DoxyCodeLine{14 }
-\DoxyCodeLine{22 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_wypozyczenia_struktura}{WypozyczeniaStruktura}}}
-\DoxyCodeLine{23 \{}
-\DoxyCodeLine{24     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_wypozyczenia_struktura_ac06e2ac007dc7c50c5b41b72a68c13c4}{numer\_karty}};}
-\DoxyCodeLine{25     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_wypozyczenia_struktura_a723e925d991082df1e064e1db35ff206}{ID\_ksiazki}};}
-\DoxyCodeLine{26     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_wypozyczenia_struktura_af180e926633cde08a05ccbc3af397ee4}{ID}};}
-\DoxyCodeLine{27     time\_t \mbox{\hyperlink{struct_wypozyczenia_struktura_a467fa1c2f84280517a73c3c891a6d2d3}{kiedy}};}
-\DoxyCodeLine{28     time\_t \mbox{\hyperlink{struct_wypozyczenia_struktura_a74096617f602a04e48193ef79aa8b560}{dokiedy}};}
-\DoxyCodeLine{29 }
-\DoxyCodeLine{30     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_wypozyczenia_struktura}{WypozyczeniaStruktura}} *\mbox{\hyperlink{struct_wypozyczenia_struktura_a4e5b6d6160b2305a9cb8a76f6c0c7867}{poprzedni}}, *\mbox{\hyperlink{struct_wypozyczenia_struktura_ae61e47a25f9714e343a8e1a437c89b44}{nastepny}};}
-\DoxyCodeLine{31 }
-\DoxyCodeLine{32 \} \mbox{\hyperlink{wypozyczenia_8h_a2e41bcc4e8df9eda8cec674691c02967}{Wypozyczenie}};}
-\DoxyCodeLine{33 }
-\DoxyCodeLine{41 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_a1ad62ce3ada3806a59561dbd8868b3aa}{wyswietl\_kto\_wypozyczyl}}();}
-\DoxyCodeLine{42 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_ac0a2eb32da7dacf3b36c40216dc1c238}{ID\_ksiazki}}();}
-\DoxyCodeLine{43 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_a4a869ed0d033a3528ea50022b87796f4}{kiedy}}();}
-\DoxyCodeLine{44 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_ac576a9dac5ce2f6e51b45ceef23778d9}{do\_kiedy}}();}
-\DoxyCodeLine{45 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_aab5fb2af45c9524a3acd98f0f14b6fa1}{wydrukuj\_wypozyczenia}}();}
-\DoxyCodeLine{46 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_ab8fb617326e316fb5a174c38eb474d17}{zapispliku\_wypozyczenia}}();}
-\DoxyCodeLine{47 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_a1ed9abde669d8ae22e4b7594016ada7c}{wczytaniepliku\_wypozyczenia}}();}
-\DoxyCodeLine{48 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_a58b0f0c25ad1f4a3ea56de0b29e0194c}{edytuj\_wypozyczenia\_ID\_ksiazki}}(\mbox{\hyperlink{struct_wypozyczenia_struktura}{Wypozyczenie}} *wypozyczenie);}
-\DoxyCodeLine{49 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_a53dfbd5acde67310c956b1c31ecb8f3b}{edytuj\_wypozyczenia\_numer\_karty}}(\mbox{\hyperlink{struct_wypozyczenia_struktura}{Wypozyczenie}}* wpis);}
-\DoxyCodeLine{50 \textcolor{keywordtype}{int} \mbox{\hyperlink{wypozyczenia_8h_a242894dcf63fe7ce16734b33ee52de5a}{znajdz\_najwyzsze\_ID}}();}
-\DoxyCodeLine{51 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_a2bf906adc10478314379e50d61bfd6f5}{edytuj\_wypozyczenia\_ID}}(\mbox{\hyperlink{struct_wypozyczenia_struktura}{Wypozyczenie}}* wpis);}
-\DoxyCodeLine{52 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_aaac626409a07d96baa8968071ea8ecf2}{dodaj\_wypozyczenie}}();}
-\DoxyCodeLine{53 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_a2f1f2e5cb61d827bb3ccf316ef2ba227}{ustaw\_ID\_nowego\_wypozyczenia}}();}
-\DoxyCodeLine{54 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_ad142cd21806abde6e1b232865f125bb2}{edytuj\_wypozyczenia\_kiedy}}(\mbox{\hyperlink{struct_wypozyczenia_struktura}{Wypozyczenie}} *wpis);}
-\DoxyCodeLine{55 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_a528dd1f42767194ed55cf4f9bd04713e}{edytuj\_wypozyczenia\_do\_kiedy}}(\mbox{\hyperlink{struct_wypozyczenia_struktura}{Wypozyczenie}}  *wpis);}
-\DoxyCodeLine{56 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_a7110aeaf9f2661365c1311fa96eacd3a}{na\_dwa\_tygodnie}}();}
-\DoxyCodeLine{57 \textcolor{keywordtype}{int} \mbox{\hyperlink{wypozyczenia_8h_a73c4ffad06374a721eeb8ed60d421821}{zalegle\_wypozyczenia}}();}
-\DoxyCodeLine{58 \textcolor{keywordtype}{float} \mbox{\hyperlink{wypozyczenia_8h_a65b934851a82f89f3e684f6021a09e24}{policz\_kare}}(\mbox{\hyperlink{struct_wypozyczenia_struktura}{Wypozyczenie}}* wpis);}
-\DoxyCodeLine{59 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_a05ec969a5ebface5c85d81fa362c29b9}{oddawanie\_ksiazki}}(\mbox{\hyperlink{struct_wypozyczenia_struktura}{Wypozyczenie}} *wpis);}
-\DoxyCodeLine{60 \textcolor{keywordtype}{int} \mbox{\hyperlink{wypozyczenia_8h_a8e7e4f1699ef7653e588fa877116cfdb}{czy\_klient\_ma\_wypozyczenia}}(\mbox{\hyperlink{struct_klient_struktura}{Klient}} *klient);}
-\DoxyCodeLine{61 \textcolor{keywordtype}{int} \mbox{\hyperlink{wypozyczenia_8h_afef897a95d3200280235e9c5b52c78dd}{czy\_ksiazka\_jest\_wypozyczona}}(\mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka}} *\mbox{\hyperlink{wypozyczenia_8h_ac0a2eb32da7dacf3b36c40216dc1c238}{ID\_ksiazki}});}
-\DoxyCodeLine{62 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_afd5606f068669c3669e5ec45ac6192b2}{zwroc\_wypozyczenie}}();}
-\DoxyCodeLine{63 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_a7c1d3c89910025671788a0afceccc9db}{usun\_wypozyczenie}}(\mbox{\hyperlink{struct_wypozyczenia_struktura}{Wypozyczenie}} *wpis);}
-\DoxyCodeLine{64 }
-\DoxyCodeLine{65 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }WypozyczeniaStruktura }
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} \mbox{\hyperlink{wypozyczenia_8h_ac06e2ac007dc7c50c5b41b72a68c13c4}{numer\_karty}};}
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} \mbox{\hyperlink{wypozyczenia_8h_a5335c8f45bdc9d157cfca2f9e65d544c}{ID\_ksiazki}};}
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} \mbox{\hyperlink{wypozyczenia_8h_af180e926633cde08a05ccbc3af397ee4}{ID}};}
+\DoxyCodeLine{21     time\_t \mbox{\hyperlink{wypozyczenia_8h_ab74178d40510a3e4c7b3386ba616bbd3}{kiedy}};}
+\DoxyCodeLine{22     time\_t \mbox{\hyperlink{wypozyczenia_8h_a74096617f602a04e48193ef79aa8b560}{dokiedy}};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \textcolor{keyword}{struct }WypozyczeniaStruktura *\mbox{\hyperlink{wypozyczenia_8h_a4e5b6d6160b2305a9cb8a76f6c0c7867}{poprzedni}}, *\mbox{\hyperlink{wypozyczenia_8h_ae61e47a25f9714e343a8e1a437c89b44}{nastepny}};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \} \mbox{\hyperlink{wypozyczenia_8h_a6f21d9187626b63577aa3e2ad12ad988}{Wypozyczenie}};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{35 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_a1ad62ce3ada3806a59561dbd8868b3aa}{wyswietl\_kto\_wypozyczyl}}();}
+\DoxyCodeLine{36 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_a5335c8f45bdc9d157cfca2f9e65d544c}{ID\_ksiazki}}();}
+\DoxyCodeLine{37 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_ab74178d40510a3e4c7b3386ba616bbd3}{kiedy}}();}
+\DoxyCodeLine{38 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_ac576a9dac5ce2f6e51b45ceef23778d9}{do\_kiedy}}();}
+\DoxyCodeLine{39 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_aab5fb2af45c9524a3acd98f0f14b6fa1}{wydrukuj\_wypozyczenia}}();}
+\DoxyCodeLine{40 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_ab8fb617326e316fb5a174c38eb474d17}{zapispliku\_wypozyczenia}}();}
+\DoxyCodeLine{41 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_a1ed9abde669d8ae22e4b7594016ada7c}{wczytaniepliku\_wypozyczenia}}();}
+\DoxyCodeLine{42 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_a58b0f0c25ad1f4a3ea56de0b29e0194c}{edytuj\_wypozyczenia\_ID\_ksiazki}}(\mbox{\hyperlink{wypozyczenia_8h_a6f21d9187626b63577aa3e2ad12ad988}{Wypozyczenie}} *wypozyczenie);}
+\DoxyCodeLine{43 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_a53dfbd5acde67310c956b1c31ecb8f3b}{edytuj\_wypozyczenia\_numer\_karty}}(\mbox{\hyperlink{wypozyczenia_8h_a6f21d9187626b63577aa3e2ad12ad988}{Wypozyczenie}}* wpis);}
+\DoxyCodeLine{44 \textcolor{keywordtype}{int} \mbox{\hyperlink{wypozyczenia_8h_a242894dcf63fe7ce16734b33ee52de5a}{znajdz\_najwyzsze\_ID}}();}
+\DoxyCodeLine{45 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_a2bf906adc10478314379e50d61bfd6f5}{edytuj\_wypozyczenia\_ID}}(\mbox{\hyperlink{wypozyczenia_8h_a6f21d9187626b63577aa3e2ad12ad988}{Wypozyczenie}}* wpis);}
+\DoxyCodeLine{46 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_aaac626409a07d96baa8968071ea8ecf2}{dodaj\_wypozyczenie}}();}
+\DoxyCodeLine{47 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_a2f1f2e5cb61d827bb3ccf316ef2ba227}{ustaw\_ID\_nowego\_wypozyczenia}}();}
+\DoxyCodeLine{48 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_ad142cd21806abde6e1b232865f125bb2}{edytuj\_wypozyczenia\_kiedy}}(\mbox{\hyperlink{wypozyczenia_8h_a6f21d9187626b63577aa3e2ad12ad988}{Wypozyczenie}} *wpis);}
+\DoxyCodeLine{49 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_a528dd1f42767194ed55cf4f9bd04713e}{edytuj\_wypozyczenia\_do\_kiedy}}(\mbox{\hyperlink{wypozyczenia_8h_a6f21d9187626b63577aa3e2ad12ad988}{Wypozyczenie}}  *wpis);}
+\DoxyCodeLine{50 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_a7110aeaf9f2661365c1311fa96eacd3a}{na\_dwa\_tygodnie}}();}
+\DoxyCodeLine{51 \textcolor{keywordtype}{int} \mbox{\hyperlink{wypozyczenia_8h_a73c4ffad06374a721eeb8ed60d421821}{zalegle\_wypozyczenia}}();}
+\DoxyCodeLine{52 \textcolor{keywordtype}{float} \mbox{\hyperlink{wypozyczenia_8h_a65b934851a82f89f3e684f6021a09e24}{policz\_kare}}(\mbox{\hyperlink{wypozyczenia_8h_a6f21d9187626b63577aa3e2ad12ad988}{Wypozyczenie}}* wpis);}
+\DoxyCodeLine{53 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_a05ec969a5ebface5c85d81fa362c29b9}{oddawanie\_ksiazki}}(\mbox{\hyperlink{wypozyczenia_8h_a6f21d9187626b63577aa3e2ad12ad988}{Wypozyczenie}} *wpis);}
+\DoxyCodeLine{54 \textcolor{keywordtype}{int} \mbox{\hyperlink{wypozyczenia_8h_a8e7e4f1699ef7653e588fa877116cfdb}{czy\_klient\_ma\_wypozyczenia}}(\mbox{\hyperlink{klienci_8h_a0b6c56914df33ac4394cafcfecd0f5fe}{Klient}} *klient);}
+\DoxyCodeLine{55 \textcolor{keywordtype}{int} \mbox{\hyperlink{wypozyczenia_8h_afef897a95d3200280235e9c5b52c78dd}{czy\_ksiazka\_jest\_wypozyczona}}(\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} *\mbox{\hyperlink{wypozyczenia_8h_a5335c8f45bdc9d157cfca2f9e65d544c}{ID\_ksiazki}});}
+\DoxyCodeLine{56 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_afd5606f068669c3669e5ec45ac6192b2}{zwroc\_wypozyczenie}}();}
+\DoxyCodeLine{57 \textcolor{keywordtype}{void} \mbox{\hyperlink{wypozyczenia_8h_a7c1d3c89910025671788a0afceccc9db}{usun\_wypozyczenie}}(\mbox{\hyperlink{wypozyczenia_8h_a6f21d9187626b63577aa3e2ad12ad988}{Wypozyczenie}} *wpis);}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

@@ -7,13 +7,8 @@
 #include <stdlib.h>
 #include "common.h"
 
-/*! \fn KsiazkaStruktura
-     \brief 
-     Jest to struktura uzywana w ksiazki.c
-   
-*/
 
-typedef struct KsiazkaStruktura
+typedef struct KsiazkaStruktura /*! \struct Struktura uzywana do przechowywania danych ksiazek */
 {
 
     int ID;

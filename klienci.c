@@ -7,8 +7,8 @@
 
 // http://fizyka.umk.pl/~leii/wskaznikiStrukturyAiR.pdf
 
-Klient *pierwszy_klient = NULL;
-Klient *ostatni_klient = NULL;
+Klient *pierwszy_klient = NULL;  /*!< Poczatkowa wartosc pierwszego klienta w bazie */
+Klient *ostatni_klient = NULL;   /*!< Poczatkowa wartosc ostatniego klienta w bazie */
 
 /*! \fn void wyswietl_baze_klientow()
      \brief 

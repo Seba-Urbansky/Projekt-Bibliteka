@@ -6,9 +6,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define MAX 32
+#define MAX 32 /*!< Deklaracja maksymalnej wartosci tekstowej zmiennej  */
 
-FILE *plik;
+
 
 /************************************************************
 Funkcja czy_plik_jest_pusty sprawdza czy plik ma pusta zawartosc.

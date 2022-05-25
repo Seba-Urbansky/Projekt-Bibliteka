@@ -8,7 +8,7 @@ var indexSectionsWithContent =
   5: "kw",
   6: "s",
   7: "agilmrt",
-  8: "dgmt",
+  8: "cdgkmtw",
   9: "p"
 };
 

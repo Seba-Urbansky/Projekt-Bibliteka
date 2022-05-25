@@ -3,8 +3,8 @@
 
 
 #ifndef MENU_H
-#define MENU_H
-#define MAX 32
+#define MENU_H /*!< Deklaracja menu */
+#define MAX 32 /*!< Deklaracja maksymalnej wartosci tekstowej zmiennej  */
 
 #include <stdio.h>
 #include <stdlib.h>

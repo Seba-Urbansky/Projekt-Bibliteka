@@ -1,14 +1,14 @@
 
 #ifndef COMMON_H
-#define COMMON_H
-#define MAX 32
+#define COMMON_H /*!< Deklaracja common */
+#define MAX 32  /*!< Deklaracja maksymalnej wartosci tekstowej zmiennej  */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-#define GODZINA 3600
-#define DZIEN 24 * GODZINA
-#define TYDZIEN 7 * DZIEN
+#define GODZINA 3600 /*!< Deklaracja godziny w sekundach */
+#define DZIEN 24 * GODZINA /*!< Deklaracja dnia */
+#define TYDZIEN 7 * DZIEN /*!< Deklaracja tygodnia */
 
 /*! \fn Funkcje  
      \brief 

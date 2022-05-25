@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dzien_0',['DZIEN',['../common_8h.html#aba57c60157386b81476b3e3691d203be',1,'common.h']]]
+  ['common_5fh_0',['COMMON_H',['../common_8h.html#a0a1448a83b84de478fdbd7612e81acb1',1,'common.h']]]
 ];

@@ -1,7 +1,7 @@
 
 
 #ifndef KLIENCI_H
-#define KLIENCI_H
+#define KLIENCI_H /*!< Deklaracja klientow  */
 
 
 

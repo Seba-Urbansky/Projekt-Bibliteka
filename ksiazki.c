@@ -6,8 +6,8 @@
 // Dodawanie/usuwanie/edycja książek (ID, tytuł, rok, autor, gatunek, liczba egzemplarzy, liczba wypożyczonych).
 // http://fizyka.umk.pl/~leii/wskaznikiStrukturyAiR.pdf
 
-Ksiazka *pierwsza_ksiazka = NULL;
-Ksiazka *ostatnia_ksiazka = NULL;
+Ksiazka *pierwsza_ksiazka = NULL; /*!< Poczatkowa wartosc pierwszej ksiazki w bazie */
+Ksiazka *ostatnia_ksiazka = NULL; /*!< Poczatkowa wartosc ostatniej ksiazki w bazie */
 
 /*! \fn Ksiazka *zamien(Ksiazka *a, Ksiazka *b)
     \brief

@@ -1,7 +1,7 @@
 
 
 #ifndef KSIAZKI_H
-#define KSIAZKI_H
+#define KSIAZKI_H /*!< Deklaracja ksiazek  */
 
 #include <stdio.h>
 #include <stdlib.h>

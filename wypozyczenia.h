@@ -2,7 +2,7 @@
 
 
 #ifndef WYPOZYCZENIA_H
-#define WYPOZYCZENIA_H
+#define WYPOZYCZENIA_H /*!< Deklaracja wypozyczen  */
 
 
 #include <stdio.h>

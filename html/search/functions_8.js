@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['sortowanie_0',['sortowanie',['../ksiazki_8h.html#ad5f77aa48d5aa3392bd2f3e22e388acc',1,'sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atrybut):&#160;ksiazki.c'],['../ksiazki_8c.html#ad5f77aa48d5aa3392bd2f3e22e388acc',1,'sortowanie(enum SortowanieKolejnosc kolejnosc, enum SortowanieAtrybut atrybut):&#160;ksiazki.c']]],
-  ['sortowanie_5fksiazek_5fniemalejace_1',['sortowanie_ksiazek_niemalejace',['../ksiazki_8h.html#a38b28d0a614a50c26b8920620dcf0d1d',1,'ksiazki.h']]]
+  ['policz_5fkare_0',['policz_kare',['../wypozyczenia_8h.html#a65b934851a82f89f3e684f6021a09e24',1,'policz_kare(Wypozyczenie *wpis):&#160;wypozyczenia.c'],['../wypozyczenia_8c.html#a65b934851a82f89f3e684f6021a09e24',1,'policz_kare(Wypozyczenie *wpis):&#160;wypozyczenia.c']]],
+  ['policz_5fksiazki_1',['policz_ksiazki',['../ksiazki_8h.html#a7d6a8320245d228b8ac22330befab405',1,'policz_ksiazki():&#160;ksiazki.c'],['../ksiazki_8c.html#a7d6a8320245d228b8ac22330befab405',1,'policz_ksiazki():&#160;ksiazki.c']]]
 ];

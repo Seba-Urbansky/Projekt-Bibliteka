@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['oddawanie_5fksiazki_0',['oddawanie_ksiazki',['../wypozyczenia_8h.html#a05ec969a5ebface5c85d81fa362c29b9',1,'wypozyczenia.h']]]
+  ['na_5fdwa_5ftygodnie_0',['na_dwa_tygodnie',['../wypozyczenia_8h.html#a7110aeaf9f2661365c1311fa96eacd3a',1,'wypozyczenia.h']]]
 ];

@@ -3,10 +3,20 @@
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka\+Struktura}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{ksiazki_8h_ab1dbf9e95b7cd7dcf63d0809e65027c9}{KSIAZKI\+\_\+H}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka\+Struktura}} \mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
@@ -21,7 +31,8 @@ enum \mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929}{Sortowanie\+
 , \mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929af9326a3865bd3a77f6307af749fd7af8}{Rok}} = 2
 , \mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929a66b379b90f0cd74d1e8c011179766a60}{Gatunek}} = 3
 , \newline
-\mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929ab4f1215e808b4bcd3283a822d8937324}{Liczba\+Egzemplarzy}} = 5
+\mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929a001479a58fb44c39a29b20d565081a68}{ID}} = 4
+, \mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929ab4f1215e808b4bcd3283a822d8937324}{Liczba\+Egzemplarzy}} = 5
 , \mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929acd29f0cb8e075f658f31f3f754f34b7d}{Liczba\+Wypozyczonych}} = 6
  \}
 \end{DoxyCompactItemize}
@@ -44,23 +55,23 @@ void \mbox{\hyperlink{ksiazki_8h_a84101ca77a61569379a0275f73d8cfd4}{zapispliku\+
 \begin{DoxyCompactList}\small\item\em Prechodzimy w petli przez wszystkie ksiazki i zapisujemy do pliku wszystkie ksiazki na ktore wskazuje wpis (gatunek, tytul, autor, ID, rok, liczba egzemplarzy, liczba wypozyczonych) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_a023661b73ad6f5af935c1bc928429310}{ksiazka\+\_\+do\+\_\+zarzadzania}} ()
 \item 
-void \mbox{\hyperlink{ksiazki_8h_a84180dfd861f8a7eccb6505bebeb26a8}{wydrukuj\+\_\+ksiazke}} (\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$wpis)
+void \mbox{\hyperlink{ksiazki_8h_a84180dfd861f8a7eccb6505bebeb26a8}{wydrukuj\+\_\+ksiazke}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$wpis)
 \begin{DoxyCompactList}\small\item\em W tej funkcji drukujemy wszystkie dane ksiazki (ID, Tytul, Autora, Rok, Liczbe egzemplarzy, Liczbe wypozyczonych) oraz wyswietlamy te dane na ekranie. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ksiazki_8h_a93f5816116ef4382f87dab1e5695e00f}{edytuj\+\_\+tytul\+\_\+ksiazki}} (\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$wpis)
+void \mbox{\hyperlink{ksiazki_8h_a93f5816116ef4382f87dab1e5695e00f}{edytuj\+\_\+tytul\+\_\+ksiazki}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$wpis)
 \begin{DoxyCompactList}\small\item\em W tej funkcji uzytkownik edytuje tytul danej ksiazki. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ksiazki_8h_acfcccbe02004a890d7f3bac5900ecf21}{edytuj\+\_\+gatunek\+\_\+ksiazki}} (\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$wpis)
+void \mbox{\hyperlink{ksiazki_8h_acfcccbe02004a890d7f3bac5900ecf21}{edytuj\+\_\+gatunek\+\_\+ksiazki}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$wpis)
 \begin{DoxyCompactList}\small\item\em W tej funkcji edytowany jest gatunek danej ksiazki np(romans na fantasty). \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ksiazki_8h_a966ffe3ef2449f7a256ac6d703c7ec24}{edytuj\+\_\+autora}} (\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$wpis)
+void \mbox{\hyperlink{ksiazki_8h_a966ffe3ef2449f7a256ac6d703c7ec24}{edytuj\+\_\+autora}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$wpis)
 \begin{DoxyCompactList}\small\item\em W tej funkcji uzytkownik edytuje autora danej ksiazki. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ksiazki_8h_ab6f2c6d841a1887aa7bd2e2ca5b99648}{edytuj\+\_\+rok}} (\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$wpis)
+void \mbox{\hyperlink{ksiazki_8h_ab6f2c6d841a1887aa7bd2e2ca5b99648}{edytuj\+\_\+rok}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$wpis)
 \begin{DoxyCompactList}\small\item\em W tej funkcji za pomoca wpisu uzytkownika mozemy zmienic rok danej ksiazki przykladowo z 1999 na 2004. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$ \mbox{\hyperlink{ksiazki_8h_af68f877082bb74fc15a27b90d96a2b4d}{wyszukaj\+\_\+ksiazke}} (int \mbox{\hyperlink{wypozyczenia_8h_af180e926633cde08a05ccbc3af397ee4}{ID}})
+\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$ \mbox{\hyperlink{ksiazki_8h_af68f877082bb74fc15a27b90d96a2b4d}{wyszukaj\+\_\+ksiazke}} (int \mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929a001479a58fb44c39a29b20d565081a68}{ID}})
 \begin{DoxyCompactList}\small\item\em W tej funkcji przechodzimy petla po wszystkich ksiazkach i jesli wpis uzytownika jest rowny ID danej ksiazki to ksiazka jest znaleziona i jest wypisywana na ekran. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{ksiazki_8h_ab253baef3a79eb201a1e7551e5e2a95d}{znajdz\+\_\+najwyzsze\+\_\+\+ID\+\_\+ksiazki}} ()
 \begin{DoxyCompactList}\small\item\em Szukanie najwyzszego ID ksiazki polega na tym, ze petlo for przechodzimy po wszystkich ksiazkach i w warunku if sprawdzamy czy aktualne ID jest wieksze od aktualnego max, jesli tak to napisujemy max nowym max (aktualne ID) \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ksiazki_8h_ac5e4aaf398428ba485855a36f3f1494e}{edytuj\+\_\+ksiazki\+\_\+\+ID\+\_\+ksiazki}} (\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$wpis)
+void \mbox{\hyperlink{ksiazki_8h_ac5e4aaf398428ba485855a36f3f1494e}{edytuj\+\_\+ksiazki\+\_\+\+ID\+\_\+ksiazki}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$wpis)
 \begin{DoxyCompactList}\small\item\em Wpis uzytkownika dokonuje zmiany ID danej ksiazki. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ksiazki_8h_a38b28d0a614a50c26b8920620dcf0d1d}{sortowanie\+\_\+ksiazek\+\_\+niemalejace}} (\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$\mbox{\hyperlink{wypozyczenia_8h_af180e926633cde08a05ccbc3af397ee4}{ID}})
+void \mbox{\hyperlink{ksiazki_8h_a38b28d0a614a50c26b8920620dcf0d1d}{sortowanie\+\_\+ksiazek\+\_\+niemalejace}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$\mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929a001479a58fb44c39a29b20d565081a68}{ID}})
 \item 
 void \mbox{\hyperlink{ksiazki_8h_adfb816e67ef893d997c5e6ee642b8df7}{wyszukaj\+\_\+ksiazki\+\_\+po\+\_\+tytule}} ()
 \begin{DoxyCompactList}\small\item\em Funkcja ta po podaniu wpisu przez uzytkownika, ktory wpisal tytul ksiazki ktorej szukajl wyszukuje dany tytul ksiazki i wyswietla ja na ekran. \end{DoxyCompactList}\item 
@@ -68,16 +79,16 @@ void \mbox{\hyperlink{ksiazki_8h_ac557385e6d4385e0274ff6a6a8aeee00}{wyszukaj\+\_
 \begin{DoxyCompactList}\small\item\em Funkcja ta po podaniu wpisu przez uzytkownika, ktory wpisal autora ksiazki, wyszukuje danego autora i wyswietla go na ekran. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_a8b6eab3e3b55d5fe5951f2b17db81c44}{wyszukaj\+\_\+ksiazki\+\_\+po\+\_\+roku}} ()
 \begin{DoxyCompactList}\small\item\em Funkcja ta po podaniu wpisu przez uzytkownika, zwraca ksiazke z roku ktory uzytkownik podal i zwraca ja na ekran. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$ \mbox{\hyperlink{ksiazki_8h_a892873c6de7b41a058e8775ea9ce8e01}{zamien}} (\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$a, \mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$b)
+\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$ \mbox{\hyperlink{ksiazki_8h_a892873c6de7b41a058e8775ea9ce8e01}{zamien}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$a, \mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$b)
 \begin{DoxyCompactList}\small\item\em Funkcja zamienia poprzednia ksiazke z nastepna ksiazke. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{ksiazki_8h_a7d6a8320245d228b8ac22330befab405}{policz\+\_\+ksiazki}} ()
 \begin{DoxyCompactList}\small\item\em Funkcja w petli przechodzi po wszystkich ksiazkach i zlicza ksiazki liczac kazda ksiazke po ktorej przechodzi. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_ad5f77aa48d5aa3392bd2f3e22e388acc}{sortowanie}} (enum \mbox{\hyperlink{ksiazki_8h_a92b3cf569043e5ddcb058a54db66783b}{Sortowanie\+Kolejnosc}} kolejnosc, enum \mbox{\hyperlink{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929}{Sortowanie\+Atrybut}} atrybut)
 \begin{DoxyCompactList}\small\item\em Sortowanie babelkowe ~\newline
 Funkcja sortowania działa na dwoch petlach for, ktore przechodza po wszytskich ksiazkach W funkcji korzystam z dwoch zmiennych p1 oraz p2 oraz korzystam z funkcji strcasecmp ktora porownuje wartosci string, natomiast w funkcjach sortujacych wartosci liczbowe uzywam operatorow porownania \char`\"{}$>$\char`\"{} i \char`\"{}$<$\char`\"{} . \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ksiazki_8h_a4c6052636c8b6375611bc320b29ff22f}{edytuj\+\_\+liczbe\+\_\+egzemplarzy}} (\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$wpis)
+void \mbox{\hyperlink{ksiazki_8h_a4c6052636c8b6375611bc320b29ff22f}{edytuj\+\_\+liczbe\+\_\+egzemplarzy}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$wpis)
 \begin{DoxyCompactList}\small\item\em Wpis uzytkownika dokonuje zmiane liczby egzemplarzy danej ksiazki. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ksiazki_8h_a05d1aa1ffff346a6f439481cf14434f8}{edytuj\+\_\+liczbe\+\_\+wypozyczonych}} (\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$wpis)
+void \mbox{\hyperlink{ksiazki_8h_a05d1aa1ffff346a6f439481cf14434f8}{edytuj\+\_\+liczbe\+\_\+wypozyczonych}} (\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$wpis)
 \begin{DoxyCompactList}\small\item\em Wpis uzytkownika dokonuje zmiane liczby wypozyczonych danej ksiazki. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_a3e817d138006527a2369e47f458236d3}{wyszukaj\+\_\+ksiazki\+\_\+po\+\_\+gatunku}} ()
 \begin{DoxyCompactList}\small\item\em Funkcja ta po podaniu wpisu przez uzytkownika, ktory wpisal gatunek danej ksiazki, wypisuje mu zawartosc na ekran. \end{DoxyCompactList}\item 
@@ -87,29 +98,6 @@ void \mbox{\hyperlink{ksiazki_8h_a768352a5223d9e1841ce9692aaf43f8d}{wyszukaj\+\_
 \begin{DoxyCompactList}\small\item\em Funkcja ta po podaniu przez uzytkownika liczby egzemplarzy ksiazek, zwraca na ekran dane ksiazki, ktora posiada dana liczbe egzemplarzy ksiazek ktore uzytkownik podal przy wpisie. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ksiazki_8h_ae189b52f9d8a0e053a3482a79a26f1c6}{wydrukuj\+\_\+po\+\_\+\+ID}} ()
 \begin{DoxyCompactList}\small\item\em Drukuje na ekran dane ksiazki, po wpisie uzytkownika, ktory wpisal chciane ID ksiazki. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Variables}
-\begin{DoxyCompactItemize}
-\item 
-int \mbox{\hyperlink{ksiazki_8h_a094c367727273b4da2b960ca3b3edc06}{ID}} = 4
-\item 
-int \mbox{\hyperlink{ksiazki_8h_ab216bb7eaebb4b2665b3a7e9d52d98d0}{rok}}
-\item 
-char $\ast$ \mbox{\hyperlink{ksiazki_8h_a113a6ab6773565fe27cdb876d0db9fb5}{tytul}} \mbox{[}\mbox{\hyperlink{common_8h_a392fb874e547e582e9c66a08a1f23326}{MAX}}\mbox{]}
-\item 
-char $\ast$ \mbox{\hyperlink{ksiazki_8h_a8b31666ce548fc477da9eada27fba523}{autor}} \mbox{[}\mbox{\hyperlink{common_8h_a392fb874e547e582e9c66a08a1f23326}{MAX}}\mbox{]}
-\item 
-char $\ast$ \mbox{\hyperlink{ksiazki_8h_a0cdb3fcd8923353f1cb289d6766c8a4b}{gatunek}} \mbox{[}\mbox{\hyperlink{common_8h_a392fb874e547e582e9c66a08a1f23326}{MAX}}\mbox{]}
-\item 
-int \mbox{\hyperlink{ksiazki_8h_a4994bb2527f97d2a36044762a8d75a08}{liczba\+\_\+egzemplarzy}}
-\item 
-int \mbox{\hyperlink{ksiazki_8h_a43bb912c5994f48c4e74182136e53467}{liczba\+\_\+wypozyczonych}}
-\item 
-struct Ksiazka\+Struktura $\ast$ \mbox{\hyperlink{ksiazki_8h_af66406297937206eae33b7a6399f3d56}{poprzedni}}
-\item 
-struct Ksiazka\+Struktura $\ast$ \mbox{\hyperlink{ksiazki_8h_a6647f51c3f7b5777e35ee7608478b79e}{nastepny}}
-\item 
- \{ ... \}  \mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}}
-\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -121,6 +109,15 @@ struct Ksiazka\+Struktura $\ast$ \mbox{\hyperlink{ksiazki_8h_a6647f51c3f7b5777e3
 
 Deklaracja ksiazek ~\newline
  
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}\label{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}} 
+\index{ksiazki.h@{ksiazki.h}!Ksiazka@{Ksiazka}}
+\index{Ksiazka@{Ksiazka}!ksiazki.h@{ksiazki.h}}
+\doxysubsubsection{\texorpdfstring{Ksiazka}{Ksiazka}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_ksiazka_struktura}{Ksiazka\+Struktura}} \mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}}}
+
+
 
 \doxysubsection{Enumeration Type Documentation}
 \mbox{\Hypertarget{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929}\label{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929}} 
@@ -144,6 +141,10 @@ Rok&\\
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{Gatunek@{Gatunek}!ksiazki.h@{ksiazki.h}}\index{ksiazki.h@{ksiazki.h}!Gatunek@{Gatunek}}}\mbox{\Hypertarget{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929a66b379b90f0cd74d1e8c011179766a60}\label{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929a66b379b90f0cd74d1e8c011179766a60}} 
 Gatunek&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ID@{ID}!ksiazki.h@{ksiazki.h}}\index{ksiazki.h@{ksiazki.h}!ID@{ID}}}\mbox{\Hypertarget{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929a001479a58fb44c39a29b20d565081a68}\label{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929a001479a58fb44c39a29b20d565081a68}} 
+ID&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{LiczbaEgzemplarzy@{LiczbaEgzemplarzy}!ksiazki.h@{ksiazki.h}}\index{ksiazki.h@{ksiazki.h}!LiczbaEgzemplarzy@{LiczbaEgzemplarzy}}}\mbox{\Hypertarget{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929ab4f1215e808b4bcd3283a822d8937324}\label{ksiazki_8h_accccfdb15134c7ccaf2cfabf210ad929ab4f1215e808b4bcd3283a822d8937324}} 
@@ -188,7 +189,7 @@ Za pomoca wpisu uzytkownika dotyczacego (ID ksiazki, tytulu ksiazki, gatunku ksi
 \index{ksiazki.h@{ksiazki.h}!edytuj\_autora@{edytuj\_autora}}
 \index{edytuj\_autora@{edytuj\_autora}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{edytuj\_autora()}{edytuj\_autora()}}
-{\footnotesize\ttfamily void edytuj\+\_\+autora (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void edytuj\+\_\+autora (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
 
 
@@ -208,7 +209,7 @@ W tej funkcji uzytkownik edytuje autora danej ksiazki.
 \index{ksiazki.h@{ksiazki.h}!edytuj\_gatunek\_ksiazki@{edytuj\_gatunek\_ksiazki}}
 \index{edytuj\_gatunek\_ksiazki@{edytuj\_gatunek\_ksiazki}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{edytuj\_gatunek\_ksiazki()}{edytuj\_gatunek\_ksiazki()}}
-{\footnotesize\ttfamily void edytuj\+\_\+gatunek\+\_\+ksiazki (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void edytuj\+\_\+gatunek\+\_\+ksiazki (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
 
 
@@ -234,7 +235,7 @@ W tej funkcji edytowany jest gatunek danej ksiazki np(romans na fantasty).
 \index{ksiazki.h@{ksiazki.h}!edytuj\_ksiazki\_ID\_ksiazki@{edytuj\_ksiazki\_ID\_ksiazki}}
 \index{edytuj\_ksiazki\_ID\_ksiazki@{edytuj\_ksiazki\_ID\_ksiazki}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{edytuj\_ksiazki\_ID\_ksiazki()}{edytuj\_ksiazki\_ID\_ksiazki()}}
-{\footnotesize\ttfamily void edytuj\+\_\+ksiazki\+\_\+\+ID\+\_\+ksiazki (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void edytuj\+\_\+ksiazki\+\_\+\+ID\+\_\+ksiazki (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
 
 
@@ -249,7 +250,7 @@ Wpis uzytkownika dokonuje zmiany ID danej ksiazki.
 \index{ksiazki.h@{ksiazki.h}!edytuj\_liczbe\_egzemplarzy@{edytuj\_liczbe\_egzemplarzy}}
 \index{edytuj\_liczbe\_egzemplarzy@{edytuj\_liczbe\_egzemplarzy}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{edytuj\_liczbe\_egzemplarzy()}{edytuj\_liczbe\_egzemplarzy()}}
-{\footnotesize\ttfamily void edytuj\+\_\+liczbe\+\_\+egzemplarzy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void edytuj\+\_\+liczbe\+\_\+egzemplarzy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
 
 
@@ -264,7 +265,7 @@ Wpis uzytkownika dokonuje zmiane liczby egzemplarzy danej ksiazki.
 \index{ksiazki.h@{ksiazki.h}!edytuj\_liczbe\_wypozyczonych@{edytuj\_liczbe\_wypozyczonych}}
 \index{edytuj\_liczbe\_wypozyczonych@{edytuj\_liczbe\_wypozyczonych}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{edytuj\_liczbe\_wypozyczonych()}{edytuj\_liczbe\_wypozyczonych()}}
-{\footnotesize\ttfamily void edytuj\+\_\+liczbe\+\_\+wypozyczonych (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void edytuj\+\_\+liczbe\+\_\+wypozyczonych (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
 
 
@@ -279,7 +280,7 @@ Wpis uzytkownika dokonuje zmiane liczby wypozyczonych danej ksiazki.
 \index{ksiazki.h@{ksiazki.h}!edytuj\_rok@{edytuj\_rok}}
 \index{edytuj\_rok@{edytuj\_rok}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{edytuj\_rok()}{edytuj\_rok()}}
-{\footnotesize\ttfamily void edytuj\+\_\+rok (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void edytuj\+\_\+rok (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
 
 
@@ -294,7 +295,7 @@ W tej funkcji za pomoca wpisu uzytkownika mozemy zmienic rok danej ksiazki przyk
 \index{ksiazki.h@{ksiazki.h}!edytuj\_tytul\_ksiazki@{edytuj\_tytul\_ksiazki}}
 \index{edytuj\_tytul\_ksiazki@{edytuj\_tytul\_ksiazki}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{edytuj\_tytul\_ksiazki()}{edytuj\_tytul\_ksiazki()}}
-{\footnotesize\ttfamily void edytuj\+\_\+tytul\+\_\+ksiazki (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void edytuj\+\_\+tytul\+\_\+ksiazki (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
 
 
@@ -361,7 +362,7 @@ Funkcja sortowania działa na dwoch petlach for, ktore przechodza po wszytskich 
 \index{ksiazki.h@{ksiazki.h}!sortowanie\_ksiazek\_niemalejace@{sortowanie\_ksiazek\_niemalejace}}
 \index{sortowanie\_ksiazek\_niemalejace@{sortowanie\_ksiazek\_niemalejace}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{sortowanie\_ksiazek\_niemalejace()}{sortowanie\_ksiazek\_niemalejace()}}
-{\footnotesize\ttfamily void sortowanie\+\_\+ksiazek\+\_\+niemalejace (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$}]{ID }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void sortowanie\+\_\+ksiazek\+\_\+niemalejace (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{ID }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{ksiazki_8h_a31ad71269e0f171ff6bbf775a7d6a253}\label{ksiazki_8h_a31ad71269e0f171ff6bbf775a7d6a253}} 
 \index{ksiazki.h@{ksiazki.h}!usun\_ksiazke@{usun\_ksiazke}}
@@ -390,7 +391,7 @@ I na koncu jesli wpis nie jest pusty to wtedy ostatnia ksiazka jest rowna wpisow
 \index{ksiazki.h@{ksiazki.h}!wydrukuj\_ksiazke@{wydrukuj\_ksiazke}}
 \index{wydrukuj\_ksiazke@{wydrukuj\_ksiazke}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{wydrukuj\_ksiazke()}{wydrukuj\_ksiazke()}}
-{\footnotesize\ttfamily void wydrukuj\+\_\+ksiazke (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void wydrukuj\+\_\+ksiazke (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
 
 
@@ -425,7 +426,7 @@ Wyswietla cala baze ksiazek.
 \index{ksiazki.h@{ksiazki.h}!wyszukaj\_ksiazke@{wyszukaj\_ksiazke}}
 \index{wyszukaj\_ksiazke@{wyszukaj\_ksiazke}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{wyszukaj\_ksiazke()}{wyszukaj\_ksiazke()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$ wyszukaj\+\_\+ksiazke (\begin{DoxyParamCaption}\item[{int}]{ID }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$ wyszukaj\+\_\+ksiazke (\begin{DoxyParamCaption}\item[{int}]{ID }\end{DoxyParamCaption})}
 
 
 
@@ -509,7 +510,7 @@ Funkcja ta po podaniu przez uzytkownika liczbe wypozyczonych ksiazek, zwraca na 
 \index{ksiazki.h@{ksiazki.h}!zamien@{zamien}}
 \index{zamien@{zamien}!ksiazki.h@{ksiazki.h}}
 \doxysubsubsection{\texorpdfstring{zamien()}{zamien()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$ zamien (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}{Ksiazka}} $\ast$}]{b }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$ zamien (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{ksiazki_8h_add1e74192a9c069b274f645990a6a6b4}{Ksiazka}} $\ast$}]{b }\end{DoxyParamCaption})}
 
 
 
@@ -551,66 +552,3 @@ Szukanie najwyzszego ID ksiazki polega na tym, ze petlo for przechodzimy po wszy
 \begin{DoxyReturn}{Returns}
 Funkcja zwraca ksiazke o najwyzszym ID 
 \end{DoxyReturn}
-
-
-\doxysubsection{Variable Documentation}
-\mbox{\Hypertarget{ksiazki_8h_a8b31666ce548fc477da9eada27fba523}\label{ksiazki_8h_a8b31666ce548fc477da9eada27fba523}} 
-\index{ksiazki.h@{ksiazki.h}!autor@{autor}}
-\index{autor@{autor}!ksiazki.h@{ksiazki.h}}
-\doxysubsubsection{\texorpdfstring{autor}{autor}}
-{\footnotesize\ttfamily char$\ast$ autor\mbox{[}\mbox{\hyperlink{common_8h_a392fb874e547e582e9c66a08a1f23326}{MAX}}\mbox{]}}
-
-\mbox{\Hypertarget{ksiazki_8h_a0cdb3fcd8923353f1cb289d6766c8a4b}\label{ksiazki_8h_a0cdb3fcd8923353f1cb289d6766c8a4b}} 
-\index{ksiazki.h@{ksiazki.h}!gatunek@{gatunek}}
-\index{gatunek@{gatunek}!ksiazki.h@{ksiazki.h}}
-\doxysubsubsection{\texorpdfstring{gatunek}{gatunek}}
-{\footnotesize\ttfamily char$\ast$ gatunek\mbox{[}\mbox{\hyperlink{common_8h_a392fb874e547e582e9c66a08a1f23326}{MAX}}\mbox{]}}
-
-\mbox{\Hypertarget{ksiazki_8h_a094c367727273b4da2b960ca3b3edc06}\label{ksiazki_8h_a094c367727273b4da2b960ca3b3edc06}} 
-\index{ksiazki.h@{ksiazki.h}!ID@{ID}}
-\index{ID@{ID}!ksiazki.h@{ksiazki.h}}
-\doxysubsubsection{\texorpdfstring{ID}{ID}}
-{\footnotesize\ttfamily ID = 4}
-
-\mbox{\Hypertarget{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}\label{ksiazki_8h_a71cabb5cdf8ea0f2421f75286baf1b8e}} 
-\index{ksiazki.h@{ksiazki.h}!Ksiazka@{Ksiazka}}
-\index{Ksiazka@{Ksiazka}!ksiazki.h@{ksiazki.h}}
-\doxysubsubsection{\texorpdfstring{}{}}
-{\footnotesize\ttfamily  \{ ... \}  Ksiazka}
-
-\mbox{\Hypertarget{ksiazki_8h_a4994bb2527f97d2a36044762a8d75a08}\label{ksiazki_8h_a4994bb2527f97d2a36044762a8d75a08}} 
-\index{ksiazki.h@{ksiazki.h}!liczba\_egzemplarzy@{liczba\_egzemplarzy}}
-\index{liczba\_egzemplarzy@{liczba\_egzemplarzy}!ksiazki.h@{ksiazki.h}}
-\doxysubsubsection{\texorpdfstring{liczba\_egzemplarzy}{liczba\_egzemplarzy}}
-{\footnotesize\ttfamily int liczba\+\_\+egzemplarzy}
-
-\mbox{\Hypertarget{ksiazki_8h_a43bb912c5994f48c4e74182136e53467}\label{ksiazki_8h_a43bb912c5994f48c4e74182136e53467}} 
-\index{ksiazki.h@{ksiazki.h}!liczba\_wypozyczonych@{liczba\_wypozyczonych}}
-\index{liczba\_wypozyczonych@{liczba\_wypozyczonych}!ksiazki.h@{ksiazki.h}}
-\doxysubsubsection{\texorpdfstring{liczba\_wypozyczonych}{liczba\_wypozyczonych}}
-{\footnotesize\ttfamily int liczba\+\_\+wypozyczonych}
-
-\mbox{\Hypertarget{ksiazki_8h_a6647f51c3f7b5777e35ee7608478b79e}\label{ksiazki_8h_a6647f51c3f7b5777e35ee7608478b79e}} 
-\index{ksiazki.h@{ksiazki.h}!nastepny@{nastepny}}
-\index{nastepny@{nastepny}!ksiazki.h@{ksiazki.h}}
-\doxysubsubsection{\texorpdfstring{nastepny}{nastepny}}
-{\footnotesize\ttfamily struct Ksiazka\+Struktura $\ast$ nastepny}
-
-\mbox{\Hypertarget{ksiazki_8h_af66406297937206eae33b7a6399f3d56}\label{ksiazki_8h_af66406297937206eae33b7a6399f3d56}} 
-\index{ksiazki.h@{ksiazki.h}!poprzedni@{poprzedni}}
-\index{poprzedni@{poprzedni}!ksiazki.h@{ksiazki.h}}
-\doxysubsubsection{\texorpdfstring{poprzedni}{poprzedni}}
-{\footnotesize\ttfamily struct Ksiazka\+Struktura$\ast$ poprzedni}
-
-\mbox{\Hypertarget{ksiazki_8h_ab216bb7eaebb4b2665b3a7e9d52d98d0}\label{ksiazki_8h_ab216bb7eaebb4b2665b3a7e9d52d98d0}} 
-\index{ksiazki.h@{ksiazki.h}!rok@{rok}}
-\index{rok@{rok}!ksiazki.h@{ksiazki.h}}
-\doxysubsubsection{\texorpdfstring{rok}{rok}}
-{\footnotesize\ttfamily int rok}
-
-\mbox{\Hypertarget{ksiazki_8h_a113a6ab6773565fe27cdb876d0db9fb5}\label{ksiazki_8h_a113a6ab6773565fe27cdb876d0db9fb5}} 
-\index{ksiazki.h@{ksiazki.h}!tytul@{tytul}}
-\index{tytul@{tytul}!ksiazki.h@{ksiazki.h}}
-\doxysubsubsection{\texorpdfstring{tytul}{tytul}}
-{\footnotesize\ttfamily char$\ast$ tytul\mbox{[}\mbox{\hyperlink{common_8h_a392fb874e547e582e9c66a08a1f23326}{MAX}}\mbox{]}}
-

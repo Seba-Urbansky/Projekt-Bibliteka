@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ksiazka_5fdo_5fzarzadzania_0',['ksiazka_do_zarzadzania',['../ksiazki_8h.html#a023661b73ad6f5af935c1bc928429310',1,'ksiazki.h']]]
+  ['id_5fksiazki_0',['ID_ksiazki',['../wypozyczenia_8h.html#ac0a2eb32da7dacf3b36c40216dc1c238',1,'wypozyczenia.h']]]
 ];

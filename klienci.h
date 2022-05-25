@@ -9,8 +9,8 @@
 #include <stdlib.h>
 #include "common.h"
 
-
-typedef struct KlientStruktura /*! \struct Struktura uzywana do przechowywania danych klientow */
+/*! \struct Struktura uzywana do przechowywania danych klientow */
+typedef struct KlientStruktura 
 {
 
     int numer_karty;

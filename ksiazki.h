@@ -7,8 +7,8 @@
 #include <stdlib.h>
 #include "common.h"
 
-
-typedef struct KsiazkaStruktura /*! \struct Struktura uzywana do przechowywania danych ksiazek */
+/*! \struct Struktura uzywana do przechowywania danych ksiazek */
+typedef struct KsiazkaStruktura 
 {
 
     int ID;

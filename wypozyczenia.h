@@ -12,8 +12,8 @@
 #include "ksiazki.h"
 #include <time.h>
 
-
-typedef struct WypozyczeniaStruktura /*! \struct Struktura uzywana do przechowywania danych wypozyczen*/
+/*! \struct Struktura uzywana do przechowywania danych wypozyczen*/
+typedef struct WypozyczeniaStruktura 
 {
     int numer_karty;
     int ID_ksiazki;

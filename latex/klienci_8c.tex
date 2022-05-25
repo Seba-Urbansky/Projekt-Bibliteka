@@ -14,21 +14,21 @@ void \mbox{\hyperlink{klienci_8c_ab0f0128ac537d0a9c981f44d93517ec9}{dodaj\+\_\+k
 \begin{DoxyCompactList}\small\item\em Funkcja dodaj\+\_\+klienta dodaje nowego klienta do bazy danych Jesli nie ma klientow w bazie to tworzymy nowego klienta w przeciwnym wypadku wpis uzytkownika dodaje nastepnego klienta do bazy klientow. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{klienci_8c_a460e7e1b92717eb9ae93cdf294abc66d}{znajdz\+\_\+najwyzsze\+\_\+\+ID\+\_\+klienci}} ()
 \begin{DoxyCompactList}\small\item\em Funkcja wyszukuje w pliku ID klienta o najwyzszej wartosci jesli wpis uzytkownika jest wiekszy od aktualnego max, to nastepuje nowe maksimum. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{klienci_8c_ae5c2b50f7b091e15b790fdc2bedd2338}{edytuj\+\_\+wypozyczenia\+\_\+numer\+\_\+karty\+\_\+abc}} (\mbox{\hyperlink{klienci_8h_a0b6c56914df33ac4394cafcfecd0f5fe}{Klient}} $\ast$wpis)
+void \mbox{\hyperlink{klienci_8c_ae5c2b50f7b091e15b790fdc2bedd2338}{edytuj\+\_\+wypozyczenia\+\_\+numer\+\_\+karty\+\_\+abc}} (\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$wpis)
 \begin{DoxyCompactList}\small\item\em Wpis uzytkownika jest przypisywany do numeru karty ktory jest rowny najwyzszemu ID klienta + 1. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{klienci_8h_a0b6c56914df33ac4394cafcfecd0f5fe}{Klient}} $\ast$ \mbox{\hyperlink{klienci_8c_a83984b8b6bc1f51e064eeb74ea2c7403}{wyszukaj\+\_\+klienta}} (int \mbox{\hyperlink{klienci_8h_ac06e2ac007dc7c50c5b41b72a68c13c4}{numer\+\_\+karty}})
+\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$ \mbox{\hyperlink{klienci_8c_a83984b8b6bc1f51e064eeb74ea2c7403}{wyszukaj\+\_\+klienta}} (int numer\+\_\+karty)
 \begin{DoxyCompactList}\small\item\em Przechodzimy w petli przez wszystkich klientow Jesli wpis uzytkownika szukajacego numeru\+\_\+karty jest rowny szukanemu numerowi karty zwroc wpis Jezeli uzytkownik nic nie wpisze nie zwracaj niczego. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{klienci_8c_a420de625e3c38ba1dad8c333fbd6447c}{wydrukuj\+\_\+klienta}} (\mbox{\hyperlink{klienci_8h_a0b6c56914df33ac4394cafcfecd0f5fe}{Klient}} $\ast$wpis)
+void \mbox{\hyperlink{klienci_8c_a420de625e3c38ba1dad8c333fbd6447c}{wydrukuj\+\_\+klienta}} (\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$wpis)
 \begin{DoxyCompactList}\small\item\em Funkcja wydrukowuje na ekran numer\+\_\+karty, imie, nazwisko,, telefon, email klienta. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{klienci_8c_ad0aa69f2005242c3b2a4080f2cdc2549}{edytuj\+\_\+imie\+\_\+klienta}} (\mbox{\hyperlink{klienci_8h_a0b6c56914df33ac4394cafcfecd0f5fe}{Klient}} $\ast$wpis)
+void \mbox{\hyperlink{klienci_8c_ad0aa69f2005242c3b2a4080f2cdc2549}{edytuj\+\_\+imie\+\_\+klienta}} (\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$wpis)
 \begin{DoxyCompactList}\small\item\em Funkcja edytuje dane imie klienta na podstawie wpisu uzytkownika. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{klienci_8c_a968b0adcc99972b069d561afc5bf3fb2}{edytuj\+\_\+telefon\+\_\+klienta}} (\mbox{\hyperlink{klienci_8h_a0b6c56914df33ac4394cafcfecd0f5fe}{Klient}} $\ast$wpis)
+void \mbox{\hyperlink{klienci_8c_a968b0adcc99972b069d561afc5bf3fb2}{edytuj\+\_\+telefon\+\_\+klienta}} (\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$wpis)
 \begin{DoxyCompactList}\small\item\em Funkcja edytuje dane telefonu klienta na podstawie wpisu uzytkownika. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{klienci_8c_a39e781ff7f36da456490a5df2e0224c4}{edytuj\+\_\+email\+\_\+klienta}} (\mbox{\hyperlink{klienci_8h_a0b6c56914df33ac4394cafcfecd0f5fe}{Klient}} $\ast$wpis)
+void \mbox{\hyperlink{klienci_8c_a39e781ff7f36da456490a5df2e0224c4}{edytuj\+\_\+email\+\_\+klienta}} (\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$wpis)
 \begin{DoxyCompactList}\small\item\em Funkcja edytuje email klienta na podstawie wpisu uzytkownika. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{klienci_8c_aa15d3041ef12ae2395ec4c333348ed54}{edytuj\+\_\+nazwisko\+\_\+klienta}} (\mbox{\hyperlink{klienci_8h_a0b6c56914df33ac4394cafcfecd0f5fe}{Klient}} $\ast$wpis)
+void \mbox{\hyperlink{klienci_8c_aa15d3041ef12ae2395ec4c333348ed54}{edytuj\+\_\+nazwisko\+\_\+klienta}} (\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$wpis)
 \begin{DoxyCompactList}\small\item\em Funkcja edytuje nazwisko klienta na podstawie wpisu uzytkownika. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{klienci_8c_a764ec0a74093c8d3d0f311dcc3c92366}{usun\+\_\+klienta}} (\mbox{\hyperlink{klienci_8h_a0b6c56914df33ac4394cafcfecd0f5fe}{Klient}} $\ast$wpis)
+void \mbox{\hyperlink{klienci_8c_a764ec0a74093c8d3d0f311dcc3c92366}{usun\+\_\+klienta}} (\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$wpis)
 \item 
 void \mbox{\hyperlink{klienci_8c_a17266993cbb25779b37136a32f5438e7}{wczytaniepliku\+\_\+klienci}} ()
 \begin{DoxyCompactList}\small\item\em Na poczatku sprawdzamy czy wczytywany plik nie jest pusty i wczytujemy z niego zawartosc. \end{DoxyCompactList}\item 
@@ -37,9 +37,9 @@ void \mbox{\hyperlink{klienci_8c_ac4a3e4f8dfde3d84742d574c7cfcd162}{zapispliku\+
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{klienci_8h_a0b6c56914df33ac4394cafcfecd0f5fe}{Klient}} $\ast$ \mbox{\hyperlink{klienci_8c_a3c0de94a34b41d515e5375a87a93e31e}{pierwszy\+\_\+klient}} = NULL
+\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$ \mbox{\hyperlink{klienci_8c_a3c0de94a34b41d515e5375a87a93e31e}{pierwszy\+\_\+klient}} = NULL
 \item 
-\mbox{\hyperlink{klienci_8h_a0b6c56914df33ac4394cafcfecd0f5fe}{Klient}} $\ast$ \mbox{\hyperlink{klienci_8c_aae7759d523352a376b850bdf6a3a2e9c}{ostatni\+\_\+klient}} = NULL
+\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$ \mbox{\hyperlink{klienci_8c_aae7759d523352a376b850bdf6a3a2e9c}{ostatni\+\_\+klient}} = NULL
 \end{DoxyCompactItemize}
 
 
@@ -58,7 +58,7 @@ Funkcja dodaj\+\_\+klienta dodaje nowego klienta do bazy danych Jesli nie ma kli
 \index{klienci.c@{klienci.c}!edytuj\_email\_klienta@{edytuj\_email\_klienta}}
 \index{edytuj\_email\_klienta@{edytuj\_email\_klienta}!klienci.c@{klienci.c}}
 \doxysubsubsection{\texorpdfstring{edytuj\_email\_klienta()}{edytuj\_email\_klienta()}}
-{\footnotesize\ttfamily void edytuj\+\_\+email\+\_\+klienta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{klienci_8h_a0b6c56914df33ac4394cafcfecd0f5fe}{Klient}} $\ast$}]{wpis }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void edytuj\+\_\+email\+\_\+klienta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
 
 
@@ -73,7 +73,7 @@ Funkcja edytuje email klienta na podstawie wpisu uzytkownika.
 \index{klienci.c@{klienci.c}!edytuj\_imie\_klienta@{edytuj\_imie\_klienta}}
 \index{edytuj\_imie\_klienta@{edytuj\_imie\_klienta}!klienci.c@{klienci.c}}
 \doxysubsubsection{\texorpdfstring{edytuj\_imie\_klienta()}{edytuj\_imie\_klienta()}}
-{\footnotesize\ttfamily void edytuj\+\_\+imie\+\_\+klienta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{klienci_8h_a0b6c56914df33ac4394cafcfecd0f5fe}{Klient}} $\ast$}]{wpis }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void edytuj\+\_\+imie\+\_\+klienta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
 
 
@@ -88,7 +88,7 @@ Funkcja edytuje dane imie klienta na podstawie wpisu uzytkownika.
 \index{klienci.c@{klienci.c}!edytuj\_nazwisko\_klienta@{edytuj\_nazwisko\_klienta}}
 \index{edytuj\_nazwisko\_klienta@{edytuj\_nazwisko\_klienta}!klienci.c@{klienci.c}}
 \doxysubsubsection{\texorpdfstring{edytuj\_nazwisko\_klienta()}{edytuj\_nazwisko\_klienta()}}
-{\footnotesize\ttfamily void edytuj\+\_\+nazwisko\+\_\+klienta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{klienci_8h_a0b6c56914df33ac4394cafcfecd0f5fe}{Klient}} $\ast$}]{wpis }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void edytuj\+\_\+nazwisko\+\_\+klienta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
 
 
@@ -103,7 +103,7 @@ Funkcja edytuje nazwisko klienta na podstawie wpisu uzytkownika.
 \index{klienci.c@{klienci.c}!edytuj\_telefon\_klienta@{edytuj\_telefon\_klienta}}
 \index{edytuj\_telefon\_klienta@{edytuj\_telefon\_klienta}!klienci.c@{klienci.c}}
 \doxysubsubsection{\texorpdfstring{edytuj\_telefon\_klienta()}{edytuj\_telefon\_klienta()}}
-{\footnotesize\ttfamily void edytuj\+\_\+telefon\+\_\+klienta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{klienci_8h_a0b6c56914df33ac4394cafcfecd0f5fe}{Klient}} $\ast$}]{wpis }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void edytuj\+\_\+telefon\+\_\+klienta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
 
 
@@ -118,7 +118,7 @@ Funkcja edytuje dane telefonu klienta na podstawie wpisu uzytkownika.
 \index{klienci.c@{klienci.c}!edytuj\_wypozyczenia\_numer\_karty\_abc@{edytuj\_wypozyczenia\_numer\_karty\_abc}}
 \index{edytuj\_wypozyczenia\_numer\_karty\_abc@{edytuj\_wypozyczenia\_numer\_karty\_abc}!klienci.c@{klienci.c}}
 \doxysubsubsection{\texorpdfstring{edytuj\_wypozyczenia\_numer\_karty\_abc()}{edytuj\_wypozyczenia\_numer\_karty\_abc()}}
-{\footnotesize\ttfamily void edytuj\+\_\+wypozyczenia\+\_\+numer\+\_\+karty\+\_\+abc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{klienci_8h_a0b6c56914df33ac4394cafcfecd0f5fe}{Klient}} $\ast$}]{wpis }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void edytuj\+\_\+wypozyczenia\+\_\+numer\+\_\+karty\+\_\+abc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
 
 
@@ -133,7 +133,7 @@ Wpis uzytkownika jest przypisywany do numeru karty ktory jest rowny najwyzszemu 
 \index{klienci.c@{klienci.c}!usun\_klienta@{usun\_klienta}}
 \index{usun\_klienta@{usun\_klienta}!klienci.c@{klienci.c}}
 \doxysubsubsection{\texorpdfstring{usun\_klienta()}{usun\_klienta()}}
-{\footnotesize\ttfamily void usun\+\_\+klienta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{klienci_8h_a0b6c56914df33ac4394cafcfecd0f5fe}{Klient}} $\ast$}]{wpis }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void usun\+\_\+klienta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
 
 \begin{DoxyItemize}
@@ -165,7 +165,7 @@ Na poczatku sprawdzamy czy wczytywany plik nie jest pusty i wczytujemy z niego z
 \index{klienci.c@{klienci.c}!wydrukuj\_klienta@{wydrukuj\_klienta}}
 \index{wydrukuj\_klienta@{wydrukuj\_klienta}!klienci.c@{klienci.c}}
 \doxysubsubsection{\texorpdfstring{wydrukuj\_klienta()}{wydrukuj\_klienta()}}
-{\footnotesize\ttfamily void wydrukuj\+\_\+klienta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{klienci_8h_a0b6c56914df33ac4394cafcfecd0f5fe}{Klient}} $\ast$}]{wpis }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void wydrukuj\+\_\+klienta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$}]{wpis }\end{DoxyParamCaption})}
 
 
 
@@ -190,7 +190,7 @@ Funkcja wyswietl\+\_\+baze\+\_\+klientow wyswietla dane klientow z pliku.
 \index{klienci.c@{klienci.c}!wyszukaj\_klienta@{wyszukaj\_klienta}}
 \index{wyszukaj\_klienta@{wyszukaj\_klienta}!klienci.c@{klienci.c}}
 \doxysubsubsection{\texorpdfstring{wyszukaj\_klienta()}{wyszukaj\_klienta()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{klienci_8h_a0b6c56914df33ac4394cafcfecd0f5fe}{Klient}} $\ast$ wyszukaj\+\_\+klienta (\begin{DoxyParamCaption}\item[{int}]{numer\+\_\+karty }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}} $\ast$ wyszukaj\+\_\+klienta (\begin{DoxyParamCaption}\item[{int}]{numer\+\_\+karty }\end{DoxyParamCaption})}
 
 
 
@@ -239,12 +239,12 @@ Zwracane jest najwyzsze ID klienta
 \index{klienci.c@{klienci.c}!ostatni\_klient@{ostatni\_klient}}
 \index{ostatni\_klient@{ostatni\_klient}!klienci.c@{klienci.c}}
 \doxysubsubsection{\texorpdfstring{ostatni\_klient}{ostatni\_klient}}
-{\footnotesize\ttfamily \mbox{\hyperlink{klienci_8h_a0b6c56914df33ac4394cafcfecd0f5fe}{Klient}}$\ast$ ostatni\+\_\+klient = NULL}
+{\footnotesize\ttfamily \mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}}$\ast$ ostatni\+\_\+klient = NULL}
 
 Wskaznik na ostatniego klienta w bazie \mbox{\Hypertarget{klienci_8c_a3c0de94a34b41d515e5375a87a93e31e}\label{klienci_8c_a3c0de94a34b41d515e5375a87a93e31e}} 
 \index{klienci.c@{klienci.c}!pierwszy\_klient@{pierwszy\_klient}}
 \index{pierwszy\_klient@{pierwszy\_klient}!klienci.c@{klienci.c}}
 \doxysubsubsection{\texorpdfstring{pierwszy\_klient}{pierwszy\_klient}}
-{\footnotesize\ttfamily \mbox{\hyperlink{klienci_8h_a0b6c56914df33ac4394cafcfecd0f5fe}{Klient}}$\ast$ pierwszy\+\_\+klient = NULL}
+{\footnotesize\ttfamily \mbox{\hyperlink{klienci_8h_a38fd7bcc190edf278f27823dfc7c3eb1}{Klient}}$\ast$ pierwszy\+\_\+klient = NULL}
 
 Wskaznik na pierwszego klienta w bazie 
